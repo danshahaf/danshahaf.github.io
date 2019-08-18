@@ -10,15 +10,11 @@
             {
                 text-align: center;
             }
-            /*.container
+            .btn
             {
-                border: 0.5px solid black;
-                border-radius: 5px;
-                padding: 5px;
-                margin: 5px;
-                font-family: Karla !important;
-                text-align: center;
-            }*/ 
+                border: 0.5px solid black !important;
+                width: 40% !important;
+            }
         </style>
 
 
@@ -26,14 +22,44 @@
 
     <body class = "body">
         <h3 class = "nameText"> Shahaf Dan  |   שחף דן</h3>
-        
+        <p> add more info about me:
+            pictures<br>
+            social media<br>
+            resume to download in pdf file<br>
+            etc...
+        </p>
+        <!-- HISTORY Collapse-->
         <button type = "button" class = " btn btn-info" data-toggle = "collapse" data-target = "#history_div"> History </button>
         <div id = "history_div" class = "collapse info_div">
+            My History<br>
+            first part: time line with hover options<br>
+            seconds part: paragraphs about myself <br>
+
+        </div>
+
+        <br><br>
+        <!-- EDUCATION Collapse-->
+        <button type = "button" class = " btn btn-info" data-toggle = "collapse" data-target = "#education_div"> Education </button>
+        <div id = "education_div" class = "collapse info_div">
+            my ecuation history <br>
+            first part: middle school and first year of high school + AMAT program in israel<br>
+            second part: grabada high school (GPA, clubs, sports, inetersts, pictures and images)<br>
+            third part: college at Las Positas (GPA,classes with options to sort <br> based on catogery (math, science, humanities...), semester, or grade. Put in exra curricular activities, like student governent, clubs, diving team, AMATYC, Awards and more)
+        </div>
+
+        <br><br>
+        <!-- EXEPRIENCE & KNOWLEDGE Collapse-->
+        <button type = "button" class = " btn btn-info" data-toggle = "collapse" data-target = "#knowledge_div"> Experience </button>
+        <div id = "knowledge_div" class = "collapse info_div">
             My name is Shahaf.
             I was born in israel and moves to the states when I was 15 of age
         </div>
 
 
+        <p> 
+            add options to communicate, find a way to build a back end in some language(try to go for node.js, rather than php or java). Be creative here
+        </p>
+        <br><br>
         <!-- Bootstrap for JQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
