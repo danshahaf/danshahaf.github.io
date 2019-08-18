@@ -1,5 +1,7 @@
 .body{text-align: center;}
 .btn {border: 0.5px solid black !important; width: 40% !important;}
+
+/* Timeline CSS code. Look up the website __https://bootsnipp.com/snippets/Q0ppE__ white gives other templates for timelines. At some point I should porbably change it up*/
 .main-timeline8 {overflow: hidden; position: relative;}
 .main-timeline8:after, .main-timeline8:before {content:""; display: block; width: 100%; clear:both;}
 .main-timeline8:before{content:"";width:3px;height:100%;background:#d6d5d5;position:absolute;top:30px;left:50%}
