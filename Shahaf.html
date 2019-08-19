@@ -12,8 +12,8 @@
     <body class = "body">
         
         <div class = "header">
-        <h2 class = "nameText"> Shahaf Dan  |   שחף דן</h2>
-        <h4>19 years old Israeli American from the Bay Area<br> Web and software full stack developer <br> Computer science 2nd year student at Las Positas College </h4>
+        <h2 class = "nameText"> Shahaf Dan </h2>
+        <h4>Web and software full stack developer from the Bay Area<br> Computer science 2nd year student at Las Positas College </h4>
         <br>
         <button type = "button" class = "btn btn-outline-secondary" onclick = "open_view_resume()">View My Resume (JPG)</button>
 
@@ -30,7 +30,7 @@
         </div>
         
         <!-- HISTORY Collapse-->
-        <button type = "button" class = " btn btn-info" data-toggle = "collapse" data-target = "#history_div"> History </button>
+        <button type = "button" class = " btn btn-info" data-toggle = "collapse" data-target = "#history_div"> Background </button>
         <div id = "history_div" class = "collapse info_div">
             My History<br>
             first part: time line with hover options<br>
@@ -148,6 +148,17 @@
 
             
         </div>
+        <br><br>
+        <!-- CONTACT ME Collapse-->
+        <button type = "button" class = " btn btn-warning" data-toggle = "collapse" data-target = "#contact_div"> Contact Me </button>
+        <div id = "contact_div" class = "collapse info_div">
+            <h4><strong><u> Gmail:</u></strong> &nbsp;  dan.shachaf@gmail.com &nbsp; &nbsp; &nbsp;
+            <strong><u>Mobile:</u></strong> &nbsp;  (925) 791 - 1544</h4>
+            <h4><strong><u> LinkedIn:</u></strong> &nbsp; &nbsp; https://www.linkedin.com/in/shahaf-dan-66812b180/</h4>
+            <button type = "button" class = "btn LinkedIn-btn" onclick = "open_LinkedIn()"><img src = "linkedIn-logo.png" class = "LinkedIn-img"></button><br>
+            <h4><strong><u> GitHub:</u></strong> &nbsp; &nbsp; https://github.com/ShahafDan25</h4>
+            <button type = "button" class = "btn LinkedIn-btn" onclick = "open_GitHub()"><img src = "GitHub-logo.svg" class = "LinkedIn-img"></button><br>
+        </div>
         <br><br><br>
 
         <p> 
@@ -170,6 +181,14 @@
             function open_dnld_resume()
             {
                 window.open("ShahafDan.pdf");
+            }
+            function open_LinkedIn()
+            {
+                window.open("https://www.linkedin.com/in/shahaf-dan-66812b180/");
+            }
+            function open_GitHub()
+            {
+                window.open("https://github.com/ShahafDan25");
             }
         </script>
     </body>
