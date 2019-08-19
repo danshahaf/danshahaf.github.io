@@ -2,7 +2,7 @@
 .btn {border: 0.5px solid black !important; width: 40% !important;}
 .header{text-align: center; float: middle !important; margin-right: 8%; margin-left: 8%; padding-right: 8%; padding-left:8%;}
 .btn-outline-danger{color:red!important; border: 0.5px solid red !important;}
-.LinkedIn-btn{height: 7% !important; width: 7% !important; padding: 1px !important;}
+.LinkedIn-btn{width: 5% !important; padding-top: 100% !important; padding: 2px !important;}
 .LinkedIn-img{height: 90%; width: 90%;}
 /* .exp{float:left; width: 20%; margin: 2px; padding: 2px; text-align: center !important;}
 .knwld{float:right; width: 20%; margin: 2px; padding: 2px; text-align: center !important;}
