@@ -1,5 +1,7 @@
 .body{text-align: center; background-image: linear-gradient(to right, #EDC877, #F5E3BC) !important;}
 .btn {border: 0.5px solid black !important; width: 40% !important;}
+.header{text-align: center; float: middle !important; margin-right: 8%; margin-left: 8%; padding-right: 8%; padding-left:8%;}
+.btn-outline-danger{color:red!important; border: 0.5px solid red !important;}
 /* .exp{float:left; width: 20%; margin: 2px; padding: 2px; text-align: center !important;}
 .knwld{float:right; width: 20%; margin: 2px; padding: 2px; text-align: center !important;}
 #knowledge_div{text-align: center !important;} */
