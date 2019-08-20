@@ -4,10 +4,12 @@
 .btn-outline-danger{color:red!important; border: 0.5px solid red !important;}
 .LinkedIn-btn{width: 5% !important; padding-top: 100% !important; padding: 2px !important;}
 .LinkedIn-img{height: 90%; width: 90%;}
+.logo-bigger-img{margin: 1% !important; padding: 2% !important; height: 9% !important; padding-top: 100%;}
 .list-group-item{border: 1px solid black; text-align: center;}
 .list-group{text-align: center !important; margin-right: 10% !important; margin-left: 10% !important;}
 .front-end{float: left; width: 50% !important;}
 .back-end{float: right; width: 50% !important;}
+.logo-img{margin: 1% !important; padding: 2% !important; height: 9%; padding-top: 0%;}
 /* .exp{float:left; width: 20%; margin: 2px; padding: 2px; text-align: center !important;}
 .knwld{float:right; width: 20%; margin: 2px; padding: 2px; text-align: center !important;}
 #knowledge_div{text-align: center !important;} */
