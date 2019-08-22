@@ -7,11 +7,13 @@ var su18g = ['A'];
 var sp19c = ["C++ Data Structures", "Electricity and Magnetism Physics", "Philosophy of Ethics", "Dive Team Practices Class", "Internship Experience", "Linear Algebda"];
 var sp19g = ['A', 'B', 'A', 'A', 'A', 'B'];
 
-var su19c = ["Intro to American Government - Political Science", ""]
+var su19c = ["Intro to American Government - Political Science", "Intro to Personal Health"]
 var su19g = ['A', 'A', 'A'];
 
 var f19c = ["Assembly Language", "Intro to Psychology", "Dicrete Mathematical Structures", "Professional Communications", "C++ Data Structures"];
 var f19g = ["N/A", "N/A", "N/A", "N/A", "N/A"];
+
+//later use node.js to populate this arrays from a solid and organized database
 function sortAlphabetically()
 {
     if(!($('.classInfo').is(':empty')))
@@ -35,9 +37,9 @@ function orderByGrade()
 {
     if(!($('.classInfo').is(':empty')))
     {
-        document.getElementById(classInfo).innerHTML = ""; // clean everything from that div
+        document.getElementById("classInfo").innerHTML = ""; // clean everything from that div
     }
-    var allClasses = su18c.concat(f18c, sp19c, su19c, f19g);
+    var allClasses = su18c.concat(f18c, sp19c, su19c, f19c);
     var allGrades = su18g.concat(f18g, sp19g,su19g, f19g);
     for(var j = 0; j < allGrades.length; j++) //check for A grades
     {
