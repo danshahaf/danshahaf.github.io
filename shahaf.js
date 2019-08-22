@@ -10,3 +10,19 @@ var sp19g = ['A', 'B', 'A', 'A', 'A', 'B'];
 var su19c = ["Intro to American Government - Political Science", ""]
 var su19g = ['A', 'A', 'A'];
 
+function sortAlphabetically()
+{
+    var allClasses = su18c.concat(f18c, sp19c, su19c);
+    allClasses.sort();
+    for(var i = 0; i < allClasses.length; i++)
+    {
+        var p = document.createElement("p");
+        var text = document.createTextNode(allClasses[i]);
+        p.appendChild(text);
+        document.getElementById("classInfo").appendChild(p);
+    }
+}
+function sortByGrade()
+{
+
+}
