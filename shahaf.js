@@ -102,11 +102,19 @@ function orderByGrade()
 
 function sortBySubject()
 {
+    var allClasses = su18c.concat(f18c, sp19c, su19c, f19c);
+    var allGrades = su18g.concat(f18g, sp19g,su19g, f19g);
     if(!($('.classInfo').is(':empty'))) //check if the div of classInfo is empry using JQuery
     {
         document.getElementById("classInfo").innerHTML = ""; // clean everything from that div
     }
-
+    for(var j = 0; j < distAllSubjects.length; j++)
+    {
+        for(var k = 0; k < allClasses.length; k++)
+        {
+            
+        }
+    }
     
 
     distAllSubjects.sort(); //sorting the distict list of all subjects alphabetically
