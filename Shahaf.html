@@ -35,120 +35,46 @@
         </p>
         </div>
         
-        <!-- HISTORY Collapse-->
-        <button type = "button" class = " btn btn-info" data-toggle = "collapse" data-target = "#history_div"> Background </button>
+        <!-- BACKGROUND Collapse-->
+        <button type = "button" class = " btn btn-primary" data-toggle = "collapse" data-target = "#history_div"> Background </button>
         <div id = "history_div" class = "collapse info_div">
             My History<br>
             first part: time line with hover options<br>
             seconds part: paragraphs about myself <br>
-            <div class = "row">
-                <div class = "col-md-12">
-                    <div class = "main-timeline8">
-                        <!-- begining of a time line section -->
-                        <div class = "timeline">
-                            <span class = "timeline-content"></span>
-                            <span class = "year">February 2000</span>
-                            <div class = "timeline-content">
-                                <h3 class = "title">Date of birth</h3>
-                                <p class = "decription">
-                                    Born in the city of Be'er Yaakov, Israel on February 25th, 2000.
-                                </p>
+            <div class = "container">
+                <div class = "row">
+                    <div class = "col-md-offset-2 col-md-8 col-sm-12">
+                        <div class = "main-timeline">
+                            <div class = "timeline">
+
                             </div>
                         </div>
-                        <!-- End of a timeline section -->
-                        <div class = "timeline">
-                            <span class = "timeline-content"></span>
-                            <span class = "year">August 2012</span>
-                            <div class = "timeline-content">
-                                <h3 class = "title">Beginnig of middle school: 7th grade</h3>
-                                <p class = "decription">
-                                    Attended MOR middle school as a student in the Honors program called AMAT, in which I was given the priveledge to take more classes and enrich my knowledge in physics, biology, math and computer science.
-                                    <br> In the 7th grade, I started learning scratch and started building my own projects
-                                </p>
-                            </div>
-                        </div>
-                        <!---->
-                        <div class = "timeline">
-                            <span class = "timeline-content"></span>
-                            <span class = "year">June 2013</span>
-                            <div class = "timeline-content">
-                                <h3 class = "title">End of 7th grade</h3>
-                                <p class = "decription">
-                                    Finished 7th grade with the first student of the program to graduate 7th grade with an average grade greater than 97% - over excellence award. 
-                                </p>
-                            </div>
-                        </div>
-                        <!---->
-                        <div class = "timeline">
-                            <span class = "timeline-content"></span>
-                            <span class = "year">September 2013</span>
-                            <div class = "timeline-content">
-                                <h3 class = "title">Beginnig of 8th grade</h3>
-                                <p class = "decription">
-                                    Continued the AMAT honors program, with more emphasis on computer science and mathematics.
-                                    <br> As part of the program, I started learning about front end languages for the web such as HTML, CSS and JavaScript 
-                                </p>
-                            </div>
-                        </div>
-                        <!---->
-                        <div class = "timeline">
-                            <span class = "timeline-content"></span>
-                            <span class = "year">June 2014</span>
-                            <div class = "timeline-content">
-                                <h3 class = "title">End of 8th grade</h3>
-                                <p class = "decription">
-                                    Graduted the second year of the honors AMAT program, with an average grade of 97.4% and recived the over excellence award for the second time in a row.
-                                </p>
-                            </div>
-                        </div>
-                        <!---->
-                        <div class = "timeline">
-                            <span class = "timeline-content"></span>
-                            <span class = "year">September 2014</span>
-                            <div class = "timeline-content">
-                                <h3 class = "title">Beginning of 9th grade</h3>
-                                <p class = "decription">
-                                   Started the third and last year of middle school and part of the honors AMAT program. With emphasis on physics, mathematics, biology, and computer science, I started learning about messages encryptions and cyber security.
-                                   <br> Through out the year I was tested and examined for potential paths in high school and the mandatory serving in the military. 
-                                </p>
-                            </div>
-                        </div>
-                         <!---->
-                         <div class = "timeline">
-                                <span class = "timeline-content"></span>
-                                <span class = "year">June 2015</span>
-                                <div class = "timeline-content">
-                                    <h3 class = "title">End of 9th grade - end of middle school</h3>
-                                    <p class = "decription">
-                                       Finished my third and last year of middle school and the AMAT honors program and became the first student in the program to gradute three years in a row with an average grade greater than 97% and the over-excellence award.
-                                       <br> Was destined to study physics and software engineering with emphasis on cyber in high school and to transfer into an elite computer science and cyber secutirty unit in the intelligence branch of the Israeli military as part of my 3-year mandatory serving.
-                                    </p>
-                                </div>
-                            </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
         <br><br>
         <!-- EDUCATION Collapse-->
         <button type = "button" class = " btn btn-primary" data-toggle = "collapse" data-target = "#education_div"> Education </button>
         <div id = "education_div" class = "collapse info_div">
-            <h3>Las Positas Class</h3>
-            <script src = "shahaf.js" type = "text/javaScript"></script>
-            <script>
-                //showClasses();
-            </script>
-            <button type = "button" class = "btn btn-primary sortBtn" onclick = "sortAlphabetically()">Alphabetically</button>
-            <button type = "button" class = "btn btn-primary sortBtn" onclick = "orderByGrade()"> By Grade </button>
-            <button type = "button" class = "btn btn-primary sortBtn" onclick = "sortBySubject()"> By Term </button>
-            <div class = "classInfo" id = "classInfo"></div>
+            <div class = "lpc" id = "lpc">
+                <h3>Las Positas Class</h3>
+            </div>
+            <div class = "ghs" id = "ghs">
+                <h3>Granada High Shcool</h3>
+            </div>
+            <div class = "MOR" id = "MOR">
+                <h3>MOR High School</h3>
+            </div>
+            
             
         </div>
 
         <br><br>
         <!-- EXEPRIENCE & KNOWLEDGE Collapse-->
-        <button type = "button" class = " btn btn-success" data-toggle = "collapse" data-target = "#knowledge_div"> Experience </button>
+        <button type = "button" class = " btn btn-primary" data-toggle = "collapse" data-target = "#knowledge_div"> Experience </button>
         <div id = "knowledge_div" class = "collapse info_div">
             <div class = "exp" id = "exp_div">
                 <h2 class = "title"> <u>Experience</u> </h2>
