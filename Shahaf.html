@@ -20,13 +20,18 @@
         <div class = "header">
         <h2 class = "nameText"> Shahaf Dan </h2>
         <h4>Web and software full stack developer from the Bay Area<br> Computer science 2nd year student at Las Positas College </h4>
-        <br>
+        
+       
         <button type = "button" class = "btn btn-outline-secondary" onclick = "open_view_resume()">View My Resume (JPG)</button>
 
             &nbsp; &nbsp; &nbsp;
 
         <button type = "button" class = "btn btn-outline-danger" onclick = "open_dnld_resume()">Download My Resume (PDF)</button>
        <br><br>
+       <div class = "imgContainer">
+            <img id = "imgBanner" class = "imgBanner shadow-lg p-3" src = "" alt = "" />
+        </div>
+        <br>
         
         </div>
         
@@ -173,6 +178,30 @@
         <!-- JavaScript code here -->
         <script src = "shahaf.js" type = "text/JavaScript"></script>
         <script type = "text/JavaScript">
+
+            var picPaths = ['shahaf-pics/off-pic-1.jpeg','shahaf-pics/off-pic-3.jpeg','shahaf-pics/pic-4.jpeg','shahaf-pics/off-pic-2.jpeg','shahaf-pics/pic-5.jpeg'];            
+            var curPic = -1;
+
+            //preload the images for smooth animation;
+            var img0 = new Array();
+            for(var i = 0; i < picPaths.length; i++)
+            {
+                img0[i] = new Image();
+                img0[i].src = picPaths[i];
+            }
+
+            function swapImage()
+            {
+                curPic = (++curPic > picPaths.length - 1)? 0: curPic;
+                imgCont.src = img0[curPic].src;
+                setTimeout(swapImage, 3500);
+            }
+
+            window.onload = function()
+            {
+                imgCont = document.getElementById('imgBanner');
+                swapImage();
+            }
             function open_view_resume()
             {
                 window.open("resumes/ShahafResume.jpg");
