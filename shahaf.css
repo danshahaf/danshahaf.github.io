@@ -16,7 +16,8 @@
 .inner-content{text-align: left !important; margin-left: 7% !important;}
 .imgContainer{text-align: center !important; margin-right: 15% !important; margin-left: 15% !important;}
 .imgBanner{height: 25%; border-radius: 4px; border: 1px solid black;}
-
+.fa{padding-top: 25% !important;}
+.vid{border: 1px solid black; border-radius: 3px !important;}
 
 /* .exp{float:left; width: 20%; margin: 2px; padding: 2px; text-align: center !important;}
 .knwld{float:right; width: 20%; margin: 2px; padding: 2px; text-align: center !important;}

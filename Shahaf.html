@@ -12,6 +12,9 @@
         <!-- Bootstrap for JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+        <!-- Bootstrap for CSS Icon -->
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
         <!-- API's website: https://funnel.io/data-sources -->
     </head>
 
@@ -46,7 +49,7 @@
                             <div class = "timeline">
                                 <a hred = "#" class = "timeline-content">
                                     <div class = "timeline-icon">
-                                        <i class = "fa fa-users"></i>
+                                        <i class = "fa fa-code"></i>
                                     </div>
                                     <div class = "inner-content">
                                         <h3 class = "title"> Web Developer Intern </h3>
@@ -63,7 +66,7 @@
                             <div class = "timeline">
                                     <a hred = "#" class = "timeline-content">
                                         <div class = "timeline-icon">
-                                            <i class = "fa fa-users"></i>
+                                            <i class = "fa fa-database"></i>
                                         </div>
                                         <div class = "inner-content">
                                             <h3 class = "title"> SQL Server Database Administrator </h3>
@@ -159,6 +162,12 @@
                     <li class = "list-group-item"><img src = "Logos/wordpress-logo.png" class = "logo-img"></li>
                 </ul>
             </div>
+
+
+            <!-- INSERTION ON TIMELAPSE VIDEO GALLERY -->
+            <iframe id = "vid" class = "embed-responsive-item vid" src = "shahaf-pics/vid-1.mp4" allowfullscreen></iframe>
+             
+       
         </div>
         <br><br>
         <!-- CONTACT ME Collapse-->
@@ -170,9 +179,6 @@
                 <strong><u> GitHub:</u></strong> &nbsp; &nbsp; <button type = "button" class = "btn LinkedIn-btn" onclick = "open_GitHub()"><img src = "Logos/GitHub-logo.svg" class = "LinkedIn-img"></button><br></h4>
         </div>
         <br><br><br>
-
-    
-        <br><br>
         
     
         <!-- JavaScript code here -->
@@ -182,14 +188,19 @@
             var picPaths = ['shahaf-pics/off-pic-1.jpeg','shahaf-pics/off-pic-3.jpeg','shahaf-pics/pic-4.jpeg','shahaf-pics/off-pic-2.jpeg','shahaf-pics/pic-5.jpeg'];            
             var curPic = -1;
 
-            //preload the images for smooth animation;
+            var movPaths = ['shahaf-pics/mov-1.MOV','shahaf-pics/mov-2.MOV'];
+            
+            //preload the images and movies for smooth animation;
             var img0 = new Array();
+
             for(var i = 0; i < picPaths.length; i++)
             {
                 img0[i] = new Image();
                 img0[i].src = picPaths[i];
+                
             }
 
+           
             function swapImage()
             {
                 curPic = (++curPic > picPaths.length - 1)? 0: curPic;
