@@ -1,5 +1,5 @@
 /** Design this to fit in both an iphone pixel size and a computer screen pixel size **/
-.body{text-align: center; background-image: linear-gradient(to right, #787440, #B5AE59) !important;}
+.body{text-align: center; background-image: linear-gradient(to right, #EDC877, #F5E3BC) !important;}
 .btn {border: 0.5px solid black !important; width: 40% !important;}
 .header{text-align: center; float: middle !important; margin-right: 7%; margin-left: 7%; padding-right: 8%; padding-left:8%;}
 .btn-outline-danger{color:red!important; border: 0.5px solid red !important;}
