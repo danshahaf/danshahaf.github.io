@@ -1,0 +1,243 @@
+<html> <!-- ALT + B to run in an oepn browser-->
+    <head>
+        <title> Shahaf Dan </title>
+        <link rel="shortcut icon" href="Logos/s-logo.jpg"/>
+
+        <!-- Bootstrap for CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel = "stylesheet" type = "text/css" href = "shahaf.css">
+
+        <!-- Bootstrap for JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Bootstrap for JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <!-- Bootstrap for CSS Icon -->
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+        <!-- API's website: https://funnel.io/data-sources -->
+    </head>
+
+    <body class = "body">
+        
+        <div class = "header">
+        <h2 class = "nameText"> Shahaf Dan </h2>
+        <p> <strong> Page built by Shahaf Dan </strong> </p> <br>
+        <h4> »    Web and software full stack developer from the Bay Area<br><br> »    Computer science 2nd year student at Las Positas College 
+        <br><br> »    A passionate programmer who always loves to leanr more<br> and expands the borders of his knowledge
+        <br><br> »    My goal in always to learn more and enrich my knowledge, while <br>using my skills  to contribute to my community and surroundings</h4>
+        
+       
+        <button type = "button" class = "btn btn-outline-secondary" onclick = "open_view_resume()">View My Resume (JPG)</button>
+
+            &nbsp; &nbsp; &nbsp;
+
+        <button type = "button" class = "btn btn-outline-danger" onclick = "open_dnld_resume()">Download My Resume (PDF)</button>
+       <br><br>
+       <div class = "imgContainer">
+            <img id = "imgBanner" class = "imgBanner shadow-lg p-3" src = "" alt = "" />
+        </div>
+        <br>
+        
+        </div>
+        
+        <!-- BACKGROUND Collapse-->
+        <button type = "button" class = " btn btn-primary" data-toggle = "collapse" data-target = "#history_div"> Experience </button>
+        <div id = "history_div" class = "collapse info_div">
+            <br>
+            <div class = "container">
+                <div class = "row">
+                    <div class = "col-md-offset-2 col-md-8 col-sm-12">
+                        <div class = "main-timeline">
+                            <div class = "timeline">
+                                <a hred = "#" class = "timeline-content">
+                                    <div class = "timeline-icon">
+                                        <i class = "fa fa-code"></i>
+                                    </div>
+                                    <div class = "inner-content">
+                                        <h3 class = "title"> Web Developer Intern </h3>
+                                        <p> <strong> Sep. 2018 - Apr. 2019  |  Amber Systems Technologies  |  Pleasanton, CA </strong> </p> 
+                                        <p class = "description">
+                                             » HTML, CSS, JavaScript, Bootstrap and jQuery Front End Developer <br>
+                                             » PHP and PostgreSQL records of money transaction and information <br> 
+                                             » Developed website templates for clients 
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- ---------------- -->
+                            <div class = "timeline">
+                                    <a hred = "#" class = "timeline-content">
+                                        <div class = "timeline-icon">
+                                            <i class = "fa fa-database"></i>
+                                        </div>
+                                        <div class = "inner-content">
+                                            <h3 class = "title"> SQL Server Database Administrator </h3>
+                                            <p> <strong> Jun. 2019 - Aug. 2019  |  FindingGenius Startup   |  San Ramon, CA </strong> </p> 
+                                            <p class = "description">
+                                                 » Used wpDatatables wordpress plugin to connect to a MySQL database <br>
+                                                 » Manipulated large amounts of information and data in SQL <br>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <br><br>
+        <!-- EDUCATION Collapse-->
+        <button type = "button" class = " btn btn-primary" data-toggle = "collapse" data-target = "#education_div"> Education </button>
+        <div id = "education_div" class = "collapse info_div">
+            <div class = "lpc edu" id = "lpc">
+                <h3>Las Positas Class</h3>
+                <p> <strong> Livermore, CA | Jun. 2018  -  Present </strong> </p>
+                <p>
+                    Currently hold a GPA of 3.72 - Second Year Computer Science Student. <br>
+                    President of Chess Club, Vice President of Computer Science Club. <br>
+                    Director of Events in the Student Government Body. <br>
+                    Study lower division computer science.
+                    
+                </p>
+            </div>
+            <br><br>
+            <div class = "ghs edu" id = "ghs">
+                <h3>Granada High Shcool</h3>
+                <p> <strong> Livermore, CA | Aug. 2015  -  Jun. 2018 </strong> </p>
+                <p>
+                    Graduated with a GPA of 4.2, as an honors student.
+                    Focused on studying computer science and computational physics.
+                </p>
+            </div>
+            <br><br>
+            <div class = "MOR edu" id = "MOR">
+                <h3>MOR Middle School</h3>
+                <p> <strong> Modi'in, Israel | Aug. 2012  -  Jun. 2015 </strong> </p>
+                <p>
+                    Graduated the AMAT honors program with an average grade of 97% three years in a row. <br>
+                    Was destined to enter a software engineering program of the Israeli military.
+                </p>
+            </div>
+            
+            
+            
+        </div>
+
+        <br><br>
+        <!-- EXEPRIENCE & KNOWLEDGE Collapse-->
+        <button type = "button" class = " btn btn-primary" data-toggle = "collapse" data-target = "#knowledge_div"> Technical Skills </button>
+        <div id = "knowledge_div" class = "collapse info_div">
+            <!-- <div class = "exp" id = "exp_div">
+                <h2 class = "title"> <u>Experience</u> </h2>
+                
+            </div> -->
+            
+            <div class = "kwnld" id = "knd_div">
+                <h2 class = "title"><u> Technical Knowledge & Skills </u></h2>
+                <div class = "front-end">
+                    <h4> Front End </h4>
+                    <ul class = "list-group">
+                        <li class = "list-group-item"><img src = "Logos/html-logo.png" class = "logo-img">   <img src = "Logos/css-logo.png" class = "logo-img"> <img src = "Logos/javascript-logo.jpg" class = "logo-img"></li>
+                        <li class = "list-group-item"><img src = "Logos/react-logo.png" class = "logo-img"></li>
+                        <li class = "list-group-item"><img src = "Logos/bootstrap-logo.png" class = "logo-img"> &nbsp;&nbsp; &nbsp; &nbsp; <img src = "Logos/jquery-logo.png" class = "logo-img"></li>
+                        <li class = "list-group-item"><img src = "Logos/swift-logo.png" class = "logo-img"></li>
+                        <li class = "list-group-item"><img src = "Logos/angularjs-logo.svg" class = "logo-img"></li>
+                    </ul>
+                </div>
+                <div class = "back-end">
+                        <h4> Back End </h4>
+                        <ul class = "list-group">
+                            <li class = "list-group-item"><img src = "Logos/java-logo.png" class = "logo-img">&nbsp; &nbsp; &nbsp; &nbsp;<img src = "Logos/jsp-logo.png" class = "logo-img"></li>
+                            <li class = "list-group-item"><img src = "Logos/nodejs-logo.png" class = "logo-img"></li>
+                            <li class = "list-group-item"><img src = "Logos/c++-logo.png" class = "logo-img"></li>
+                            <li class = "list-group-item"><img src = "Logos/php-logo.png" class = "logo-img"></li>
+                            <li class = "list-group-item"><img src = "Logos/mysql-logo.png" class = "logo-img"></li>
+                        </ul>
+                    </div>
+            </div>
+
+            <br><br>
+            <div class = "other-exps">
+                <h4> Other Experties </h4>
+                <ul class = "list-group">
+                    <li class = "list-group-item"><img src = "Logos/word-logo.svg" class = "logo-img"> &nbsp; &nbsp; <img src = "Logos/powerpoint-logo.svg" class = "logo-img"> &nbsp; &nbsp; <img src = "Logos/excel-logo.svg" class = "logo-img"></li> 
+                    <li class = "list-group-item"><img src = "Logos/linux-logo.jpg" class = "logo-img"> &nbsp; &nbsp; <img src = "Logos/ubuntu-logo.png" class = "logo-img"> &nbsp; &nbsp; <img src = "Logos/vmware-logo.webp" class = "logo-img"></li>
+                    <li class = "list-group-item"><img src = "Logos/wordpress-logo.png" class = "logo-img"></li>
+                </ul>
+            </div>
+
+
+            <!-- INSERTION ON TIMELAPSE VIDEO GALLERY -->
+            <iframe id = "vid" class = "embed-responsive-item vid" src = "shahaf-pics/vid-1.mp4" allowfullscreen></iframe>
+             
+       
+        </div>
+        <br><br>
+        <!-- CONTACT ME Collapse-->
+        <button type = "button" class = " btn btn-warning" data-toggle = "collapse" data-target = "#contact_div"> Contact Me </button>
+        <div id = "contact_div" class = "collapse info_div">
+            <h4><strong><u> Gmail:</u></strong> &nbsp;  dan.shachaf@gmail.com <br><br>
+            <strong><u>Mobile:</u></strong> &nbsp;  (925) 791 - 1544</h4>
+            <h4><strong><u> LinkedIn:</u></strong> &nbsp; &nbsp; <button type = "button" class = "btn LinkedIn-btn" onclick = "open_LinkedIn()"><img src = "Logos/linkedIn-logo.png" class = "LinkedIn-img"></button> &nbsp; &nbsp; &nbsp; &nbsp;
+                <strong><u> GitHub:</u></strong> &nbsp; &nbsp; <button type = "button" class = "btn LinkedIn-btn" onclick = "open_GitHub()"><img src = "Logos/GitHub-logo.svg" class = "LinkedIn-img"></button><br></h4>
+        </div>
+        <br><br><br>
+        
+    
+        <!-- JavaScript code here -->
+        <script src = "shahaf.js" type = "text/JavaScript"></script>
+        <script type = "text/JavaScript">
+
+            var picPaths = ['shahaf-pics/off-pic-1.jpeg','shahaf-pics/off-pic-3.jpeg','shahaf-pics/pic-4.jpeg','shahaf-pics/off-pic-2.jpeg','shahaf-pics/pic-5.jpeg'];            
+            var curPic = -1;
+
+            var movPaths = ['shahaf-pics/mov-1.MOV','shahaf-pics/mov-2.MOV'];
+            
+            //preload the images and movies for smooth animation;
+            var img0 = new Array();
+
+            for(var i = 0; i < picPaths.length; i++)
+            {
+                img0[i] = new Image();
+                img0[i].src = picPaths[i];
+                
+            }
+
+           
+            function swapImage()
+            {
+                curPic = (++curPic > picPaths.length - 1)? 0: curPic;
+                imgCont.src = img0[curPic].src;
+                setTimeout(swapImage, 3500);
+            }
+
+            window.onload = function()
+            {
+                imgCont = document.getElementById('imgBanner');
+                swapImage();
+            }
+            function open_view_resume()
+            {
+                window.open("resumes/ShahafResume.jpg");
+            }
+            function open_dnld_resume()
+            {
+                window.open("resumes/ShahafDan.pdf");
+            }
+            function open_LinkedIn()
+            {
+                window.open("https://www.linkedin.com/in/shahaf-dan-66812b180/");
+            }
+            function open_GitHub()
+            {
+                window.open("https://github.com/ShahafDan25");
+            }
+        </script>
+    </body>
+</html>
+
+    
