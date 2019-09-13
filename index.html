@@ -192,14 +192,15 @@
             <strong><u>Mobile:</u></strong> &nbsp;  (925) 791 - 1544</h4>
             <h4><strong><u> LinkedIn:</u></strong> &nbsp; &nbsp; <button type = "button" class = "btn LinkedIn-btn" onclick = "open_LinkedIn()"><img src = "Logos/linkedIn-logo.png" class = "LinkedIn-img"></button> &nbsp; &nbsp; &nbsp; &nbsp;
                 <strong><u> GitHub:</u></strong> &nbsp; &nbsp; <button type = "button" class = "btn LinkedIn-btn" onclick = "open_GitHub()"><img src = "Logos/GitHub-logo.svg" class = "LinkedIn-img"></button><br></h4>
-            <h4> <strong>Shoot me an Email! </strong> <button type = "button" class = "btn gmail-btn"data-toggle = "collapse" data-target = "#email_div" onclick = "send_email()"><img src = "Logos/gmail-logo.png" class = "gmail-img"></button> </h4>
+            <h4> <strong>Shoot me an Email! </strong> <button type = "button" class = "btn gmail-btn" data-toggle = "collapse" data-target = "#email_div" ><img src = "Logos/gmail-logo.png" class = "gmail-img"></button> </h4>
                 <br>
             <!-- Open this div when email img is clicked -->
             <div id = "email_div" class = "collapse email-div">
-                From: &nbsp; &nbsp; <input type = "text" placeholder = " Your Email Address"class = "email-sender-input"> <br><br>
+                From: &nbsp; &nbsp; <input type = "text" id = "from_email" placeholder = " Your Email Address"class = "email-sender-input"> <br><br>
+                <input type = "text" class = "subject" id = "subjectIntro" placeholder="Message Subject"><br><br>
                 <textarea class = "email-body form-control" id = "email-body" rows = "7"></textarea>
                 <br>
-                <button type = "button" class = "btn btn-outline-danger send" id = "send-email-btn"> Send this email!</button>
+                <button type = "button" class = "btn btn-outline-primary send" id = "send-email-btn" onclick = "send_email()"> Send this email!</button>
             </div>
         </div>
         <br><br><br>
@@ -253,29 +254,58 @@
             {
                 window.open("https://github.com/ShahafDan25");
             }
+            function send_email()
+            {
 
-            $.ajax({
-                type: “POST”,
+                var x = document.getElementById("from_email").value.length == 0;
+                if(x)
+                {
+                    alert ("Enter your email address");
+                    document.getElementById("from_email").style.border = "0.6px solid red";
+                }
+                var y = document.getElementById("email-body").value.length == 0;
+                if(y)
+                {
+                    alert("Write something as your messgae, please");
+                    document.getElementById("email-body").style.border = "0.6px solid red";
+ 
+                }
+                var t = document.getElementById("messageIntro").value.length == 0;
+                if(t)
+                {
+                    alert("Come up with a message title");
+                    document.getElementById("subjectIntro").style.border = "0.6px solid red";
+ 
+                }
+
+                if(!t && !y && !x)
+                {
+                    alert("Message  Sent! Thank You!");
+                    $.ajax({
+                    type: “POST”,
                     url: “https://mandrillapp.com/api/1.0/messages/send.json”,
                     data: {
                         ‘key’: ‘YOUR API KEY HERE’,
                         ‘message’: {
-                        ‘from_email’: ‘YOUR@EMAIL.HERE’,
+                        ‘from_email’: document.getElementById("from_email"),
                         ‘to’: [
                             {
-                            ‘email’: ‘RECIPIENT_NO_1@EMAIL.HERE’,
-                            ‘name’: ‘RECIPIENT NAME (OPTIONAL)’,
+                            ‘email’: ‘dan.shachaf@gmail.com’,
+                            ‘name’: ‘Shahaf’,
                             ‘type’: ‘to’
                             },
                         ],
                     ‘autotext’: ‘true’,
-                    ‘subject’: ‘YOUR SUBJECT HERE!’,
-                    ‘html’: ‘YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!’
+                    ‘subject’: document.getElementById("subjectIntro"),
+                    ‘html’: document.getElementById("email-body")
                         }
                     }
                     }).done(function(response) {
                         console.log(response); // if you're into that sorta thing
                     });
+            
+                }
+            }
             
         </script>
     </body>
