@@ -62,12 +62,12 @@
                                         <i class = "fa fa-code"></i>
                                     </div>
                                     <div class = "inner-content">
-                                        <h3 class = "title"> Web Developer Intern </h3>
+                                        <h3 class = "title"> Full Stack Web Developer Intern </h3>
                                         <p> <strong> Sep. 2018 - Apr. 2019  |  Amber Systems Technologies  |  Pleasanton, CA </strong> </p> 
                                         <p class = "description">
-                                             » HTML, CSS, JavaScript, Bootstrap and jQuery Front End Developer <br>
-                                             » PHP and PostgreSQL records of money transaction and information <br> 
-                                             » Developed website templates for clients 
+                                             » Developed Front End Templates using HTML, CSS, JavaScript, Bootstrap API and jQuery  <br>
+                                             » Constructed Back End Programs in PHP along with the Front End Applications <br> 
+                                             » Managed and Manipulated data from clients using PostgreSQL databases and AJAX database connectivity.
                                         </p>
                                     </div>
                                 </a>
@@ -84,6 +84,8 @@
                                             <p class = "description">
                                                  » Used wpDatatables wordpress plugin to connect to a MySQL database <br>
                                                  » Manipulated large amounts of information and data in SQL <br>
+                                                 » Constructed Bakcend Programs in Java, using JavaServer Pages (JSP) <br>
+                                                 » Connected Java JSP code to SQL databases using JDBC connectivity. <br>
                                             </p>
                                         </div>
                                     </a>
@@ -186,10 +188,19 @@
         <!-- CONTACT ME Collapse-->
         <button type = "button" class = " btn btn-warning" data-toggle = "collapse" data-target = "#contact_div"> Contact Me </button>
         <div id = "contact_div" class = "collapse info_div">
-            <h4><strong><u> Gmail:</u></strong> &nbsp;  dan.shachaf@gmail.com <br><br>
+            <h4><strong><u> Email:</u></strong> &nbsp;  dan.shachaf@gmail.com <br><br>
             <strong><u>Mobile:</u></strong> &nbsp;  (925) 791 - 1544</h4>
             <h4><strong><u> LinkedIn:</u></strong> &nbsp; &nbsp; <button type = "button" class = "btn LinkedIn-btn" onclick = "open_LinkedIn()"><img src = "Logos/linkedIn-logo.png" class = "LinkedIn-img"></button> &nbsp; &nbsp; &nbsp; &nbsp;
                 <strong><u> GitHub:</u></strong> &nbsp; &nbsp; <button type = "button" class = "btn LinkedIn-btn" onclick = "open_GitHub()"><img src = "Logos/GitHub-logo.svg" class = "LinkedIn-img"></button><br></h4>
+            <h4> <strong>Shoot me an Email! </strong> <button type = "button" class = "btn gmail-btn"data-toggle = "collapse" data-target = "#email_div" onclick = "send_email()"><img src = "Logos/gmail-logo.png" class = "gmail-img"></button> </h4>
+                <br>
+            <!-- Open this div when email img is clicked -->
+            <div id = "email_div" class = "collapse email-div">
+                From: &nbsp; &nbsp; <input type = "text" placeholder = " Your Email Address"class = "email-sender-input"> <br><br>
+                <textarea class = "email-body form-control" id = "email-body" rows = "7"></textarea>
+                <br>
+                <button type = "button" class = "btn btn-outline-danger send" id = "send-email-btn"> Send this email!</button>
+            </div>
         </div>
         <br><br><br>
         
@@ -242,6 +253,30 @@
             {
                 window.open("https://github.com/ShahafDan25");
             }
+
+            $.ajax({
+                type: “POST”,
+                    url: “https://mandrillapp.com/api/1.0/messages/send.json”,
+                    data: {
+                        ‘key’: ‘YOUR API KEY HERE’,
+                        ‘message’: {
+                        ‘from_email’: ‘YOUR@EMAIL.HERE’,
+                        ‘to’: [
+                            {
+                            ‘email’: ‘RECIPIENT_NO_1@EMAIL.HERE’,
+                            ‘name’: ‘RECIPIENT NAME (OPTIONAL)’,
+                            ‘type’: ‘to’
+                            },
+                        ],
+                    ‘autotext’: ‘true’,
+                    ‘subject’: ‘YOUR SUBJECT HERE!’,
+                    ‘html’: ‘YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!’
+                        }
+                    }
+                    }).done(function(response) {
+                        console.log(response); // if you're into that sorta thing
+                    });
+            
         </script>
     </body>
 </html>

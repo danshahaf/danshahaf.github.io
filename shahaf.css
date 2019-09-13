@@ -5,6 +5,8 @@
 .btn-outline-danger{color:red!important; border: 0.5px solid red !important;}
 .LinkedIn-btn{width: 5% !important; padding-top: 100% !important; padding: 2px !important;}
 .LinkedIn-img{height: 90%; width: 90%;}
+.gmail-btn{width:5% !important; padding-top: 100% !important; padding: 2px !important; border-radius: 150px !important;}
+.gmail-img{width: 100%; height: 120%; border-radius: 150% !important;}
 .logo-bigger-img{margin: 1% !important; padding: 2% !important; height: 9% !important; padding-top: 100%;}
 .list-group-item{border: 1px solid black; text-align: center;}
 .list-group{text-align: center !important; margin-right: 10% !important; margin-left: 10% !important;}
@@ -17,8 +19,11 @@
 .imgContainer{text-align: center !important; margin-right: 15% !important; margin-left: 15% !important;}
 .imgBanner{height: 25%; border-radius: 4px; border: 1px solid black;}
 .fa{padding-top: 25% !important;}
-.vid{border: 1px solid black; border-radius: 3px !important;}
-
+.vid{border: 1px solid black; border-radius: 3px !important;  }
+textarea{ text-align: center !important;   border: 0.8px solid black !important; border-radius: 3px;}
+.email-div{ margin-right: 15% !important; margin-left: 15% !important;}
+.send{margin-right: 20% !important; margin-left: 20% !important;}
+.email-sender-input{text-align: center; border: 0.6px solid black; border-radius: 4px; padding: 3px;}
 /* .exp{float:left; width: 20%; margin: 2px; padding: 2px; text-align: center !important;}
 .knwld{float:right; width: 20%; margin: 2px; padding: 2px; text-align: center !important;}
 #knowledge_div{text-align: center !important;} */
