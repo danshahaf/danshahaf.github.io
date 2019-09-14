@@ -192,9 +192,11 @@
             <strong><u>Mobile:</u></strong> &nbsp;  (925) 791 - 1544</h4>
             <h4><strong><u> LinkedIn:</u></strong> &nbsp; &nbsp; <button type = "button" class = "btn LinkedIn-btn" onclick = "open_LinkedIn()"><img src = "Logos/linkedIn-logo.png" class = "LinkedIn-img"></button> &nbsp; &nbsp; &nbsp; &nbsp;
                 <strong><u> GitHub:</u></strong> &nbsp; &nbsp; <button type = "button" class = "btn LinkedIn-btn" onclick = "open_GitHub()"><img src = "Logos/GitHub-logo.svg" class = "LinkedIn-img"></button><br></h4>
-            <h4> <strong>Shoot me an Email! </strong> <button type = "button" class = "btn gmail-btn" data-toggle = "collapse" data-target = "#email_div" ><img src = "Logos/gmail-logo.png" class = "gmail-img"></button> </h4>
+            <!-- <h4> <strong>Shoot me an Email! </strong> <button type = "button" class = "btn gmail-btn" data-toggle = "collapse" data-target = "#email_div" ><img src = "Logos/gmail-logo.png" class = "gmail-img"></button> </h4> -->
                 <br>
-            <!-- Open this div when email img is clicked -->
+            <!-- Open this div when email img is clicked: COMMENTED OUT FOR NOW, FINISH LATER -->
+
+            <!--
             <div id = "email_div" class = "collapse email-div">
                 From: &nbsp; &nbsp; <input type = "text" id = "from_email" placeholder = " Your Email Address" class = "email-sender-input"> &nbsp; &nbsp; &nbsp; &nbsp;
                 <input type = "text" class = "subject" id = "subjectIntro" placeholder="Message Subject"><br><br>
@@ -202,6 +204,7 @@
                 <br>
                 <button type = "button" class = "btn btn-outline-danger send" id = "send-email-btn" onclick = "sendEmail()"> Send this email!</button>
             </div>
+        -->
         </div>
         <br><br><br>
         
@@ -261,13 +264,16 @@
         <script type = "text/javascript">
         function sendEmail()
         {
-
+             
             Email.send({
-                SecureToken:'35836cdf-de4a-48ab-9ec2-881ef4b0c909',
+                SecureToken:'5659d736-6bc5-4d73-a2ee-a0835e344417',
                 To: "dan.shachaf@gmail.com",
-                From: document.getElementById("from_email").value,
-                Subject: document.getElementById("subjectIntro").value,
-                Body: document.getElementById("email-body").value
+                //From: document.getElementById("from_email").value,
+                //Subject: document.getElementById("subjectIntro").value,
+                //Body: document.getElementById("email-body").value
+                From: "dan.shachaf@gmail.com",
+                Subject: "This is a test",
+                Body: "Hello World Email Test"
             }).then(
                 message => alert("Message Sent Succesfully, Thank You!")
             );
