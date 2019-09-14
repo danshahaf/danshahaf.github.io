@@ -24,7 +24,7 @@ textarea{ text-align: center !important;   border: 0.8px solid black !important;
 .email-div{ margin-right: 15% !important; margin-left: 15% !important;}
 .send{margin-right: 20% !important; margin-left: 20% !important;}
 .email-sender-input{text-align: center; border: 0.6px solid black; border-radius: 4px; padding: 3px;}
-.subject{text-align: center; border: 0.6px solid black !important; border-radius: 4px; }
+.subject{text-align: center; border: 0.6px solid black !important; border-radius: 4px; padding: 3px !important; width: 60% !important;}
 /* .exp{float:left; width: 20%; margin: 2px; padding: 2px; text-align: center !important;}
 .knwld{float:right; width: 20%; margin: 2px; padding: 2px; text-align: center !important;}
 #knowledge_div{text-align: center !important;} */

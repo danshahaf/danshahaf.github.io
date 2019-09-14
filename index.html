@@ -182,7 +182,7 @@
             <!-- INSERTION ON TIMELAPSE VIDEO GALLERY -->
             <iframe id = "vid" class = "embed-responsive-item vid" src = "shahaf-pics/vid-1.mp4" allowfullscreen></iframe>
              
-       
+       <!--35836cdf-de4a-48ab-9ec2-881ef4b0c909-->
         </div>
         <br><br>
         <!-- CONTACT ME Collapse-->
@@ -196,11 +196,11 @@
                 <br>
             <!-- Open this div when email img is clicked -->
             <div id = "email_div" class = "collapse email-div">
-                From: &nbsp; &nbsp; <input type = "text" id = "from_email" placeholder = " Your Email Address"class = "email-sender-input"> <br><br>
+                From: &nbsp; &nbsp; <input type = "text" id = "from_email" placeholder = " Your Email Address" class = "email-sender-input"> &nbsp; &nbsp; &nbsp; &nbsp;
                 <input type = "text" class = "subject" id = "subjectIntro" placeholder="Message Subject"><br><br>
                 <textarea class = "email-body form-control" id = "email-body" rows = "7"></textarea>
                 <br>
-                <button type = "button" class = "btn btn-outline-primary send" id = "send-email-btn" onclick = "send_email()"> Send this email!</button>
+                <button type = "button" class = "btn btn-outline-danger send" id = "send-email-btn" onclick = "sendEmail()"> Send this email!</button>
             </div>
         </div>
         <br><br><br>
@@ -254,60 +254,26 @@
             {
                 window.open("https://github.com/ShahafDan25");
             }
-            function send_email()
-            {
-
-                var x = document.getElementById("from_email").value.length == 0;
-                if(x)
-                {
-                    alert ("Enter your email address");
-                    document.getElementById("from_email").style.border = "0.6px solid red";
-                }
-                var y = document.getElementById("email-body").value.length == 0;
-                if(y)
-                {
-                    alert("Write something as your messgae, please");
-                    document.getElementById("email-body").style.border = "0.6px solid red";
- 
-                }
-                var t = document.getElementById("messageIntro").value.length == 0;
-                if(t)
-                {
-                    alert("Come up with a message title");
-                    document.getElementById("subjectIntro").style.border = "0.6px solid red";
- 
-                }
-
-                if(!t && !y && !x)
-                {
-                    alert("Message  Sent! Thank You!");
-                    $.ajax({
-                    type: “POST”,
-                    url: “https://mandrillapp.com/api/1.0/messages/send.json”,
-                    data: {
-                        ‘key’: ‘YOUR API KEY HERE’,
-                        ‘message’: {
-                        ‘from_email’: document.getElementById("from_email"),
-                        ‘to’: [
-                            {
-                            ‘email’: ‘dan.shachaf@gmail.com’,
-                            ‘name’: ‘Shahaf’,
-                            ‘type’: ‘to’
-                            },
-                        ],
-                    ‘autotext’: ‘true’,
-                    ‘subject’: document.getElementById("subjectIntro"),
-                    ‘html’: document.getElementById("email-body")
-                        }
-                    }
-                    }).done(function(response) {
-                        console.log(response); // if you're into that sorta thing
-                    });
-            
-                }
-            }
-            
         </script>
+
+    <!-- JavaScript code for smtp.js API for sending the email -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script type = "text/javascript">
+        function sendEmail()
+        {
+
+            Email.send({
+                SecureToken:'35836cdf-de4a-48ab-9ec2-881ef4b0c909',
+                To: "dan.shachaf@gmail.com",
+                From: document.getElementById("from_email").value,
+                Subject: document.getElementById("subjectIntro").value,
+                Body: document.getElementById("email-body").value
+            }).then(
+                message => alert("Message Sent Succesfully, Thank You!")
+            );
+        }
+        </script>
+
     </body>
 </html>
 
