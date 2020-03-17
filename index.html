@@ -39,7 +39,7 @@
 
             &nbsp; &nbsp; &nbsp;
 
-        <button type = "button" class = "btn btn-outline-danger" onclick = "open_dnld_resume()" download = "resumes/ShahafDan_Resume.pdf">Download My Resume (PDF)</button>
+        <button type = "button" class = "btn btn-outline-danger" onclick = "open_dnld_resume()" download = "docs/ShahafDan_Resume.pdf">Download My Resume (PDF)</button>
        <br><br>
        <div class = "imgContainer">
             <img id = "imgBanner" class = "imgBanner shadow-lg p-3" src = "" alt = "" />
@@ -169,14 +169,14 @@
                                 </p>
                                 <!-- TODO : Add Asbtracts later-->
                                 <!-- TODO: Add names of the projects after the strong tab-->
-                                <a> <strong>Physics: Electricity andg Magnetism: </strong></a><br>
-                                <a> <strong>Computer Science: Java Development: </strong></a><br>
-                                <a> <strong>Computer Science: Data Structures: </strong></a><br>
-                                <a> <strong>Math: Discrete Math Structures: </strong></a><br>
-                                <a> <strong>Computer Science: Database Programming: </strong></a><br>
-                                <a> <strong>Math: Differential Equations: </strong></a><br>
-                                <a> <strong>Computer Science: Capstone Project: </strong></a><br>
-                                <a> <strong>Physics: Quantum Mechanics: </strong></a><br>
+                                <p> <strong>Physics: Electricity andg Magnetism: </strong></p> <a href="docs/LinkNotAvail.pdf">Solar Panels: Efficiency, Mechanism, and Applications</a><br>
+                                <p> <strong>Computer Science: Java Development: </strong></p> <a href="docs/LinkNotAvail.pdf"> Web Development: Java, JSP's, and the JDBC Protocol</a><br>
+                                <p> <strong>Computer Science: Data Structures: </strong></p> <a href="docs/DataStruc_Abs.pdf">Dictionary Tree Structure</a><br>
+                                <p> <strong>Math: Discrete Math Structures: </strong></p> <a href="docs/LinkNotAvail.pdf">Hash Tables: Efficiency, Mechanism, and Applications</a><br>
+                                <p> <strong>Computer Science: Database Programming: </strong><p> <a href="docs/LinkNotAvail.pdf">Web Development: PHP, PDO, and Dynamic Front End</a><br>
+                                <p> <strong>Math: Differential Equations: </strong></p> <a href="docs/LinkNotAvail.pdf">Fourier's theorem and Transformation</a><br>
+                                <p> <strong>Computer Science: Capstone Project: </strong></p> <a href="docs/LinkNotAvail.pdf">The Market's Platform</a><br>
+                                <p> <strong>Physics: Quantum Mechanics: </strong></p> <a href="docs/LinkNotAvail.pdf">The Meissner's Effect</a><br>
 
                             </ul><br>
                             <!-- Dive Team -->
@@ -193,7 +193,9 @@
                     <button type = "button" class = "btn btn-info" id = "classes-btn" data-toggle="collapse" data-target="#classes-div"> Classes </button>
                     <div id = "classes-div" class = "collapse classes_div">
                         <h4> Organize By: </h4>
-                        <button> Name </button> &nbsp; &nbsp; <button> Subject </button> &nbsp; &nbsp; <button> Grade </button> 
+                        <button class = "btn btn-secondary"> Name </button> &nbsp; &nbsp; 
+                        <button class = "btn btn-secondary"> Subject </button> &nbsp; &nbsp; 
+                        <button class = "btn btn-secondary"> Grade </button> 
                     </div>
                     
                     <!-- REDESIGNING FROM NOW ^^^^ -->
@@ -332,11 +334,11 @@
             }
             function open_view_resume()
             {
-                window.open("resumes/ShahafDan_Resume.jpg");
+                window.open("docs/ShahafDan_Resume.jpg");
             }
             function open_dnld_resume()
             {
-                window.open("resumes/ShahafDan_Resume.pdf");
+                window.open("docs/ShahafDan_Resume.pdf");
             }
             function open_LinkedIn()
             {
