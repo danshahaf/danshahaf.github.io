@@ -120,5 +120,20 @@ textarea{ text-align: center !important;   border: 0.8px solid black !important;
     }
     .main-timeline .title{ font-size: 18px; }
 }
-
+.activities_div
+{
+    text-align: left !important;
+}
+.act-title
+{
+    font-size: 15px
+}
+.act-date
+{
+    font-size: 10px;
+}
+.act-desc
+{
+    font-size: 12px;
+}
 /* End timeline css */
