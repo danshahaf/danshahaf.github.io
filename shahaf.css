@@ -136,4 +136,9 @@ textarea{ text-align: center !important;   border: 0.8px solid black !important;
 {
     font-size: 12px;
 }
+
+.smallerBtn
+{
+    width: 25% !important;
+}
 /* End timeline css */

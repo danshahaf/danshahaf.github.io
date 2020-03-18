@@ -1,0 +1,28 @@
+Year 	Semester	Name of Class	Honors	Code	CRN	Grade 	Points	Units	Total 
+2018	Summer	Critical Reading and Comp.		ENG 1A	10022	A	4	3	3
+	Fall	Swimming 1		KIN SW1	22011	A	4	1	19
+		Diving		KIN DIV	21808	A	4	1	
+		Computing Fundamentals II		CS 2	23250	A	4	4	
+		Multivariable Calculus 3		MATH 3	20076	A	4	5	
+		Optics and Thermodynamics		PHY 1B	22691	A	4	5	
+		Critical Thinking/Writing Lit		ENG 7	20289	A	4	3	
+2019	Spring	Linear Algebra		MATH 7	30319	B	3	3.5	15
+		Electricity and Magnetism	✓	PHY 1C 	32425	A	4	5	
+		Advanced Prog. Data Structure 		CS 20	32439	W	4	0	
+		Swim and Dive Team		KIN 50	30966	A	4	3	
+		Internship Work Experience		WRKX 94	33269	A	4	0.5	
+		Philosophy of Arts		PHIL 3	30696	A	4	3	
+	Summer	Java Programming	✓	CSCI 19A	10380	A	4	4	11
+		Intro to Health Education		HLTH 1	10063	A	4	3	
+		Intro to American Government		POLI 7 	10039	A	4	4	
+	Fall	Discrete Math Structures	✓	CS 17	23527	A	4	4	18
+		Psychology		PSYC 1	20549	A	4	3	
+		Professional Communication		CS 43	20424	A	4	3	
+		Advanced Prog. Data Structure 	✓	CS 20	20764	A	4	4	
+		Computer Science Assembly		CS 21 	22106	B	3	4	
+2020	Spring	Differential Equations	✓	MATH 5	30265		4	3.5	16.5
+		Capstone Project		CS 47	30575		4	3	
+		Quantum Mechanics Physics		PHY 1D 	32070		4	3	
+		Linux / Unix Certification		CS 41	32078		4	3	
+		Database Programming	✓	CS 45	32588		4	4	
+	Summer	American Cultures of California		HIST 14			4	3	3
