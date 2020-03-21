@@ -103,24 +103,24 @@ function sortBySubject()
 /// ----------------- COURSES AND CLASSES ORDERING FUNCTIONS -----------------------
 function orderBySubject()
 {
-    document.getElementById("classBySubject").style.backgroundColor = "#00cc00";
-    document.getElementById("classByName").style.backgroundColor = "white";
-    document.getElementById("classByGrade").style.backgroundColor = "white";
+    document.getElementById("classBySubject").style.border = "1px solid #00cc00";
+    document.getElementById("classByName").style.border = "1px solid white";
+    document.getElementById("classByGrade").style.border = "1px solid white";
     //---------------------------------------------------------------------//
 
 }
 function orderByName()
 {
-    document.getElementById("classByName").style.backgroundColor = "#00cc00";
-    document.getElementById("classByGrade").style.backgroundColor = "white";
-    document.getElementById("classBySubject").style.backgroundColor = "white";
+    document.getElementById("classByName").style.border = "1px solid #00cc00";
+    document.getElementById("classByGrade").style.border = "1px solid white";
+    document.getElementById("classBySubject").style.border = "1px solid white";
     //---------------------------------------------------------------------//
 
 }
 function orderByGrade()
 {
-    document.getElementById("classByGrade").style.backgroundColor = "#00cc00";
-    document.getElementById("classByName").style.backgroundColor = "white";
-    document.getElementById("classBySubject").style.backgroundColor = "white";
+    document.getElementById("classByGrade").style.border = "1px solid #00cc00";
+    document.getElementById("classByName").style.border = "1px solid white";
+    document.getElementById("classBySubject").style.border = "1px solid white";
     //---------------------------------------------------------------------//
 }
