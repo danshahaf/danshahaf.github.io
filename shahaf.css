@@ -147,15 +147,19 @@ textarea{ text-align: center !important;   border: 0.8px solid black !important;
     width: 65% !important;
 }
 
-.projectTable
-{
-    text-align: center;
-    padding: 10%;
-    margin-right: 10%;
-    margin-left: 10%;
-}
+
 /* End timeline css */
-.tableRow
+
+.btn-secondary
 {
-    margin: 5px !important;
+    background-color: #6C757D;
+    color: white;
+}
+.honorsProjectsClass
+{
+    padding: 2% !important;
+    text-align: center !important;
+    background-color: white;
+    border-radius: 4px;
+    border: 3px solid black;
 }
