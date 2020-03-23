@@ -1,0 +1,14 @@
+<?php
+    function by_grade($conn)
+    {
+        return;
+    }
+    function by_subject($conn)
+    {
+        return;
+    }
+    function by_name($conn)
+    {
+        return;
+    }
+?>

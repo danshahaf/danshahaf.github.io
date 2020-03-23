@@ -23,8 +23,11 @@ function insert_school($c, $id, $n, $l)
     return;
 }
 
-function insert_course()
+function insert_course($c, $crn, $s, $num, $name, $g, $u, $t, $y, $sid)
 {
+    $sql = "INSERT INTO Courses (CRN, Subject, Number, Name, Grade, Units, Term, Year, schoolID) VALUES (".$crn.", '".$s."', '".$num."', '".$name."', '".$g."', ".$u.", '".$t."', ".$y.", ".$sid.");";
+    $c->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $c->exec($sql); //execute the sql inset query (insert to data base)
     return;
 }
 
@@ -35,7 +38,7 @@ while($choice != "x")
 {
     if($choice == "1")
     {
-        echo 'insert information about a shcool \n';
+        echo 'insert information about a shcool \r\n';
         echo 'ID: ';
         $id = rtrim(fgets(STDIN));
         echo 'Name: ';
@@ -46,7 +49,26 @@ while($choice != "x")
     }
     else if($choice == "2")
     {
-        echo 'insert information about a course:';
+        echo 'insert information about a course: \r\n';
+        echo 'CRN: ';
+        $crn = rtrim(fgets(STDIN));
+        echo 'SUBJECT: ';
+        $subject = rtrim(fgets(STDIN));
+        echo 'COURSE NUMBER: ';
+        $num = rtrim(fgets(STDIN));
+        echo 'NAME: ';
+        $name = rtrim(fgets(STDIN));
+        echo 'GRADE: ';
+        $g = rtrim(fgets(STDIN));
+        echo 'UNITS: ';
+        $u = rtrim(fgets(STDIN));
+        echo 'TERM: ';
+        $t = rtrim(fgets(STDIN));
+        echo 'YEAR: ';
+        $y = rtrim(fgets(STDIN));
+        echo 'School ID: ';
+        $sid = rtrim(fgets(STDIN));
+        insert_course($conn, $crn, $subject, $num, $name, $g, $u, $t, $y, $sid);
     }
     else
     {
