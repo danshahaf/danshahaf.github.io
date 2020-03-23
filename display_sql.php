@@ -8,7 +8,7 @@
         $stmt -> execute(); ///execute the query to the database
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
         { //concatinate to huge string to be passed //concatinaton in php is done with '.='
-            $$all_courses .= "<option class = 'pull-left ddOption' value = '".$row['FirstName']."".$row['LastName']."'>".$row['FirstName']." ".$row['LastName']."      -       ".$row['patID']."</option><br>";
+            $all_courses .= "<tr><td>".row['Grade']."</td><td>".row['Subject']."</td><td>".row['Number']."</td><td> - ".row['Name']."</td></tr>";
         }
         return $all_courses; //return the final string to echo on the html page
     }
@@ -21,7 +21,7 @@
         $stmt -> execute(); ///execute the query to the database
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
         { //concatinate to huge string to be passed //concatinaton in php is done with '.='
-            $$all_courses .= "<option class = 'pull-left ddOption' value = '".$row['FirstName']."".$row['LastName']."'>".$row['FirstName']." ".$row['LastName']."      -       ".$row['patID']."</option><br>";
+            $all_courses .= "<tr><td>".row['Subject']."</td><td>".row['Number']."</td><td>".row['Grade']."</td><td> - ".row['Name']."</td></tr>";
         }
         return $all_courses; //return the final string to echo on the html page
         return;
@@ -35,7 +35,7 @@
         $stmt -> execute(); ///execute the query to the database
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
         { //concatinate to huge string to be passed //concatinaton in php is done with '.='
-            $$all_courses .= "<option class = 'pull-left ddOption' value = '".$row['FirstName']."".$row['LastName']."'>".$row['FirstName']." ".$row['LastName']."      -       ".$row['patID']."</option><br>";
+            $all_courses .= "<tr><td>".row['Name']."</td><td>".row['Grade']."</td><td>".row['Subject']."</td><td>".row['Number']."</td></tr>";
         }
         return $all_courses; //return the final string to echo on the html page
         return;
