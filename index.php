@@ -10,7 +10,7 @@
    })();
 </script>
     <head>
-        <title> Shahaf Dan </title>
+        <title> Shahaf Dan 1</title>
         <link rel="shortcut icon" href="Logos/s-logo.jpg"/>
 
         <!-- Bootstrap for CSS -->
