@@ -27,7 +27,7 @@
         return;
     }
 
-    function by_name($conn)
+    function by_name($conn) //NOTE: TODO: School code is given by CEEB (check online sources)
     {
         $all_courses = ""; //initiatde, declaration
         $sql = "SELECT Subject, Number, Name, Grade FROM Courses ORDER BY Name";

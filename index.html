@@ -1,3 +1,8 @@
+<!--
+<?php
+    include "display_sql.php"; //include functions for classes display
+?>
+-->
 <html> <!-- ALT + B to run in an oepn browser-->
 <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
 <script type="text/javascript">
@@ -6,7 +11,7 @@
    })();
 </script>
     <head>
-        <title> Shahaf Dan </title>
+        <title> Shahaf Dan 2</title>
         <link rel="shortcut icon" href="Logos/s-logo.jpg"/>
 
         <!-- Bootstrap for CSS -->
@@ -181,10 +186,69 @@
                     <button type = "button" class = "btn btn-info" id = "classes-btn" data-toggle="collapse" data-target="#classes-div"> Classes </button>
                     <div id = "classes-div" class = "collapse classes_div">
                         <h4> Organize By: </h4>
-                        <button class = "btn btn-secondary smallerBtn" id = "classByName" onclick = "orderByName()"><strong> Name </strong></button> &nbsp; &nbsp; 
+                        <button class = "btn btn-secondary smallerBtn" id = "classByName" onclick = "orderByName()"><strong> Name </strong></button> &nbsp; &nbsp;     
                         <button class = "btn btn-secondary smallerBtn" id = "classBySubject" onclick = "orderBySubject()"> <strong> Subject </strong> </button> &nbsp; &nbsp; 
                         <button class = "btn btn-secondary smallerBtn" id = "classByGrade" onclick = "orderByGrade()"> <strong> Grade </strong> </button> 
+                        
+                        <div class = "classses" id = "by_grade">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Grade</th>
+                                    <th scope="col">Subject</th>
+                                    <th scope="col">Number</th>
+                                    <th scope="col">Name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!--
+                                <?php
+                                    echo by_grade(connDB());
+                                ?>
+                                -->
+                            </tbody>
+                        </table>
+                        </div>
+
+                        <div class = "classses" id = "by_subject">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Subject</th>
+                                    <th scope="col">Number</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Grade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                    echo by_grade(connDB());
+                                ?>
+                            </tbody>
+                        </table>
+                        </div>
+
+                        <div class = "classses" id = "by_name">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Subject</th>
+                                    <th scope="col">Number</th>
+                                    <th scope="col">Grade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                    echo by_name(connDB());
+                                ?>
+                            </tbody>
+                        </table>
+                        </div>
+
+                        <!-- DONE WITH CLASSES AND COURSES -->
                         <div class ="projects-div">
+                        </div>
                         <br><br><br><br>
                         <h4><u>Projects, Researches, Papers </u></h4>
                         <br>

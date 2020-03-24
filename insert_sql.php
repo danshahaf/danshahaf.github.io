@@ -1,5 +1,8 @@
 <?php
 
+//NOTE: TODO: School code is given by CEEB (check online sources)
+
+
 function connDB() //call to get connection
 {
     $username = "root";
