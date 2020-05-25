@@ -1,4 +1,3 @@
-
 var found = true;
 var allSubjects = su18s.concat(f18s, sp19s,su19s, f19s);
 var distAllSubjects = [];
