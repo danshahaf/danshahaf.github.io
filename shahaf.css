@@ -5,6 +5,9 @@
 .btn-outline-danger{color:red!important; border: 0.5px solid red !important;}
 .LinkedIn-btn{width: 5% !important; padding-top: 100% !important; padding: 2px !important;}
 .LinkedIn-img{height: 90%; width: 90%;}
+.w45{width: 45% !important;}
+.ml2{margin-left: 2% !important;}
+.tablePart{width: 90% !important; padding-right:3% !important; padding-left: 3% !important; margin: 0% !important;}
 .gmail-btn{width:5% !important; padding-top: 100% !important; padding: 2px !important; border-radius: 150px !important;}
 .gmail-img{width: 100%; height: 120%; border-radius: 150% !important;}
 .logo-bigger-img{margin: 1% !important; padding: 2% !important; height: 9% !important; padding-top: 100%;}
@@ -13,11 +16,13 @@
 .logo-img{margin: 1% !important; padding: 0.5% !important; height: 9%; padding-top: 0%;}
 .logo-img-smaller{margin: 1% !important; padding: 0.5% !important; height: 6%; padding-top: 0%;}
 .sortBtn{width: 25% !important; margin: 3% !important;}
-.edu{margin-right: 15% !important; margin-left: 15% !important;}
+.edu{margin-right: 7% !important; margin-left: 7% !important;}
 .inner-content{text-align: left !important; margin-left: 7% !important;}
 .imgContainer{text-align: center !important; margin-right: 15% !important; margin-left: 15% !important;}
 .imgBanner{height: 25%; border-radius: 4px; border: 1px solid black;}
 .fa{padding-top: 25% !important;}
+.sub-edu-btn{margin-top:1% !important;}
+.spacebar{border-top: 4px solid white; margin-top: 1.2% !important; margin-bottom: 1% !important; width:55% !important;}
 .inline{display: inline-block !important; display:flex; flex-direction: row;}
 .vid{border: 1px solid black; border-radius: 3px !important;  }
 textarea{ text-align: center !important;   border: 0.8px solid black !important; border-radius: 3px;}
@@ -42,7 +47,7 @@ textarea{ text-align: center !important;   border: 0.8px solid black !important;
 .main-timeline .timeline-content:hover{ text-decoration: none; }
 .main-timeline .timeline-content:before{
     content: "";
-    background: #fff;
+    background: rgba(255, 255, 255, 0.72) ;
     position: absolute;
     top: 7px;
     right: 7px;
@@ -120,10 +125,6 @@ textarea{ text-align: center !important;   border: 0.8px solid black !important;
     }
     .main-timeline .title{ font-size: 18px; }
 }
-.activities_div
-{
-    text-align: left !important;
-}
 .act-title
 {
     font-size: 15px
@@ -142,10 +143,7 @@ textarea{ text-align: center !important;   border: 0.8px solid black !important;
     width: 25% !important;
 }
 
-.activities_div
-{
-    width: 65% !important;
-}
+
 
 
 /* End timeline css */
@@ -155,8 +153,21 @@ textarea{ text-align: center !important;   border: 0.8px solid black !important;
     background-color: #6C757D;
     color: white;
 }
-.honorsProjectsClass
+.btn-outline-primary {
+    color: #007bff;
+    background-color: transparent;
+    background-image: none;
+    border-color: #007bff !important;
+}
+.projectTableContainer
 {
+    width: 100% !important;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 5px !important;
+    padding: 2% !important;
+}
+.honorsProjectsClass{
     padding: 2% !important;
     text-align: center !important;
     background-color: white;

@@ -1,9 +1,9 @@
 <!--
 <?php
     include "display_sql.php"; //include functions for classes display
-?>
+?> -->
 
-<html> <!-- ALT + B to run in an oepn browser-->
+<html> 
 <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
 <script type="text/javascript">
    (function(){
@@ -16,6 +16,8 @@
 
         <!-- Bootstrap for CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        
+        <!-- MY CSS -->
         <link rel = "stylesheet" type = "text/css" href = "shahaf.css">
 
         <!-- Bootstrap for JQuery -->
@@ -51,7 +53,7 @@
         
         </div>
         
-        <!-- BACKGROUND Collapse-->
+        <!--------------------------- EXPERIENCE COLLAPSE --------------------------------->
         <button type = "button" class = " btn btn-primary" data-toggle = "collapse" data-target = "#history_div"> Experience </button>
         <div id = "history_div" class = "collapse info_div">
             <br>
@@ -106,181 +108,210 @@
         <div id = "education_div" class = "collapse info_div">
             <div class = "lpc edu" id = "lpc">
                 <h3>Las Positas Class</h3>
-                <p> <strong> Livermore, CA | Jun. 2018  -  September 2020 </strong> </p>
+                <p> <strong> Livermore, CA | June 2018  -  May 2020 </strong> </p>
                 
                 <h4> <u>GPA:</u> 3.89 </h4>
-                    <button type = "button" class = "btn btn-info" id = "activities-btn" data-toggle="collapse" data-target="#activities-div"> Activities </button>
-                    <div id = "activities-div" class = " collapse activities_div"> <!-- ALIGN TO THE LEFT-->
-                        <li>
-                            <!-- Chess Club -->
-                            <ul class = "pull-left">
-                                <p class = "act-title">&nbsp;&nbsp;&nbsp;<strong>Chess Club   </strong>|   Founder ⇨ President</p> <!--13-->
-                                <p class = "act-date"> Novemebr 2018 - June 2020 </p><!--10-->
-                                
-                                <p class = "act-desc"> The chess club was founded in November 2018 by Shahaf Dan and Sayed Hamid Mirzahi
-                                On a weekly basis, 30 registered member gather to play chess, learn new strategies, study the history of the game,
-                                and enjoy a safe space where they can take a break from the busy academic routine
-                                </p>
-                            </ul> <br><hr>
-                            <!-- Alpha Gamma Sigma-->
-                            <ul class = "pull-left">
-                                <p class = "act-title">&nbsp;&nbsp;&nbsp;<strong> Alpha Gamma Sigma (ΑΓΣ) - Honors Society   </strong>|   Member ⇨ President</p> <!--13-->
-                                <p class = "act-date"> February 2019 - September 2020 </p><!--10-->
-                                <p class = "act-desc"> AGS is an intercollegiate honors society for leader, overachiever students with emphasis on community service 
-                                As the Las Positas College Sigma Theta (ΣΘ) is considered one of the most active and accomplished chapters in the state of California,
-                                it is my duty and pleasure to serve as the president, chair the biweekly meetings, oversee all community service by all members, 
-                                conduct events and fundraisers, and create an environment where overachievr students who are interested in contributing further to 
-                                their communities and the student body, are given and granted a various of opporutnities. </p>
-                            </ul> <br> <hr>
-                            <!-- Student Government -->
-                            <ul class = "pull-left">
-                                <p class = "act-title">&nbsp;&nbsp;&nbsp;<strong> Las Positas College Student Government   </strong>|   Senator ⇨ Director of Events</p> <!-- 13 -->
-                                <p class = "act-date"> Novemebr 2018 - August 2020 </p><!-- 10 -->
-                                <p class = "act-desc"> <!-- 12 -->
-                                    The LPCSG is the most effective student organizatio on campus, creating many events, attending conference, 
-                                and representing the student body of Las Positas. As the director of events, it is my mission to phase the campus cultural identity to
-                                 be more student friendly, get rid of the negative stigma that student life in communit colleges are not productive, and create events 
-                                that will strngethen and embrace the relationships between the student body and the campus. </p>
-                            </ul> <br> <hr>
-                            <!-- Mu Alpha Theta: Math Honors Society -->
-                            <ul class = "pull-left">
-                                <p class = "act-title">&nbsp;&nbsp;&nbsp;<strong> Mu Alpha Theta (ΜΑΘ) - Math Honors Society   </strong>|   Member</p> <!--13-->
-                                <p class = "act-date"> September 2018 - June 2020 </p><!--10-->
-                                <p class = "act-desc"> 
-                                    Mu Alpha Theta is the Math Honors Society on Las Positas College, providing student with extracurricular math activities,
-                                     club meetings, and the AMATYC Exam per academic term. As an outstanding member, I have places in the top 5 students in the AMATYC exam,
-                                     in both academic years 2018 - 2019, and 2019 - 2020.
-                                </p>
-                            </ul><br><hr>
-                            <!-- Committees -->
-                            <ul class = "pull-left">
-                                <p class = "act-title">&nbsp;&nbsp;&nbsp;<strong> Committees, Involvement and Representation </strong> </p> <!--13-->
-                                <p class = "act-desc"> 
-                                    » <u>ASACC Representative: </u> Represented Las Positas in the American Student Association tow years continuasly (2019, 2020) in Washington D.C. &nbsp; Met with congresspeople and brought to their attention concerns and issues from community college students <br>
-                                    » <u>Technology Committee: </u> Represented the student body on the District Technology Coordination Committee, pushing for technological solutions that will benefit the student body <br>
-                                    » <u>Student Events Committee: </u> Chaired the student events committee as the student elected Director of Events <br>
-                                    » <u>Student Achievment and Equity Committee: </u> Served as the representative on the SAE Committee, pushing for increased student equity and voicing student concerns <br>
-                                </p>
-                            </ul> <br><hr>
-                            <!-- Honors Projects -->
-                            <ul class = "pull-left">
+                <button type = "button" class = "btn btn-info sub-edu-btn" id = "activities-btn" data-toggle="collapse" data-target="#activities-div"> Activities </button> <br>
+                <button type = "button" class = "btn btn-info sub-edu-btn" id = "classes-btn" data-toggle="collapse" data-target="#classes-div"> Classes </button> <br>
+                <button type = "button" class = "btn btn-info sub-edu-btn" id = "projects-btn" data-toggle="collapse" data-target="#projects-div"> Projects </button> <br>
+                <!----------------------------- COLLAPSE OF ACTIVITIES DIV ------------------------------------>
+                <div id = "activities-div" class = " collapse activities_div"> <!-- ALIGN TO THE LEFT-->
+                    <li>
+                        <!-- Chess Club -->
+                        <ul class = "pull-left">
+                            <p class = "act-title">&nbsp;&nbsp;&nbsp;<strong>Chess Club   </strong>|   Founder ⇨ President</p> <!--13-->
+                            <p class = "act-date"> Novemebr 2018 - June 2020 </p><!--10-->
                             
-                                <p class = "act-title">&nbsp;&nbsp;&nbsp;<strong> Honors Projects, Research, and Papers</strong> </p> <!--13-->
-                                <p class = "act-desc"> 
-                                    As part of the honors program, by graduation I will have completed 6 honors porjects in various subjects and classes, and achieving the honors stamp on my diploma.
-                                    As part of the program, I have conducted research in Physics, Mathematics, and Computer Science.
-                                </p>
-                                <!-- TODO : Add Asbtracts later-->
-                            </ul><br><hr>
-                            <!-- Dive Team -->
-                            <ul >
-                                <p class = "act-title">&nbsp;&nbsp;&nbsp;<strong> Student Athlete: Swim & Dive Team   </strong>|   Diver ⇨ Team Leader </p> <!--13-->
-                                <p class = "act-date"> January 2019 - May 2019 </p><!--10-->
-                                <p class = "act-desc"> As a student athlete, I have represnted Las Positas College in conferences and meets as a diver.</p>
-                            </ul><br>
-                        </li>
-                    </div>
-                    <br><br>
-                    <button type = "button" class = "btn btn-info" id = "classes-btn" data-toggle="collapse" data-target="#classes-div"> Classes </button>
-                    <div id = "classes-div" class = "collapse classes_div">
-                        <h4> Organize By: </h4>
-                        <button class = "btn btn-secondary smallerBtn" id = "classByName" onclick = "orderByName()"><strong> Name </strong></button> &nbsp; &nbsp;     
-                        <button class = "btn btn-secondary smallerBtn" id = "classBySubject" onclick = "orderBySubject()"> <strong> Subject </strong> </button> &nbsp; &nbsp; 
-                        <button class = "btn btn-secondary smallerBtn" id = "classByGrade" onclick = "orderByGrade()"> <strong> Grade </strong> </button> 
+                            <p class = "act-desc"> The chess club was founded in November 2018 by Shahaf Dan and Sayed Hamid Mirzahi
+                            On a weekly basis, 30 registered member gather to play chess, learn new strategies, study the history of the game,
+                            and enjoy a safe space where they can take a break from the busy academic routine
+                            </p>
+                        </ul> <br><hr>
+                        <!-- Alpha Gamma Sigma-->
+                        <ul class = "pull-left">
+                            <p class = "act-title">&nbsp;&nbsp;&nbsp;<strong> Alpha Gamma Sigma (ΑΓΣ) - Honors Society   </strong>|   Member ⇨ President</p> <!--13-->
+                            <p class = "act-date"> February 2019 - September 2020 </p><!--10-->
+                            <p class = "act-desc"> AGS is an intercollegiate honors society for leader, overachiever students with emphasis on community service 
+                            As the Las Positas College Sigma Theta (ΣΘ) is considered one of the most active and accomplished chapters in the state of California,
+                            it is my duty and pleasure to serve as the president, chair the biweekly meetings, oversee all community service by all members, 
+                            conduct events and fundraisers, and create an environment where overachievr students who are interested in contributing further to 
+                            their communities and the student body, are given and granted a various of opporutnities. </p>
+                        </ul> <br> <hr>
+                        <!-- Student Government -->
+                        <ul class = "pull-left">
+                            <p class = "act-title">&nbsp;&nbsp;&nbsp;<strong> Las Positas College Student Government   </strong>|   Senator ⇨ Director of Events</p> <!-- 13 -->
+                            <p class = "act-date"> Novemebr 2018 - August 2020 </p><!-- 10 -->
+                            <p class = "act-desc"> <!-- 12 -->
+                                The LPCSG is the most effective student organizatio on campus, creating many events, attending conference, 
+                            and representing the student body of Las Positas. As the director of events, it is my mission to phase the campus cultural identity to
+                                be more student friendly, get rid of the negative stigma that student life in communit colleges are not productive, and create events 
+                            that will strngethen and embrace the relationships between the student body and the campus. </p>
+                        </ul> <br> <hr>
+                        <!-- Mu Alpha Theta: Math Honors Society -->
+                        <ul class = "pull-left">
+                            <p class = "act-title">&nbsp;&nbsp;&nbsp;<strong> Mu Alpha Theta (ΜΑΘ) - Math Honors Society   </strong>|   Member</p> <!--13-->
+                            <p class = "act-date"> September 2018 - June 2020 </p><!--10-->
+                            <p class = "act-desc"> 
+                                Mu Alpha Theta is the Math Honors Society on Las Positas College, providing student with extracurricular math activities,
+                                    club meetings, and the AMATYC Exam per academic term. As an outstanding member, I have places in the top 5 students in the AMATYC exam,
+                                    in both academic years 2018 - 2019, and 2019 - 2020.
+                            </p>
+                        </ul><br><hr>
+                        <!-- Committees -->
+                        <ul class = "pull-left">
+                            <p class = "act-title">&nbsp;&nbsp;&nbsp;<strong> Committees, Involvement and Representation </strong> </p> <!--13-->
+                            <p class = "act-desc"> 
+                                » <u>ASACC Representative: </u> Represented Las Positas in the American Student Association tow years continuasly (2019, 2020) in Washington D.C. &nbsp; Met with congresspeople and brought to their attention concerns and issues from community college students <br>
+                                » <u>Technology Committee: </u> Represented the student body on the District Technology Coordination Committee, pushing for technological solutions that will benefit the student body <br>
+                                » <u>Student Events Committee: </u> Chaired the student events committee as the student elected Director of Events <br>
+                                » <u>Student Achievment and Equity Committee: </u> Served as the representative on the SAE Committee, pushing for increased student equity and voicing student concerns <br>
+                            </p>
+                        </ul> <br><hr>
+                        <!-- Honors Projects -->
+                        <ul class = "pull-left">
                         
-                        <div class = "classses" id = "by_grade">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Grade</th>
-                                    <th scope="col">Subject</th>
-                                    <th scope="col">Number</th>
-                                    <th scope="col">Name</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!--
-                                <?php
-                                    echo by_grade(connDB());
-                                ?>
-                                -->
-                            </tbody>
-                        </table>
-                        </div>
-
-                        <div class = "classses" id = "by_subject">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Subject</th>
-                                    <th scope="col">Number</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Grade</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- <?php
-                                    echo by_grade(connDB());
-                                ?> -->
-                            </tbody>
-                        </table>
-                        </div>
-
-                        <div class = "classses" id = "by_name">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Subject</th>
-                                    <th scope="col">Number</th>
-                                    <th scope="col">Grade</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- <?php
-                                    echo by_name(connDB());
-                                ?> -->
-                            </tbody>
-                        </table>
-                        </div>
-
-                        <!-- DONE WITH CLASSES AND COURSES -->
-                        <div class ="projects-div">
-                        </div>
-                        <br><br><br><br>
-                        <h4><u>Projects, Researches, Papers </u></h4>
-                        <br>
-                        <div class = "honorsProjectsClass" id = "honorsProjectsId">
-                            <table class = "projectTable table">
-                                <tr class = "tableRow">
-                                    <td><p> <strong><u>Physics</u>: Electricity andg Magnetism </strong></p> <a href="docs/Phy1c_abs.pdf">Solar Panels: Efficiency, Mechanism, and Applications</a></td> 
-                                    <td><p> <strong><u>Computer Science</u>: Java Development </strong></p> <a href="docs/csci19a_abs.pdf"> Java Web Development and SQL</a></td>
-                                </tr>
-                                <!-- <br><br><hr> -->
-                                <tr class = "tableRow">
-                                    <td> <p> <strong><u>Computer Science</u>: Data Structures </strong></p> <a href="docs/DataStruc_Abs.pdf">Dictionary Tree Structure</a> <br></td>
-                                    <td> <p> <strong><u>Math</u>: Discrete Math Structures </strong></p> <a href="docs/cs17_abs.pdf">Hash Tables: Efficiency, Mechanism, and Applications</a> </td>
-                                </tr>
-                                <!-- <br><br><hr> -->
-                                <tr class = "tableRow">
-                                    <td> <p> <strong><u>Computer Science</u>: Database Programming </strong><p> <a href="docs/cs45_abs.pdf">Web Development: PHP, PDO, and Dynamic Front End</a> </td>
-                                    <td> <p> <strong><u>Math</u>: Differential Equations </strong></p> <a href="docs/LinkNotAvail.pdf">Fourier's theorem and Transformation</a> </td>
-                                </tr>
-                                <!-- <br><br><hr> -->
-                                <tr class = "tableRow">
-                                    <td> <p> <strong><u>Computer Science</u>: Capstone Project </strong></p> <a href="docs/LinkNotAvail.pdf">The Market's Platform</a></td>
-                                    <td><p> <strong><u>Physics</u>: Quantum Mechanics </strong></p> <a href="docs/LinkNotAvail.pdf">Meissner's Effect and Magentic Elevation</a></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
+                            <p class = "act-title">&nbsp;&nbsp;&nbsp;<strong> Honors Projects, Research, and Papers</strong> </p> <!--13-->
+                            <p class = "act-desc"> 
+                                As part of the honors program, by graduation I will have completed 6 honors porjects in various subjects and classes, and achieving the honors stamp on my diploma.
+                                As part of the program, I have conducted research in Physics, Mathematics, and Computer Science.
+                            </p>
+                            <!-- TODO : Add Asbtracts later-->
+                        </ul><br><hr>
+                        <!-- Dive Team -->
+                        <ul >
+                            <p class = "act-title">&nbsp;&nbsp;&nbsp;<strong> Student Athlete: Swim & Dive Team   </strong>|   Diver ⇨ Team Leader </p> <!--13-->
+                            <p class = "act-date"> January 2019 - May 2019 </p><!--10-->
+                            <p class = "act-desc"> As a student athlete, I have represnted Las Positas College in conferences and meets as a diver.</p>
+                        </ul><br>
+                    </li>
+                </div>
+                <br><br>
+                <!----------------------------- COLLAPSE OF CLASSES DIV ------------------->
+                <div id = "classes-div" class = "collapse classes_div">
+                    <h4> Organize By: </h4>
+                    <button class = "btn btn-secondary smallerBtn" id = "classByName" onclick = "orderByName()"><strong> Name </strong></button> &nbsp; &nbsp;     
+                    <button class = "btn btn-secondary smallerBtn" id = "classBySubject" onclick = "orderBySubject()"> <strong> Subject </strong> </button> &nbsp; &nbsp; 
+                    <button class = "btn btn-secondary smallerBtn" id = "classByGrade" onclick = "orderByGrade()"> <strong> Grade </strong> </button> 
                     
-                    <!-- REDESIGNING FROM NOW ^^^^ -->
-                    <!-- MAKE INTO DIVS: Computer Science, Math, Physics, Others -->
-                     <!-- MAKE INTO COLLAPSABLE DIVS -->
-                </p>
+                    <div class = "classses" id = "by_grade">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Grade</th>
+                                <th scope="col">Subject</th>
+                                <th scope="col">Number</th>
+                                <th scope="col">Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--
+                            <?php
+                                echo by_grade(connDB());
+                            ?>
+                            -->
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <div class = "classses" id = "by_subject">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Subject</th>
+                                <th scope="col">Number</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- <?php
+                                echo by_grade(connDB());
+                            ?> -->
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <div class = "classses" id = "by_name">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Subject</th>
+                                <th scope="col">Number</th>
+                                <th scope="col">Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- <?php
+                                echo by_name(connDB());
+                            ?> -->
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <!-- DONE WITH CLASSES AND COURSES -->
+                    
+                </div>
+                <!----------------------------- COLLAPSE OF PROJECTS DIV ------------------------------------>
+                <div id = "projects-div" class = "collapse"> <!-- ALIGN TO THE LEFT-->
+                    <h4><u>Projects, Researches, Papers </u></h4>
+                    <br>
+                    <div class = "projectTableContainer">
+                        <table class = "table projectTable">
+                            <thead class = "tablePart">
+                                <tr>
+                                    <th scope="col">Class</th>
+                                    <th scope="col">Research Project Name</th>
+                                    <th scope="col">See for Yourself</th>
+                                </tr>
+                            </thead>
+                            <tbody class = "tablePart">
+                                <tr class = "tableRow">
+                                    <td><strong>Physics</strong>: Electricity and Magnetism</td>
+                                    <td>Solar Panels: Efficiency, Mechanism, and Applications</td>
+                                    <td><button type = "button" class="btn btn-outline-primary w45" onclick = "window.open('docs/Phy1c_abs.pdf');">Abstract</button>&nbsp;<button type = "button" class = "btn btn-outline-primary ml2 w45"> Paper </button></td>
+                                </tr>
+                                <tr class = "tableRow">
+                                    <td><strong>Computer Science</strong>: Java Programming</td>
+                                    <td>MyEvents - Management WebApp</td>
+                                    <td><button type = "button" class="btn btn-outline-primary w45">Abstract</button>&nbsp;<button type = "button" class = "btn btn-outline-primary ml2 w45"> ZIP Link </button></td>
+                                </tr>
+                                <tr class = "tableRow">
+                                    <td><strong>Computer Science</strong>: Data Structures</td>
+                                    <td>Dictionary Tree: Customized Data Structure</td>
+                                    <td><button type = "button" class="btn btn-outline-primary w45">Abstract</button>&nbsp;<button type = "button" class = "btn btn-outline-primary ml2 w45"> ZIP Link </button></td>
+                                </tr>
+                                <tr class = "tableRow">
+                                    <td><strong>Mathematics</strong>: Discrete Mathematical Structures</td>
+                                    <td>Hash Tables: Efficiency, Mechanism, and Applications</td>
+                                    <td><button type = "button" class="btn btn-outline-primary w45">Abstract</button>&nbsp;<button type = "button" class = "btn btn-outline-primary ml2 w45"> Paper </button></td>
+                                </tr>
+                                <tr class = "tableRow">
+                                    <td><strong>Physics</strong>: Introduction to Quantum Mechanics</td>
+                                    <td>The Meissner Effect: Superconductivity, Magnetic Levitation,<br> and Quantum Locking</td>
+                                    <td><button type = "button" class="btn btn-outline-primary w45">Abstract</button>&nbsp;<button type = "button" class = "btn btn-outline-primary ml2 w45"> Paper </button></td>
+                                </tr>
+                                <tr class = "tableRow">
+                                    <td><strong>Computer Science</strong>: Capstone Project</td>
+                                    <td>The Market's Manager</td>
+                                    <td><button type = "button" class="btn btn-outline-primary w45">Abstract</button>&nbsp;<button type = "button" class = "btn btn-outline-primary ml2 w45"> ZIP Link </button></td>
+                                </tr>
+                                <tr class = "tableRow">
+                                    <td><strong>Computer Science</strong>: Database Programming</td>
+                                    <td>Rate My Professor at Las Positas College</td>
+                                    <td><button type = "button" class="btn btn-outline-primary w45">Abstract</button>&nbsp;<button type = "button" class = "btn btn-outline-primary ml2 w45"> ZIP Link </button></td>
+                                </tr>
+                                <tr class = "tableRow">
+                                    <td><strong>Mathematics</strong>: Differential Equations</td>
+                                    <td>Euler's Formula and Fourier Transforms</td>
+                                    <td><button type = "button" class="btn btn-outline-primary w45">Abstract</button>&nbsp;<button type = "button" class = "btn btn-outline-primary ml2 w45"> Paper </button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-            <br><br>
+            <hr class = "spacebar">
             <div class = "ghs edu" id = "ghs">
                 <h3>Granada High Shcool</h3>
                 <p> <strong> Livermore, CA | Aug. 2015  -  Jun. 2018 </strong> </p>
@@ -289,7 +320,7 @@
                     Focused on studying computer science and computational physics.
                 </p>
             </div>
-            <br><br>
+            <hr class = "spacebar">
             <div class = "MOR edu" id = "MOR">
                 <h3>MOR Middle School</h3>
                 <p> <strong> Modi'in, Israel | Aug. 2012  -  Jun. 2015 </strong> </p>
@@ -298,19 +329,12 @@
                     Was destined to enter a software engineering program of the Israeli military.
                 </p>
             </div>
-            
-            
-            
         </div>
 
         <br><br>
-        <!-- EXEPRIENCE & KNOWLEDGE Collapse-->
+        <!----------------------  TECHNICAL SKILLS COLLAPSE ------------------------------>
         <button type = "button" class = " btn btn-primary" data-toggle = "collapse" data-target = "#knowledge_div"> Technical Skills </button>
         <div id = "knowledge_div" class = "collapse info_div">
-            <!-- <div class = "exp" id = "exp_div">
-                <h2 class = "title"> <u>Experience</u> </h2>
-                
-            </div> -->
             <!-- TODO: Add linkedin logo if passed the linkedin test-->
             <div class = "kwnld" id = "knd_div">
                 <h2 class = "title"><u> Technical Knowledge & Skills </u></h2>
