@@ -189,10 +189,10 @@
                 <!----------------------------- COLLAPSE OF CLASSES DIV ------------------->
                 <div id = "classes-div" class = "collapse classes_div">
                     <h4> Organize By: </h4>
-                    <button class = "btn btn-secondary w17" id = "classByName" onclick = "coursesAlphabetically()"><strong> Name </strong></button> &nbsp; &nbsp;     
-                    <button class = "btn btn-secondary w17" id = "classBySubject" onclick = "coursesBySubject()"> <strong> Subject </strong> </button> &nbsp; &nbsp; 
-                    <button class = "btn btn-secondary w17" id = "classByGrade" onclick = "coursesByGrade()"> <strong> Grade </strong> </button> &nbsp; &nbsp;
-                    <button class = "btn btn-secondary w17" id = "classByGrade" onclick = "coursesChronoligically()"> <strong> Academic Term </strong> </button> 
+                    <button class = "btn btn-secondary w17 courses-btn" id = "classByName" onclick = "coursesAlphabetically()"><strong> Name </strong></button> &nbsp; &nbsp;     
+                    <button class = "btn btn-secondary w17 courses-btn" id = "classBySubject" onclick = "coursesBySubject()"> <strong> Subject </strong> </button> &nbsp; &nbsp; 
+                    <button class = "btn btn-secondary w17 courses-btn" id = "classByGrade" onclick = "coursesByGrade()"> <strong> Grade </strong> </button> &nbsp; &nbsp;
+                    <button class = "btn btn-secondary w17 courses-btn" id = "classByGrade" onclick = "coursesChronoligically()"> <strong> Academic Term </strong> </button> 
                     <br><br>
                     <div class = "classes" id = "by_grade">
                         <table class = "table projectTable">
@@ -329,10 +329,9 @@
         <!-- CONTACT ME Collapse-->
         <button type = "button" class = " btn btn-warning" data-toggle = "collapse" data-target = "#contact_div"> Contact Me </button>
         <div id = "contact_div" class = "collapse info_div">
-            <h4><strong><u> Email:</u></strong> &nbsp;  dan.shachaf@gmail.com <br><br>
-            <strong><u>Mobile:</u></strong> &nbsp;  (925) 791 - 1544</h4>
-            <h4><strong><u> LinkedIn:</u></strong> &nbsp; &nbsp; <button type = "button" class = "btn LinkedIn-btn" onclick = "window.open('www.linkedin.com/in/shahaf-dan-66812b180/');"><img src = "Logos/linkedIn-logo.png" class = "LinkedIn-img"></button> &nbsp; &nbsp; &nbsp; &nbsp;
-                <strong><u> GitHub:</u></strong> &nbsp; &nbsp; <button type = "button" class = "btn LinkedIn-btn" onclick = "window.open('github.com/ShahafDan25');"><img src = "Logos/GitHub-logo.svg" class = "LinkedIn-img"></button><br></h4>
+            <h4><strong><u> Email:</u></strong> &nbsp;  dan.shachaf@gmail.com &nbsp; &nbsp;<strong><u>Mobile:</u></strong> &nbsp;  (925) 791 - 1544</h4><br>
+            <button type = "button" class = "contact-btn inline " onclick = "window.open('www.linkedin.com/in/shahaf-dan-66812b180/');"><img src = "Logos/linkedin-logo.png" class = "LinkedIn-img"></button>
+            <button type = "button" class = "contact-btn inline " onclick = "window.open('github.com/ShahafDan25');"><img src = "Logos/gitHub-logo.png" class = "LinkedIn-img"></button><br>
             <!-- <h4> <strong>Shoot me an Email! </strong> <button type = "button" class = "btn gmail-btn" data-toggle = "collapse" data-target = "#email_div" ><img src = "Logos/gmail-logo.png" class = "gmail-img"></button> </h4> -->
                 <br>
             <!-- Open this div when email img is clicked: COMMENTED OUT FOR NOW, FINISH LATER -->

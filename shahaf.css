@@ -8,6 +8,7 @@
 .w45{width: 45% !important;}
 .w94{width: 94% !important;}
 .ml2{margin-left: 2% !important;}
+.courses-btn:hover{background-color:white !important; color:gray !important;}
 .opposite-outline-primary:hover{border-color: gray !important; background-color: #007bff; color:white;}
 .tablePart{width: 90% !important; padding-right:3% !important; padding-left: 3% !important; margin: 0% !important;}
 .gmail-btn{width:5% !important; padding-top: 100% !important; padding: 2px !important; border-radius: 150px !important;}
@@ -33,10 +34,8 @@ textarea{ text-align: center !important;   border: 0.8px solid black !important;
 .send{margin-right: 20% !important; margin-left: 20% !important;}
 .email-sender-input{text-align: center; border: 0.6px solid black; border-radius: 4px; padding: 3px;}
 .subject{text-align: center; border: 0.6px solid black !important; border-radius: 4px; padding: 3px !important; width: 60% !important;}
-/* .exp{float:left; width: 20%; margin: 2px; padding: 2px; text-align: center !important;}
-.knwld{float:right; width: 20%; margin: 2px; padding: 2px; text-align: center !important;}
-#knowledge_div{text-align: center !important;} */
-
+.contact-btn{background-color: transparent !important; margin-right: 3% !important; border: 2px solid white !important; border-radius: 25px !important; width: 10% !important; padding: 1% !important;}
+.contact-btn:hover{background-color:white !important; border: 2px solid gray !important; border-radius: 15px !important; padding: 1.15% !important;}
 /* timeline CSS */
 .main-timeline{ font-family: 'Nunito Sans', sans-serif; }
 .main-timeline .timeline-content{
