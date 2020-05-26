@@ -156,7 +156,13 @@ textarea{ text-align: center !important;   border: 0.8px solid black !important;
 {
     width: 25% !important;
 }
-
+.resume{background-color:rgba(255, 255, 255, 0.45)}
+.resume:hover{
+    background-color: white;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
 
 
 
