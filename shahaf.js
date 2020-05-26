@@ -72,45 +72,28 @@ console.log("tbody");
 function coursesAlphabetically()
 {
     // ---------- preparations: ---------------
-    
-    thead.deleteRow(0);
-    for(var z = 0; z < 0; z++)
-    {
-        tbody.deleteRow(z);
-    }
-
-    console.log("called");
-
-
+    cleanPrevTable();
     // ---------- sorting: ---------------
     var coursesCopy = courses;
     var coursesAlphabetically = new Array(coursesCopy.length);
     for (var x = 0; x < coursesAlphabetically.length; x++)
     {
         var counter = 0;
-        var biggerAlphaBet = coursesCopy[counter];
-        while(biggerAlphaBet == null)
+        var index = counter;
+        while(coursesCopy[index] == null)
         {
             counter++;
-            biggerAlphaBet = coursesCopy[counter];
+            index = counter;
         }
-        for(var i = counter; i < courses.length - 1; i++)
+        for(var i = courses.length; i < counter; i--)
         {
-            if(coursesCopy[i] < biggerAlphaBet && coursesCopy[i] != null)
-            {
-                var index = i;
-                biggerAlphaBet = coursesCopy[i];
-            }
+            if(coursesCopy[i].name > coursesCopy[index].name && coursesCopy[i] != null) index = i;
         }
-        coursesAlphabetically[x] = biggerAlphaBet;
-        console.log(coursesCopy[index]);
+        coursesAlphabetically[x] = coursesCopy[index];
+        console.log(coursesCopy);
         delete coursesCopy[index];
-        console.log(coursesCopy[index]);
-
     }
-    console.log("sorted");
-
-
+    coursesAlphabetically.reverse();
     // ---------- populating: ---------------
     var row = thead.insertRow(0);    
     var cell = row.insertCell(0);
@@ -121,7 +104,6 @@ function coursesAlphabetically()
     cell.innerHTML = "<strong>Grade</strong>";
     var cell = row.insertCell(3);
     cell.innerHTML = "<strong>Academic Term</strong>";
-    console.log("thead");
     for(var i = 0; i < coursesAlphabetically.length; i++)
     {
         var row = tbody.insertRow(0);    
@@ -134,13 +116,57 @@ function coursesAlphabetically()
         var cell = row.insertCell(3);
         cell.innerHTML = coursesAlphabetically[i].academic;
     }
-    console.log("tbody");
 
     return;
 }
 
-function classesBySubject()
+function coursesBySubject()
 {
+    // ---------- preparations: ---------------
+    cleanPrevTable();
+    // ---------- sorting: ---------------
+    var coursesCopy = courses;
+    var courses2 = new Array(coursesCopy.length);
+    for (var x = 0; x < courses2.length; x++)
+    {
+        var counter = 0;
+        var index = counter;
+        while(coursesCopy[index] == null)
+        {
+            counter++;
+            index = counter;
+        }
+        for(var i = courses.length; i < counter; i--)
+        {
+            if(coursesCopy[i].id > coursesCopy[index].id && coursesCopy[i] != null) index = i;
+        }
+        courses2[x] = coursesCopy[index];
+        console.log(coursesCopy);
+        delete coursesCopy[index];
+    }
+    courses2.reverse();
+    // ---------- populating: ---------------
+    var row = thead.insertRow(0);    
+    var cell = row.insertCell(0);
+    cell.innerHTML = "<strong>Subject</strong>";
+    var cell = row.insertCell(1);
+    cell.innerHTML = "<strong>Name</strong>";
+    var cell = row.insertCell(2);
+    cell.innerHTML = "<strong>Grade</strong>";
+    var cell = row.insertCell(3);
+    cell.innerHTML = "<strong>Academic Term</strong>";
+    for(var i = 0; i < courses2.length; i++)
+    {
+        var row = tbody.insertRow(0);    
+        var cell = row.insertCell(0);
+        cell.innerHTML = courses2[i].id;
+        var cell = row.insertCell(1);
+        cell.innerHTML = courses2[i].name;
+        var cell = row.insertCell(2);
+        cell.innerHTML = "<strong>" + courses2[i].grade + "</strong>";
+        var cell = row.insertCell(3);
+        cell.innerHTML = courses2[i].academic;
+    }
 
     return;
 }
@@ -157,6 +183,12 @@ function coursesChronologically()
     return;
 }
 
+function cleanPrevTable()
+{
+    thead.deleteRow(0);
+    for(var z = courses.length - 1; z > -1; z--) {tbody.deleteRow(z);}
+    return;
+}
 
 
 
