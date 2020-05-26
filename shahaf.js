@@ -54,7 +54,6 @@ var cell = row.insertCell(2);
 cell.innerHTML = "<strong>Grade</strong>";
 var cell = row.insertCell(3);
 cell.innerHTML = "<strong>Academic Term</strong>";
-console.log("thead");
 for(var i = courses.length - 1; i > -1; i--)
 {
     var row = tbody.insertRow(0);    
@@ -67,8 +66,8 @@ for(var i = courses.length - 1; i > -1; i--)
     var cell = row.insertCell(3);
     cell.innerHTML = courses[i].academic;
 }
-console.log("tbody");
 
+// ============= FUCTIONS =============:::
 function coursesAlphabetically()
 {
     // ---------- preparations: ---------------
@@ -167,19 +166,107 @@ function coursesBySubject()
         var cell = row.insertCell(3);
         cell.innerHTML = courses2[i].academic;
     }
-
     return;
 }
 
 function coursesByGrade()
 {
-
+    // ---------- preparations: ---------------
+    cleanPrevTable();
+    // ---------- sorting: ---------------
+    var coursesCopy = courses;
+    var courses2 = new Array(coursesCopy.length);
+    for (var x = 0; x < courses2.length; x++)
+    {
+        var counter = 0;
+        var index = counter;
+        while(coursesCopy[index] == null)
+        {
+            counter++;
+            index = counter;
+        }
+        for(var i = courses.length; i < counter; i--)
+        {
+            if(coursesCopy[i].grade > coursesCopy[index].grade && coursesCopy[i] != null) index = i;
+        }
+        courses2[x] = coursesCopy[index];
+        console.log(coursesCopy);
+        delete coursesCopy[index];
+    }
+    courses2.reverse();
+    // ---------- populating: ---------------
+    var row = thead.insertRow(0);    
+    var cell = row.insertCell(0);
+    cell.innerHTML = "<strong>Grade</strong>";
+    var cell = row.insertCell(1);
+    cell.innerHTML = "<strong>Name</strong>";
+    var cell = row.insertCell(2);
+    cell.innerHTML = "<strong>Subject</strong>";
+    var cell = row.insertCell(3);
+    cell.innerHTML = "<strong>Academic Term</strong>";
+    for(var i = 0; i < courses2.length; i++)
+    {
+        var row = tbody.insertRow(0);    
+        var cell = row.insertCell(0);
+        cell.innerHTML = "<strong>" + courses2[i].grade + "</strong>";
+        var cell = row.insertCell(1);
+        cell.innerHTML = courses2[i].name;
+        var cell = row.insertCell(2);
+        cell.innerHTML = courses2[i].id;
+        var cell = row.insertCell(3);
+        cell.innerHTML = courses2[i].academic;
+    }
     return;
 }
 
-function coursesChronologically()
+function coursesChronoligically()
 {
-
+    // ---------- preparations: ---------------
+    cleanPrevTable();
+    // ---------- sorting: ---------------
+    var coursesCopy = courses;
+    var courses2 = new Array(coursesCopy.length);
+    for (var x = 0; x < courses2.length; x++)
+    {
+        var counter = 0;
+        var index = counter;
+        while(coursesCopy[index] == null)
+        {
+            counter++;
+            index = counter;
+        }
+        for(var i = courses.length; i < counter; i--)
+        {
+            if(coursesCopy[i].grade > coursesCopy[index].grade && coursesCopy[i] != null) index = i;
+        }
+        courses2[x] = coursesCopy[index];
+        console.log(coursesCopy);
+        delete coursesCopy[index];
+    }
+    courses2.reverse();
+    // ---------- populating: ---------------
+    var row = thead.insertRow(0);    
+    var cell = row.insertCell(0);
+    cell.innerHTML = "<strong>Academic Term</strong>";
+    var cell = row.insertCell(1);
+    cell.innerHTML = "<strong>Name</strong>";
+    var cell = row.insertCell(2);
+    cell.innerHTML = "<strong>Subject</strong>";
+    var cell = row.insertCell(3);
+    cell.innerHTML = "<strong>Grade </strong>";
+    for(var i = 0; i < courses2.length; i++)
+    {
+        var row = tbody.insertRow(0);    
+        var cell = row.insertCell(0);
+        cell.innerHTML = courses2[i].academic;
+        var cell = row.insertCell(1);
+        cell.innerHTML = courses2[i].name;
+        var cell = row.insertCell(2);
+        cell.innerHTML = courses2[i].id;
+        var cell = row.insertCell(3);
+        cell.innerHTML = "<strong>" + courses2[i].grade + "</strong>";
+        cell.innerHTML = courses2[i].academic;
+    }
     return;
 }
 
