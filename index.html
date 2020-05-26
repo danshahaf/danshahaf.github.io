@@ -189,68 +189,17 @@
                 <!----------------------------- COLLAPSE OF CLASSES DIV ------------------->
                 <div id = "classes-div" class = "collapse classes_div">
                     <h4> Organize By: </h4>
-                    <button class = "btn btn-secondary smallerBtn" id = "classByName" onclick = "orderByName()"><strong> Name </strong></button> &nbsp; &nbsp;     
-                    <button class = "btn btn-secondary smallerBtn" id = "classBySubject" onclick = "orderBySubject()"> <strong> Subject </strong> </button> &nbsp; &nbsp; 
-                    <button class = "btn btn-secondary smallerBtn" id = "classByGrade" onclick = "orderByGrade()"> <strong> Grade </strong> </button> 
-                    
+                    <button class = "btn btn-secondary w17" id = "classByName" onclick = "coursesAlphabetically()"><strong> Name </strong></button> &nbsp; &nbsp;     
+                    <button class = "btn btn-secondary w17" id = "classBySubject" onclick = "coursesBySubject()"> <strong> Subject </strong> </button> &nbsp; &nbsp; 
+                    <button class = "btn btn-secondary w17" id = "classByGrade" onclick = "coursesByGrade()"> <strong> Grade </strong> </button> &nbsp; &nbsp;
+                    <button class = "btn btn-secondary w17" id = "classByGrade" onclick = "coursesChronoligically()"> <strong> Academic Term </strong> </button> 
+
                     <div class = "classses" id = "by_grade">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Grade</th>
-                                <th scope="col">Subject</th>
-                                <th scope="col">Number</th>
-                                <th scope="col">Name</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!--
-                            <?php
-                                echo by_grade(connDB());
-                            ?>
-                            -->
-                        </tbody>
-                    </table>
-                    </div>
-
-                    <div class = "classses" id = "by_subject">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Subject</th>
-                                <th scope="col">Number</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Grade</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- <?php
-                                echo by_grade(connDB());
-                            ?> -->
-                        </tbody>
-                    </table>
-                    </div>
-
-                    <div class = "classses" id = "by_name">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Name</th>
-                                <th scope="col">Subject</th>
-                                <th scope="col">Number</th>
-                                <th scope="col">Grade</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- <?php
-                                echo by_name(connDB());
-                            ?> -->
-                        </tbody>
-                    </table>
-                    </div>
-
-                    <!-- DONE WITH CLASSES AND COURSES -->
-                    
+                        <table class = "table projectTable">
+                            <thead id = "classesTableHead"></thead>
+                            <tbody id = "classesTableBody"></tbody>
+                        </table>
+                    </div>                    
                 </div>
                 <!----------------------------- COLLAPSE OF PROJECTS DIV ------------------------------------>
                 <div id = "projects-div" class = "collapse"> <!-- ALIGN TO THE LEFT-->

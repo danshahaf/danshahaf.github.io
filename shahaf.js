@@ -44,102 +44,96 @@ const course26 = new Course('Kinesiology','SW1','Introduction to Swimming','A','
 var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course24, course25];
 // ============== END OF JSON CLASSES =================//
 
-for(var p = 0; p < allSubjects.length; p++)
-    {
-    found = false;
-    for(var j = 0; j < distAllSubjects.length; j++)
-    {
-        if(distAllSubjects[j] == allSubjects[p])
-        {
-            found = true;
-        }
-            
-    }
-    if(!found)
-    {
-        distAllSubjects.push(allSubjects[p]);
-    }
-}
-
-//later use node.js to populate this arrays from a solid and organized database
-function sortAlphabetically()
+function coursesAlphabetically()
 {
-    if(!($('.classInfo').is(':empty')))
+    // ---------- preparations: ---------------
+    var thead = document.getElementById("classesTableHead");
+    var tbody = document.getElementById("classesTableBody");
+    thead.deleteRow(0);
+    for(var z = 0; z < 0; z++)
     {
-        document.getElementById("classInfo").innerHTML = ""; // clean everything from that div
+        tbody.deleteRow(z);
     }
-    
 
-    var allClasses = su18c.concat(f18c, sp19c, su19c, f19c);
-    allClasses.sort();
+    console.log("called");
 
-    for(var i = 0; i < allClasses.length; i++)
+
+    // ---------- sorting: ---------------
+    var coursesCopy = courses;
+    var coursesAlphabetically = new Array(coursesCopy.length);
+    for (var x = 0; x < coursesAlphabetically.length; x++)
     {
-        var p = document.createElement("p");
-        var text = document.createTextNode(allClasses[i]);
-        p.appendChild(text);
-        document.getElementById("classInfo").appendChild(p);
+        var counter = 0;
+        var biggerAlphaBet = coursesCopy[counter];
+        while(biggerAlphaBet == null)
+        {
+            counter++;
+            biggerAlphaBet = coursesCopy[counter];
+        }
+        for(var i = counter; i < courses.length - 1; i++)
+        {
+            if(coursesCopy[i] < biggerAlphaBet && coursesCopy[i] != null)
+            {
+                var index = i;
+                biggerAlphaBet = coursesCopy[i];
+            }
+        }
+        coursesAlphabetically[x] = biggerAlphaBet;
+        console.log(coursesCopy[index]);
+        delete coursesCopy[index];
+        console.log(coursesCopy[index]);
+
     }
+    console.log("sorted");
+
+
+    // ---------- populating: ---------------
+    var row = thead.insertRow(0);    
+    var cell = row.insertCell(0);
+    cell.innerHTML = "Name";
+    var cell = row.insertCell(1);
+    cell.innerHTML = "Subject";
+    var cell = row.insertCell(2);
+    cell.innerHTML = "Grade";
+    var cell = row.insertCell(3);
+    cell.innerHTML = "Academic Term";
+    console.log("thead");
+    for(var i = 0; i < coursesAlphabetically.length; i++)
+    {
+        var row = tbody.insertRow(0);    
+        var cell = row.insertCell(0);
+        cell.innerHTML = coursesAlphabetically[i].name;
+        var cell = row.insertCell(1);
+        cell.innerHTML = coursesAlphabetically[i].id;
+        var cell = row.insertCell(2);
+        cell.innerHTML = coursesAlphabetically[i].grade;
+        var cell = row.insertCell(3);
+        cell.innerHTML = coursesAlphabetically[i].academic;
+    }
+    console.log("tbody");
+
+    return;
 }
-function orderByGrade()
+
+function classesBySubject()
 {
-    if(!($('.classInfo').is(':empty')))
-    {
-        document.getElementById("classInfo").innerHTML = ""; // clean everything from that div
-    }
-    var allClasses = su18c.concat(f18c, sp19c, su19c, f19c);
-    var allGrades = su18g.concat(f18g, sp19g,su19g, f19g);
-    for(var j = 0; j < allGrades.length; j++) //check for A grades
-    {
-        if(allGrades[j] == 'A')
-        {
-            var p = document.createElement("p");
-            var text = document.createTextNode(allClasses[j] + "  -  " + allGrades[j]);
-            p.appendChild(text);
-            document.getElementById("classInfo").appendChild(p);
-        }
-    }
-    for(var j = 0; j < allGrades.length; j++) //check for B grades
-    {
-        if(allGrades[j] == 'B')
-        {
-            var p = document.createElement("p");
-            var text = document.createTextNode(allClasses[j] + "  -  " + allGrades[j]);
-            p.appendChild(text);
-            document.getElementById("classInfo").appendChild(p);
-        }
-    }
-    for(var j = 0; j < allGrades.length; j++) //check for C grades
-    {
-        if(allGrades[j] == 'C')
-        {
-            var p = document.createElement("p");
-            var text = document.createTextNode(allClasses[j] + "  -  " + allGrades[j]);
-            p.appendChild(text);
-            document.getElementById("classInfo").appendChild(p);
-        }
-    }
+
+    return;
 }
 
-function sortBySubject()
+function coursesByGrade()
 {
-    var allClasses = su18c.concat(f18c, sp19c, su19c, f19c);
-    var allGrades = su18g.concat(f18g, sp19g,su19g, f19g);
-    if(!($('.classInfo').is(':empty'))) //check if the div of classInfo is empry using JQuery
-    {
-        document.getElementById("classInfo").innerHTML = ""; // clean everything from that div
-    }
-    for(var j = 0; j < distAllSubjects.length; j++)
-    {
-        for(var k = 0; k < allClasses.length; k++)
-        {
-            
-        }
-    }
-    
 
-    distAllSubjects.sort(); //sorting the distict list of all subjects alphabetically
+    return;
 }
+
+function coursesChronologically()
+{
+
+    return;
+}
+
+
 
 
 /// ----------------- COURSES AND CLASSES ORDERING FUNCTIONS -----------------------

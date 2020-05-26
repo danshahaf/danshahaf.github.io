@@ -23,6 +23,7 @@
 .imgContainer{text-align: center !important; margin-right: 15% !important; margin-left: 15% !important;}
 .imgBanner{height: 25%; border-radius: 4px; border: 1px solid black;}
 .fa{padding-top: 25% !important;}
+.w17{width: 17% !important;}
 .sub-edu-btn{margin-top:1% !important;}
 .spacebar{border-top: 4px solid white; margin-top: 1.2% !important; margin-bottom: 1% !important; width:55% !important;}
 .inline{display: inline-block !important; display:flex; flex-direction: row;}
