@@ -163,13 +163,13 @@ textarea{ text-align: center !important;   border: 0.8px solid black !important;
     -ms-transform: scale(1.05);
     transform: scale(1.05);
   }
-
+.act-div{margin-right: 25% !important; margin-left: 25% !important; background-color:rgba(255, 255, 255, 0.75);}
 .item-activities-list
 {
     background-color:rgba(255, 255, 255, 0.65);
     color:#007bff !important;
     border: 1.5px solid #007bff !important;
-    width: 30% !important;
+    width: 55% !important;
     padding-top: 1% !important;
     padding-bottom: 1% !important;
 }
