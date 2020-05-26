@@ -360,8 +360,8 @@
         <div id = "contact_div" class = "collapse info_div">
             <h4><strong><u> Email:</u></strong> &nbsp;  dan.shachaf@gmail.com <br><br>
             <strong><u>Mobile:</u></strong> &nbsp;  (925) 791 - 1544</h4>
-            <h4><strong><u> LinkedIn:</u></strong> &nbsp; &nbsp; <button type = "button" class = "btn LinkedIn-btn" onclick = "open_LinkedIn()"><img src = "Logos/linkedIn-logo.png" class = "LinkedIn-img"></button> &nbsp; &nbsp; &nbsp; &nbsp;
-                <strong><u> GitHub:</u></strong> &nbsp; &nbsp; <button type = "button" class = "btn LinkedIn-btn" onclick = "open_GitHub()"><img src = "Logos/GitHub-logo.svg" class = "LinkedIn-img"></button><br></h4>
+            <h4><strong><u> LinkedIn:</u></strong> &nbsp; &nbsp; <button type = "button" class = "btn LinkedIn-btn" onclick = "window.open('www.linkedin.com/in/shahaf-dan-66812b180/');"><img src = "Logos/linkedIn-logo.png" class = "LinkedIn-img"></button> &nbsp; &nbsp; &nbsp; &nbsp;
+                <strong><u> GitHub:</u></strong> &nbsp; &nbsp; <button type = "button" class = "btn LinkedIn-btn" onclick = "window.open('github.com/ShahafDan25');"><img src = "Logos/GitHub-logo.svg" class = "LinkedIn-img"></button><br></h4>
             <!-- <h4> <strong>Shoot me an Email! </strong> <button type = "button" class = "btn gmail-btn" data-toggle = "collapse" data-target = "#email_div" ><img src = "Logos/gmail-logo.png" class = "gmail-img"></button> </h4> -->
                 <br>
             <!-- Open this div when email img is clicked: COMMENTED OUT FOR NOW, FINISH LATER -->
@@ -383,34 +383,30 @@
         <script src = "shahaf.js" type = "text/JavaScript"></script>
         <script type = "text/JavaScript">
 
-            var picPaths = ['shahaf-pics/off-pic-1.jpeg','shahaf-pics/off-pic-3.jpeg','shahaf-pics/pic-4.jpeg','shahaf-pics/off-pic-2.jpeg','shahaf-pics/pic-5.jpeg', 'shahaf-pics/IMG_3878.jpeg'];            
+            var picPaths = ['shahaf-pics/AL.JPG', 'shahaf-pics/AQ.JPG', 'shahaf-pics/AC.JPG', 'shahaf-pics/AY.JPG', 'shahaf-pics/AE.JPG', 'shahaf-pics/AH.JPG', 'shahaf-pics/AG.JPG', 'shahaf-pics/AF.JPG', 'shahaf-pics/AI.JPG', 'shahaf-pics/AU.JPG', 'shahaf-pics/AO.JPG', 'shahaf-pics/AA.JPG', 'shahaf-pics/AM.JPG', 'shahaf-pics/AN.JPG', 'shahaf-pics/AK.JPG', 'shahaf-pics/AP.JPG', 'shahaf-pics/AB.JPG', 'shahaf-pics/AR.JPG', 'shahaf-pics/AS.JPG', 'shahaf-pics/AT.JPG', 'shahaf-pics/AJ.JPG', 'shahaf-pics/AV.JPG', 'shahaf-pics/AW.JPG', 'shahaf-pics/AX.JPG', 'shahaf-pics/AD.JPG'];            
             var curPic = -1;
-
-            var movPaths = ['shahaf-pics/mov-1.MOV','shahaf-pics/mov-2.MOV'];
             
             //preload the images and movies for smooth animation;
             var img0 = new Array();
 
-            for(var i = 0; i < picPaths.length; i++)
+            for(var i = 0; i < picPaths.length; i++) //populate array of images
             {
                 img0[i] = new Image();
                 img0[i].src = picPaths[i];
-                
             }
 
            
-            function swapImage()
-            {
+            function swapImage() {
                 curPic = (++curPic > picPaths.length - 1)? 0: curPic;
                 imgCont.src = img0[curPic].src;
                 setTimeout(swapImage, 3500);
             }
 
-            window.onload = function()
-            {
+            window.onload = function(){
                 imgCont = document.getElementById('imgBanner');
                 swapImage();
             }
+            
             function open_view_resume()
             {
                 window.open("docs/ShahafDan_Resume.jpg");
@@ -418,14 +414,6 @@
             function open_dnld_resume()
             {
                 window.open("docs/ShahafDan_Resume.pdf");
-            }
-            function open_LinkedIn()
-            {
-                window.open("https://www.linkedin.com/in/shahaf-dan-66812b180/");
-            }
-            function open_GitHub()
-            {
-                window.open("https://github.com/ShahafDan25");
             }
         </script>
 
