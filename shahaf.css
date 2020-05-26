@@ -170,6 +170,15 @@ textarea{ text-align: center !important;   border: 0.8px solid black !important;
     border-radius: 5px !important;
     padding: 2% !important;
 }
+.classes
+{
+    background-color: white;
+    border-radius:5px !important;
+    border: 2px solid black;
+    padding: 2%; 
+    margin-right: 3% !important;
+    margin-left: 3% !important;
+}
 .honorsProjectsClass{
     padding: 2% !important;
     text-align: center !important;

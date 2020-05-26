@@ -1,7 +1,4 @@
-var found = true;
-
-
-// ================ JSON FOR CLASSES ================= //
+// ================ JS FOR CLASSES ================= //
 class Course
 {
     constructor(subject, number, name, grade, term, year)
@@ -44,11 +41,38 @@ const course26 = new Course('Kinesiology','SW1','Introduction to Swimming','A','
 var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course24, course25];
 // ============== END OF JSON CLASSES =================//
 
+// ================ POPULATE ORIGINAL TABLE ================= //
+var thead = document.getElementById("classesTableHead");
+var tbody = document.getElementById("classesTableBody");
+// ---------- populating: ---------------
+var row = thead.insertRow(0);    
+var cell = row.insertCell(0);
+cell.innerHTML = "<strong>Name</strong>";
+var cell = row.insertCell(1);
+cell.innerHTML = "<strong>Subject</strong>";
+var cell = row.insertCell(2);
+cell.innerHTML = "<strong>Grade</strong>";
+var cell = row.insertCell(3);
+cell.innerHTML = "<strong>Academic Term</strong>";
+console.log("thead");
+for(var i = courses.length - 1; i > -1; i--)
+{
+    var row = tbody.insertRow(0);    
+    var cell = row.insertCell(0);
+    cell.innerHTML = courses[i].name;
+    var cell = row.insertCell(1);
+    cell.innerHTML = courses[i].id;
+    var cell = row.insertCell(2);
+    cell.innerHTML = "<strong>" + courses[i].grade + "</strong>";
+    var cell = row.insertCell(3);
+    cell.innerHTML = courses[i].academic;
+}
+console.log("tbody");
+
 function coursesAlphabetically()
 {
     // ---------- preparations: ---------------
-    var thead = document.getElementById("classesTableHead");
-    var tbody = document.getElementById("classesTableBody");
+    
     thead.deleteRow(0);
     for(var z = 0; z < 0; z++)
     {
@@ -90,13 +114,13 @@ function coursesAlphabetically()
     // ---------- populating: ---------------
     var row = thead.insertRow(0);    
     var cell = row.insertCell(0);
-    cell.innerHTML = "Name";
+    cell.innerHTML = "<strong>Name</strong>";
     var cell = row.insertCell(1);
-    cell.innerHTML = "Subject";
+    cell.innerHTML = "<strong>Subject</strong>";
     var cell = row.insertCell(2);
-    cell.innerHTML = "Grade";
+    cell.innerHTML = "<strong>Grade</strong>";
     var cell = row.insertCell(3);
-    cell.innerHTML = "Academic Term";
+    cell.innerHTML = "<strong>Academic Term</strong>";
     console.log("thead");
     for(var i = 0; i < coursesAlphabetically.length; i++)
     {
@@ -106,7 +130,7 @@ function coursesAlphabetically()
         var cell = row.insertCell(1);
         cell.innerHTML = coursesAlphabetically[i].id;
         var cell = row.insertCell(2);
-        cell.innerHTML = coursesAlphabetically[i].grade;
+        cell.innerHTML = "<strong>" + coursesAlphabetically[i].grade + "</strong>";
         var cell = row.insertCell(3);
         cell.innerHTML = coursesAlphabetically[i].academic;
     }
