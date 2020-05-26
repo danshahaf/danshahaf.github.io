@@ -6,37 +6,37 @@ class Course
         this.id = subject + " [ " + number + " ]";
         this.name = name;
         this.grade = grade;
-        this.academic = term + " " + year;
+        this.academic = year + " | " + term;
     }
 }
 
 // define courses data in javascript classes form:
-const course01 = new Course('Computer Science','20','Advanced Programming with Data Structures','A','Fall','2019');
-const course02 = new Course('Computer Science','21','Assembly Programming and Computer Architecture','B','Fall','2019');
-const course03 = new Course('Computer Science','47','Capstone Project','A','Spring','2020');
-const course04 = new Course('Computer Science','1','Computing Fundamentals I','B','Spring','2020');
-const course05 = new Course('Computer Science','2','Computing Fundamentals II','A','Fall','2018');
-const course06 = new Course('English','1A','Critical Reading and Composition','A','Summer','2018');
-const course07 = new Course('English','7','Critical Thinking and Wirintg Literature','A','Fall','2018');
-const course08 = new Course('Computer Science','45','Database Programming','A','Spring','2020');
-const course09 = new Course('Computer Science','17','Discrete Mathematical Structures','A','Fall','2018');
-const course10 = new Course('Physics','1C','Electricity and Magnetism','A','Spring','2019');
-const course11 = new Course('Mathematics','7','Elementary Linear Algebra','B','Spring','2019');
-const course12 = new Course('Work Experience','94','Internship Work Experience','A','Spring','2019');
-const course13 = new Course('Political Science','7','Introduction to American Government','A','Summer','2019');
-const course14 = new Course('Psychology','1','introduction to General Psychology','A','Fall','2019');
-const course15 = new Course('Health','1A','Introduction to Personal Health','A','Summer','2019');
-const course16 = new Course('Physics','1D','Introduction to Quantum Mechanics','A','Spring','2020');
-const course17 = new Course('Computer Science','19A','Java Programming and Development','A','Summer','2019');
-const course18 = new Course('Computer Science','41','Linux Programming and Certification','A','Spring','2020');
-const course19 = new Course('Mathematics','3','Multivariable Calculus','A','Fall','2018');
-const course20 = new Course('Physics','1B','Optics and Thermodynamics','A','Fall','2018');
-const course21 = new Course('Mathematics','5','Differental Equations','A','Spring','2020');
-const course22 = new Course('Philosophy','3','Philosophy of Arts and Aesthetics','A','Spring','2019');
-const course23 = new Course('Computer Science','43','Professional Communications','A','Fall','2019');
-const course24 = new Course('Kinesiology','DIV','Spring Board Diving','A','Fall','2018');
-const course25 = new Course('Kinesiology','50','Swim and Dive Team','A','Spring','2019');
-const course26 = new Course('Kinesiology','SW1','Introduction to Swimming','A','Fall','2018');
+const course01 = new Course('Computer Science','20','Advanced Programming with Data Structures','A','Fall','2019C');
+const course02 = new Course('Computer Science','21','Assembly Programming and Computer Architecture','B','Fall','2019C');
+const course03 = new Course('Computer Science','47','Capstone Project','A','Spring','2020A');
+const course04 = new Course('Computer Science','1','Computing Fundamentals I','B','Spring','2020A');
+const course05 = new Course('Computer Science','2','Computing Fundamentals II','A','Fall','2018C');
+const course06 = new Course('English','1A','Critical Reading and Composition','A','Summer','2018B');
+const course07 = new Course('English','7','Critical Thinking and Wirintg Literature','A','Fall','2018C');
+const course08 = new Course('Computer Science','45','Database Programming','A','Spring','2020A');
+const course09 = new Course('Computer Science','17','Discrete Mathematical Structures','A','Fall','2018C');
+const course10 = new Course('Physics','1C','Electricity and Magnetism','A','Spring','2019A');
+const course11 = new Course('Mathematics','7','Elementary Linear Algebra','B','Spring','2019A');
+const course12 = new Course('Work Experience','94','Internship Work Experience','A','Spring','2019A');
+const course13 = new Course('Political Science','7','Introduction to American Government','A','Summer','2019B');
+const course14 = new Course('Psychology','1','introduction to General Psychology','A','Fall','2019C');
+const course15 = new Course('Health','1A','Introduction to Personal Health','A','Summer','2019B');
+const course16 = new Course('Physics','1D','Introduction to Quantum Mechanics','A','Spring','2020A');
+const course17 = new Course('Computer Science','19A','Java Programming and Development','A','Summer','2019B');
+const course18 = new Course('Computer Science','41','Linux Programming and Certification','A','Spring','2020A');
+const course19 = new Course('Mathematics','3','Multivariable Calculus','A','Fall','2018C');
+const course20 = new Course('Physics','1B','Optics and Thermodynamics','A','Fall','2018C');
+const course21 = new Course('Mathematics','5','Differental Equations','A','Spring','2020A');
+const course22 = new Course('Philosophy','3','Philosophy of Arts and Aesthetics','A','Spring','2019A');
+const course23 = new Course('Computer Science','43','Professional Communications','A','Fall','2019C');
+const course24 = new Course('Kinesiology','DIV','Spring Board Diving','A','Fall','2018C');
+const course25 = new Course('Kinesiology','50','Swim and Dive Team','A','Spring','2019A');
+const course26 = new Course('Kinesiology','SW1','Introduction to Swimming','A','Fall','2018C');
 
 var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course24, course25];
 // ============== END OF JSON CLASSES =================//
@@ -71,28 +71,26 @@ for(var i = courses.length - 1; i > -1; i--)
 function coursesAlphabetically()
 {
     // ---------- preparations: ---------------
+    var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course24, course25];
     cleanPrevTable();
     // ---------- sorting: ---------------
-    var coursesCopy = courses;
-    var coursesAlphabetically = new Array(coursesCopy.length);
+    var coursesAlphabetically = new Array(courses.length);
     for (var x = 0; x < coursesAlphabetically.length; x++)
     {
         var counter = 0;
         var index = counter;
-        while(coursesCopy[index] == null)
+        while(courses[counter] == null) {counter++}
+        index = counter;
+        for(var i = counter; i < courses[i].length; i++)
         {
-            counter++;
-            index = counter;
+            if(courses[i] != null)
+            {
+                if(courses[i].name > courses[index].name) index = i;
+            }
         }
-        for(var i = courses.length; i < counter; i--)
-        {
-            if(coursesCopy[i].name > coursesCopy[index].name && coursesCopy[i] != null) index = i;
-        }
-        coursesAlphabetically[x] = coursesCopy[index];
-        console.log(coursesCopy);
-        delete coursesCopy[index];
+        coursesAlphabetically[x] = courses[index];
+        delete courses[index];
     }
-    coursesAlphabetically.reverse();
     // ---------- populating: ---------------
     var row = thead.insertRow(0);    
     var cell = row.insertCell(0);
@@ -105,7 +103,7 @@ function coursesAlphabetically()
     cell.innerHTML = "<strong>Academic Term</strong>";
     for(var i = 0; i < coursesAlphabetically.length; i++)
     {
-        var row = tbody.insertRow(0);    
+        var row = tbody.insertRow(i);    
         var cell = row.insertCell(0);
         cell.innerHTML = coursesAlphabetically[i].name;
         var cell = row.insertCell(1);
@@ -122,28 +120,27 @@ function coursesAlphabetically()
 function coursesBySubject()
 {
     // ---------- preparations: ---------------
+    var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course24, course25];
     cleanPrevTable();
     // ---------- sorting: ---------------
-    var coursesCopy = courses;
-    var courses2 = new Array(coursesCopy.length);
-    for (var x = 0; x < courses2.length; x++)
+    var subjectiveCourses = new Array(courses.length);
+    for (var x = 0; x < subjectiveCourses.length; x++)
     {
         var counter = 0;
         var index = counter;
-        while(coursesCopy[index] == null)
+        while(courses[counter] == null) {counter++}
+        index = counter;
+        for(var i = counter; i < courses.length; i++)
         {
-            counter++;
-            index = counter;
+            if(courses[i] != null)
+            {
+                if(courses[i].id < courses[index].id) index = i;
+            }
         }
-        for(var i = courses.length; i < counter; i--)
-        {
-            if(coursesCopy[i].id > coursesCopy[index].id && coursesCopy[i] != null) index = i;
-        }
-        courses2[x] = coursesCopy[index];
-        console.log(coursesCopy);
-        delete coursesCopy[index];
+        subjectiveCourses[x] = courses[index];
+        delete courses[index];
     }
-    courses2.reverse();
+    subjectiveCourses.reverse();
     // ---------- populating: ---------------
     var row = thead.insertRow(0);    
     var cell = row.insertCell(0);
@@ -154,46 +151,45 @@ function coursesBySubject()
     cell.innerHTML = "<strong>Grade</strong>";
     var cell = row.insertCell(3);
     cell.innerHTML = "<strong>Academic Term</strong>";
-    for(var i = 0; i < courses2.length; i++)
+    for(var i = 0; i < subjectiveCourses.length; i++)
     {
         var row = tbody.insertRow(0);    
         var cell = row.insertCell(0);
-        cell.innerHTML = courses2[i].id;
+        cell.innerHTML = subjectiveCourses[i].id;
         var cell = row.insertCell(1);
-        cell.innerHTML = courses2[i].name;
+        cell.innerHTML = subjectiveCourses[i].name;
         var cell = row.insertCell(2);
-        cell.innerHTML = "<strong>" + courses2[i].grade + "</strong>";
+        cell.innerHTML = "<strong>" + subjectiveCourses[i].grade + "</strong>";
         var cell = row.insertCell(3);
-        cell.innerHTML = courses2[i].academic;
+        cell.innerHTML = subjectiveCourses[i].academic;
     }
     return;
 }
 
 function coursesByGrade()
 {
-    // ---------- preparations: ---------------
+     // ---------- preparations: ---------------
+    var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course24, course25];
     cleanPrevTable();
     // ---------- sorting: ---------------
-    var coursesCopy = courses;
-    var courses2 = new Array(coursesCopy.length);
-    for (var x = 0; x < courses2.length; x++)
+    var courses = courses;
+    var coursesg = new Array(courses.length);
+    for (var x = 0; x < coursesg.length; x++)
     {
         var counter = 0;
         var index = counter;
-        while(coursesCopy[index] == null)
+        while(courses[counter] == null) {counter++;}
+        index = counter;
+        for(var i = counter; i < courses.length; i++)
         {
-            counter++;
-            index = counter;
+            if(courses[i] != null)
+            {
+                if(courses[i].grade > courses[index].grade) index = i;
+            }
         }
-        for(var i = courses.length; i < counter; i--)
-        {
-            if(coursesCopy[i].grade > coursesCopy[index].grade && coursesCopy[i] != null) index = i;
-        }
-        courses2[x] = coursesCopy[index];
-        console.log(coursesCopy);
-        delete coursesCopy[index];
+        coursesg[x] = courses[index];
+        delete courses[index];
     }
-    courses2.reverse();
     // ---------- populating: ---------------
     var row = thead.insertRow(0);    
     var cell = row.insertCell(0);
@@ -204,17 +200,17 @@ function coursesByGrade()
     cell.innerHTML = "<strong>Subject</strong>";
     var cell = row.insertCell(3);
     cell.innerHTML = "<strong>Academic Term</strong>";
-    for(var i = 0; i < courses2.length; i++)
+    for(var i = 0; i < coursesg.length; i++)
     {
         var row = tbody.insertRow(0);    
         var cell = row.insertCell(0);
-        cell.innerHTML = "<strong>" + courses2[i].grade + "</strong>";
+        cell.innerHTML = "<strong>" + coursesg[i].grade + "</strong>";
         var cell = row.insertCell(1);
-        cell.innerHTML = courses2[i].name;
+        cell.innerHTML = coursesg[i].name;
         var cell = row.insertCell(2);
-        cell.innerHTML = courses2[i].id;
+        cell.innerHTML = coursesg[i].id;
         var cell = row.insertCell(3);
-        cell.innerHTML = courses2[i].academic;
+        cell.innerHTML = coursesg[i].academic.substring(0,4) + coursesg[i].academic.substring(5, coursesg[i].academic.length);
     }
     return;
 }
@@ -222,28 +218,26 @@ function coursesByGrade()
 function coursesChronoligically()
 {
     // ---------- preparations: ---------------
+    var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course24, course25];
     cleanPrevTable();
     // ---------- sorting: ---------------
-    var coursesCopy = courses;
-    var courses2 = new Array(coursesCopy.length);
-    for (var x = 0; x < courses2.length; x++)
+    var coursesChron = new Array(courses.length);
+    for (var x = 0; x < coursesChron.length; x++)
     {
         var counter = 0;
         var index = counter;
-        while(coursesCopy[index] == null)
+        while(courses[counter] == null) {counter++}
+        index = counter;
+        for(var i = 0; i < courses.length; i++) 
         {
-            counter++;
-            index = counter;
+            if(courses[i] != null)
+            {
+                if(courses[i].academic > courses[index].academic) index = i;
+            }
         }
-        for(var i = courses.length; i < counter; i--)
-        {
-            if(coursesCopy[i].grade > coursesCopy[index].grade && coursesCopy[i] != null) index = i;
-        }
-        courses2[x] = coursesCopy[index];
-        console.log(coursesCopy);
-        delete coursesCopy[index];
+        coursesChron[x] = courses[index];
+        delete courses[index];
     }
-    courses2.reverse();
     // ---------- populating: ---------------
     var row = thead.insertRow(0);    
     var cell = row.insertCell(0);
@@ -254,18 +248,17 @@ function coursesChronoligically()
     cell.innerHTML = "<strong>Subject</strong>";
     var cell = row.insertCell(3);
     cell.innerHTML = "<strong>Grade </strong>";
-    for(var i = 0; i < courses2.length; i++)
+    for(var i = 0; i < coursesChron.length; i++)
     {
-        var row = tbody.insertRow(0);    
+        var row = tbody.insertRow(i);    
         var cell = row.insertCell(0);
-        cell.innerHTML = courses2[i].academic;
-        var cell = row.insertCell(1);
-        cell.innerHTML = courses2[i].name;
-        var cell = row.insertCell(2);
-        cell.innerHTML = courses2[i].id;
-        var cell = row.insertCell(3);
-        cell.innerHTML = "<strong>" + courses2[i].grade + "</strong>";
-        cell.innerHTML = courses2[i].academic;
+        cell.innerHTML = coursesChron[i].academic.substring(0,4) + coursesChron[i].academic.substring(5, coursesChron[i].academic.length);
+        cell = row.insertCell(1);
+        cell.innerHTML = coursesChron[i].name;
+        cell = row.insertCell(2);
+        cell.innerHTML = coursesChron[i].id;
+        cell = row.insertCell(3);
+        cell.innerHTML = "<strong>" + coursesChron[i].grade + "</strong>";
     }
     return;
 }
@@ -275,31 +268,4 @@ function cleanPrevTable()
     thead.deleteRow(0);
     for(var z = courses.length - 1; z > -1; z--) {tbody.deleteRow(z);}
     return;
-}
-
-
-
-/// ----------------- COURSES AND CLASSES ORDERING FUNCTIONS -----------------------
-function orderBySubject()
-{
-    document.getElementById("classBySubject").style.border = "1px solid #00cc00";
-    document.getElementById("classByName").style.border = "1px solid white";
-    document.getElementById("classByGrade").style.border = "1px solid white";
-    //---------------------------------------------------------------------//
-
-}
-function orderByName()
-{
-    document.getElementById("classByName").style.border = "1px solid #00cc00";
-    document.getElementById("classByGrade").style.border = "1px solid white";
-    document.getElementById("classBySubject").style.border = "1px solid white";
-    //---------------------------------------------------------------------//
-
-}
-function orderByGrade()
-{
-    document.getElementById("classByGrade").style.border = "1px solid #00cc00";
-    document.getElementById("classByName").style.border = "1px solid white";
-    document.getElementById("classBySubject").style.border = "1px solid white";
-    //---------------------------------------------------------------------//
 }

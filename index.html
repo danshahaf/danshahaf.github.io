@@ -1,15 +1,5 @@
-<!--
-<?php
-    include "display_sql.php"; //include functions for classes display
-?> -->
-
+<!-- <!DOCTYPE html> -->
 <html> 
-<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("user_q8qaHpID3MDMpXziPTIjL");
-   })();
-</script>
     <head>
         <title> Shahaf Dan</title>
         <link rel="shortcut icon" href="Logos/s-logo.jpg"/>
@@ -36,7 +26,6 @@
         
         <div class = "header">
             <h2 class = "nameText"> Shahaf Dan</h2>
-            <!-- <p> <strong> Page built by Shahaf Dan </strong> </p> -->
             <h4> »    Full Stack Software Developer  |  Bay Area 
             <br><br>
             <button type = "button" class = "btn btn-outline-secondary inline" onclick = "open_view_resume()">View My Resume (JPG)</button>
@@ -96,7 +85,6 @@
             </div>
             
         </div>
-
         <br><br>
         <!-- EDUCATION Collapse-->
         <button type = "button" class = " btn btn-primary" data-toggle = "collapse" data-target = "#education_div"> Education </button>
@@ -223,7 +211,12 @@
                                 <tr class = "tableRow">
                                     <td><strong>Computer Science</strong>: Data Structures</td>
                                     <td>Dictionary Tree: Customized Data Structure</td>
-                                    <td><button type = "button" class="btn btn-outline-primary w45 opposite-outline-primary" onclick = "window.open('docs/cs20_abs.pdf');">Abstract</button>&nbsp;<button type = "button" class = "btn btn-outline-primary ml2 w45 opposite-outline-primary" onclick = "window.open('github.com/ShahafDan25/DataStructures-CPP/tree/master/A12_DictionaryTree');"> ZIP Link </button></td>
+                                    <td><button type = "button" class="btn btn-outline-primary w45 opposite-outline-primary" onclick = "window.open('docs/cs20_abs.pdf');">Abstract</button>&nbsp;<button type = "button" class = "btn btn-outline-primary ml2 w45 opposite-outline-primary" onclick = "window.location.href = 'github.com/ShahafDan25/DataStructures-CPP/tree/master/A12_DictionaryTree';"> ZIP </button></td>
+                                </tr>
+                                <tr class = "tableRow">
+                                    <td><strong>Computer Science</strong>: Assembly Programming</td>
+                                    <td>Assembler Movie I\O Encryptor</td>
+                                    <td><button type = "button" class = "btn btn-outline-primary ml2 w94 opposite-outline-primary" onclick = "window.location.href = 'github.com/ShahafDan25/DataStructures-CPP/tree/master/A12_DictionaryTree';"> ZIP </button></td>
                                 </tr>
                                 <tr class = "tableRow">
                                     <td><strong>Mathematics</strong>: Discrete Mathematical Structures</td>
@@ -232,18 +225,18 @@
                                 </tr>
                                 <tr class = "tableRow">
                                     <td><strong>Physics</strong>: Introduction to Quantum Mechanics</td>
-                                    <td>The Meissner Effect: Superconductivity, Magnetic Levitation,<br> and Quantum Locking</td>
+                                    <td>The Meissner Effect: Superconductivity and Magnetic Levitation</td>
                                     <td><button type = "button" class="btn btn-outline-primary w45 opposite-outline-primary" onclick = "window.open('docs/phy1d_abs.pdf');">Abstract</button>&nbsp;<button type = "button" class = "btn btn-outline-primary ml2 w45 opposite-outline-primary" onclick = "window.open('docs/phys1d_proj.pdf');"> Paper </button></td>
                                 </tr>
                                 <tr class = "tableRow">
                                     <td><strong>Computer Science</strong>: Capstone Project</td>
                                     <td>The Market's Manager</td>
-                                    <td><button type = "button" class="btn btn-outline-primary w45 opposite-outline-primary" onclick = "window.open('docs/cs47_report.pdf');"> Report </button>&nbsp;<button type = "button" class = "btn btn-outline-primary ml2 w45 opposite-outline-primary" onclick = "window.open('github.com/ShahafDan25/LPCCapstone');"> ZIP Link </button></td>
+                                    <td><button type = "button" class="btn btn-outline-primary w45 opposite-outline-primary" onclick = "window.open('docs/cs47_report.pdf');"> Report </button>&nbsp;<button type = "button" class = "btn btn-outline-primary ml2 w45 opposite-outline-primary" onclick = "window.location.href = 'github.com/ShahafDan25/LPCCapstone';"> ZIP </button></td>
                                 </tr>
                                 <tr class = "tableRow">
                                     <td><strong>Computer Science</strong>: Database Programming</td>
                                     <td>Rate My Professor at Las Positas College</td>
-                                    <td><button type = "button" class="btn btn-outline-primary w45 opposite-outline-primary" onclick = "window.open('docs/cs45_abs.pdf');">Abstract</button>&nbsp;<button type = "button" class = "btn btn-outline-primary ml2 w45 opposite-outline-primary" onclick = "window.open('github.com/ShahafDan25/LPC-RMP');"> ZIP Link </button></td>
+                                    <td><button type = "button" class="btn btn-outline-primary w45 opposite-outline-primary" onclick = "window.open('docs/cs45_abs.pdf');">Abstract</button>&nbsp;<button type = "button" class = "btn btn-outline-primary ml2 w45 opposite-outline-primary" onclick = "window.location.href = 'github.com/ShahafDan25/LPC-RMP';"> ZIP </button></td>
                                 </tr>
                                 <tr class = "tableRow">
                                     <td><strong>Mathematics</strong>: Differential Equations</td>
@@ -274,7 +267,6 @@
                 </p>
             </div>
         </div>
-
         <br><br>
         <!----------------------  TECHNICAL SKILLS COLLAPSE ------------------------------>
         <button type = "button" class = " btn btn-primary" data-toggle = "collapse" data-target = "#knowledge_div"> Technical Skills </button>
@@ -325,23 +317,10 @@
         <button type = "button" class = " btn btn-warning" data-toggle = "collapse" data-target = "#contact_div"> Contact Me </button>
         <div id = "contact_div" class = "collapse info_div">
             <h4><strong><u> Email:</u></strong> &nbsp;  dan.shachaf@gmail.com &nbsp; &nbsp;<strong><u>Mobile:</u></strong> &nbsp;  (925) 791 - 1544</h4><br>
-            <button type = "button" class = "contact-btn inline " onclick = "window.open('www.linkedin.com/in/shahaf-dan-66812b180/');"><img src = "Logos/linkedin-logo.png" class = "LinkedIn-img"></button>
-            <button type = "button" class = "contact-btn inline " onclick = "window.open('github.com/ShahafDan25');"><img src = "Logos/gitHub-logo.png" class = "LinkedIn-img"></button><br>
-            <!-- <h4> <strong>Shoot me an Email! </strong> <button type = "button" class = "btn gmail-btn" data-toggle = "collapse" data-target = "#email_div" ><img src = "Logos/gmail-logo.png" class = "gmail-img"></button> </h4> -->
-                <br>
-            <!-- Open this div when email img is clicked: COMMENTED OUT FOR NOW, FINISH LATER -->
-
-            <!--
-            <div id = "email_div" class = "collapse email-div">
-                From: &nbsp; &nbsp; <input type = "text" id = "from_email" placeholder = " Your Email Address" class = "email-sender-input"> &nbsp; &nbsp; &nbsp; &nbsp;
-                <input type = "text" class = "subject" id = "subjectIntro" placeholder="Message Subject"><br><br>
-                <textarea class = "email-body form-control" id = "email-body" rows = "7"></textarea>
-                <br>
-                <button type = "button" class = "btn btn-outline-danger send" id = "send-email-btn" onclick = "sendEmail()"> Send this email!</button>
-            </div>
-        -->
+            <button type = "button" class = "contact-btn inline " onclick = "window.location.href = 'www.linkedin.com/in/shahaf-dan-66812b180/';"><img src = "Logos/linkedin-logo.png" class = "LinkedIn-img"></button>
+            <button type = "button" class = "contact-btn inline " onclick = "window.location.href = 'github.com/ShahafDan25';"><img src = "Logos/gitHub-logo.png" class = "LinkedIn-img"></button><br>
         </div>
-        <br><br><br>
+        <br>
         
     
         <!-- JavaScript code here -->
@@ -350,17 +329,13 @@
 
             var picPaths = ['shahaf-pics/AL.JPG', 'shahaf-pics/AQ.JPG', 'shahaf-pics/AC.JPG', 'shahaf-pics/AY.JPG', 'shahaf-pics/AE.JPG', 'shahaf-pics/AH.JPG', 'shahaf-pics/AG.JPG', 'shahaf-pics/AF.JPG', 'shahaf-pics/AI.JPG', 'shahaf-pics/AU.JPG', 'shahaf-pics/AO.JPG', 'shahaf-pics/AA.JPG', 'shahaf-pics/AM.JPG', 'shahaf-pics/AN.JPG', 'shahaf-pics/AK.JPG', 'shahaf-pics/AP.JPG', 'shahaf-pics/AB.JPG', 'shahaf-pics/AR.JPG', 'shahaf-pics/AS.JPG', 'shahaf-pics/AT.JPG', 'shahaf-pics/AJ.JPG', 'shahaf-pics/AV.JPG', 'shahaf-pics/AW.JPG', 'shahaf-pics/AX.JPG', 'shahaf-pics/AD.JPG'];            
             var curPic = -1;
-            
-            //preload the images and movies for smooth animation;
             var img0 = new Array();
 
-            for(var i = 0; i < picPaths.length; i++) //populate array of images
-            {
+            for(var i = 0; i < picPaths.length; i++) {
                 img0[i] = new Image();
                 img0[i].src = picPaths[i];
             }
 
-           
             function swapImage() {
                 curPic = (++curPic > picPaths.length - 1)? 0: curPic;
                 imgCont.src = img0[curPic].src;
@@ -371,36 +346,6 @@
                 imgCont = document.getElementById('imgBanner');
                 swapImage();
             }
-
-            function open_view_resume()
-            {
-                window.open("docs/ShahafDan_Resume.jpg");
-            }
-            function open_dnld_resume()
-            {
-                window.open("docs/ShahafDan_Resume.pdf");
-            }
-        </script>
-
-    <!-- JavaScript code for smtp.js API for sending the email -->
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-        <script type = "text/javascript">
-        function sendEmail()
-        {
-             
-            Email.send({
-                SecureToken:'5659d736-6bc5-4d73-a2ee-a0835e344417',
-                To: "dan.shachaf@gmail.com",
-                //From: document.getElementById("from_email").value,
-                //Subject: document.getElementById("subjectIntro").value,
-                //Body: document.getElementById("email-body").value
-                From: "dan.shachaf@gmail.com",
-                Subject: "This is a test",
-                Body: "Hello World Email Test"
-            }).then(
-                message => alert("Message Sent Succesfully, Thank You!")
-            );
-        }
         </script>
 
     </body>
