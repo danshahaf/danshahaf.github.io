@@ -17,6 +17,8 @@
 .w45{width: 45% !important;}
 .w94{width: 94% !important;}
 .ml2{margin-left: 2% !important;}
+.logo-label{font-family: "monospace" !important; text-align: center !important;}
+.skill-logo-container{margin-left: 5% !important; margin-right: 5% !important; }
 .courses-btn:hover{background-color:white !important; color:gray !important;}
 .opposite-outline-primary:hover{border-color: gray !important; background-color: #007bff; color:white;}
 .tablePart{width: 90% !important; padding-right:3% !important; padding-left: 3% !important; margin: 0% !important;}
