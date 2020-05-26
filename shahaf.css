@@ -9,16 +9,16 @@
 .gmail-img{width: 100%; height: 120%; border-radius: 150% !important;}
 .logo-bigger-img{margin: 1% !important; padding: 2% !important; height: 9% !important; padding-top: 100%;}
 .list-group-item{border: 1px solid black; text-align: center;}
-.list-group{text-align: center !important; margin-right: 10% !important; margin-left: 10% !important;}
-.front-end{float: left; width: 50% !important;}
-.back-end{float: right; width: 50% !important;}
+.list-group{text-align: center !important; margin-right: 3% !important; margin-left: 3% !important;}
 .logo-img{margin: 1% !important; padding: 0.5% !important; height: 9%; padding-top: 0%;}
+.logo-img-smaller{margin: 1% !important; padding: 0.5% !important; height: 6%; padding-top: 0%;}
 .sortBtn{width: 25% !important; margin: 3% !important;}
 .edu{margin-right: 15% !important; margin-left: 15% !important;}
 .inner-content{text-align: left !important; margin-left: 7% !important;}
 .imgContainer{text-align: center !important; margin-right: 15% !important; margin-left: 15% !important;}
 .imgBanner{height: 25%; border-radius: 4px; border: 1px solid black;}
 .fa{padding-top: 25% !important;}
+.inline{display: inline-block !important; display:flex; flex-direction: row;}
 .vid{border: 1px solid black; border-radius: 3px !important;  }
 textarea{ text-align: center !important;   border: 0.8px solid black !important; border-radius: 3px;}
 .email-div{ margin-right: 15% !important; margin-left: 15% !important;}
@@ -162,4 +162,10 @@ textarea{ text-align: center !important;   border: 0.8px solid black !important;
     background-color: white;
     border-radius: 4px;
     border: 3px solid black;
+}
+
+.exps-table
+{
+    width: 33% !important;
+    margin-left: 0px!important;
 }
