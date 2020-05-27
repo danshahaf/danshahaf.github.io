@@ -46,7 +46,7 @@ textarea{ text-align: center !important;   border: 0.8px solid black !important;
 .send{margin-right: 20% !important; margin-left: 20% !important;}
 .email-sender-input{text-align: center; border: 0.6px solid black; border-radius: 4px; padding: 3px;}
 .subject{text-align: center; border: 0.6px solid black !important; border-radius: 4px; padding: 3px !important; width: 60% !important;}
-.contact-btn{background-color: rgba(255, 255, 255, 0.45) !important; margin-right: 1% !important; border: 2px solid white !important; width: 5.25% !important; height: 9% !important; padding: 0.5% !important;}
+.contact-btn{background-color: rgba(255, 255, 255, 0.45) !important; margin-right: 1% !important; border: 2px solid white !important; width: 5.6% !important; height: 9.3% !important; padding: 0.5% !important;}
 .contact-btn:hover{background-color:white !important; border: 3px solid black !important; padding: 0.75% !important;}
 /* timeline CSS */
 .main-timeline{ font-family: 'Nunito Sans', sans-serif; }
@@ -215,7 +215,7 @@ textarea{ text-align: center !important;   border: 0.8px solid black !important;
     border-radius: 4px;
     border: 3px solid black;
 }
-.footer{margin-bottom: 5% !important; background: linear-gradient(to right,rgb(160, 131, 255),rgb(236, 174, 255)); border-top: 3px solid black; border-bottom: 3px solid black; padding: 1% !important; opacity: 0.9;}
+.footer{margin-bottom: 5% !important; background: linear-gradient(to right,rgb(160, 131, 255),rgb(236, 174, 255)); border-top: 3px solid black; border-bottom: 3px solid black; padding: 2% !important; opacity: 0.9;}
 .exps-table
 {
     width: 33% !important;
