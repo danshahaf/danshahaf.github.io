@@ -4,17 +4,19 @@
         <title> Shahaf Dan</title>
         <link rel="shortcut icon" href="Logos/s-logo.jpg"/>
 
+        <style>
+
+            svg{
+                width: 100% !important;
+                height: 100% !important;
+            }
+        </style>
+
         <!-- Bootstrap for CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         
         <!-- MY CSS -->
         <link rel = "stylesheet" type = "text/css" href = "shahaf.css">
-
-        <!-- MORRIS.JS LINKS -->
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 
         <!-- MY JavaScript -->
         <!-- <script src = "shahaf.js" type = "text/JavaScript"></script> -->
@@ -27,6 +29,12 @@
 
         <!-- Bootstrap for CSS Icon -->
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+        <!-- MORRIS.JS LINKS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 
         <!-- API's website: https://funnel.io/data-sources -->
     </head>
@@ -192,9 +200,10 @@
                             <tbody id = "classesTableBody"></tbody>
                         </table>
                     </div> <br>
-                    <div class = "classes">
+                    <div class = "classes" style = "width: 94% !important; position: relative !important;">
                         <h3>GPA Maintenance Graph</h3>
-                        <div class = "gpaGraph" id = "gpaGraph"></div>
+                        <div id = "gpaGraph" style = "width: 100% !important; margin-left: 25% !important; padding: 0% !important; height: 100% !important;"></div>
+                        
                     </div>                  
                 </div>
                 <button type = "button" class = "btn btn-info sub-edu-btn" id = "projects-btn" data-toggle="collapse" data-target="#projects-div"> Projects </button> <br>
@@ -332,21 +341,8 @@
         </footer>
 
         <script src = "shahaf.js" type = "text/JavaScript"></script>
-        <script>
-            var gpaGraphData = getGpaGraphData();
-            // console.log(gpaGraphData);
-            Morris.Line({
-                element : 'gpaGraph',
-                data: gpaGraphData, 
-                xkey: ['TERM'],
-                ykeys: ['GPA'],
-                ymin: 'auto',
-                ymax: 'auto',
-                labels:['GPA'],
-                hideHover:'auto',
-                stacked:true
-            });
-        </script>
+        <script src = "graph.js" type = "text/JavaScript"></script>
+
         <!-- TO ADD: Icons instead of photos (example: <i class="fa fa-github" aria-hidden="true"></i>
 
             Add Grades Graphs (Morris.js)
@@ -364,6 +360,27 @@
             Makeit flexible for any screen size!!
 -->
     </body>
+    <script>
+        console.log(gpaGraphData);
+        $("#gpaGraph").empty();
+        Morris.Line({
+            element : 'gpaGraph',
+            data: gpaGraphData, 
+            xkey: 'TERM',
+            ykeys: ['GPA'],
+            ymin: 3.00,
+            ymax: 4.00,
+            labels:['GPA'],
+            hideHover:'auto',
+            stacked: false,
+            parseTime: false,
+            pointSize: 0,
+            dataLabels: false,
+            lineType: 'vertical',
+            lineWidth: 2.5
+        });
+    </script>
+
 </html>
 
     

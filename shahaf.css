@@ -199,6 +199,7 @@ textarea{ text-align: center !important;   border: 0.8px solid black !important;
     border-radius: 5px !important;
     padding: 2% !important;
 }
+.gpaGraph {width: 100 !important;}
 .classes
 {
     background-color: white;
