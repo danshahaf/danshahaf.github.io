@@ -4,14 +4,6 @@
         <title> Shahaf Dan</title>
         <link rel="shortcut icon" href="Logos/s-logo.jpg"/>
 
-        <style>
-
-            svg{
-                width: 100% !important;
-                height: 100% !important;
-            }
-        </style>
-
         <!-- Bootstrap for CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         
@@ -199,11 +191,6 @@
                             <thead id = "classesTableHead"></thead>
                             <tbody id = "classesTableBody"></tbody>
                         </table>
-                    </div> <br>
-                    <div class = "classes" style = "width: 94% !important; position: relative !important;">
-                        <h3>GPA Maintenance Graph</h3>
-                        <div id = "gpaGraph" style = "width: 100% !important; margin-left: 25% !important; padding: 0% !important; height: 100% !important;"></div>
-                        
                     </div>                  
                 </div>
                 <button type = "button" class = "btn btn-info sub-edu-btn" id = "projects-btn" data-toggle="collapse" data-target="#projects-div"> Projects </button> <br>
@@ -341,7 +328,6 @@
         </footer>
 
         <script src = "shahaf.js" type = "text/JavaScript"></script>
-        <script src = "graph.js" type = "text/JavaScript"></script>
 
         <!-- TO ADD: Icons instead of photos (example: <i class="fa fa-github" aria-hidden="true"></i>
 
@@ -360,26 +346,6 @@
             Makeit flexible for any screen size!!
 -->
     </body>
-    <script>
-        console.log(gpaGraphData);
-        $("#gpaGraph").empty();
-        Morris.Line({
-            element : 'gpaGraph',
-            data: gpaGraphData, 
-            xkey: 'TERM',
-            ykeys: ['GPA'],
-            ymin: 3.00,
-            ymax: 4.00,
-            labels:['GPA'],
-            hideHover:'auto',
-            stacked: false,
-            parseTime: false,
-            pointSize: 0,
-            dataLabels: false,
-            lineType: 'vertical',
-            lineWidth: 2.5
-        });
-    </script>
 
 </html>
 
