@@ -26,7 +26,7 @@ const course12 = new Course('Work Experience','94','Internship Work Experience',
 const course13 = new Course('Political Science','7','Introduction to American Government','A','Summer','2019B');
 const course14 = new Course('Psychology','1','introduction to General Psychology','A','Fall','2019C');
 const course15 = new Course('Health','1A','Introduction to Personal Health','A','Summer','2019B');
-const course16 = new Course('Physics','1D','Introduction to Quantum Mechanics','A','Spring','2020A');
+const course16 = new Course('Physics','1D','Introduction to Quantum Mechanics','B','Spring','2020A');
 const course17 = new Course('Computer Science','19A','Java Programming and Development','A','Summer','2019B');
 const course18 = new Course('Computer Science','41','Linux Programming and Certification','A','Spring','2020A');
 const course19 = new Course('Mathematics','3','Multivariable Calculus','A','Fall','2018C');
@@ -64,7 +64,7 @@ for(var i = courses.length - 1; i > -1; i--)
     var cell = row.insertCell(2);
     cell.innerHTML = "<strong>" + courses[i].grade + "</strong>";
     var cell = row.insertCell(3);
-    cell.innerHTML = courses[i].academic;
+    cell.innerHTML = courses[i].academic.substring(0,4) + courses[i].academic.substring(5, courses[i].academic.length);
 }
 
 // ============= FUCTIONS =============:::
@@ -111,7 +111,7 @@ function coursesAlphabetically()
         var cell = row.insertCell(2);
         cell.innerHTML = "<strong>" + coursesAlphabetically[i].grade + "</strong>";
         var cell = row.insertCell(3);
-        cell.innerHTML = coursesAlphabetically[i].academic;
+        cell.innerHTML = coursesAlphabetically[i].academic.substring(0,4) + coursesAlphabetically[i].academic.substring(5, coursesAlphabetically[i].academic.length);
     }
 
     return;
@@ -161,7 +161,7 @@ function coursesBySubject()
         var cell = row.insertCell(2);
         cell.innerHTML = "<strong>" + subjectiveCourses[i].grade + "</strong>";
         var cell = row.insertCell(3);
-        cell.innerHTML = subjectiveCourses[i].academic;
+        cell.innerHTML = subjectiveCourses[i].academic.substring(0,4) + subjectiveCourses[i].academic.substring(5, subjectiveCourses[i].academic.length);
     }
     return;
 }
@@ -268,4 +268,10 @@ function cleanPrevTable()
     thead.deleteRow(0);
     for(var z = courses.length - 1; z > -1; z--) {tbody.deleteRow(z);}
     return;
+}
+
+function gpaGraph() {
+    var data = "";
+
+    return data;
 }
