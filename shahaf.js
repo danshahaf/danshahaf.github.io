@@ -329,7 +329,6 @@ function getGpaGraphData() {
         else if(coursesChron[t-1].grade == 'C') totalgpaunits += 2*coursesChron[t-1].units;
         else if(coursesChron[t-1].grade == 'D') totalgpaunits += 1*coursesChron[t-1].units;
         totalunits += coursesChron[t-1].units;
-        // console.log(coursesChron[t-1].name)
         if(coursesChron[t].academic != coursesChron[t-1].academic) {
             var finalTerm = parseInt(coursesChron[t-1].year.substring(0,4));
             if(coursesChron[t-1].term == "Spring") finalTerm += 0.04;
