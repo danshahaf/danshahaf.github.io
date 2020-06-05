@@ -1,8 +1,34 @@
+
+// ================ JS FOR PHOTOS ================= //
+
+var picPaths = ['shahaf-pics/AL.JPG', 'shahaf-pics/AQ.JPG', 'shahaf-pics/AC.JPG', 'shahaf-pics/AY.JPG', 'shahaf-pics/AE.JPG', 'shahaf-pics/AH.JPG', 'shahaf-pics/AG.JPG', 'shahaf-pics/AF.JPG', 'shahaf-pics/AI.JPG', 'shahaf-pics/AU.JPG', 'shahaf-pics/AO.JPG', 'shahaf-pics/AA.JPG', 'shahaf-pics/AM.JPG', 'shahaf-pics/AN.JPG', 'shahaf-pics/AK.JPG', 'shahaf-pics/AP.JPG', 'shahaf-pics/AB.JPG', 'shahaf-pics/AR.JPG', 'shahaf-pics/AS.JPG', 'shahaf-pics/AT.JPG', 'shahaf-pics/AJ.JPG', 'shahaf-pics/AV.JPG', 'shahaf-pics/AW.JPG', 'shahaf-pics/AX.JPG', 'shahaf-pics/AD.JPG'];            
+var curPic = -1;
+var img0 = new Array();
+
+for(var i = 0; i < picPaths.length; i++) {
+    img0[i] = new Image();
+    img0[i].src = picPaths[i];
+}
+
+function swapImage() {
+    curPic = (++curPic > picPaths.length - 1)? 0: curPic;
+    imgCont.src = img0[curPic].src;
+    setTimeout(swapImage, 3500);
+}
+
+window.onload = function(){
+    imgCont = document.getElementById('imgBanner');
+    swapImage();
+}
+
 // ================ JS FOR CLASSES ================= //
 class Course
 {
-    constructor(subject, number, name, grade, term, year)
+    constructor(subject, number, name, grade, term, year, units)
     {
+        this.units = units;
+        this.term = term;
+        this.year = year;
         this.id = subject + " [ " + number + " ]";
         this.name = name;
         this.grade = grade;
@@ -11,32 +37,32 @@ class Course
 }
 
 // define courses data in javascript classes form:
-const course01 = new Course('Computer Science','20','Advanced Programming with Data Structures','A','Fall','2019C');
-const course02 = new Course('Computer Science','21','Assembly Programming and Computer Architecture','B','Fall','2019C');
-const course03 = new Course('Computer Science','47','Capstone Project','A','Spring','2020A');
-const course04 = new Course('Computer Science','1','Computing Fundamentals I','B','Spring','2020A');
-const course05 = new Course('Computer Science','2','Computing Fundamentals II','A','Fall','2018C');
-const course06 = new Course('English','1A','Critical Reading and Composition','A','Summer','2018B');
-const course07 = new Course('English','7','Critical Thinking and Wirintg Literature','A','Fall','2018C');
-const course08 = new Course('Computer Science','45','Database Programming','A','Spring','2020A');
-const course09 = new Course('Computer Science','17','Discrete Mathematical Structures','A','Fall','2018C');
-const course10 = new Course('Physics','1C','Electricity and Magnetism','A','Spring','2019A');
-const course11 = new Course('Mathematics','7','Elementary Linear Algebra','B','Spring','2019A');
-const course12 = new Course('Work Experience','94','Internship Work Experience','A','Spring','2019A');
-const course13 = new Course('Political Science','7','Introduction to American Government','A','Summer','2019B');
-const course14 = new Course('Psychology','1','introduction to General Psychology','A','Fall','2019C');
-const course15 = new Course('Health','1A','Introduction to Personal Health','A','Summer','2019B');
-const course16 = new Course('Physics','1D','Introduction to Quantum Mechanics','B','Spring','2020A');
-const course17 = new Course('Computer Science','19A','Java Programming and Development','A','Summer','2019B');
-const course18 = new Course('Computer Science','41','Linux Programming and Certification','A','Spring','2020A');
-const course19 = new Course('Mathematics','3','Multivariable Calculus','A','Fall','2018C');
-const course20 = new Course('Physics','1B','Optics and Thermodynamics','A','Fall','2018C');
-const course21 = new Course('Mathematics','5','Differental Equations','A','Spring','2020A');
-const course22 = new Course('Philosophy','3','Philosophy of Arts and Aesthetics','A','Spring','2019A');
-const course23 = new Course('Computer Science','43','Professional Communications','A','Fall','2019C');
-const course24 = new Course('Kinesiology','DIV','Spring Board Diving','A','Fall','2018C');
-const course25 = new Course('Kinesiology','50','Swim and Dive Team','A','Spring','2019A');
-const course26 = new Course('Kinesiology','SW1','Introduction to Swimming','A','Fall','2018C');
+const course01 = new Course('Computer Science','20','Advanced Programming with Data Structures','A','Fall','2019C', 4);
+const course02 = new Course('Computer Science','21','Assembly Programming and Computer Architecture','B','Fall','2019C', 4);
+const course03 = new Course('Computer Science','47','Capstone Project','A','Spring','2020A', 3);
+const course04 = new Course('Computer Science','1','Computing Fundamentals I','B','Spring','2020A', 4);
+const course05 = new Course('Computer Science','2','Computing Fundamentals II','A','Fall','2018C', 4);
+const course06 = new Course('English','1A','Critical Reading and Composition','A','Summer','2018B', 3);
+const course07 = new Course('English','7','Critical Thinking and Wirintg Literature','A','Fall','2018C', 3);
+const course08 = new Course('Computer Science','45','Database Programming','A','Spring','2020A', 4);
+const course09 = new Course('Computer Science','17','Discrete Mathematical Structures','A','Fall','2019C', 4);
+const course10 = new Course('Physics','1C','Electricity and Magnetism','A','Spring','2019A', 5);
+const course11 = new Course('Mathematics','7','Elementary Linear Algebra','B','Spring','2019A', 3.5);
+const course12 = new Course('Work Experience','94','Internship Work Experience','A','Spring','2019A', 0.5);
+const course13 = new Course('Political Science','7','Introduction to American Government','A','Summer','2019B', 4);
+const course14 = new Course('Psychology','1','introduction to General Psychology','A','Fall','2019C', 3);
+const course15 = new Course('Health','1A','Introduction to Personal Health','A','Summer','2019B', 3);
+const course16 = new Course('Physics','1D','Introduction to Quantum Mechanics','B','Spring','2020A', 3);
+const course17 = new Course('Computer Science','19A','Java Programming and Development','A','Summer','2019B', 4);
+const course18 = new Course('Computer Science','41','Linux Programming and Certification','A','Spring','2020A', 3);
+const course19 = new Course('Mathematics','3','Multivariable Calculus','A','Fall','2018C', 5);
+const course20 = new Course('Physics','1B','Optics and Thermodynamics','A','Fall','2018C', 5);
+const course21 = new Course('Mathematics','5','Differental Equations','A','Spring','2020A', 3.5);
+const course22 = new Course('Philosophy','3','Philosophy of Arts and Aesthetics','A','Spring','2019A', 3);
+const course23 = new Course('Computer Science','43','Professional Communications','A','Fall','2019C', 3);
+const course24 = new Course('Kinesiology','DIV','Spring Board Diving','A','Fall','2018C', 1);
+const course25 = new Course('Kinesiology','50','Swim and Dive Team','A','Spring','2019A', 3);
+const course26 = new Course('Kinesiology','SW1','Introduction to Swimming','A','Fall','2018C', 1);
 
 var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course24, course25];
 // ============== END OF JSON CLASSES =================//
@@ -270,8 +296,52 @@ function cleanPrevTable()
     return;
 }
 
-function gpaGraph() {
-    var data = "";
 
-    return data;
+// ================ JS FOR GRADES GRPHA (@lpc) ================= //
+function getGpaGraphData() {
+    var gpaGraphData = [];
+    var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course24, course25];
+    // ---------- sorting: ---------------
+    var coursesChron = new Array(courses.length);
+    for (var x = 0; x < coursesChron.length; x++)
+    {
+        var counter = 0;
+        var index = counter;
+        while(courses[counter] == null) {counter++}
+        index = counter;
+        for(var i = 0; i < courses.length; i++) 
+        {
+            if(courses[i] != null)
+            {
+                if(courses[i].academic > courses[index].academic) index = i;
+            }
+        }
+        coursesChron[x] = courses[index];
+        delete courses[index];
+    }
+    coursesChron.reverse();
+    var gpaRecord;
+    var totalgpaunits = 0.0
+    var totalunits = 0.0;
+    for(var t = 1; t < coursesChron.length; t++) { //maybe later <= courseChron.....
+        if(coursesChron[t-1].grade == 'A') totalgpaunits += 4*coursesChron[t-1].units;
+        else if(coursesChron[t-1].grade == 'B') totalgpaunits += 3*coursesChron[t-1].units;
+        else if(coursesChron[t-1].grade == 'C') totalgpaunits += 2*coursesChron[t-1].units;
+        else if(coursesChron[t-1].grade == 'D') totalgpaunits += 1*coursesChron[t-1].units;
+        totalunits += coursesChron[t-1].units;
+        // console.log(coursesChron[t-1].name)
+        if(coursesChron[t].academic != coursesChron[t-1].academic) {
+            var finalTerm = parseInt(coursesChron[t-1].year.substring(0,4));
+            if(coursesChron[t-1].term == "Spring") finalTerm += 0.04;
+            else if(coursesChron[t-1].term == "Summer") finalTerm += 0.39;
+            else if(coursesChron[t-1].term == "Fall") finalTerm += 0.62
+            gpaRecord = {TERM: finalTerm, GPA: (totalgpaunits/totalunits)};
+            gpaGraphData.push(gpaRecord);
+        }
+    }
+    return gpaGraphData;
 }
+
+
+
+

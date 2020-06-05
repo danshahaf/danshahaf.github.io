@@ -10,6 +10,15 @@
         <!-- MY CSS -->
         <link rel = "stylesheet" type = "text/css" href = "shahaf.css">
 
+        <!-- MORRIS.JS LINKS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+
+        <!-- MY JavaScript -->
+        <!-- <script src = "shahaf.js" type = "text/JavaScript"></script> -->
+
         <!-- Bootstrap for JQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -182,7 +191,11 @@
                             <thead id = "classesTableHead"></thead>
                             <tbody id = "classesTableBody"></tbody>
                         </table>
-                    </div>                    
+                    </div> <br>
+                    <div class = "classes">
+                        <h3>GPA Maintenance Graph</h3>
+                        <div class = "gpaGraph" id = "gpaGraph"></div>
+                    </div>                  
                 </div>
                 <button type = "button" class = "btn btn-info sub-edu-btn" id = "projects-btn" data-toggle="collapse" data-target="#projects-div"> Projects </button> <br>
                 <!----------------------------- COLLAPSE OF PROJECTS DIV ------------------------------------>
@@ -317,31 +330,39 @@
             <a class = "contact-btn inline" href = 'https://www.github.com/ShahafDan25'><img src = "Logos/gitHub-logo.png" class = "LinkedIn-img"></a>
             <a class = "contact-btn inline" onclick = "window.open('mailto:dan.shachaf@gmail.com?subject=I saw your website, and...');"><img src = "Logos/gmail-logo.svg" class = "LinkedIn-img"></a>
         </footer>
-        <!-- JavaScript code here -->
+
         <script src = "shahaf.js" type = "text/JavaScript"></script>
-        <script type = "text/JavaScript">
-
-            var picPaths = ['shahaf-pics/AL.JPG', 'shahaf-pics/AQ.JPG', 'shahaf-pics/AC.JPG', 'shahaf-pics/AY.JPG', 'shahaf-pics/AE.JPG', 'shahaf-pics/AH.JPG', 'shahaf-pics/AG.JPG', 'shahaf-pics/AF.JPG', 'shahaf-pics/AI.JPG', 'shahaf-pics/AU.JPG', 'shahaf-pics/AO.JPG', 'shahaf-pics/AA.JPG', 'shahaf-pics/AM.JPG', 'shahaf-pics/AN.JPG', 'shahaf-pics/AK.JPG', 'shahaf-pics/AP.JPG', 'shahaf-pics/AB.JPG', 'shahaf-pics/AR.JPG', 'shahaf-pics/AS.JPG', 'shahaf-pics/AT.JPG', 'shahaf-pics/AJ.JPG', 'shahaf-pics/AV.JPG', 'shahaf-pics/AW.JPG', 'shahaf-pics/AX.JPG', 'shahaf-pics/AD.JPG'];            
-            var curPic = -1;
-            var img0 = new Array();
-
-            for(var i = 0; i < picPaths.length; i++) {
-                img0[i] = new Image();
-                img0[i].src = picPaths[i];
-            }
-
-            function swapImage() {
-                curPic = (++curPic > picPaths.length - 1)? 0: curPic;
-                imgCont.src = img0[curPic].src;
-                setTimeout(swapImage, 3500);
-            }
-
-            window.onload = function(){
-                imgCont = document.getElementById('imgBanner');
-                swapImage();
-            }
+        <script>
+            var gpaGraphData = getGpaGraphData();
+            // console.log(gpaGraphData);
+            Morris.Line({
+                element : 'gpaGraph',
+                data: gpaGraphData, 
+                xkey: ['TERM'],
+                ykeys: ['GPA'],
+                ymin: 'auto',
+                ymax: 'auto',
+                labels:['GPA'],
+                hideHover:'auto',
+                stacked:true
+            });
         </script>
+        <!-- TO ADD: Icons instead of photos (example: <i class="fa fa-github" aria-hidden="true"></i>
 
+            Add Grades Graphs (Morris.js)
+
+            Change font (learn from coderpseudonym.github.io (ROMAN))
+
+            Menu Bar Instead of Buttons (?)
+
+            Add About Section
+
+            Add Nice Footer (learn from coderpseudonym.github.io)
+
+            Change Activities section style and design
+
+            Makeit flexible for any screen size!!
+-->
     </body>
 </html>
 
