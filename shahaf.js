@@ -1,11 +1,73 @@
 // ================ JS FOR NAV-BAR SCROLLING ================= //
-(function titleScroller(text) {
-    document.title = text;
-    console.log(text);
-    setTimeout(function () {
-        titleScroller(text.substr(1) + text.substr(0, 1));
-    }, 500);
-}(document.title + "    "));
+//Timer
+var c = 0;
+var t;
+var timer_is_on = 0;
+
+function timedCount() {
+  document.getElementById("txt").value = c;
+  c = c + 1;
+  t = setTimeout(timedCount, 1000);
+}//timer counter
+
+function startCount() {
+  if (!timer_is_on) {
+    timer_is_on = 1;
+    timedCount();
+  }
+}//start count
+
+function stopCount() {
+  clearTimeout(t);
+  timer_is_on = 0;
+  c = 0;
+}//stop count
+
+// var msg  = document.title;
+// var endChar = "... ";
+// var pos = 0;
+//Move title bar
+// function moveTitle()
+// {
+//      var ml = msg.length;
+//     title = msg.substr(pos,ml) + endChar + msg.substr(0,pos);
+//   document.title = title;   
+//   pos++;
+//   if (pos > ml) pos=0;
+//   window.setTimeout("moveTitle()",500);
+//   window.setInterval("moveTitle()", 10000);
+  
+// }
+// moveTitle();
+
+//Navbar 
+function responsiveNavBar() {
+    var x = document.getElementById("nav-bar");
+    if (x.className === "nav-bar") {
+      x.className += " responsive";
+    } else {
+      x.className = "nav-bar";
+    }
+  }
+// (function(c, a, m) {
+//     var title = (c || document.title) + " " + (a || "-") + " ";
+//     setInterval(function() {
+//       title = title.substring(1) + title.charAt(0);
+//       document.title = title;
+//     }, m || 300);
+//   })(
+//     /* Tab Text */ "This webpage has a scrolling tab title",
+//     /* Title Repeat Separator */ "-",
+//     /* Scroll Speed (in milleseconds) */ 300
+//   );
+
+// (function titleScroller(text) {
+//     document.title = text;
+//     console.log(text);
+//     setTimeout(function () {
+//         titleScroller(text.substr(1) + text.substr(0, 1));
+//     }, 500);
+// }(document.title + "    "));
 
 $(document).ready(function(){
     $('a[href^="#"]').on('click',function (e) {

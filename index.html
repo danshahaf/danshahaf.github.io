@@ -31,11 +31,11 @@
     </head>
 
     <body class = "body">
-        <header class = "nav-bar">
-            <a href = "#history_div" class = "nav-bar-option inline"> About </a>
-            <a href = "#history_div" class = "nav-bar-option inline"> Experience </a>
-            <a href = "#history_div" class = "nav-bar-option inline"> Education </a>
-            <a href = "#history_div" class = "nav-bar-option inline"> Professional Skills </a>
+        <header class = "nav-bar" id = "nav-bar">
+            <a href = "#history_div" class = "nav-bar-option inline" onclick = "responsiveNavBar()"> About </a>
+            <a href = "#history_div" class = "nav-bar-option inline" onclick = "responsiveNavBar()"> Experience </a>
+            <a href = "#history_div" class = "nav-bar-option inline" onclick = "responsiveNavBar()"> Education </a>
+            <a href = "#knowledge_div" class = "nav-bar-option inline" onclick = "responsiveNavBar()"> Professional Skills </a>
         </header>
         <div class = "header">
             <h2 class = "nameText"> Shahaf Dan</h2>
@@ -283,8 +283,8 @@
         </div>
         <br><br>
         <!----------------------  TECHNICAL SKILLS COLLAPSE ------------------------------>
-        <button type = "button" class = " btn btn-primary" data-toggle = "collapse" data-target = "#knowledge_div"> Technical Skills </button>
-        <div id = "knowledge_div" class = "collapse info_div">
+        <!-- <button type = "button" class = " btn btn-primary" data-toggle = "collapse" data-target = "#knowledge_div"> Technical Skills </button> -->
+        <div id = "knowledge_div" class = "info_div">
             <!-- TODO: Add linkedin logo if passed the linkedin test-->
             <div class = "kwnld" id = "knd_div">
                 <h2 class = "title"><u> Technical Knowledge & Skills </u></h2>
