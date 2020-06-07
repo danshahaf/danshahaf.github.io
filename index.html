@@ -13,7 +13,7 @@
         <!-- FontAwesome Icons -->
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <!-- Bootstrap for JQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
         <!-- Bootstrap for JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -32,12 +32,14 @@
 
     <body class = "body">
         <header class = "nav-bar" id = "nav-bar">
-            <a href = "#history_div" class = "nav-bar-option inline" onclick = "responsiveNavBar()"> About </a>
-            <a href = "#history_div" class = "nav-bar-option inline" onclick = "responsiveNavBar()"> Experience </a>
-            <a href = "#history_div" class = "nav-bar-option inline" onclick = "responsiveNavBar()"> Education </a>
-            <a href = "#knowledge_div" class = "nav-bar-option inline" onclick = "responsiveNavBar()"> Professional Skills </a>
+            <a href = "#about_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar(this.value)" value = "about"> About </a>
+            <a href = "#history_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar()"  value = "history"> Experience </a>
+            <a href = "#education_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar()"  value = "education"> Education </a>
+            <a href = "#knowledge_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar()"  value = "knwoledge"> Skills </a>
+            <a href = "#contact_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar()"  value = "contact"> Contact </a>
+
         </header>
-        <div class = "header">
+        <div class = "header" id = "about_div">
             <h2 class = "nameText"> Shahaf Dan</h2>
             <h4> »    Full Stack Software Developer  |  Bay Area 
             <br><br>
@@ -50,9 +52,10 @@
         </div>
         
         <!--------------------------- EXPERIENCE COLLAPSE --------------------------------->
-        <button type = "button" class = " btn btn-primary" data-toggle = "collapse" data-target = "#history_div"> Experience </button>
-        <div id = "history_div" class = "collapse info_div">
+        <div id = "history_div" class = "info_div">
             <br>
+            <h2 class = "title"><u> Work Experience </u></h2>
+
             <div class = "container">
                 <div class = "row">
                     <div class = "col-md-offset-2 col-md-8 col-sm-12">
@@ -80,7 +83,7 @@
                                             <i class = "fa fa-database"></i>
                                         </div>
                                         <div class = "inner-content">
-                                            <h3 class = "title"> SQL Server Database Administrator </h3>
+                                            <h3 class = "title"> Back-End Java Software Developer </h3>
                                             <p> <strong> Jun. 2019 - Aug. 2019  |  FindingGenius Startup   |  San Ramon, CA </strong> </p> 
                                             <p class = "description">
                                                  » Assisted with the development of the company's software in Java.<br>
@@ -99,12 +102,22 @@
         </div>
         <br><br>
         <!-------------------------- EDUCATION COLLAPSE -------------------------->
-        <button type = "button" class = " btn btn-primary" data-toggle = "collapse" data-target = "#education_div"> Education </button>
-        <div id = "education_div" class = "collapse info_div">
+        <div id = "education_div" class = "info_div">
+            <h2 class = "title"><u> Education</u>  &nbsp;  <i class="fa fa-graduation-cap"></i>
+            </h2><br>
+            <div class = "bu edu" id = "lpc">
+                <h3>Boston University</h3>
+                <p> <strong> Bostom, MA | September 2020  -  May 2022 </strong> </p> 
+            </div>
+            <hr class = "spacebar">
             <div class = "lpc edu" id = "lpc">
-                <h3>Las Positas Class</h3>
+                <h3>Las Positas College</h3>
                 <p> <strong> Livermore, CA | June 2018  -  May 2020 </strong> </p>
-                
+                <!-- <h4> Associated of Arts Degree: Computer Studies </h4>
+                <h4> Associated of Sciences Degree: Mathematics </h4>
+                <h4> Associated of Sciences Degree: Physics </h4>
+                <h4> Certificated: Computer Programming </h4> -->
+
                 <h4> <u>GPA:</u> 3.83 </h4>
                 <button type = "button" class = "btn btn-info sub-edu-btn" id = "activities-btn" data-toggle="collapse" data-target="#activities-div"> Activities </button> <br>
                 <!----------------------------- COLLAPSE OF ACTIVITIES DIV ------------------------------------>
