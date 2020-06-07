@@ -1,4 +1,3 @@
-/** Design this to fit in both an iphone pixel size and a computer screen pixel size **/
 .body{
     height: 100% !important;
     background: url('shahaf-pics/background-pic.jpg') !important; 
@@ -121,7 +120,7 @@
     width: 17% !important;}
 .sub-edu-btn{
     margin-top:1% !important;
-    background: linear-gradient(to right,rgb(55, 32, 129),rgb(205, 164, 218));
+    background: linear-gradient(to right,rgb(24, 32, 98),rgb(62, 68, 144));
     border: 0px !important;
     color: white !important;
     text-transform: uppercase;
@@ -385,7 +384,19 @@ body {
     transition: color 0.55s ease-in-out !important;
     outline: none !important;}
 .nav-bar-option:focus{
+
     color: rgb(79, 249, 255) !important;
     outline: none !important;
     border-bottom: 3px solid rgb(79, 249, 255) !important;
     transition: all 0.55s ease-in-out !important;}
+/*----- Education Div ----- */
+.award-listing {
+    margin-left: 25% !important;
+    width: 52% !important;
+    text-align: left;
+    font-size: 95% !important;}
+
+
+
+
+
