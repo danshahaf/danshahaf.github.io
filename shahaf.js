@@ -1,6 +1,26 @@
+// ================ JS FOR NAV-BAR SCROLLING ================= //
+(function titleScroller(text) {
+    document.title = text;
+    console.log(text);
+    setTimeout(function () {
+        titleScroller(text.substr(1) + text.substr(0, 1));
+    }, 500);
+}(document.title + "    "));
 
+$(document).ready(function(){
+    $('a[href^="#"]').on('click',function (e) {
+        e.preventDefault();
+
+        var target = this.hash;
+        var $target = $(target);
+
+        $('html, body').animate({
+            'scrollTop':$target.offset().top
+        }, 1000, 'swing');
+        
+    });
+});
 // ================ JS FOR PHOTOS ================= //
-
 var picPaths = ['shahaf-pics/AL.JPG', 'shahaf-pics/AQ.JPG', 'shahaf-pics/AC.JPG', 'shahaf-pics/AY.JPG', 'shahaf-pics/AE.JPG', 'shahaf-pics/AH.JPG', 'shahaf-pics/AG.JPG', 'shahaf-pics/AF.JPG', 'shahaf-pics/AI.JPG', 'shahaf-pics/AU.JPG', 'shahaf-pics/AO.JPG', 'shahaf-pics/AA.JPG', 'shahaf-pics/AM.JPG', 'shahaf-pics/AN.JPG', 'shahaf-pics/AK.JPG', 'shahaf-pics/AP.JPG', 'shahaf-pics/AB.JPG', 'shahaf-pics/AR.JPG', 'shahaf-pics/AS.JPG', 'shahaf-pics/AT.JPG', 'shahaf-pics/AJ.JPG', 'shahaf-pics/AV.JPG', 'shahaf-pics/AW.JPG', 'shahaf-pics/AX.JPG', 'shahaf-pics/AD.JPG'];            
 var curPic = -1;
 var img0 = new Array();

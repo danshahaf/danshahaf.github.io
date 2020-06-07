@@ -45,7 +45,7 @@
 .edu{margin-right: 7% !important; margin-left: 7% !important;}
 .inner-content{text-align: left !important; margin-left: 4% !important;}
 .imgContainer{text-align: center !important; margin-right: 15% !important; margin-left: 15% !important;}
-.imgBanner{height: 45%; border-radius: 10px; border: 0.1px solid black;}
+.imgBanner{height: 35%; border-radius: 5px; border: 0.1px solid black;}
 .fa{padding-top: 25% !important;}
 .w17{width: 17% !important;}
 .sub-edu-btn{margin-top:1% !important;}
@@ -238,4 +238,41 @@ body {font-family: 'Mono', monospace; }
 {
     width: 33% !important;
     margin-left: 0px!important;
+}
+/*----- Navigation Bar ----- */
+.nav-bar {
+    width: 100% !important;
+    margin-top: 0% !important;
+    padding-left: 3.5% !important;
+    padding-top: 1.75% !important;
+    background-color: black !important;
+    height: 8.5% !important;
+}
+.nav-bar-option {
+    color: white;
+    float: left;
+    margin-right: 3% !important;
+    width: auto !important;
+    border:0px !important;
+    padding-right: 2.25% !important;
+    padding-left: 2.25% !important;
+    font-weight: bolder;
+    font-size: 110% !important;
+    transition: 0.55s !important;
+    background-image: black;
+    padding-bottom: 1.25% !important;
+}
+.nav-bar-option:hover {
+    border-bottom: 1.25px solid transparent;
+    background-image: linear-gradient(to right,#6C4ADC,#9C36BA) !important;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: color 0.55s ease-in-out !important;
+    outline: none !important;
+}
+.nav-bar-option:focus{
+    color: rgb(79, 249, 255) !important;
+    outline: none !important;
+    border-bottom: 3px solid rgb(79, 249, 255) !important;
+    transition: all 0.55s ease-in-out !important;
 }
