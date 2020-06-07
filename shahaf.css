@@ -20,8 +20,19 @@
 .ml2{margin-left: 2% !important;}
 .logo-label{font-family: "monospace" !important; text-align: center !important;}
 .skill-logo-container{margin-left: 5% !important; margin-right: 5% !important; }
-.courses-btn:hover{background-color:white !important; color:gray !important;}
-.opposite-outline-primary:hover{border-color: gray !important; background-color: #007bff; color:white;}
+.courses-btn, .projects-btn{
+    background-image: linear-gradient(to right, #535e70 0%, #98aed4 51%, #535e70 100%);
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+.projects-btn {font-size: 90% !important;}
+.courses-btn:hover, .projects-btn:hover{background-position: right center; color: black; text-shadow: 0px 0px 10px rgba(0,0,0,0.8);}
+.projects-btn:hover{border-color: gray !important; background-color: #007bff; color:white;}
+.see-project-col {width: 20% !important;}
 .tablePart{width: 90% !important; padding-right:3% !important; padding-left: 3% !important; margin: 0% !important;}
 .gmail-btn{width:5% !important; padding-top: 100% !important; padding: 2px !important; border-radius: 150px !important;}
 .gmail-img{width: 100%; height: 120%; border-radius: 150% !important;}
@@ -32,7 +43,7 @@
 .logo-img-smaller{margin: 1% !important; padding: 0.5% !important; height: 6%; padding-top: 0%;}
 .sortBtn{width: 25% !important; margin: 3% !important;}
 .edu{margin-right: 7% !important; margin-left: 7% !important;}
-.inner-content{text-align: left !important; margin-left: 7% !important;}
+.inner-content{text-align: left !important; margin-left: 4% !important;}
 .imgContainer{text-align: center !important; margin-right: 15% !important; margin-left: 15% !important;}
 .imgBanner{height: 45%; border-radius: 10px; border: 0.1px solid black;}
 .fa{padding-top: 25% !important;}
@@ -46,7 +57,7 @@ textarea{ text-align: center !important;   border: 0.8px solid black !important;
 .send{margin-right: 20% !important; margin-left: 20% !important;}
 .email-sender-input{text-align: center; border: 0.6px solid black; border-radius: 4px; padding: 3px;}
 .subject{text-align: center; border: 0.6px solid black !important; border-radius: 4px; padding: 3px !important; width: 60% !important;}
-.contact-btn{background-color: rgba(255, 255, 255, 0.45) !important; margin-right: 1% !important; border: 2px solid white !important; width: 5.6% !important; height: 9.3% !important; padding: 0.5% !important;}
+.contact-btn{background-color: rgba(255, 255, 255, 0.45) !important; margin-right: 1% !important; border: 2px solid white !important; width: 5.6% !important; height: 9.3% !important; padding: 0.5% !important; transition: 0.5s !important;}
 .contact-btn:hover{background-color:white !important; border: 3px solid black !important; padding: 0.75% !important;}
 /* timeline CSS */
 .main-timeline{ font-family: 'Nunito Sans', sans-serif; }
@@ -100,7 +111,7 @@ textarea{ text-align: center !important;   border: 0.8px solid black !important;
     padding: 20px 150px 20px 20px;
 }
 .main-timeline .timeline:nth-child(even) .timeline-content:before{
-    left: 7px;
+    left: 4px;
     right: 0;
 }
 .main-timeline .timeline:nth-child(even) .timeline-icon{
@@ -139,26 +150,28 @@ textarea{ text-align: center !important;   border: 0.8px solid black !important;
     }
     .main-timeline .title{ font-size: 18px; }
 }
-.act-title{font-size: 15px}
-.act-date{font-size: 10px;}
-.act-desc{font-size: 12px;}
+body {font-family: 'Mono', monospace; }
+.act-date{font-size: 12px; font-family: 'Mono', monospace; }
+.act-desc{font-size: 16px; font-family: 'Mono', monospace;}
 .smallerBtn{width: 25% !important;}
-.resume{background-color:rgba(255, 255, 255, 0.45)}
+.resume{background-color:rgba(255, 255, 255, 0.45); transition: 0.5s;}
 .resume:hover{
     background-color: white;
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
+    -webkit-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    transform: scale(1.08);
+    font-weight: bold;
   }
-.act-div{margin-right: 25% !important; margin-left: 25% !important; background-color:rgba(255, 255, 255, 0.75);}
+.act-div{margin-right: 14.5% !important; margin-left: 14.5% !important; background-color:rgba(255, 255, 255, 0.75);padding-right: 3% !important;padding-left: 3% !important; padding-bottom: 1.25% !important;}
 .item-activities-list
 {
     background-color:rgba(255, 255, 255, 0.65);
-    color:#007bff !important;
-    border: 1.5px solid #007bff !important;
-    width: 55% !important;
-    padding-top: 1% !important;
-    padding-bottom: 1% !important;
+    color:#034b97 !important;
+    border: 1.5px solid #9C36BA !important;
+    width: 80% !important;
+    padding-top: 1.25% !important;
+    padding-bottom: 1.25% !important;
+    transition: 0.5s;
 }
 .item-activities-list:hover
 {
@@ -167,16 +180,20 @@ textarea{ text-align: center !important;   border: 0.8px solid black !important;
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
+    outline: none !important;
 }
 .lower-item-activities-list
 {
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top: 1.5px solid #9C36BA !important;
+
 }
 .upper-item-activities-list
 {
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;!
+    border-bottom: 1.5px solid #9C36BA !important;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
 }
 /* End timeline css */
 
