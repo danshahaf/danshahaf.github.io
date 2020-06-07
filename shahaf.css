@@ -90,11 +90,13 @@
     margin: 1% !important; 
     padding: 0.5% !important; 
     height: 9%; 
-    padding-top: 0%;}
+    padding-top: 0%;
+    z-index: 3}
 .logo-img-smaller{
     margin: 1% !important; 
     padding: 0.5% !important; 
     height: 6%; 
+    z-index: 3
     padding-top: 0%;}
 .sortBtn{
     width: 25% !important; 
@@ -361,7 +363,7 @@ body {
     background-color: #121212;  
     position: fixed;
     top: 0;
-    z-index: 2 !important;}
+    z-index: 5 !important;}
 .nav-bar-option {
     color: white;
     float: left;
