@@ -32,11 +32,11 @@
 
     <body class = "body">
         <header class = "nav-bar" id = "nav-bar">
-            <a href = "#about_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar(this.value)" value = "about"> About </a>
-            <a href = "#history_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar()"  value = "history"> Experience </a>
-            <a href = "#education_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar()"  value = "education"> Education </a>
-            <a href = "#knowledge_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar()"  value = "knwoledge"> Skills </a>
-            <a href = "#contact_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar()"  value = "contact"> Contact </a>
+            <a href = "#about_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('about_dov');" > About </a>
+            <a href = "#history_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('history_div')" > Experience </a>
+            <a href = "#education_div" class = "nav-bar-option responsive inline"  onclick = "responsiveNavBar('education_div')" > Education </a>
+            <a href = "#knowledge_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('knowledge_div')" > Skills </a>
+            <a href = "#contact_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('contact_div')"  > Contact </a>
 
         </header>
         <div class = "header" id = "about_div">
@@ -53,9 +53,7 @@
         
         <!--------------------------- EXPERIENCE COLLAPSE --------------------------------->
         <div id = "history_div" class = "info_div">
-            <br>
             <h2 class = "title"><u> Work Experience </u></h2>
-
             <div class = "container">
                 <div class = "row">
                     <div class = "col-md-offset-2 col-md-8 col-sm-12">
@@ -103,11 +101,10 @@
         <br><br>
         <!-------------------------- EDUCATION COLLAPSE -------------------------->
         <div id = "education_div" class = "info_div">
-            <h2 class = "title"><u> Education</u>  &nbsp;  <i class="fa fa-graduation-cap"></i>
-            </h2><br>
+            <h2 class = "title"><u> Education</u>  &nbsp;  <i class="fa fa-graduation-cap"></i></h2><br>
             <div class = "bu edu" id = "lpc">
                 <h3>Boston University</h3>
-                <p> <strong> Bostom, MA | September 2020  -  May 2022 </strong> </p> 
+                <p> <strong> Boston, MA | September 2020  -  May 2022 </strong> </p> 
             </div>
             <hr class = "spacebar">
             <div class = "lpc edu" id = "lpc">
@@ -336,13 +333,24 @@
         <br><br>
         <!-- CONTACT ME Collapse-->
         <br>
+        <div class = "info_div" id = "contact_div">
+            <!-- <h2 class = "title"><u> Contact </u>  &nbsp;  <i class="fa fa-envelope-o"></i></h2><br> -->
+                <!-- <p class = "contact-msg"> <strong>
+                    I currently seek internships for the summer season of 2020, and am willing to work either remotely or from an office. 
+                    <br>
+                    As I will transfer to Boston University in the fall, if the option arises, I will defer my admission decision by 6 months for the purpose of interning
+                    <br>
+                    I am available for contact via email (see below) or phone call <u> (925) 791 - 1544</u>
+                </strong></p> -->
         
-        <footer class = "footer">
-            <a class = "contact-btn inline" onclick = "window.open('docs/ShahafDan_Resume06062020.pdf');"><img src = "Logos/resume-logo.png" class = "LinkedIn-img"></a>
-            <a class = "contact-btn inline" href = 'https://www.linkedin.com/in/shahaf-dan-66812b180/'><img src = "Logos/linkedIn-logo.png" class = "LinkedIn-img"></a>
-            <a class = "contact-btn inline" href = 'https://www.github.com/ShahafDan25'><img src = "Logos/gitHub-logo.png" class = "LinkedIn-img"></a>
-            <a class = "contact-btn inline" onclick = "window.open('mailto:dan.shachaf@gmail.com?subject=I saw your website, and...');"><img src = "Logos/gmail-logo.svg" class = "LinkedIn-img"></a>
-        </footer>
+            <div class = "footer">
+                <a class = "contact-btn inline" onclick = "window.open('docs/ShahafDan_Resume06062020.pdf');"><img src = "Logos/resume-logo.png" class = "LinkedIn-img"></a>
+                <a class = "contact-btn inline" href = 'https://www.linkedin.com/in/shahaf-dan-66812b180/'><img src = "Logos/linkedIn-logo.png" class = "LinkedIn-img"></a>
+                <a class = "contact-btn inline" href = 'https://www.github.com/ShahafDan25'><img src = "Logos/gitHub-logo.png" class = "LinkedIn-img"></a>
+                <a class = "contact-btn inline" onclick = "window.open('mailto:dan.shachaf@gmail.com?subject=I saw your website, and...');"><img src = "Logos/gmail-logo.svg" class = "LinkedIn-img"></a>
+            </div>
+        </div>
+        
 
         <script src = "shahaf.js" type = "text/JavaScript"></script>
 

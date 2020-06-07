@@ -1,13 +1,5 @@
 // ================ JS FOR NAV-BAR SCROLLING ================= // 
-
-//Navbar 
-function responsiveNavBar() {
-    var x = document.getElementById("nav-bar");
-    if (x.className === "nav-bar") x.className += " responsive";
-    else x.className = "nav-bar";
-    
-}
-
+//Make Navigation Bar Responsive
 $(document).ready(function(){
     $('a[href^="#"]').on('click',function (e) {
         e.preventDefault();
@@ -21,6 +13,19 @@ $(document).ready(function(){
         
     });
 });
+
+function responsiveNavBar(val) {
+    var x = document.getElementById("nav-bar");
+    if (x.className === "nav-bar") x.className += " responsive";
+    else x.className = "nav-bar";
+    var divs = ["about", "history", "education", "knowledge", "contact"];
+    for(var i = 0; i < divs.length; i++) {
+        document.getElementById(divs[i] + "_div").style += "padding-top: 0.25% !important;";
+    }        
+    document.getElementById(val).style.padding += "6% 0px 0.75% 0rem";
+}
+
+
 // ================ JS FOR PHOTOS ================= //
 var picPaths = ['shahaf-pics/AL.JPG', 'shahaf-pics/AQ.JPG', 'shahaf-pics/AC.JPG', 'shahaf-pics/AY.JPG', 'shahaf-pics/AE.JPG', 'shahaf-pics/AH.JPG', 'shahaf-pics/AG.JPG', 'shahaf-pics/AF.JPG', 'shahaf-pics/AI.JPG', 'shahaf-pics/AU.JPG', 'shahaf-pics/AO.JPG', 'shahaf-pics/AA.JPG', 'shahaf-pics/AM.JPG', 'shahaf-pics/AN.JPG', 'shahaf-pics/AK.JPG', 'shahaf-pics/AP.JPG', 'shahaf-pics/AB.JPG', 'shahaf-pics/AR.JPG', 'shahaf-pics/AS.JPG', 'shahaf-pics/AT.JPG', 'shahaf-pics/AJ.JPG', 'shahaf-pics/AV.JPG', 'shahaf-pics/AW.JPG', 'shahaf-pics/AX.JPG', 'shahaf-pics/AD.JPG'];            
 var curPic = -1;
