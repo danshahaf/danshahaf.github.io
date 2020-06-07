@@ -36,8 +36,8 @@
             <a href = "#history_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('history_div')" > Experience </a>
             <a href = "#education_div" class = "nav-bar-option responsive inline"  onclick = "responsiveNavBar('education_div')" > Education </a>
             <a href = "#knowledge_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('knowledge_div')" > Skills </a>
+            <a href = "#projects_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('projects_div')" > Project </a>
             <a href = "#contact_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('contact_div')"  > Contact </a>
-
         </header>
         <div class = "header" id = "about_div">
             <h2 class = "nameText"> Shahaf Dan</h2>
@@ -323,7 +323,6 @@
         </div>
         <br><br>
         <!----------------------  TECHNICAL SKILLS COLLAPSE ------------------------------>
-        <!-- <button type = "button" class = " btn btn-primary" data-toggle = "collapse" data-target = "#knowledge_div"> Technical Skills </button> -->
         <div id = "knowledge_div" class = "info_div">
             <!-- TODO: Add linkedin logo if passed the linkedin test-->
             <div class = "kwnld" id = "knd_div">
@@ -356,9 +355,15 @@
                     </ul>
                 </div>
             </div>
-            <br><br>
             <!-- INSERTION ON TIMELAPSE VIDEO GALLERY -->
             <!-- <iframe id = "vid" class = "embed-responsive-item vid" src = "shahaf-pics/vid-1.mp4" allowfullscreen></iframe> -->
+        </div>
+         <!----------------------  TECHNICAL SKILLS COLLAPSE ------------------------------>
+        <div id = "projects_div" class = "info_div">
+            <h2 class = "title"><u>My Projects</u>   <i class="fa fa-cogs"></i></h2>
+            <p> The Market</p> <br>
+            <p> LPC - RMP </p> <br>
+            <p>Brain Storm </p> <br>
         </div>
         <br><br>
         <!-- CONTACT ME Collapse-->
@@ -366,28 +371,19 @@
         <div class = "info_div" id = "contact_div">
             <h2 class = "title"><u>Contact</u>    <i class="fa fa-commenting"></i></h2>
             <br>
-                <!-- <p class = "contact-msg"> <strong>
-                    I currently seek internships for the summer season of 2020, and am willing to work either remotely or from an office. 
-                    <br>
-                    As I will transfer to Boston University in the fall, if the option arises, I will defer my admission decision by 6 months for the purpose of interning
-                    <br>
-                    I am available for contact via email (see below) or phone call <u> (925) 791 - 1544</u>
-                </strong></p> -->
-        
             <div class = "footer">
                 <a class = "contact-btn inline" onclick = "window.open('docs/ShahafDan_Resume06062020.pdf');"><img src = "Logos/resume-logo.png" class = "LinkedIn-img"></a>
                 <a class = "contact-btn inline" href = 'https://www.linkedin.com/in/shahaf-dan-66812b180/'><img src = "Logos/linkedIn-logo.png" class = "LinkedIn-img"></a>
                 <a class = "contact-btn inline" href = 'https://www.github.com/ShahafDan25'><img src = "Logos/gitHub-logo.png" class = "LinkedIn-img"></a>
                 <a class = "contact-btn inline" onclick = "window.open('mailto:dan.shachaf@gmail.com?subject=I saw your website, and...');"><img src = "Logos/gmail-logo.png" class = "LinkedIn-img"></a>
                 <a class = "contact-btn inline" href = "https://www.hackerrank.com/dan_shachaf"><img src = "Logos/hackerrank-logo.png" class = "LinkedIn-img"></a>
-
             </div>
         </div>
         
 
         <script src = "shahaf.js" type = "text/JavaScript"></script>
 
-        <!-- TO ADD: Icons instead of photos (example: <i class="fa fa-github" aria-hidden="true"></i>
+        <!-- TO ADD: 
 
             Add Grades Graphs (Morris.js)
 
@@ -397,11 +393,11 @@
 
             add Projects section
 
-            add map of locations of me moving around the gloeb
+            time Lapse video of me coding
 
-            Make it flexible for any screen size!!
+            Add Map of my locations around at the globe at each year
 
-            Add HackerRank
+            Make it flexible for any screen size!! (width: auto @screen size....)
 -->
     </body>
 
