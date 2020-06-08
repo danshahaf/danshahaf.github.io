@@ -380,7 +380,7 @@ body {
     font-size: 110% !important;
     transition: 0.37s !important;
     background-image: black;
-    padding-bottom: 1.25% !important;}
+    padding-bottom: 1% !important;}
 .nav-bar-option:hover {
     border-bottom: 1.25px solid transparent;
     background-image: linear-gradient(to right,#6C4ADC,#9C36BA) !important;
