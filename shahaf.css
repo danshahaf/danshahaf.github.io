@@ -118,9 +118,9 @@
     padding-top: 25% !important;}
 .w17{
     width: 17% !important;}
-.sub-edu-btn{
+.sub-edu-btn, .sub-proj-btn{
     margin-top:1% !important;
-    background: linear-gradient(to right,rgb(24, 32, 98),rgb(62, 68, 144));
+    background: linear-gradient(to right,rgb(24, 32, 98),rgb(72, 77, 141));
     border: 0px !important;
     color: white !important;
     text-transform: uppercase;
@@ -130,7 +130,7 @@
     background-size: 200% auto;
     box-shadow: 0 0 20px #ccc;
     text-shadow: 0px 0px 10px rgba(0,0,0,0.3);}
-.sub-edu-btn:hover {
+.sub-edu-btn:hover, .sub-proj-btn:hover {
     background-position: right center; 
     text-shadow: 0px 0px 10px rgba(0,0,0,0.8); }
 .spacebar{
@@ -342,7 +342,7 @@ body {
 .exps-table{
     width: 33% !important;
     margin-left: 0px!important;}
-.fa-graduation-cap, .fa-commenting, .fa-wrench, .fa-briefcase, .fa-cogs {
+.fa-graduation-cap, .fa-commenting, .fa-wrench, .fa-briefcase, .fa-cogs, .fa-github {
     padding: 0% !important;}
 .info_div{ 
     width: 100% !important;
@@ -412,7 +412,16 @@ body {
 .about-me-text {
     font-weight: bold !important;
     font-size: 85% !important;}
-
+/* ----- Projects Div ----- */
+.projects-div {
+    border: 0.3px solid black !important;
+    margin-top: 1.25% !important;}
+.project-description {
+    font-size: 110%;
+    font-weight: bold;
+    text-align: justify;
+    margin-left: 20% !important;
+    width: 60% !important;}
 
 
 
