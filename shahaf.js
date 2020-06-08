@@ -18,7 +18,7 @@ function responsiveNavBar(val) {
     var x = document.getElementById("nav-bar");
     if (x.className === "nav-bar") x.className += " responsive";
     else x.className = "nav-bar";
-    var divs = ["about", "history", "education", "knowledge", "contact"];
+    var divs = ["history", "education", "knowledge", "contact"];
     for(var i = 0; i < divs.length; i++) {
         document.getElementById(divs[i] + "_div").style.padding = "0.25% 0px 0.75% 0rem";
     }

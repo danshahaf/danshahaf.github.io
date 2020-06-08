@@ -35,20 +35,22 @@
 
     <body class = "body">
         <header class = "nav-bar" id = "nav-bar">
-            <a href = "#about_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('about_div');" > About </a>
+            <a href = "#about_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('about_di∫v');" > About </a>
             <a href = "#history_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('history_div')" > Experience </a>
             <a href = "#education_div" class = "nav-bar-option responsive inline"  onclick = "responsiveNavBar('education_div')" > Education </a>
             <a href = "#knowledge_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('knowledge_div')" > Skills </a>
             <a href = "#projects_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('projects_div')" > Project </a>
             <a href = "#contact_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('contact_div')"  > Contact </a>
+            <p class = "nav-bar-myname responsive inline"> Shahaf Dan </p>
         </header>
+        <!--------------------------- ABOUT ME COLLAPSE --------------------------------->
         <div class = "header" id = "about_div">
-            <h2 class = "nameText"> Shahaf Dan</h2>
-            <h4> »    Full Stack Software Developer  |  Bay Area 
-            <br><br>
-            <button type = "button" class = "btn btn-outline-danger inline resume" onclick = "window.open('docs/ShahafDan_Resume06072020.pdf');"> My Resume (PDF)</button>
-            <br><br>
+            <!-- <h2 class = "nameText"> Shahaf Dan</h2>         -->
             <div class = "about-me">
+                <br>
+                <h4 class = "centrize"><strong> »    Full Stack Software Developer  |  Bay Area </strong></h4>
+                <button type = "button" class = "btn btn-outline-danger inline resume" onclick = "window.open('docs/ShahafDan_Resume06072020.pdf');"> My Resume (PDF)</button>
+                <br><br><hr class = "thin-spacebar"><br>
                 <h5 class = "about-me-text"> 
                     Welcome to My Portfolio Website! This is a space that I have put together to document my academic, work, and computer science experience collectively. <br><br>
                     I currently seek internships for the summer of 2020, and if the opportunity will arise, will defer my transfer - admission decision at Boston University to gain work experience. <br><br>
@@ -224,8 +226,8 @@
                 </div>
                 <!----------------------------- COLLAPSE OF CLASSES DIV -------------------------------------------->
                 <button type = "button" class = "btn sub-edu-btn" id = "classes-btn" data-toggle="collapse" data-target="#classes-div"> Classes </button> <br>
-                <div id = "classes-div" class = "collapse classes_div">
-                    <h4> Organize By: </h4>
+                <div id = "classes-div" class = "collapse classes_div"> <br>
+                    <h4> Order By: </h4>
                     <button class = "btn w17 courses-btn" id = "classByName" onclick = "coursesAlphabetically()"><strong> Name </strong></button> &nbsp; &nbsp;     
                     <button class = "btn w17 courses-btn" id = "classBySubject" onclick = "coursesBySubject()"> <strong> Subject </strong> </button> &nbsp; &nbsp; 
                     <button class = "btn w17 courses-btn" id = "classByGrade" onclick = "coursesByGrade()"> <strong> Grade </strong> </button> &nbsp; &nbsp;

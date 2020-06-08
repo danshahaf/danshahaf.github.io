@@ -10,17 +10,10 @@
 .btn {
     border: 0.5px solid black !important; 
     width: 40% !important;}
-.header{
-    text-align: center; 
-    float: middle !important; 
-    margin-right: 7%; 
-    margin-left: 7%; 
-    padding-right: 8%; 
-    padding-left:8%; 
-    padding-top:5%;}
-.btn-outline-danger{
-    color:red!important; 
-    border: 0.5px solid red !important;}
+
+.centrize {
+    text-align: center !important;
+}
 .LinkedIn-btn{
     width: 5% !important;
      padding-top: 100% !important; 
@@ -138,6 +131,12 @@
     margin-top: 1.2% !important; 
     margin-bottom: 1% !important; 
     width:55% !important;}
+.thin-spacebar {
+    border-top: 1px solid #707070; 
+    margin-top: 1.2% !important; 
+    margin-bottom: 1% !important; 
+    width:85% !important;
+}
 .inline{
     display: inline-block !important; 
     display:flex; flex-direction: row;}
@@ -269,14 +268,7 @@ body {
     font-size: 16px; font-family: 'Mono', monospace;}
 .smallerBtn{
     width: 25% !important;}
-.resume{
-    background-color:rgba(255, 255, 255, 0.45); transition: 0.5s;}
-.resume:hover{
-    background-color: white;
-    -webkit-transform: scale(1.08);
-    -ms-transform: scale(1.08);
-    transform: scale(1.08);
-    font-weight: bold;}
+
 .act-div{
     margin-right: 14.5% !important; margin-left: 14.5% !important; background-color:rgba(255, 255, 255, 0.75);padding-right: 3% !important;padding-left: 3% !important; padding-bottom: 1.25% !important;}
 .item-activities-list{
@@ -374,25 +366,42 @@ body {
     margin-right: 3% !important;
     width: auto !important;
     border:0px !important;
-    padding-right: 2.25% !important;
-    padding-left: 2.25% !important;
+    padding-right: 1.25% !important;
+    padding-left: 1.25% !important;
     font-weight: bolder;
     font-size: 110% !important;
     transition: 0.37s !important;
     background-image: black;
-    padding-bottom: 1% !important;}
+    padding-bottom: 1% !important;
+    outline: none !important;}
 .nav-bar-option:hover {
     border-bottom: 1.25px solid transparent;
     background-image: linear-gradient(to right,#6C4ADC,#9C36BA) !important;
     -webkit-background-clip: text;
     color: transparent;
-    transition: color 0.55s ease-in-out !important;
+    -webkit-transform: scale(1.08);
+    -ms-transform: scale(1.08); 
+    transform: scale(1.08);
+    transition: all 0.42s ease-in-out !important;
     outline: none !important;}
+.nav-bar-myname {
+    border-bottom: 1.25px solid transparent;
+    background-image: linear-gradient(to right,#6C4ADC,#9C36BA) !important;
+    -webkit-background-clip: text;
+    color: transparent;
+    float: right !important;
+    font-size: 200% !important;
+    margin-bottom: 0% !important;
+    margin-right: 5% !important;
+    vertical-align: middle !important;
+    font-weight: bolder !important;}
 .nav-bar-option:focus{
-
     color: rgb(79, 249, 255) !important;
     outline: none !important;
     border-bottom: 3px solid rgb(79, 249, 255) !important;
+    -webkit-transform: scale(1.08);
+    -ms-transform: scale(1.08); 
+    transform: scale(1.08);
     transition: all 0.55s ease-in-out !important;}
 /*----- Education Div ----- */
 .award-listing {
@@ -401,17 +410,33 @@ body {
     text-align: left;
     font-size: 95% !important;}
 /*----- About Div ----*/
+.header{
+    text-align: center; 
+    float: middle !important;
+    padding-top:5%;}
+.btn-outline-danger{
+    color:red!important; 
+    border: 0.7px solid red !important;}
+.resume{
+    background-color:rgba(255, 255, 255, 0.45); 
+    transition: 0.35s;
+    width: 100% !important;}
+.resume:hover{
+    background-color: rgba(251, 223, 223, 0.856);
+    -webkit-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    transform: scale(1.08);
+    font-weight: bolder;}
 .about-me {
+    background-color: rgba(255, 255, 255, 0.637) !important; 
     width: 100% !important;
-    /* margin-left: % !important; */
-    padding-right: 5% !important;
-    padding-left: 5% !important;
+    padding-right: 15% !important;
+    padding-left: 15% !important;
     padding-top: 0.5% !important;
-    background-color: rgba(255, 255, 255, 0.637) !important;
     text-align: justify !important;}
 .about-me-text {
     font-weight: bold !important;
-    font-size: 85% !important;}
+    font-size: 105% !important;}
 /* ----- Projects Div ----- */
 .projects-div {
     border: 0.3px solid black !important;
