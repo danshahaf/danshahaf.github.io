@@ -21,8 +21,9 @@ function responsiveNavBar(val) {
     var divs = ["about", "history", "education", "knowledge", "contact"];
     for(var i = 0; i < divs.length; i++) {
         document.getElementById(divs[i] + "_div").style.padding = "0.25% 0px 0.75% 0rem";
-    }        
-    document.getElementById(val).style.padding = "6% 0px 0.75% 0rem";
+    }
+    if(val != "contact_div") document.getElementById(val).style.padding = "6% 0px 0.75% 0rem";
+
 }
 
 
