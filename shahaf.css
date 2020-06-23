@@ -24,9 +24,22 @@ div.content {
 .centrize {
     text-align: center !important;
 }
-
-
-
+/* ------------ GENERAL -------------- */
+.inline{
+    display: inline-block !important; 
+    display:flex; 
+    flex-direction: row;
+}
+.fa-graduation-cap, .fa-commenting, .fa-wrench, .fa-briefcase, .fa-cogs, .fa-github {
+    padding: 0% !important;
+    height: auto !important;
+}
+.section-title {
+    text-align: left !important;
+    margin-left: 9.5% !important;
+    margin-bottom: 2.5% !important;
+    height: auto !important;
+}
 
 
 
@@ -148,9 +161,6 @@ div.content {
     margin-bottom: 1% !important; 
     width:85% !important;
 }
-.inline{
-    display: inline-block !important; 
-    display:flex; flex-direction: row;}
 .vid{
     border: 1px solid black; 
     border-radius: 3px !important;  }
@@ -325,8 +335,6 @@ textarea{
 .exps-table{
     width: 33% !important;
     margin-left: 0px!important;}
-.fa-graduation-cap, .fa-commenting, .fa-wrench, .fa-briefcase, .fa-cogs, .fa-github {
-    padding: 0% !important;}
 
 .contact-msg {
     text-align: left !important;

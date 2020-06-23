@@ -35,11 +35,11 @@
     <body class = "body">
         <!--------------------------- HEADER: NAV-BAR --------------------------------->
         <header class = "nav-bar" id = "nav-bar">
-            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('about_div');" > About </a>
-            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('history_div')" > Experience </a>
-            <a class = "nav-bar-option responsive inline"  onclick = "responsiveNavBar('education_div')" > Education </a>
-            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('knowledge_div')" > Skills </a>
-            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('projects_div')" > Project </a>
+            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('about_div');" > <i class="fa fa-user"></i> </a>
+            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('history_div')" > <i class = "fa fa-briefcase"></i> </a>
+            <a class = "nav-bar-option responsive inline"  onclick = "responsiveNavBar('education_div')" >  <i class="fa fa-graduation-cap"></i> </a>
+            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('knowledge_div')" >  <i class="fa fa-wrench"></i> </a>
+            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('projects_div')" > <i class="fa fa-cogs"></i> </a>
             <p class = "nav-bar-myname responsive inline"> Shahaf Dan </p>
         </header>
         <!--------------------------- SIDEBAR: SUB-NAV-BAR --------------------------------->
@@ -50,9 +50,10 @@
             <a class = "contact-btn" onclick = "window.open('mailto:dan.shachaf@gmail.com?subject=I saw your website, and...');"><img src = "Logos/gmail-logo.png" class = "LinkedIn-img"></a><br><br>
             <a class = "contact-btn" href = "https://www.hackerrank.com/dan_shachaf"><img src = "Logos/hackerrank-logo.png" class = "LinkedIn-img"></a><br><br>
         </div>
-        <!--------------------------- ABOUT ME COLLAPSE --------------------------------->
+        <!--------------------------- CONTENT DIVISION --------------------------------->
         <div class = "content">
-            <div class = "header" id = "about_div" style = "display: block">
+            <!--------------------------- ABOUT ME COLLAPSE --------------------------------->
+            <div id = "about_div" style = "display: block">
                 <!-- <h2 class = "nameText"> Shahaf Dan</h2>         -->
                 <div class = "about-me">
                     <h4 class = "centrize"><strong> »    Full Stack Software Developer  |  Bay Area </strong></h4>
@@ -70,8 +71,8 @@
                 </div>
             </div>
             <!--------------------------- EXPERIENCE COLLAPSE --------------------------------->
-            <div id = "history_div" class = "info_div" style = "display: none">
-                <h2 class = "title"><u>Work Experience</u> <i class="fa fa-briefcase"></i></h2>
+            <div id = "history_div" style = "display: none">
+                <h2 class = "section-title">Work Experience<h2>
                 <div class = "container">
                     <div style = "width: 100% !important;">
                         <div class = "col-md-offset-2 col-md-8 col-sm-12" style = " margin-right: 5% !important; margin-left: 5% !important; width: 90% !important; padding: 0% !important;">
@@ -118,7 +119,7 @@
             </div>
             <!-------------------------- EDUCATION COLLAPSE -------------------------->
             <div id = "education_div" class = "info_div" style = "display: none">
-                <h2 class = "title"><u> Education</u>  &nbsp;  <i class="fa fa-graduation-cap"></i></h2><br>
+                <h2 class = "section-title"> Education </h2>
                 <div class = "bu edu" id = "lpc">
                     <h3>Boston University</h3>
                     <p> <strong> Boston, MA | September 2020  -  May 2022 </strong> </p> 
@@ -332,43 +333,41 @@
             <!----------------------  TECHNICAL SKILLS COLLAPSE ------------------------------>
             <div id = "knowledge_div" class = "info_div" style = "display: none">
                 <!-- TODO: Add linkedin logo if passed the linkedin test-->
-                <div class = "kwnld" id = "knd_div">
-                    <h2 class = "title"><u>Technical Knowledge & Skills</u>   <i class="fa fa-wrench"></i></h2>
-                    <div class = "inline exps-table">
-                        <h4> Front End </h4>
-                        <ul class = "list-group">
-                            <li class = "list-group-item"><img src = "Logos/html-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/css-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/javascript-logo.png" class = "logo-img"></li>
-                            <li class = "list-group-item"><img src = "Logos/react-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/morrisjs-logo.png" class = "logo-img"></li>
-                            <li class = "list-group-item"><img src = "Logos/bootstrap-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/jquery-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/ajax-logo.png" class = "logo-img"></li>
-                            <li class = "list-group-item"><img src = "Logos/swift-logo.png" class = "logo-img"></li>
-                        </ul>
-                    </div>
-                    <div class = "inline exps-table">
-                        <h4> Back End </h4>
-                        <ul class = "list-group">
-                            <li class = "list-group-item"><img src = "Logos/java-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/jsp-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/c++-logo.png" class = "logo-img"></li>
-                            <li class = "list-group-item"><img src = "Logos/nodejs-logo.png" class = "logo-img"></li>
-                            <li class = "list-group-item"><img src = "Logos/php-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/PhpMyAdmin-logo.svg" class = "logo-img"></li>
-                            <li class = "list-group-item"><img src = "Logos/mysql-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/mongodb-logo.png" class = "logo-img"></li>
-                        </ul>
-                    </div>
-                    <div class = "inline exps-table">
-                        <h4> Other Experties </h4>
-                        <ul class = "list-group">
-                            <li class = "list-group-item"><img src = "Logos/word-logo.svg" class = "logo-img"> &nbsp; <img src = "Logos/powerpoint-logo.svg" class = "logo-img"> &nbsp; <img src = "Logos/excel-logo.svg" class = "logo-img"></li> 
-                            <li class = "list-group-item"><img src = "Logos/linux-logo.jpg" class = "logo-img"> &nbsp; <img src = "Logos/ubuntu-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/vmware-logo.webp" class = "logo-img"></li>
-                            <li class = "list-group-item"><img src = "Logos/MatLab-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/GnuOctave-logo.png" class = "logo-img"></li>
-                            <li class = "list-group-item"><img src = "Logos/wordpress-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/LaTeX-logo.png" class = "logo-img-smaller"></li>
-                        </ul>
-                    </div>
+                <h2 class = "section-title"> Technical Knowledge & Skills </h2>
+                <div class = "inline exps-table">
+                    <h4> Front End </h4>
+                    <ul class = "list-group">
+                        <li class = "list-group-item"><img src = "Logos/html-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/css-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/javascript-logo.png" class = "logo-img"></li>
+                        <li class = "list-group-item"><img src = "Logos/react-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/morrisjs-logo.png" class = "logo-img"></li>
+                        <li class = "list-group-item"><img src = "Logos/bootstrap-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/jquery-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/ajax-logo.png" class = "logo-img"></li>
+                        <li class = "list-group-item"><img src = "Logos/swift-logo.png" class = "logo-img"></li>
+                    </ul>
+                </div>
+                <div class = "inline exps-table">
+                    <h4> Back End </h4>
+                    <ul class = "list-group">
+                        <li class = "list-group-item"><img src = "Logos/java-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/jsp-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/c++-logo.png" class = "logo-img"></li>
+                        <li class = "list-group-item"><img src = "Logos/nodejs-logo.png" class = "logo-img"></li>
+                        <li class = "list-group-item"><img src = "Logos/php-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/PhpMyAdmin-logo.svg" class = "logo-img"></li>
+                        <li class = "list-group-item"><img src = "Logos/mysql-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/mongodb-logo.png" class = "logo-img"></li>
+                    </ul>
+                </div>
+                <div class = "inline exps-table">
+                    <h4> Other Experties </h4>
+                    <ul class = "list-group">
+                        <li class = "list-group-item"><img src = "Logos/word-logo.svg" class = "logo-img"> &nbsp; <img src = "Logos/powerpoint-logo.svg" class = "logo-img"> &nbsp; <img src = "Logos/excel-logo.svg" class = "logo-img"></li> 
+                        <li class = "list-group-item"><img src = "Logos/linux-logo.jpg" class = "logo-img"> &nbsp; <img src = "Logos/ubuntu-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/vmware-logo.webp" class = "logo-img"></li>
+                        <li class = "list-group-item"><img src = "Logos/MatLab-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/GnuOctave-logo.png" class = "logo-img"></li>
+                        <li class = "list-group-item"><img src = "Logos/wordpress-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/LaTeX-logo.png" class = "logo-img-smaller"></li>
+                    </ul>
                 </div>
                 <!-- INSERTION ON TIMELAPSE VIDEO GALLERY -->
                 <!-- <iframe id = "vid" class = "embed-responsive-item vid" src = "shahaf-pics/vid-1.mp4" allowfullscreen></iframe> -->
             </div>
              <!----------------------  PROJECTS COLLAPSE ------------------------------>
             <div id = "projects_div" class = "info_div" style = "display: none">
-                <h2 class = "title"><u>My Projects</u>   <i class="fa fa-cogs"></i></h2>
-                <br> <!--------------------  The Market Manager  ----------------->
+                <h2 class = "section-title"> My Projects </h2>
+                <!--------------------  The Market Manager  ----------------->
                 <button type = "button" class = "btn sub-proj-btn" id = "projects-btn-1" data-toggle="collapse" data-target="#projects-div-1"> The Market's Manager </button> 
                 <div id = "projects-div-1" class = "collapse projects-div">
                     <h4><u>The Market's Manager</u></h4>
