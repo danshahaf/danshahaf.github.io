@@ -1,18 +1,11 @@
-// ================ JS FOR NAV-BAR SCROLLING ================= // 
-//Make Navigation Bar Responsive
-// $(document).ready(function(){
-//     $('a[href^="#"]').on('click',function (e) {
-//         e.preventDefault();
-
-//         var target = this.hash;
-//         var $target = $(target);
-
-//         $('html, body').animate({
-//             'scrollTop':$target.offset().top
-//         }, 1000, 'swing');
-        
-//     });
-// });
+// ================ JS FOR NAV-BAR & SIDE_BAR ================= // 
+function showlpcedu(x){
+    var divs = ["recognitions", "activities", "classes", "projects"];
+    for(var i = 0; i < divs.length; i++) {
+        document.getElementById(divs[i] + "-div").style.display = "none";
+    }
+    document.getElementById(x.substring(0,x.length-4)+'-div').style.display = "block";
+}
 
 function responsiveNavBar(val) {
     var divs = ["about", "history", "education", "knowledge", "projects"];
@@ -53,7 +46,7 @@ class Course
         this.units = units;
         this.term = term;
         this.year = year;
-        this.id = subject + " [ " + number + " ]";
+        this.id = subject + " :" + number;
         this.name = name;
         this.grade = grade;
         this.academic = year + " | " + term;
@@ -88,7 +81,7 @@ const course24 = new Course('Kinesiology','DIV','Spring Board Diving','A','Fall'
 const course25 = new Course('Kinesiology','50','Swim and Dive Team','A','Spring','2019A', 3);
 const course26 = new Course('Kinesiology','SW1','Introduction to Swimming','A','Fall','2018C', 1);
 
-var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course24, course25];
+var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course25, course26];
 // ============== END OF JSON CLASSES =================//
 
 // ================ POPULATE ORIGINAL TABLE ================= //
@@ -120,6 +113,7 @@ for(var i = courses.length - 1; i > -1; i--)
 // ============= FUCTIONS =============:::
 function coursesAlphabetically()
 {
+    restyleBtns("classByName");
     // ---------- preparations: ---------------
     var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course24, course25];
     cleanPrevTable();
@@ -169,6 +163,7 @@ function coursesAlphabetically()
 
 function coursesBySubject()
 {
+    restyleBtns("classBySubject");
     // ---------- preparations: ---------------
     var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course24, course25];
     cleanPrevTable();
@@ -218,6 +213,7 @@ function coursesBySubject()
 
 function coursesByGrade()
 {
+    restyleBtns("classByGrade");
      // ---------- preparations: ---------------
     var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course24, course25];
     cleanPrevTable();
@@ -267,6 +263,7 @@ function coursesByGrade()
 
 function coursesChronoligically()
 {
+    restyleBtns("classByTerm");
     // ---------- preparations: ---------------
     var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course24, course25];
     cleanPrevTable();
@@ -318,6 +315,14 @@ function cleanPrevTable()
     thead.deleteRow(0);
     for(var z = courses.length - 1; z > -1; z--) {tbody.deleteRow(z);}
     return;
+}
+
+function restyleBtns(x) {
+    btns = ["classByName", "classBySubject", "classByGrade", "classByTerm"];
+    for(var i = 0; i <btns.length; i++) {
+        document.getElementById(btns[i]).style.boxShadow = "-3px -3px 7px #FFFFFF73, 3px 3px 5px rgba(94, 104, 121, 0.288)";
+    }
+    document.getElementById(x).style.boxShadow = "inset -3px -3px 7px #FFFFFF73, inset 3px 3px 5px rgba(94, 104, 121, 0.288)";
 }
 
 

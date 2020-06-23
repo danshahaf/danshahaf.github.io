@@ -37,8 +37,8 @@ div.content {
     height: auto !important;
 }
 .quarter {
-    width: 21% !important;
-    margin-right: 2.5% !important;
+    width: 22% !important;
+    margin-right: 2% !important;
 }
 
 
@@ -56,25 +56,7 @@ div.content {
     text-align: center !important;}
 .skill-logo-container{
     margin-left: 5% !important; margin-right: 5% !important; }
-.courses-btn, .projects-btn{
-    background-image: linear-gradient(to right, #535e70 0%, #98aed4 51%, #535e70 100%);
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;
-    box-shadow: 0 0 20px #eee;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.3);}
-.projects-btn {
-    font-size: 90% !important;}
-.courses-btn:hover, .projects-btn:hover{
-    background-position: right center; 
-    color: black; 
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.8);}
-.projects-btn:hover{
-    border-color: gray !important; 
-    background-color: #007bff; color:white;}
-.see-project-col {
-    width: 20% !important;}
+
 .tablePart{
     width: 90% !important; 
     padding-right:3% !important; 
@@ -130,25 +112,6 @@ div.content {
     height: 35%; 
     border-radius: 5px; 
     border: 0.1px solid black;}
-.fa{
-    padding-top: 25% !important;}
-.w17{
-    width: 17% !important;}
-.sub-edu-btn {
-    margin-top:1% !important;
-    background: linear-gradient(to right,rgb(24, 32, 98),rgb(72, 77, 141));
-    border: 0px !important;
-    padding: 1% !important;
-    color: white !important;
-    text-transform: uppercase;
-    font-size: 90% !important;
-    transition: 0.35s !important;
-    background-size: 200% auto;
-    box-shadow: 0 0 20px #ccc;
-    letter-spacing: 0.30em !important;
-    font-weight: 450 !important;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-}
 .sub-edu-btn:hover, .sub-proj-btn:hover {
     background-position: right center; 
     text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
@@ -314,21 +277,9 @@ textarea{
     background-color: transparent;
     background-image: none;
     border-color: #007bff !important;}
-.projectTableContainer{
-    width: 100% !important;
-    background-color: white;
-    border: 3px solid black;
-    border-radius: 5px !important;
-    padding: 2% !important;}
 .gpaGraph {
     width: 100 !important;}
-.classes{
-    background-color: white;
-    border-radius:5px !important;
-    border: 2px solid black;
-    padding: 2%; 
-    margin-right: 3% !important;
-    margin-left: 3% !important;}
+
 .honorsProjectsClass{
     padding: 2% !important;
     text-align: center !important;
@@ -402,8 +353,6 @@ textarea{
     transition: all 0.55s ease-in-out !important;}
 /*----- Education Div ----- */
 .award-listing {
-    margin-left: 25% !important;
-    width: 52% !important;
     text-align: left;
     font-size: 95% !important;
 }
@@ -426,6 +375,57 @@ textarea{
     letter-spacing: 0.35em !important;
     font-weight: 450 !important;
     text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+.classes, .projectTableContainer{
+    background: #DDE1E7 !important;    
+    /* border: 0.1px solid black; */
+    border-radius: 4px;
+    padding: 2%;
+}
+#classesTableBody, #projectTableBody{
+    font-size: 85% !important;
+}
+#classesTableBody tr {
+    padding-bottom: 2px !important;
+}
+.projectName {
+    width: 26% !important;
+}
+.sub-edu-btn {
+    margin-top:1% !important;
+    background: linear-gradient(to right,rgb(24, 32, 98),rgb(72, 77, 141));
+    border: 0px !important;
+    padding: 1% !important;
+    color: white !important;
+    text-transform: uppercase;
+    font-size: 90% !important;
+    transition: 0.35s !important;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #ccc;
+    letter-spacing: 0.30em !important;
+    font-weight: 450 !important;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+.courses-btn, .projects-btn {
+    background: #DDE1E7 !important;
+    box-shadow: -3px -3px 7px #FFFFFF73, 3px 3px 5px rgba(94, 104, 121, 0.288);
+    border-radius: 10px;
+    font-size: 90%;
+    letter-spacing: 0.25em;
+    transition: 0.25s;
+    padding-right: 1%;
+    padding-left: 1%;
+    /* text-transform: uppercase; */
+}
+.courses-btn:hover {
+    box-shadow: inset -3px -3px 7px #FFFFFF73, inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+    transition: all 0.25s linear !important;
+}
+.sepClassesTable {
+    border: 1.5px solid white;
+}
+.see-project-col {
+    width: 23.5% !important;
 }
 /*----- About Div ----*/
 .btn-outline-danger{
