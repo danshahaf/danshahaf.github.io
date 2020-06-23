@@ -17,10 +17,6 @@ div.content {
     padding: 6% 0% 2% 2% !important;
     height: 100%;
 }
-.btn {
-    border: 0.5px solid black !important; 
-    width: 40% !important;
-}
 .centrize {
     text-align: center !important;
 }
@@ -40,7 +36,10 @@ div.content {
     margin-bottom: 2.5% !important;
     height: auto !important;
 }
-
+.quarter {
+    width: 21% !important;
+    margin-right: 2.5% !important;
+}
 
 
 
@@ -135,21 +134,25 @@ div.content {
     padding-top: 25% !important;}
 .w17{
     width: 17% !important;}
-.sub-edu-btn, .sub-proj-btn{
+.sub-edu-btn {
     margin-top:1% !important;
     background: linear-gradient(to right,rgb(24, 32, 98),rgb(72, 77, 141));
     border: 0px !important;
+    padding: 1% !important;
     color: white !important;
     text-transform: uppercase;
-    font-weight: bold;
-    font-size: 110% !important;
-    transition: 0.5s !important;
+    font-size: 90% !important;
+    transition: 0.35s !important;
     background-size: 200% auto;
     box-shadow: 0 0 20px #ccc;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.3);}
+    letter-spacing: 0.30em !important;
+    font-weight: 450 !important;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
 .sub-edu-btn:hover, .sub-proj-btn:hover {
     background-position: right center; 
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.8); }
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+ }
 .spacebar{
     border-top: 4px solid #707070; 
     margin-top: 1.2% !important; 
@@ -402,7 +405,28 @@ textarea{
     margin-left: 25% !important;
     width: 52% !important;
     text-align: left;
-    font-size: 95% !important;}
+    font-size: 95% !important;
+}
+.sub-edu-div {
+    text-align: justify !important;
+    width: 90% !important;
+    margin-left: 10% !important;
+}
+.sub-proj-btn{
+    margin-top:1% !important;
+    background: linear-gradient(to right,rgb(24, 32, 98),rgb(72, 77, 141));
+    border: 0px !important;
+    padding: 1% !important;
+    color: white !important;
+    text-transform: uppercase;
+    font-size: 90% !important;
+    transition: 0.35s !important;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #ccc;
+    letter-spacing: 0.35em !important;
+    font-weight: 450 !important;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
 /*----- About Div ----*/
 .btn-outline-danger{
     color:red!important; 
