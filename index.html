@@ -30,400 +30,392 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 
-        <!-- API's website: https://funnel.io/data-sources -->
     </head>
 
     <body class = "body">
+        <!--------------------------- HEADER: NAV-BAR --------------------------------->
         <header class = "nav-bar" id = "nav-bar">
-            <a href = "#about_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('about_di∫v');" > About </a>
-            <a href = "#history_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('history_div')" > Experience </a>
-            <a href = "#education_div" class = "nav-bar-option responsive inline"  onclick = "responsiveNavBar('education_div')" > Education </a>
-            <a href = "#knowledge_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('knowledge_div')" > Skills </a>
-            <a href = "#projects_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('projects_div')" > Project </a>
-            <a href = "#contact_div" class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('contact_div')"  > Contact </a>
+            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('about_div');" > About </a>
+            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('history_div')" > Experience </a>
+            <a class = "nav-bar-option responsive inline"  onclick = "responsiveNavBar('education_div')" > Education </a>
+            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('knowledge_div')" > Skills </a>
+            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('projects_div')" > Project </a>
             <p class = "nav-bar-myname responsive inline"> Shahaf Dan </p>
         </header>
-        <!--------------------------- ABOUT ME COLLAPSE --------------------------------->
-        <div class = "header" id = "about_div">
-            <!-- <h2 class = "nameText"> Shahaf Dan</h2>         -->
-            <div class = "about-me">
-                <br>
-                <h4 class = "centrize"><strong> »    Full Stack Software Developer  |  Bay Area </strong></h4>
-                <button type = "button" class = "btn btn-outline-danger inline resume" onclick = "window.open('docs/ShahafDan_Resume06072020.pdf');"> My Resume (PDF)</button>
-                <br><br><hr class = "thin-spacebar"><br>
-                <h5 class = "about-me-text"> 
-                    Welcome to My Portfolio Website! This is a space that I have put together to document my academic, work, and computer science experience collectively. <br><br>
-                    I currently seek internships for the summer of 2020, and if the opportunity will arise, will defer my transfer - admission decision at Boston University to gain work experience. <br><br>
-                    <!-- My educational goals include the pursue of a Bachelor's of Science Degree in Computer Science, and a Masters Degree in Business. <br><br> -->
-                    I hope this site will assist you in learning more about me, my projects and the tools that I have come across along my journey ! <br><br>
-                </h5>
-            </div>
-            <div class = "imgContainer">
-                <img id = "imgBanner" class = "imgBanner shadow-lg p-3" src = "" alt = ""/>
-            </div>
-            <br>
+        <!--------------------------- SIDEBAR: SUB-NAV-BAR --------------------------------->
+        <div class = "sidebar" id = "sidebar">
+            <a class = "contact-btn" onclick = "window.open('docs/ShahafDan_Resume06072020.pdf');"><img src = "Logos/resume-logo.png" class = "LinkedIn-img"></a><br><br>
+            <a class = "contact-btn" href = 'https://www.linkedin.com/in/shahaf-dan-66812b180/'><img src = "Logos/linkedIn-logo.png" class = "LinkedIn-img"></a><br><br>
+            <a class = "contact-btn" href = 'https://www.github.com/ShahafDan25'><img src = "Logos/gitHub-logo.png" class = "LinkedIn-img"></a><br><br>
+            <a class = "contact-btn" onclick = "window.open('mailto:dan.shachaf@gmail.com?subject=I saw your website, and...');"><img src = "Logos/gmail-logo.png" class = "LinkedIn-img"></a><br><br>
+            <a class = "contact-btn" href = "https://www.hackerrank.com/dan_shachaf"><img src = "Logos/hackerrank-logo.png" class = "LinkedIn-img"></a><br><br>
         </div>
-        
-        <!--------------------------- EXPERIENCE COLLAPSE --------------------------------->
-        <div id = "history_div" class = "info_div">
-            <h2 class = "title"><u>Work Experience</u>    <i class="fa fa-briefcase"></i>
-            </h2>
-            <div class = "container">
-                <div style = "width: 100% !important;">
-                    <div class = "col-md-offset-2 col-md-8 col-sm-12" style = " margin-right: 5% !important; margin-left: 5% !important; width: 90% !important; padding: 0% !important;">
-                        <div class = "main-timeline">
-                            <div class = "timeline">
-                                <a href = "#" class = "timeline-content">
-                                    <div class = "timeline-icon">
-                                        <i class = "fa fa-code"></i>
-                                    </div>
-                                    <div class = "inner-content">
-                                        <h3 class = "title"> Full Stack Web Developer Intern </h3>
-                                        <p> <strong> Sep. 2018 - Apr. 2019  |  Amber Systems Technologies  |  Pleasanton, CA </strong> </p> 
-                                        <p class = "description">
-                                             » Developed client-based front-end web application templates in HTML, JavaScript, CSS, and Bootstrap libraries (jQuery and AJAX) <br>
-                                             » Worked with PHP in the back-end with mysqli database connectivity <br>
-                                             » Designed PHP algorithms with embedded MySQL queries for data manipulation.
-                                        </p>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- ---------------- -->
-                            <div class = "timeline">
-                                    <a hred = "#" class = "timeline-content">
+        <!--------------------------- ABOUT ME COLLAPSE --------------------------------->
+        <div class = "content">
+            <div class = "header" id = "about_div" style = "display: block">
+                <!-- <h2 class = "nameText"> Shahaf Dan</h2>         -->
+                <div class = "about-me">
+                    <h4 class = "centrize"><strong> »    Full Stack Software Developer  |  Bay Area </strong></h4>
+                    <button type = "button" class = "btn btn-outline-danger inline resume" onclick = "window.open('docs/ShahafDan_Resume06072020.pdf');"> My Resume (PDF)</button>
+                    <br><br><hr class = "thin-spacebar"><br>
+                    <h5 class = "about-me-text"> 
+                        Welcome to My Portfolio Website! This is a space that I have put together to document my academic, work, and computer science experience collectively. <br><br>
+                        I currently seek internships for the summer of 2020, and if the opportunity will arise, will defer my transfer - admission decision at Boston University to gain work experience. <br><br>
+                        <!-- My educational goals include the pursue of a Bachelor's of Science Degree in Computer Science, and a Masters Degree in Business. <br><br> -->
+                        I hope this site will assist you in learning more about me, my projects and the tools that I have come across along my journey ! <br><br>
+                    </h5>
+                </div>
+                <div class = "imgContainer">
+                    <img id = "imgBanner" class = "imgBanner shadow-lg p-3" src = "" alt = ""/>
+                </div>
+            </div>
+            <!--------------------------- EXPERIENCE COLLAPSE --------------------------------->
+            <div id = "history_div" class = "info_div" style = "display: none">
+                <h2 class = "title"><u>Work Experience</u> <i class="fa fa-briefcase"></i></h2>
+                <div class = "container">
+                    <div style = "width: 100% !important;">
+                        <div class = "col-md-offset-2 col-md-8 col-sm-12" style = " margin-right: 5% !important; margin-left: 5% !important; width: 90% !important; padding: 0% !important;">
+                            <div class = "main-timeline">
+                                <div class = "timeline">
+                                    <a href = "#" class = "timeline-content">
                                         <div class = "timeline-icon">
-                                            <i class = "fa fa-database"></i>
+                                            <i class = "fa fa-code"></i>
                                         </div>
                                         <div class = "inner-content">
-                                            <h3 class = "title"> Back-End Java Software Developer </h3>
-                                            <p> <strong> Jun. 2019 - Aug. 2019  |  FindingGenius Startup   |  San Ramon, CA </strong> </p> 
+                                            <h3 class = "title"> Full Stack Web Developer Intern </h3>
+                                            <p> <strong> Sep. 2018 - Apr. 2019  |  Amber Systems Technologies  |  Pleasanton, CA </strong> </p> 
                                             <p class = "description">
-                                                 » Assisted with the development of the company's software in Java.<br>
-                                                 » Used the JDBC protocol to manipulate MySQL data on the server end. <br>
-                                                 » Constructed bakcnend Java-based data structures and algorithms <br>
-                                                 » Worked with JSPs to develop a back-end software dynamic with the front-end in HTML, CSS, and JavaScript.
+                                                 » Developed client-based front-end web application templates in HTML, JavaScript, CSS, and Bootstrap libraries (jQuery and AJAX) <br>
+                                                 » Worked with PHP in the back-end with mysqli database connectivity <br>
+                                                 » Designed PHP algorithms with embedded MySQL queries for data manipulation.
                                             </p>
                                         </div>
                                     </a>
                                 </div>
+                                <!-- ---------------- -->
+                                <div class = "timeline">
+                                        <a hred = "#" class = "timeline-content">
+                                            <div class = "timeline-icon">
+                                                <i class = "fa fa-database"></i>
+                                            </div>
+                                            <div class = "inner-content">
+                                                <h3 class = "title"> Back-End Java Software Developer </h3>
+                                                <p> <strong> Jun. 2019 - Aug. 2019  |  FindingGenius Startup   |  San Ramon, CA </strong> </p> 
+                                                <p class = "description">
+                                                     » Assisted with the development of the company's software in Java.<br>
+                                                     » Used the JDBC protocol to manipulate MySQL data on the server end. <br>
+                                                     » Constructed bakcnend Java-based data structures and algorithms <br>
+                                                     » Worked with JSPs to develop a back-end software dynamic with the front-end in HTML, CSS, and JavaScript.
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
             </div>
+            <!-------------------------- EDUCATION COLLAPSE -------------------------->
+            <div id = "education_div" class = "info_div" style = "display: none">
+                <h2 class = "title"><u> Education</u>  &nbsp;  <i class="fa fa-graduation-cap"></i></h2><br>
+                <div class = "bu edu" id = "lpc">
+                    <h3>Boston University</h3>
+                    <p> <strong> Boston, MA | September 2020  -  May 2022 </strong> </p> 
+                </div>
+                <hr class = "spacebar">
+                <div class = "lpc edu" id = "lpc">
+                    <h3>Las Positas College</h3>
+                    <p> <strong> Livermore, CA | June 2018  -  May 2020 </strong> </p>
+                    <h4> <u>GPA:</u> 3.83 </h4>
+                    <!----------------------------- COLLAPSE OF DEGREES, AWARDS, RECOGNITIONS DIV ------------------------------------>
+                    <button type = "button" class = "btn sub-edu-btn" id = "recognitions-btn" data-toggle="collapse" data-target="#recognitions-div"> Recognitions </button> <br>
+                    <div id = "recognitions-div" class = "collapse recognitions-div">
+                        <h3><u>Degrees & Certifications</u></h3>
+                        <ul class = "award-listing">
+                            <li><strong>Associates of Arts</strong>: Computer Studies</li>
+                            <li><strong>Associates of Sciences</strong>: Mathematics</li>
+                            <li><strong>Associates of Sciences</strong>: Physics</li>
+                            <li><strong>Certification</strong>: Computer Programming</li>
+                            <li><strong>Certification</strong>: LPI (Linux Professional Institute) Linux Programming</li>
+                        </ul>
+                        <h3><u>Scholarships</u></h3>
+                        <ul class = "award-listing">
+                            <li><strong>Scholarship</strong>: Alpha Gamma Sigma Honors Society California State Mantovani Academic and Leadership Scholarship</li>
+                            <li><strong>Scholarship</strong>: The Mathematics, Engineering and Computer Science Las Positas College Department Scholarship</li>
+                            <li><strong>Scholarship</strong>: American Council of Engineering Companies: Bay Area Chapter Scholarship</li>
+                        </ul>
+                        <h3><u>Awards</u></h3>
+                        <ul class = "award-listing">
+                            <li><strong>Award</strong>: 2018-2019 Locally Top Ranked Math Honors Society AMATYC Exam Performance</li>
+                            <li><strong>Award</strong>: 2019-2020 Locally Top Ranked Math Honors Society AMATYC Exam Performance</li>
+                            <li><strong>Recognition of Completion</strong>: Honors Program Scholar (For the Completion of 6 honors courses</li>
+                        </ul>
+                    </div>
+                    <!----------------------------- COLLAPSE OF ACTIVITIES DIV -------------------------------------->
+                    <button type = "button" class = "btn sub-edu-btn" id = "activities-btn" data-toggle="collapse" data-target="#activities-div"> Activities </button> <br>
+                    <div id = "activities-div" class = " collapse activities_div"> <!-- ALIGN TO THE LEFT-->
+                        <br><br>
+                        <button class = "upper-item-activities-list item-activities-list" data-toggle="collapse" data-target="#chessclub-div"><strong>Chess Club    </strong>|   Founder ⇨ President </button><br>
+                            <div id = "chessclub-div" class = "collapse act-div"> <br>
+                                <p class = "act-date"> Novemebr 2018 - June 2020 </p> 
+                                <p class = "act-desc"> The chess club was founded in November 2018 by Shahaf Dan and Sayed Hamid Mirzahi
+                                On a weekly basis, 30 registered member gather to play chess, learn new strategies, study the history of the game,
+                                and enjoy a safe space where they can take a break from the busy academic routine
+                                </p>
+                            </div>
+                        <button class = "item-activities-list" data-toggle="collapse" data-target="#ags-div"><strong>Alpha Gamma Sigma (ΑΓΣ) - Honors Society   </strong>|   Member ⇨ President </button><br>
+                            <div id = "ags-div" class = "collapse act-div"><br>
+                                <p class = "act-date"> February 2019 - September 2020 </p>
+                                <p class = "act-desc"> AGS is an intercollegiate honors society for leader, overachiever students with emphasis on community service 
+                                As the Las Positas College Sigma Theta (ΣΘ) is considered one of the most active and accomplished chapters in the state of California,
+                                it is my duty and pleasure to serve as the president, chair the biweekly meetings, oversee all community service by all members, 
+                                conduct events and fundraisers, and create an environment where overachievr students who are interested in contributing further to 
+                                their communities and the student body, are given and granted a various of opporutnities. 
+                                </p>
+                            </div>
+                        <button class = "item-activities-list" data-toggle="collapse" data-target="#studgov-div"><strong> Student Government   </strong>|   Senator ⇨ Director of Events </button><br>
+                            <div id = "studgov-div" class = "collapse act-div"><br>
+                                <p class = "act-date"> Novemebr 2018 - August 2020 </p>
+                                <p class = "act-desc"> 
+                                The LPCSG is the most effective student organization on campus, creating many events, attending conference, 
+                                and representing the student body of Las Positas. As the director of events, it is my mission to phase the campus cultural identity to
+                                be more student friendly, get rid of the negative stigma that student life in communit colleges are not productive, and create events 
+                                that will strngethen and embrace the relationships between the student body and the campus. 
+                                </p>
+                            </div>
+                        <button class = "item-activities-list" data-toggle="collapse" data-target="#compsciclub-div"><strong>Mu Alpha Theta (ΜΑΘ) - Math Honors Society   </strong> |   Member </button><br>
+                            <div id = "compsciclub-div" class = "collapse act-div"><br>
+                                <p class = "act-date"> September 2018 - June 2020 </p>
+                                <p class = "act-desc"> 
+                                    Mu Alpha Theta is the Math Honors Society on Las Positas College, providing student with extracurricular math activities,
+                                    club meetings, and the AMATYC Exam per academic term. As an outstanding member, I have places in the top 5 students in the AMATYC exam,
+                                    in both academic years 2018 - 2019, and 2019 - 2020.
+                                </p>
+                            </div>
+                        <button class = "item-activities-list" data-toggle="collapse" data-target="#mathclub-div"><strong> Committees, Involvement, and Representation </strong> </button><br>
+                            <div id = "mathclub-div" class = "collapse act-div"><br>
+                                <p class = "act-desc"> 
+                                    » <u>ASACC Representative: </u> Represented Las Positas in the American Student Association tow years continuasly (2019, 2020) in Washington D.C. &nbsp; Met with congresspeople and brought to their attention concerns and issues from community college students <br>
+                                    » <u>Technology Committee: </u> Represented the student body on the District Technology Coordination Committee, pushing for technological solutions that will benefit the student body <br>
+                                    » <u>Student Events Committee: </u> Chaired the student events committee as the student elected Director of Events <br>
+                                    » <u>Student Achievment and Equity Committee: </u> Served as the representative on the SAE Committee, pushing for increased student equity and voicing student concerns <br>
+                                </p>
+                            </div>
+                        <button class = "item-activities-list" data-toggle="collapse" data-target="#committess-div"><strong>Honors Program</strong></button><br>
+                            <div id = "committess-div" class = "collapse act-div"><br>
+                                <p class = "act-desc"> 
+                                    As part of the honors program, by graduation I will have completed 6 honors porjects in various subjects and classes.
+                                    Recognized as an honors scholar, for which I have achieved the honors stamp on my diploma.
+                                    As part of the program, I have conducted research in Physics, Mathematics, and Computer Science.
+                                </p>
+                            </div>
+                        <button class = "item-activities-list" data-toggle="collapse" data-target="#honorsprog-div"><strong>Computer Science Club   </strong>|   Member ⇨ Vice President </button><br>
+                            <div id = "honorsprog-div" class = "collapse act-div"><br>
+                                <p class = "act-date"> May 2019 - January 2020 </p>
+                                <p class = "act-desc"> 
+                                    Server as the Vice President of the Computer Science Club. 
+                                    Assisted the President with any tasks including setting up field trips, organizing local competetions, and preparing presentations about various topics
+                                </p>
+                            </div>
+                        <button class = "lower-item-activities-list item-activities-list" data-toggle="collapse" data-target="#diveteam-div"><strong> Collegiate Dive Team   </strong>|   Diver ⇨ Team Leader </button><br>
+                            <div class = "collapse act-div" id = "diveteam-div"><br>
+                                <p class = "act-date"> September 2018 - May 2019 </p>
+                                <p class = "act-desc">
+                                    As a student athlete, I have represnted Las Positas College in conferences and meets as a diver.
+                                </p>
+                            </div>
+                        <br>
+                    </div>
+                    <!----------------------------- COLLAPSE OF CLASSES DIV -------------------------------------------->
+                    <button type = "button" class = "btn sub-edu-btn" id = "classes-btn" data-toggle="collapse" data-target="#classes-div"> Classes </button> <br>
+                    <div id = "classes-div" class = "collapse classes_div"> <br>
+                        <h4> Order By: </h4>
+                        <button class = "btn w17 courses-btn" id = "classByName" onclick = "coursesAlphabetically()"><strong> Name </strong></button> &nbsp; &nbsp;     
+                        <button class = "btn w17 courses-btn" id = "classBySubject" onclick = "coursesBySubject()"> <strong> Subject </strong> </button> &nbsp; &nbsp; 
+                        <button class = "btn w17 courses-btn" id = "classByGrade" onclick = "coursesByGrade()"> <strong> Grade </strong> </button> &nbsp; &nbsp;
+                        <button class = "btn w17 courses-btn" id = "classByGrade" onclick = "coursesChronoligically()"> <strong> Academic Term </strong> </button> 
+                        <br><br>
+                        <div class = "classes" id = "by_grade">
+                            <table class = "table projectTable">
+                                <thead id = "classesTableHead"></thead>
+                                <tbody id = "classesTableBody"></tbody>
+                            </table>
+                        </div>                  
+                    </div>
+                    <!----------------------------- COLLAPSE OF PROJECTS DIV --------------------------------------->
+                    <button type = "button" class = "btn sub-edu-btn" id = "projects-btn" data-toggle="collapse" data-target="#projects-div"> Projects </button> <br>
+                    <div id = "projects-div" class = "collapse"> <!-- ALIGN TO THE LEFT-->
+                        <h4><u>Projects, Researches, Papers </u></h4>
+                        <br>
+                        <div class = "projectTableContainer">
+                            <table class = "table projectTable">
+                                <thead class = "tablePart">
+                                    <tr>
+                                        <th scope="col">Class</th>
+                                        <th scope="col">Research Project Name</th>
+                                        <th scope="col">See for Yourself</th>
+                                    </tr>
+                                </thead>
+                                <tbody class = "tablePart">
+                                    <tr class = "tableRow">
+                                        <td><strong>Physics</strong>: Electricity and Magnetism</td>
+                                        <td>Solar Panels: Efficiency, Mechanism, and Applications</td>
+                                        <td class = "see-project-col"><button type = "button" class="btn w45 projects-btn" onclick = "window.open('docs/phy1c_abs.pdf');">Abstract</button>&nbsp;<button type = "button" class = "btn   ml2 w45 projects-btn" onclick = "window.open('docs/proj.pdf');"> Paper </button></td>
+                                    </tr>
+                                    <tr class = "tableRow">
+                                        <td><strong>Computer Science</strong>: Java Programming</td>
+                                        <td>MyEvents - Management WebApp</td>
+                                        <td class = "see-project-col"><button type = "button" class="btn w94 projects-btn" onclick = "window.open('docs/csci19a_abs.pdf');">Abstract</button></td>
+                                    </tr>
+                                    <tr class = "tableRow">
+                                        <td><strong>Computer Science</strong>: Data Structures</td>
+                                        <td>Dictionary Tree: Customized Data Structure</td>
+                                        <td class = "see-project-col"><button type = "button" class="btn w45 projects-btn" onclick = "window.open('docs/cs20_abs.pdf');">Abstract</button>&nbsp;<form class = "inline ml2 w45" action = "https://www.github.com/ShahafDan25/DataStructures-CPP/tree/master/A12_DictionaryTree"><button class = "btn   w100 projects-btn"> Code </button></form></td>
+                                    </tr>
+                                    <tr class = "tableRow">
+                                        <td><strong>Computer Science</strong>: Assembly Programming</td>
+                                        <td>Assembler Movie I\O Encryptor</td>
+                                        <td class = "see-project-col"><form action = "https://github.com/ShahafDan25/Assembly/tree/master/Projects/10_DynamicMemory_ShahafDan_Linux64"><button class = "btn   ml2 w94 projects-btn"> Code </button></form></td>
+                                    </tr>
+                                    <tr class = "tableRow">
+                                        <td><strong>Mathematics</strong>: Discrete Mathematical Structures</td>
+                                        <td>Hash Tables: Efficiency, Mechanism, and Applications</td>
+                                        <td class = "see-project-col"><button type = "button" class="btn   w45 projects-btn" onclick = "window.open('docs/cs17_abs.pdf');">Abstract</button>&nbsp;<button type = "button" class = "btn   ml2 w45 projects-btn" onclick = "window.open('docs/cs17_proj.pdf');"> Paper </button></td>
+                                    </tr>
+                                    <tr class = "tableRow">
+                                        <td><strong>Physics</strong>: Introduction to Quantum Mechanics</td>
+                                        <td>The Meissner Effect: Superconductivity and Magnetic Levitation</td>
+                                        <td class = "see-project-col"><button type = "button" class="btn   w45 projects-btn" onclick = "window.open('docs/phy1d_abs.pdf');">Abstract</button>&nbsp;<button type = "button" class = "btn   ml2 w45 projects-btn" onclick = "window.open('docs/phys1d_proj.pdf');"> Paper </button></td>
+                                    </tr>
+                                    <tr class = "tableRow">
+                                        <td><strong>Computer Science</strong>: Capstone Project</td>
+                                        <td>The Market's Manager</td>
+                                        <td class = "see-project-col"><button type = "button" class="btn   w45 projects-btn" onclick = "window.open('docs/cs47_report.pdf');"> Report </button>&nbsp;<form class = "inline  ml2 w45" action = "https://github.com/ShahafDan25/LPCCapstone"><button class = "btn   projects-btn w100" > Code  </button></form></td>
+                                    </tr>
+                                    <tr class = "tableRow">
+                                        <td><strong>Computer Science</strong>: Database Programming</td>
+                                        <td>Rate My Professor at Las Positas College</td>
+                                        <td class = "see-project-col"><button type = "button" class="btn   w45 projects-btn" onclick = "window.open('docs/cs45_abs.pdf');">Abstract</button>&nbsp;<form class = "inline w45 ml2" action = "https://www.github.com/ShahafDan25/LPC-RMP"><button class = "btn   projects-btn w100"> Code </button></form></td>
+                                    </tr>
+                                    <tr class = "tableRow">
+                                        <td><strong>Mathematics</strong>: Differential Equations</td>
+                                        <td>Euler's Formula and Fourier Transforms</td>
+                                        <td class = "see-project-col"><button type = "button" class="btn   w45 projects-btn" onclick = "window.open('docs/math5_abs.pdf');">Abstract</button>&nbsp;<button type = "button" class = "btn   ml2 w45 projects-btn" onclick = "window.open('docs/math5_proj.pdf');"> Paper </button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <hr class = "spacebar">
+                <div class = "ghs edu" id = "ghs">
+                    <h3>Granada High Shcool</h3>
+                    <p> <strong> Livermore, CA | Aug. 2015  -  Jun. 2018 </strong> </p>
+                    <h4> <u>GPA:</u> 4.20 </h4>
+                    <p>
+                        Graduated as an honors student and a Pedrozzi Scholar. <br>
+                        Focused on studying computer science and computational physics. <br>
+                        Recognized for community service, excellence in computer science, and honors roll.
+                    </p>
+                </div>
+                <hr class = "spacebar">
+                <div class = "MOR edu" id = "MOR">
+                    <h3>MOR Middle School</h3>
+                    <p> <strong> Modi'in, Israel | Aug. 2012  -  Jun. 2015 </strong> </p>
+                    <p>
+                        Graduated the AMAT honors program with an average grade of 97% three years in a row. <br>
+                        Was destined to enter a software engineering program of the Israeli military.
+                    </p>
+                </div>
+            </div>
+            <!----------------------  TECHNICAL SKILLS COLLAPSE ------------------------------>
+            <div id = "knowledge_div" class = "info_div" style = "display: none">
+                <!-- TODO: Add linkedin logo if passed the linkedin test-->
+                <div class = "kwnld" id = "knd_div">
+                    <h2 class = "title"><u>Technical Knowledge & Skills</u>   <i class="fa fa-wrench"></i></h2>
+                    <div class = "inline exps-table">
+                        <h4> Front End </h4>
+                        <ul class = "list-group">
+                            <li class = "list-group-item"><img src = "Logos/html-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/css-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/javascript-logo.png" class = "logo-img"></li>
+                            <li class = "list-group-item"><img src = "Logos/react-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/morrisjs-logo.png" class = "logo-img"></li>
+                            <li class = "list-group-item"><img src = "Logos/bootstrap-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/jquery-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/ajax-logo.png" class = "logo-img"></li>
+                            <li class = "list-group-item"><img src = "Logos/swift-logo.png" class = "logo-img"></li>
+                        </ul>
+                    </div>
+                    <div class = "inline exps-table">
+                        <h4> Back End </h4>
+                        <ul class = "list-group">
+                            <li class = "list-group-item"><img src = "Logos/java-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/jsp-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/c++-logo.png" class = "logo-img"></li>
+                            <li class = "list-group-item"><img src = "Logos/nodejs-logo.png" class = "logo-img"></li>
+                            <li class = "list-group-item"><img src = "Logos/php-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/PhpMyAdmin-logo.svg" class = "logo-img"></li>
+                            <li class = "list-group-item"><img src = "Logos/mysql-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/mongodb-logo.png" class = "logo-img"></li>
+                        </ul>
+                    </div>
+                    <div class = "inline exps-table">
+                        <h4> Other Experties </h4>
+                        <ul class = "list-group">
+                            <li class = "list-group-item"><img src = "Logos/word-logo.svg" class = "logo-img"> &nbsp; <img src = "Logos/powerpoint-logo.svg" class = "logo-img"> &nbsp; <img src = "Logos/excel-logo.svg" class = "logo-img"></li> 
+                            <li class = "list-group-item"><img src = "Logos/linux-logo.jpg" class = "logo-img"> &nbsp; <img src = "Logos/ubuntu-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/vmware-logo.webp" class = "logo-img"></li>
+                            <li class = "list-group-item"><img src = "Logos/MatLab-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/GnuOctave-logo.png" class = "logo-img"></li>
+                            <li class = "list-group-item"><img src = "Logos/wordpress-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/LaTeX-logo.png" class = "logo-img-smaller"></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- INSERTION ON TIMELAPSE VIDEO GALLERY -->
+                <!-- <iframe id = "vid" class = "embed-responsive-item vid" src = "shahaf-pics/vid-1.mp4" allowfullscreen></iframe> -->
+            </div>
+             <!----------------------  PROJECTS COLLAPSE ------------------------------>
+            <div id = "projects_div" class = "info_div" style = "display: none">
+                <h2 class = "title"><u>My Projects</u>   <i class="fa fa-cogs"></i></h2>
+                <br> <!--------------------  The Market Manager  ----------------->
+                <button type = "button" class = "btn sub-proj-btn" id = "projects-btn-1" data-toggle="collapse" data-target="#projects-div-1"> The Market's Manager </button> 
+                <div id = "projects-div-1" class = "collapse projects-div">
+                    <h4><u>The Market's Manager</u></h4>
+                    <a class = "inline" href = "github.com/ShahafDan25/LPCCapstone"><u>See Code</u></a> <i class="fa fa-github"></i> &nbsp;
+                    <p class = "inline"> March 2020 </p><br>
+                    <p> ---- PROJECT UNDER CONSTRUCTIONS AT THE MOMENT ----</p>
+                    <p class = "project-description">
+                        <!-- Project Information Goes Here -->
+                        The Market is a monthly service, ran and managed by the Las Positas College Student Government [LPCSG]. In the event, the student government collaborates with the Alameda County's Food Bank to distribute free groceries to the students and anyone from the surrounding communities. <br> <br>
+                        As I volunteer monthly in the event, I noticed the management system is extremely inefficient and time consuming, mainly to the lack of automation and technological optimization. <br><br>
+                        As a young software developer, I develop a manegement web-app on a closed server using HTML, JavaScript, CSS, and Bootstrap API's for the front end user interface, and PHP for the back end with embedded MySQL queries in accordance to the designated database I created.<br><br>
+                        The software has significantly improved the management of the service. It provides the users with tools such as sign up sheets for volunteers (and user registration), admin report generation for each market both in PDF fprmat (using FPDF library) and in HTML format with graphics to illustrate statistics (using Morris.js), the option to manage effectively the inventory of each market occurence, and a user-friendly registration form. <br><br>
+                        Additionally, the software assists with the analysis of data to increase the rates of attendance, describe when volunteers are needed the most, and more.
+                    </p>
+                </div>
+                <br> <!--------------------  LPC - RMP  ----------------->
+                <button type = "button" class = "btn sub-proj-btn" id = "projects-btn-1" data-toggle="collapse" data-target="#projects-div-2"> LPC - RMP </button> 
+                <div id = "projects-div-2" class = "collapse projects-div">
+                    <h4><u>LPC - RMP</u></h4>
+                    <a class = "inline" href = "https://github.com/ShahafDan25/LPC-RMP"><u>See Code</u></a> <i class="fa fa-github"></i> &nbsp;
+                    <p class = "inline"> May 2020 </p> <br>
+                    <p class = "project-description">
+                        <!-- Project Information Goes Here -->
+                        Las Positas College - Rate My Professor [LPC - RMP] is a site I plan to launch by the end of summer 2020, which will assist student at Las Positas College to better choose their classes and professors to fit their own academic and learning styles. <br><br>
+                        The registration to the site is limited to student with a Las Positas College Student email account (@zonemail.clpccd.edu), to create an online-community where information is validated and trsuted. <br><br>
+                        The site will allow students to leave feedback about their experience in certain classes or with certain instructors, which will allow professor to improve upon their feedback, and for student to more carefully choose their classes and instructors.
+                    </p>
+                </div>
+                <br> <!--------------------  BrainStorm  ----------------->
+                <button type = "button" class = "btn sub-proj-btn" id = "projects-btn-1" data-toggle="collapse" data-target="#projects-div-3"> BrainStorm </button>
+                <div id = "projects-div-3" class = "collapse projects-div">
+                    <h4><u>BrainStorm</u></h4>
+                    <a class = "inline" href = "https://github.com/ShahafDan25/BrainStorm"><u>See Code</u></a> <i class="fa fa-github"></i> &nbsp;
+                    <p class = "inline"> June 2020 </p><br>
+                    <p> ---- PROJECT UNDER CONSTRUCTIONS AT THE MOMENT ----</p>
+                    <p class = "project-description">
+                        <!-- Project Information Goes Here -->
+                        BrainStorm is an inter-collegiate online tool specified for community college student, with the simple objective of helping students navigate a better and more effective path towards their transfer to a 4 year institution. <br><br>
+                        It provides students with the opportunity to compare classes from different community colleges (based on a location and specified radius) which will allow them to choose the best class that would fit their learning style from a variety of community coleges. <br><br>
+                        The site was born from the need to carefully select classes in an era where online-learning is incredibly significant and powerful. Student will have the oppotunity to ask difference students from other community colleges as well as alumnis about their transfer experience, and what academic path do they recommend the most. <br><br>
+                    </p>
+                </div>
+                <br><br>
+            </div>
+        </div>
+        
             
-        </div>
-        <br><br>
-        <!-------------------------- EDUCATION COLLAPSE -------------------------->
-        <div id = "education_div" class = "info_div">
-            <h2 class = "title"><u> Education</u>  &nbsp;  <i class="fa fa-graduation-cap"></i></h2><br>
-            <div class = "bu edu" id = "lpc">
-                <h3>Boston University</h3>
-                <p> <strong> Boston, MA | September 2020  -  May 2022 </strong> </p> 
-            </div>
-            <hr class = "spacebar">
-            <div class = "lpc edu" id = "lpc">
-                <h3>Las Positas College</h3>
-                <p> <strong> Livermore, CA | June 2018  -  May 2020 </strong> </p>
-                <h4> <u>GPA:</u> 3.83 </h4>
-                <!----------------------------- COLLAPSE OF DEGREES, AWARDS, RECOGNITIONS DIV ------------------------------------>
-                <button type = "button" class = "btn sub-edu-btn" id = "recognitions-btn" data-toggle="collapse" data-target="#recognitions-div"> Recognitions </button> <br>
-                <div id = "recognitions-div" class = "collapse recognitions-div">
-                    <h3><u>Degrees & Certifications</u></h3>
-                    <ul class = "award-listing">
-                        <li><strong>Associates of Arts</strong>: Computer Studies</li>
-                        <li><strong>Associates of Sciences</strong>: Mathematics</li>
-                        <li><strong>Associates of Sciences</strong>: Physics</li>
-                        <li><strong>Certification</strong>: Computer Programming</li>
-                        <li><strong>Certification</strong>: LPI (Linux Professional Institute) Linux Programming</li>
-                    </ul>
-                    <h3><u>Scholarships</u></h3>
-                    <ul class = "award-listing">
-                        <li><strong>Scholarship</strong>: Alpha Gamma Sigma Honors Society California State Mantovani Academic and Leadership Scholarship</li>
-                        <li><strong>Scholarship</strong>: The Mathematics, Engineering and Computer Science Las Positas College Department Scholarship</li>
-                        <li><strong>Scholarship</strong>: American Council of Engineering Companies: Bay Area Chapter Scholarship</li>
-                    </ul>
-                    <h3><u>Awards</u></h3>
-                    <ul class = "award-listing">
-                        <li><strong>Award</strong>: 2018-2019 Locally Top Ranked Math Honors Society AMATYC Exam Performance</li>
-                        <li><strong>Award</strong>: 2019-2020 Locally Top Ranked Math Honors Society AMATYC Exam Performance</li>
-                        <li><strong>Recognition of Completion</strong>: Honors Program Scholar (For the Completion of 6 honors courses</li>
-                    </ul>
-                </div>
-                <!----------------------------- COLLAPSE OF ACTIVITIES DIV -------------------------------------->
-                <button type = "button" class = "btn sub-edu-btn" id = "activities-btn" data-toggle="collapse" data-target="#activities-div"> Activities </button> <br>
-                <div id = "activities-div" class = " collapse activities_div"> <!-- ALIGN TO THE LEFT-->
-                    <br><br>
-                    <button class = "upper-item-activities-list item-activities-list" data-toggle="collapse" data-target="#chessclub-div"><strong>Chess Club    </strong>|   Founder ⇨ President </button><br>
-                        <div id = "chessclub-div" class = "collapse act-div"> <br>
-                            <p class = "act-date"> Novemebr 2018 - June 2020 </p> 
-                            <p class = "act-desc"> The chess club was founded in November 2018 by Shahaf Dan and Sayed Hamid Mirzahi
-                            On a weekly basis, 30 registered member gather to play chess, learn new strategies, study the history of the game,
-                            and enjoy a safe space where they can take a break from the busy academic routine
-                            </p>
-                        </div>
-                    <button class = "item-activities-list" data-toggle="collapse" data-target="#ags-div"><strong>Alpha Gamma Sigma (ΑΓΣ) - Honors Society   </strong>|   Member ⇨ President </button><br>
-                        <div id = "ags-div" class = "collapse act-div"><br>
-                            <p class = "act-date"> February 2019 - September 2020 </p>
-                            <p class = "act-desc"> AGS is an intercollegiate honors society for leader, overachiever students with emphasis on community service 
-                            As the Las Positas College Sigma Theta (ΣΘ) is considered one of the most active and accomplished chapters in the state of California,
-                            it is my duty and pleasure to serve as the president, chair the biweekly meetings, oversee all community service by all members, 
-                            conduct events and fundraisers, and create an environment where overachievr students who are interested in contributing further to 
-                            their communities and the student body, are given and granted a various of opporutnities. 
-                            </p>
-                        </div>
-                    <button class = "item-activities-list" data-toggle="collapse" data-target="#studgov-div"><strong> Student Government   </strong>|   Senator ⇨ Director of Events </button><br>
-                        <div id = "studgov-div" class = "collapse act-div"><br>
-                            <p class = "act-date"> Novemebr 2018 - August 2020 </p>
-                            <p class = "act-desc"> 
-                            The LPCSG is the most effective student organization on campus, creating many events, attending conference, 
-                            and representing the student body of Las Positas. As the director of events, it is my mission to phase the campus cultural identity to
-                            be more student friendly, get rid of the negative stigma that student life in communit colleges are not productive, and create events 
-                            that will strngethen and embrace the relationships between the student body and the campus. 
-                            </p>
-                        </div>
-                    <button class = "item-activities-list" data-toggle="collapse" data-target="#compsciclub-div"><strong>Mu Alpha Theta (ΜΑΘ) - Math Honors Society   </strong> |   Member </button><br>
-                        <div id = "compsciclub-div" class = "collapse act-div"><br>
-                            <p class = "act-date"> September 2018 - June 2020 </p>
-                            <p class = "act-desc"> 
-                                Mu Alpha Theta is the Math Honors Society on Las Positas College, providing student with extracurricular math activities,
-                                club meetings, and the AMATYC Exam per academic term. As an outstanding member, I have places in the top 5 students in the AMATYC exam,
-                                in both academic years 2018 - 2019, and 2019 - 2020.
-                            </p>
-                        </div>
-                    <button class = "item-activities-list" data-toggle="collapse" data-target="#mathclub-div"><strong> Committees, Involvement, and Representation </strong> </button><br>
-                        <div id = "mathclub-div" class = "collapse act-div"><br>
-                            <p class = "act-desc"> 
-                                » <u>ASACC Representative: </u> Represented Las Positas in the American Student Association tow years continuasly (2019, 2020) in Washington D.C. &nbsp; Met with congresspeople and brought to their attention concerns and issues from community college students <br>
-                                » <u>Technology Committee: </u> Represented the student body on the District Technology Coordination Committee, pushing for technological solutions that will benefit the student body <br>
-                                » <u>Student Events Committee: </u> Chaired the student events committee as the student elected Director of Events <br>
-                                » <u>Student Achievment and Equity Committee: </u> Served as the representative on the SAE Committee, pushing for increased student equity and voicing student concerns <br>
-                            </p>
-                        </div>
-                    <button class = "item-activities-list" data-toggle="collapse" data-target="#committess-div"><strong>Honors Program</strong></button><br>
-                        <div id = "committess-div" class = "collapse act-div"><br>
-                            <p class = "act-desc"> 
-                                As part of the honors program, by graduation I will have completed 6 honors porjects in various subjects and classes.
-                                Recognized as an honors scholar, for which I have achieved the honors stamp on my diploma.
-                                As part of the program, I have conducted research in Physics, Mathematics, and Computer Science.
-                            </p>
-                        </div>
-                    <button class = "item-activities-list" data-toggle="collapse" data-target="#honorsprog-div"><strong>Computer Science Club   </strong>|   Member ⇨ Vice President </button><br>
-                        <div id = "honorsprog-div" class = "collapse act-div"><br>
-                            <p class = "act-date"> May 2019 - January 2020 </p>
-                            <p class = "act-desc"> 
-                                Server as the Vice President of the Computer Science Club. 
-                                Assisted the President with any tasks including setting up field trips, organizing local competetions, and preparing presentations about various topics
-                            </p>
-                        </div>
-                    <button class = "lower-item-activities-list item-activities-list" data-toggle="collapse" data-target="#diveteam-div"><strong> Collegiate Dive Team   </strong>|   Diver ⇨ Team Leader </button><br>
-                        <div class = "collapse act-div" id = "diveteam-div"><br>
-                            <p class = "act-date"> September 2018 - May 2019 </p>
-                            <p class = "act-desc">
-                                As a student athlete, I have represnted Las Positas College in conferences and meets as a diver.
-                            </p>
-                        </div>
-                    <br>
-                </div>
-                <!----------------------------- COLLAPSE OF CLASSES DIV -------------------------------------------->
-                <button type = "button" class = "btn sub-edu-btn" id = "classes-btn" data-toggle="collapse" data-target="#classes-div"> Classes </button> <br>
-                <div id = "classes-div" class = "collapse classes_div"> <br>
-                    <h4> Order By: </h4>
-                    <button class = "btn w17 courses-btn" id = "classByName" onclick = "coursesAlphabetically()"><strong> Name </strong></button> &nbsp; &nbsp;     
-                    <button class = "btn w17 courses-btn" id = "classBySubject" onclick = "coursesBySubject()"> <strong> Subject </strong> </button> &nbsp; &nbsp; 
-                    <button class = "btn w17 courses-btn" id = "classByGrade" onclick = "coursesByGrade()"> <strong> Grade </strong> </button> &nbsp; &nbsp;
-                    <button class = "btn w17 courses-btn" id = "classByGrade" onclick = "coursesChronoligically()"> <strong> Academic Term </strong> </button> 
-                    <br><br>
-                    <div class = "classes" id = "by_grade">
-                        <table class = "table projectTable">
-                            <thead id = "classesTableHead"></thead>
-                            <tbody id = "classesTableBody"></tbody>
-                        </table>
-                    </div>                  
-                </div>
-                <!----------------------------- COLLAPSE OF PROJECTS DIV --------------------------------------->
-                <button type = "button" class = "btn sub-edu-btn" id = "projects-btn" data-toggle="collapse" data-target="#projects-div"> Projects </button> <br>
-                <div id = "projects-div" class = "collapse"> <!-- ALIGN TO THE LEFT-->
-                    <h4><u>Projects, Researches, Papers </u></h4>
-                    <br>
-                    <div class = "projectTableContainer">
-                        <table class = "table projectTable">
-                            <thead class = "tablePart">
-                                <tr>
-                                    <th scope="col">Class</th>
-                                    <th scope="col">Research Project Name</th>
-                                    <th scope="col">See for Yourself</th>
-                                </tr>
-                            </thead>
-                            <tbody class = "tablePart">
-                                <tr class = "tableRow">
-                                    <td><strong>Physics</strong>: Electricity and Magnetism</td>
-                                    <td>Solar Panels: Efficiency, Mechanism, and Applications</td>
-                                    <td class = "see-project-col"><button type = "button" class="btn w45 projects-btn" onclick = "window.open('docs/phy1c_abs.pdf');">Abstract</button>&nbsp;<button type = "button" class = "btn   ml2 w45 projects-btn" onclick = "window.open('docs/proj.pdf');"> Paper </button></td>
-                                </tr>
-                                <tr class = "tableRow">
-                                    <td><strong>Computer Science</strong>: Java Programming</td>
-                                    <td>MyEvents - Management WebApp</td>
-                                    <td class = "see-project-col"><button type = "button" class="btn w94 projects-btn" onclick = "window.open('docs/csci19a_abs.pdf');">Abstract</button></td>
-                                </tr>
-                                <tr class = "tableRow">
-                                    <td><strong>Computer Science</strong>: Data Structures</td>
-                                    <td>Dictionary Tree: Customized Data Structure</td>
-                                    <td class = "see-project-col"><button type = "button" class="btn w45 projects-btn" onclick = "window.open('docs/cs20_abs.pdf');">Abstract</button>&nbsp;<form class = "inline ml2 w45" action = "https://www.github.com/ShahafDan25/DataStructures-CPP/tree/master/A12_DictionaryTree"><button class = "btn   w100 projects-btn"> Code </button></form></td>
-                                </tr>
-                                <tr class = "tableRow">
-                                    <td><strong>Computer Science</strong>: Assembly Programming</td>
-                                    <td>Assembler Movie I\O Encryptor</td>
-                                    <td class = "see-project-col"><form action = "https://github.com/ShahafDan25/Assembly/tree/master/Projects/10_DynamicMemory_ShahafDan_Linux64"><button class = "btn   ml2 w94 projects-btn"> Code </button></form></td>
-                                </tr>
-                                <tr class = "tableRow">
-                                    <td><strong>Mathematics</strong>: Discrete Mathematical Structures</td>
-                                    <td>Hash Tables: Efficiency, Mechanism, and Applications</td>
-                                    <td class = "see-project-col"><button type = "button" class="btn   w45 projects-btn" onclick = "window.open('docs/cs17_abs.pdf');">Abstract</button>&nbsp;<button type = "button" class = "btn   ml2 w45 projects-btn" onclick = "window.open('docs/cs17_proj.pdf');"> Paper </button></td>
-                                </tr>
-                                <tr class = "tableRow">
-                                    <td><strong>Physics</strong>: Introduction to Quantum Mechanics</td>
-                                    <td>The Meissner Effect: Superconductivity and Magnetic Levitation</td>
-                                    <td class = "see-project-col"><button type = "button" class="btn   w45 projects-btn" onclick = "window.open('docs/phy1d_abs.pdf');">Abstract</button>&nbsp;<button type = "button" class = "btn   ml2 w45 projects-btn" onclick = "window.open('docs/phys1d_proj.pdf');"> Paper </button></td>
-                                </tr>
-                                <tr class = "tableRow">
-                                    <td><strong>Computer Science</strong>: Capstone Project</td>
-                                    <td>The Market's Manager</td>
-                                    <td class = "see-project-col"><button type = "button" class="btn   w45 projects-btn" onclick = "window.open('docs/cs47_report.pdf');"> Report </button>&nbsp;<form class = "inline  ml2 w45" action = "https://github.com/ShahafDan25/LPCCapstone"><button class = "btn   projects-btn w100" > Code  </button></form></td>
-                                </tr>
-                                <tr class = "tableRow">
-                                    <td><strong>Computer Science</strong>: Database Programming</td>
-                                    <td>Rate My Professor at Las Positas College</td>
-                                    <td class = "see-project-col"><button type = "button" class="btn   w45 projects-btn" onclick = "window.open('docs/cs45_abs.pdf');">Abstract</button>&nbsp;<form class = "inline w45 ml2" action = "https://www.github.com/ShahafDan25/LPC-RMP"><button class = "btn   projects-btn w100"> Code </button></form></td>
-                                </tr>
-                                <tr class = "tableRow">
-                                    <td><strong>Mathematics</strong>: Differential Equations</td>
-                                    <td>Euler's Formula and Fourier Transforms</td>
-                                    <td class = "see-project-col"><button type = "button" class="btn   w45 projects-btn" onclick = "window.open('docs/math5_abs.pdf');">Abstract</button>&nbsp;<button type = "button" class = "btn   ml2 w45 projects-btn" onclick = "window.open('docs/math5_proj.pdf');"> Paper </button></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <hr class = "spacebar">
-            <div class = "ghs edu" id = "ghs">
-                <h3>Granada High Shcool</h3>
-                <p> <strong> Livermore, CA | Aug. 2015  -  Jun. 2018 </strong> </p>
-                <h4> <u>GPA:</u> 4.20 </h4>
-                <p>
-                    Graduated as an honors student and a Pedrozzi Scholar. <br>
-                    Focused on studying computer science and computational physics. <br>
-                    Recognized for community service, excellence in computer science, and honors roll.
-                </p>
-            </div>
-            <hr class = "spacebar">
-            <div class = "MOR edu" id = "MOR">
-                <h3>MOR Middle School</h3>
-                <p> <strong> Modi'in, Israel | Aug. 2012  -  Jun. 2015 </strong> </p>
-                <p>
-                    Graduated the AMAT honors program with an average grade of 97% three years in a row. <br>
-                    Was destined to enter a software engineering program of the Israeli military.
-                </p>
-            </div>
-        </div>
-        <br><br>
-        <!----------------------  TECHNICAL SKILLS COLLAPSE ------------------------------>
-        <div id = "knowledge_div" class = "info_div">
-            <!-- TODO: Add linkedin logo if passed the linkedin test-->
-            <div class = "kwnld" id = "knd_div">
-                <h2 class = "title"><u>Technical Knowledge & Skills</u>   <i class="fa fa-wrench"></i></h2>
-                <div class = "inline exps-table">
-                    <h4> Front End </h4>
-                    <ul class = "list-group">
-                        <li class = "list-group-item"><img src = "Logos/html-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/css-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/javascript-logo.png" class = "logo-img"></li>
-                        <li class = "list-group-item"><img src = "Logos/react-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/morrisjs-logo.png" class = "logo-img"></li>
-                        <li class = "list-group-item"><img src = "Logos/bootstrap-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/jquery-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/ajax-logo.png" class = "logo-img"></li>
-                        <li class = "list-group-item"><img src = "Logos/swift-logo.png" class = "logo-img"></li>
-                    </ul>
-                </div>
-                <div class = "inline exps-table">
-                    <h4> Back End </h4>
-                    <ul class = "list-group">
-                        <li class = "list-group-item"><img src = "Logos/java-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/jsp-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/c++-logo.png" class = "logo-img"></li>
-                        <li class = "list-group-item"><img src = "Logos/nodejs-logo.png" class = "logo-img"></li>
-                        <li class = "list-group-item"><img src = "Logos/php-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/PhpMyAdmin-logo.svg" class = "logo-img"></li>
-                        <li class = "list-group-item"><img src = "Logos/mysql-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/mongodb-logo.png" class = "logo-img"></li>
-                    </ul>
-                </div>
-                <div class = "inline exps-table">
-                    <h4> Other Experties </h4>
-                    <ul class = "list-group">
-                        <li class = "list-group-item"><img src = "Logos/word-logo.svg" class = "logo-img"> &nbsp; <img src = "Logos/powerpoint-logo.svg" class = "logo-img"> &nbsp; <img src = "Logos/excel-logo.svg" class = "logo-img"></li> 
-                        <li class = "list-group-item"><img src = "Logos/linux-logo.jpg" class = "logo-img"> &nbsp; <img src = "Logos/ubuntu-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/vmware-logo.webp" class = "logo-img"></li>
-                        <li class = "list-group-item"><img src = "Logos/MatLab-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/GnuOctave-logo.png" class = "logo-img"></li>
-                        <li class = "list-group-item"><img src = "Logos/wordpress-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/LaTeX-logo.png" class = "logo-img-smaller"></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- INSERTION ON TIMELAPSE VIDEO GALLERY -->
-            <!-- <iframe id = "vid" class = "embed-responsive-item vid" src = "shahaf-pics/vid-1.mp4" allowfullscreen></iframe> -->
-        </div>
-         <!----------------------  PROJECTS COLLAPSE ------------------------------>
-        <div id = "projects_div" class = "info_div">
-            <h2 class = "title"><u>My Projects</u>   <i class="fa fa-cogs"></i></h2>
-            <br> <!--------------------  The Market Manager  ----------------->
-            <button type = "button" class = "btn sub-proj-btn" id = "projects-btn-1" data-toggle="collapse" data-target="#projects-div-1"> The Market's Manager </button> 
-            <div id = "projects-div-1" class = "collapse projects-div">
-                <h4><u>The Market's Manager</u></h4>
-                <a class = "inline" href = "github.com/ShahafDan25/LPCCapstone"><u>See Code</u></a> <i class="fa fa-github"></i> &nbsp;
-                <p class = "inline"> March 2020 </p><br>
-                <p> ---- PROJECT UNDER CONSTRUCTIONS AT THE MOMENT ----</p>
-                <p class = "project-description">
-                    <!-- Project Information Goes Here -->
-                    The Market is a monthly service, ran and managed by the Las Positas College Student Government [LPCSG]. In the event, the student government collaborates with the Alameda County's Food Bank to distribute free groceries to the students and anyone from the surrounding communities. <br> <br>
-                    As I volunteer monthly in the event, I noticed the management system is extremely inefficient and time consuming, mainly to the lack of automation and technological optimization. <br><br>
-                    As a young software developer, I develop a manegement web-app on a closed server using HTML, JavaScript, CSS, and Bootstrap API's for the front end user interface, and PHP for the back end with embedded MySQL queries in accordance to the designated database I created.<br><br>
-                    The software has significantly improved the management of the service. It provides the users with tools such as sign up sheets for volunteers (and user registration), admin report generation for each market both in PDF fprmat (using FPDF library) and in HTML format with graphics to illustrate statistics (using Morris.js), the option to manage effectively the inventory of each market occurence, and a user-friendly registration form. <br><br>
-                    Additionally, the software assists with the analysis of data to increase the rates of attendance, describe when volunteers are needed the most, and more.
-                </p>
-            </div>
-            <br> <!--------------------  LPC - RMP  ----------------->
-            <button type = "button" class = "btn sub-proj-btn" id = "projects-btn-1" data-toggle="collapse" data-target="#projects-div-2"> LPC - RMP </button> 
-            <div id = "projects-div-2" class = "collapse projects-div">
-                <h4><u>LPC - RMP</u></h4>
-                <a class = "inline" href = "https://github.com/ShahafDan25/LPC-RMP"><u>See Code</u></a> <i class="fa fa-github"></i> &nbsp;
-                <p class = "inline"> May 2020 </p> <br>
-                <p class = "project-description">
-                    <!-- Project Information Goes Here -->
-                    Las Positas College - Rate My Professor [LPC - RMP] is a site I plan to launch by the end of summer 2020, which will assist student at Las Positas College to better choose their classes and professors to fit their own academic and learning styles. <br><br>
-                    The registration to the site is limited to student with a Las Positas College Student email account (@zonemail.clpccd.edu), to create an online-community where information is validated and trsuted. <br><br>
-                    The site will allow students to leave feedback about their experience in certain classes or with certain instructors, which will allow professor to improve upon their feedback, and for student to more carefully choose their classes and instructors.
-                </p>
-            </div>
-            <br> <!--------------------  BrainStorm  ----------------->
-            <button type = "button" class = "btn sub-proj-btn" id = "projects-btn-1" data-toggle="collapse" data-target="#projects-div-3"> BrainStorm </button>
-            <div id = "projects-div-3" class = "collapse projects-div">
-                <h4><u>BrainStorm</u></h4>
-                <a class = "inline" href = "https://github.com/ShahafDan25/BrainStorm"><u>See Code</u></a> <i class="fa fa-github"></i> &nbsp;
-                <p class = "inline"> June 2020 </p><br>
-                <p> ---- PROJECT UNDER CONSTRUCTIONS AT THE MOMENT ----</p>
-                <p class = "project-description">
-                    <!-- Project Information Goes Here -->
-                    BrainStorm is an inter-collegiate online tool specified for community college student, with the simple objective of helping students navigate a better and more effective path towards their transfer to a 4 year institution. <br><br>
-                    It provides students with the opportunity to compare classes from different community colleges (based on a location and specified radius) which will allow them to choose the best class that would fit their learning style from a variety of community coleges. <br><br>
-                    The site was born from the need to carefully select classes in an era where online-learning is incredibly significant and powerful. Student will have the oppotunity to ask difference students from other community colleges as well as alumnis about their transfer experience, and what academic path do they recommend the most. <br><br>
-                </p>
-            </div>
-            <br><br>
-        </div>
-        <br><br>
-        <!----------------------- CONTACT ME Collapse ------------------------------>
-        <div class = "info_div" id = "contact_div">
-            <h2 class = "title"><u>Contact</u>    <i class="fa fa-commenting"></i></h2>
-            <br>
-            <div class = "footer">
-                <a class = "contact-btn inline" onclick = "window.open('docs/ShahafDan_Resume06072020.pdf');"><img src = "Logos/resume-logo.png" class = "LinkedIn-img"></a>
-                <a class = "contact-btn inline" href = 'https://www.linkedin.com/in/shahaf-dan-66812b180/'><img src = "Logos/linkedIn-logo.png" class = "LinkedIn-img"></a>
-                <a class = "contact-btn inline" href = 'https://www.github.com/ShahafDan25'><img src = "Logos/gitHub-logo.png" class = "LinkedIn-img"></a>
-                <a class = "contact-btn inline" onclick = "window.open('mailto:dan.shachaf@gmail.com?subject=I saw your website, and...');"><img src = "Logos/gmail-logo.png" class = "LinkedIn-img"></a>
-                <a class = "contact-btn inline" href = "https://www.hackerrank.com/dan_shachaf"><img src = "Logos/hackerrank-logo.png" class = "LinkedIn-img"></a>
-            </div>
-        </div>
         <script src = "shahaf.js" type = "text/JavaScript"></script>
 
         <!-- TO ADD: 

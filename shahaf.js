@@ -1,28 +1,25 @@
 // ================ JS FOR NAV-BAR SCROLLING ================= // 
 //Make Navigation Bar Responsive
-$(document).ready(function(){
-    $('a[href^="#"]').on('click',function (e) {
-        e.preventDefault();
+// $(document).ready(function(){
+//     $('a[href^="#"]').on('click',function (e) {
+//         e.preventDefault();
 
-        var target = this.hash;
-        var $target = $(target);
+//         var target = this.hash;
+//         var $target = $(target);
 
-        $('html, body').animate({
-            'scrollTop':$target.offset().top
-        }, 1000, 'swing');
+//         $('html, body').animate({
+//             'scrollTop':$target.offset().top
+//         }, 1000, 'swing');
         
-    });
-});
+//     });
+// });
 
 function responsiveNavBar(val) {
-    var x = document.getElementById("nav-bar");
-    if (x.className === "nav-bar") x.className += " responsive";
-    else x.className = "nav-bar";
-    var divs = ["history", "education", "knowledge", "contact"];
+    var divs = ["about", "history", "education", "knowledge", "projects"];
     for(var i = 0; i < divs.length; i++) {
-        document.getElementById(divs[i] + "_div").style.padding = "0.25% 0px 0.75% 0rem";
+        document.getElementById(divs[i] + "_div").style.display = "none";
     }
-    if(val != "contact_div") document.getElementById(val).style.padding = "6% 0px 0.75% 0rem";
+    document.getElementById(val).style.display = "block";
 
 }
 
