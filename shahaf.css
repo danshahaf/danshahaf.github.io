@@ -44,7 +44,21 @@ div.content {
     margin-right: 1% !important;
 }
 
-
+/* //not sure where it goes: */
+.sub-proj-btn{
+    margin-top:1% !important;
+    background: linear-gradient(to right,rgb(24, 32, 98),rgb(72, 77, 141));
+    border: 0px !important;
+    padding: 1% !important;
+    color: white !important;
+    text-transform: uppercase;
+    font-size: 90% !important;
+    transition: 0.35s !important;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #ccc;
+    letter-spacing: 0.25em !important;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
 
 .w45{
     width: 45% !important;}
@@ -53,58 +67,18 @@ div.content {
 .w100{
     width: 100% !important;}
 .ml2{
-    margin-left: 2% !important;}
-.logo-label{
-    font-family: "monospace" !important; 
-    text-align: center !important;}
-.skill-logo-container{
-    margin-left: 5% !important; margin-right: 5% !important; }
-
+    margin-left: 2% !important;
+}
 .tablePart{
     width: 90% !important; 
     padding-right:3% !important; 
     padding-left: 3% !important; 
-    margin: 0% !important;}
-.gmail-btn{
-    width:5% !important; 
-    padding-top: 100% !important; 
-    padding: 2px !important; 
-    border-radius: 150px !important;}
-.gmail-img{
-    width: 100%; 
-    height: 120%; 
-    border-radius: 150% !important;}
-.logo-bigger-img{
-    margin: 1% !important; 
-    padding: 2% !important; 
-    height: 9% !important; 
-    padding-top: 100%;}
-.list-group-item{
-    border: 1px solid black; 
-    text-align: center;}
-.list-group{
-    text-align: center !important; 
-    margin-right: 3% !important; 
-    margin-left: 3% !important;}
-.logo-img{
-    margin: 1% !important; 
-    padding: 0.5% !important; 
-    height: 9%; 
-    padding-top: 0%;
-    z-index: 3}
-.logo-img-smaller{
-    margin: 1% !important; 
-    padding: 0.5% !important; 
-    height: 6%; 
-    z-index: 3
-    padding-top: 0%;}
-.sortBtn{
-    width: 25% !important; 
-    margin: 3% !important;}
-
+    margin: 0% !important;
+}
 .inner-content{
     text-align: left !important; 
-    margin-left: 4% !important;}
+    margin-left: 4% !important;
+}
 .imgContainer{
     text-align: center !important; 
     margin-right: 15% !important; 
@@ -112,44 +86,12 @@ div.content {
 .imgBanner{
     height: 35%; 
     border-radius: 5px; 
-    border: 0.1px solid black;}
-
-.spacebar{
-    border-top: 4px solid #707070; 
-    margin-top: 1.2% !important; 
-    margin-bottom: 1% !important; 
-    width:55% !important;}
-.thin-spacebar {
-    border-top: 1px solid #707070; 
-    margin-top: 1.2% !important; 
-    margin-bottom: 1% !important; 
-    width:85% !important;
+    border: 0.1px solid black;
 }
 .vid{
     border: 1px solid black; 
-    border-radius: 3px !important;  }
-textarea{ 
-    text-align: center !important;   
-    border: 0.8px solid black !important; 
-    border-radius: 3px;}
-.email-div{ 
-    margin-right: 15% !important; 
-    margin-left: 15% !important;}
-.send{
-    margin-right: 20% !important; 
-    margin-left: 20% !important;}
-.email-sender-input{
-    text-align: center; 
-    border: 0.6px solid black; 
-    border-radius: 4px; 
-    padding: 3px;}
-.subject{
-    text-align: center; 
-    border: 0.6px solid black !important; 
-    border-radius: 4px; 
-    padding: 3px !important; 
-    width: 60% !important;}
-
+    border-radius: 3px !important;  
+}
 /* timeline CSS */
 .main-timeline{ 
     font-family: 'Nunito Sans', sans-serif; }
@@ -238,33 +180,6 @@ textarea{
         width: 80px;
     }
     .main-timeline .title{ font-size: 18px; }}
-/* End timeline css */
-.btn-secondary{
-    background-color: #6C757D;
-    color: white;}
-.btn-outline-primary {
-    color: #007bff;
-    background-color: transparent;
-    background-image: none;
-    border-color: #007bff !important;}
-.gpaGraph {
-    width: 100 !important;}
-
-.honorsProjectsClass{
-    padding: 2% !important;
-    text-align: center !important;
-    background-color: white;
-    border-radius: 4px;
-    border: 3px solid black;}
-.exps-table{
-    width: 33% !important;
-    margin-left: 0px!important;}
-
-.contact-msg {
-    text-align: left !important;
-    width: 60% !important;
-    margin-left: 20% !important;
-    margin-right: 20% !important;}
 /*----- Navigation Bar ----- */
 .nav-bar {
     width: 100% !important;
@@ -340,21 +255,6 @@ textarea{
     width: 90% !important;
     margin-left: 10% !important;
 }
-.sub-proj-btn{
-    margin-top:1% !important;
-    background: linear-gradient(to right,rgb(24, 32, 98),rgb(72, 77, 141));
-    border: 0px !important;
-    padding: 1% !important;
-    color: white !important;
-    text-transform: uppercase;
-    font-size: 90% !important;
-    transition: 0.35s !important;
-    background-size: 200% auto;
-    box-shadow: 0 0 20px #ccc;
-    letter-spacing: 0.35em !important;
-    font-weight: 450 !important;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-}
 .sub-edu-btn:hover, .sub-proj-btn:hover, .sub-edu-btn-fold:hover {
     background-position: right center; 
     text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
@@ -400,7 +300,7 @@ textarea{
     box-shadow: 0 0 20px #ccc;
     width: 4% !important;
 }
-.courses-btn, .projects-btn {
+.courses-btn{
     background: #DDE1E7 !important;
     box-shadow: -3px -3px 7px #FFFFFF73, 3px 3px 5px rgba(94, 104, 121, 0.288);
     border-radius: 10px;
@@ -471,44 +371,196 @@ textarea{
 .exps1, .exps2, .exps3 {
     margin: 0;
     padding: 0;
-    width: 30% !important;
+    width: 31% !important;
     margin-right: 1.5 !important;
     top: 2px !important;
 }
 .experties {
     width: 100% !important;
+    margin-left: 6% !important;
+}
+.exps-items {
+    text-align: left !important;
+    margin-left: 2.5% !important;
+}
+.ta-left {
+    text-align: left !important;
+}
+.logo-img{
+    margin: 1% !important; 
+    padding: 0.5% !important; 
+    height: 7%; 
+    padding-top: 0%;
+    text-align: right !important;
+    z-index: 3
 }
 /*----- About Div ----*/
 .btn-outline-danger{
     color:red!important; 
-    border: 0.7px solid red !important;}
+    border: 0.7px solid red !important;
+}
 .resume{
     background-color:rgba(255, 255, 255, 0.45); 
     transition: 0.35s;
-    width: 100% !important;}
+    width: 100% !important;
+}
 .resume:hover{
     background-color: rgba(251, 223, 223, 0.856);
     -webkit-transform: scale(1.08);
     -ms-transform: scale(1.08);
     transform: scale(1.08);
-    font-weight: bolder;}
+    font-weight: bolder;
+}
 .about-me {
     background-color: rgba(255, 255, 255, 0.637) !important; 
     width: 100% !important;
     padding-right: 1% !important;
     padding-left: 7.5% !important;
     padding-top: 0.5% !important;
-    text-align: justify !important;}
+    text-align: justify !important;
+}
 .about-me-text {
     font-weight: bold !important;
-    font-size: 105% !important;}
+    font-size: 105% !important;
+}
 /* ----- Projects Div ----- */
 .project-description {
     font-size: 110%;
     font-weight: bold;
     text-align: justify;
     margin-left: 20% !important;
-    width: 60% !important;}
+    width: 60% !important;
+}
+.project-btns-container {
+    align-items: left !important;
+    text-align: left !important;
+    margin-left: 18% !important;
+    margin-top: 4% !important;
+}
+
+.projects-btn {
+    margin-right: 3% !important;
+  -webkit-transform: translateX(-10%) translateY(-10%);
+          transform: translateX(-10%) translateY(-10%);
+  background: #fff;
+  width: 'auto';
+  padding: 1.5% 2.5% 1.5% 2.5%;
+  border: 5px solid #4ac0ee;
+  color: #4ac0ee;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 3;
+  -moz-transition: all 0.15s ease-out 0.15s;
+  -o-transition: all 0.15s ease-out 0.15s;
+  -webkit-transition: all 0.15s ease-out;
+  -webkit-transition-delay: 0.15s;
+  -webkit-transition: all 0.15s ease-out 0.15s;
+  transition: all 0.15s ease-out 0.15s;
+  letter-spacing: 0.25em !important;
+  font-family: "Gill Sans" !important;
+}
+.projects-btn:after, .projects-btn:before {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  top: 100%;
+  left: 0;
+  bottom: -10px;
+  content: "";
+  z-index: 2;
+  -moz-transition: all 0.15s ease-out 0.15s;
+  -o-transition: all 0.15s ease-out 0.15s;
+  -webkit-transition: all 0.15s ease-out;
+  -webkit-transition-delay: 0.15s;
+  -webkit-transition: all 0.15s ease-out 0.15s;
+  transition: all 0.15s ease-out 0.15s;
+}
+.projects-btn:after, .projects-btn:before {
+    bottom: -10px;
+    content: "";
+    z-index: 2;
+    -moz-transition: all 0.15s ease-out 0.15s;
+    -o-transition: all 0.15s ease-out 0.15s;
+    -webkit-transition: all 0.15s ease-out;
+    -webkit-transition-delay: 0.15s;
+    -webkit-transition: all 0.15s ease-out 0.15s;
+    transition: all 0.15s ease-out 0.15s;
+}
+.projects-btn:before {
+    background: #4ac0ee;
+    top: 10px;
+    left: -15px;
+    height: 100%;
+    width: 15px;
+  }
+  .projects-btn:after {
+    width: 100%;
+    background: #4ac0ee;
+    right: 0px;
+    left: -15px;
+    height: 15px;
+  }
+  .projects-btn:hover {
+    background: #4ac0ee;
+    color: #fff;
+    margin-left: -7.5px;
+    margin-bottom: -7.5px;
+  }
+  .projects-btn:hover:after, .projects-btn:hover:before {
+    top: 100%;
+    left: 0;
+    bottom: 0px;
+  }
+  .projects-btn:hover:before {
+    top: 0px;
+    left: 0px;
+    width: 0px;
+  }
+  .projects-btn:hover:after {
+    right: 0px;
+    left: 0px;
+    height: 0px;
+  }
+.projects-btn-clicked {
+    background: #4a7eee;
+    color: #ccc;
+    margin-right: 3% !important;
+    -webkit-transform: translateX(-10%) translateY(-10%);
+            transform: translateX(-10%) translateY(-10%);
+    width: 'auto';
+    padding: 1.5% 2.5% 1.5% 2.5%;
+    border: 5px solid #4a7eee;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 3;
+    -moz-transition: all 0.15s ease-out 0.15s;
+    -o-transition: all 0.15s ease-out 0.15s;
+    -webkit-transition: all 0.15s ease-out;
+    -webkit-transition-delay: 0.15s;
+    -webkit-transition: all 0.15s ease-out 0.15s;
+    transition: all 0.15s ease-out 0.15s;
+    letter-spacing: 0.25em !important;
+    font-family: "Gill Sans" !important;
+    margin-left: -7.5px;
+    margin-bottom: -7.5px;
+  }
+  .projects-btn-clicked:after, .projects-btn-clicked:before {
+    top: 100%;
+    left: 0;
+    bottom: 0px;
+  }
+  .projects-btn-clicked:before {
+    top: 0px;
+    left: 0px;
+    width: 0px;
+  }
+  .projects-btn-clicked:after {
+    right: 0px;
+    left: 0px;
+    height: 0px;
+  }
 /* ----- SIDEBAR  ----- */
 .sidebar {
     margin: 0px !important;
@@ -526,7 +578,7 @@ textarea{
     border-bottom-left-radius: 150px;
 }
 .LinkedIn-img{
-    width: 100%;
+    width: 80%;
 }
 
 

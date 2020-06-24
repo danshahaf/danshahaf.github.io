@@ -1,4 +1,4 @@
-// ================ JS FOR NAV-BAR & SIDE_BAR & ACTIVITIES_BAR ================= // 
+// ================ JS FOR NAV-BAR & SIDE_BAR & ACTIVITIES_BAR & PROJECTS MENU================= // 
 function showlpcedu(x){
     hideAllLpcEdu();
     document.getElementById(x.substring(0,x.length-4)+'-div').style.display = "block";
@@ -38,6 +38,15 @@ function showActivitiesDesc(x, t) {
     t.style.boxShadow = "inset -4px -4px 8px #FFFFFF53, inset 4px 4px 5px rgba(94, 104, 121, 0.388)";
 }
 
+function showAProject(x) {
+    for(var i = 1; i < 4; i++){
+        document.getElementById("projects-div-"+i).style.display = "none";
+        document.getElementById("projects-btn-"+i).className = "projects-btn inline";
+    }
+    document.getElementById("projects-div-"+x).style.display = "block";
+    document.getElementById("projects-btn-"+x).className = "projects-btn-clicked inline";
+
+}
 // ================ JS FOR PHOTOS ================= //
 var picPaths = ['shahaf-pics/AL.JPG', 'shahaf-pics/AQ.JPG', 'shahaf-pics/AC.JPG', 'shahaf-pics/AY.JPG', 'shahaf-pics/AE.JPG', 'shahaf-pics/AH.JPG', 'shahaf-pics/AG.JPG', 'shahaf-pics/AF.JPG', 'shahaf-pics/AI.JPG', 'shahaf-pics/AU.JPG', 'shahaf-pics/AO.JPG', 'shahaf-pics/AA.JPG', 'shahaf-pics/AM.JPG', 'shahaf-pics/AN.JPG', 'shahaf-pics/AK.JPG', 'shahaf-pics/AP.JPG', 'shahaf-pics/AB.JPG', 'shahaf-pics/AR.JPG', 'shahaf-pics/AS.JPG', 'shahaf-pics/AT.JPG', 'shahaf-pics/AJ.JPG', 'shahaf-pics/AV.JPG', 'shahaf-pics/AW.JPG', 'shahaf-pics/AX.JPG', 'shahaf-pics/AD.JPG'];            
 var curPic = -1;
