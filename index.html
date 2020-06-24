@@ -8,9 +8,9 @@
         <script src = "https://use.fontawesome.com/9f04ec4af7.js"></script>
 
         <!-- BOOTSTRAP -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
         <!-- MORRIS.JS LINKS -->
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
@@ -126,7 +126,6 @@
                         <button type = "button" class = "btn sub-edu-btn inline quarter" id = "projects-btn" onclick = "showlpcedu(this.id);"> Projects </button> 
                         <!----------------------------- COLLAPSE OF DEGREES, AWARDS, RECOGNITIONS DIV ------------------------------------>
                         <div id = "recognitions-div" class = "recognitions-div" style = "display: none">
-                            <br>
                             <h5><u>Degrees & Certifications</u></h3>
                             <ul class = "award-listing">
                                 <li><strong>Associates of Arts</strong>: Computer Studies</li>
@@ -152,27 +151,43 @@
                         </div>
                         <!----------------------------- COLLAPSE OF ACTIVITIES DIV -------------------------------------->
                         <div id = "activities-div" class = "activities_div" style = "display: none">
-                            <br><br>
-                            <button class = "upper-item-activities-list item-activities-list" data-toggle="collapse" data-target="#chessclub-div"><strong>Chess Club    </strong>|   Founder <i class="fa fa-long-arrow-right"></i> President </button><br>
-                                <div id = "chessclub-div" class = "collapse act-div"> <br>
+                            <div class = "activities-menu inline">
+                                <button class = "upper-item-activities-list item-activities-list" onclick = 'showActivitiesDesc("chessclub-div", this)'><strong> Chess Club </strong><br>  Founder & President </button>
+                                <button class = "item-activities-list" onclick = 'showActivitiesDesc("ags-div", this)'><strong> Alpha Gamma Sigma </strong><br> President </button>
+                                <button class = "item-activities-list" onclick = 'showActivitiesDesc("studgov-div", this)'><strong> Student Government </strong><br> Director of Events </button>
+                                <button class = "item-activities-list" onclick = 'showActivitiesDesc("compsciclub-div", this)'><strong> Mu Alpha Theta (ΜΑΘ) - Math Honors Society </strong><br> Member </button>
+                                <button class = "item-activities-list" onclick = 'showActivitiesDesc("mathclub-div", this)'><strong> Committees and Representation </strong> </button>
+                                <button class = "item-activities-list" onclick = 'showActivitiesDesc("committess-div", this)'><strong> Honors Program </strong><br> Schoar </button>
+                                <button class = "item-activities-list" onclick = 'showActivitiesDesc("honorsprog-div", this)'><strong>Computer Science Club</strong><br> Vice President </button>
+                                <button class = "lower-item-activities-list item-activities-list" onclick = 'showActivitiesDesc("diveteam-div", this)'><strong> Collegiate Dive Team </strong><br> Team Leader </button>
+                            </div>
+                            <div class = "activities-content inline">
+                                <div id = "chessclub-div" class = "act-div" style = "display: none">
+                                    <h4><strong>The Chess Club - President</strong></h4>
                                     <p class = "act-date"> Novemebr 2018 - June 2020 </p> 
-                                    <p class = "act-desc"> The chess club was founded in November 2018 by Shahaf Dan and Sayed Hamid Mirzahi
-                                    On a weekly basis, 30 registered member gather to play chess, learn new strategies, study the history of the game,
-                                    and enjoy a safe space where they can take a break from the busy academic routine
+                                    <p class = "act-desc"> 
+                                        Founded in October 2018 by myself and my classmate Sayed Hamid, the Las Positas College chess club quickly became one of the most succesfull clubs at the college.
+                                        <br><br>
+                                        The club grew quickly to sizes reaching at times to 40 people in a room!
+                                        <br><br>
+                                        As the president, it was my duty and pleaure to oversee the club's management, outreach, events, and chair the meetings. 
+                                        <br><br>
+                                        On a weekly basis, I prepared presentations for our members, who were able to gather along to play chess, learn new strtegies, meet friends, learn about the history of the game, and emjoy a safe space where they can take a break from the busy academic routine.
                                     </p>
                                 </div>
-                            <button class = "item-activities-list" data-toggle="collapse" data-target="#ags-div"><strong>Alpha Gamma Sigma (ΑΓΣ) - Honors Society   </strong>|   Member <i class="fa fa-long-arrow-right"></i> President </button><br>
-                                <div id = "ags-div" class = "collapse act-div"><br>
-                                    <p class = "act-date"> February 2019 - September 2020 </p>
-                                    <p class = "act-desc"> AGS is an intercollegiate honors society for leader, overachiever students with emphasis on community service 
-                                    As the Las Positas College Sigma Theta (ΣΘ) is considered one of the most active and accomplished chapters in the state of California,
-                                    it is my duty and pleasure to serve as the president, chair the biweekly meetings, oversee all community service by all members, 
-                                    conduct events and fundraisers, and create an environment where overachievr students who are interested in contributing further to 
-                                    their communities and the student body, are given and granted a various of opporutnities. 
+                                <div id = "ags-div" class = "act-div" style = "display: none">
+                                    <h4> Alpha Gamma Sigma (Sigma Theta ΣΘ Chapter) - President</h4>
+                                    <p class = "act-date"> February 2019 - August 2020 </p>
+                                    <p class = "act-desc"> 
+                                        AGS is a California state-wide honors society for community college students the emphasizes and resembles comunity services, leadership, and academic excellence.
+                                        <br><br>
+                                        After elected as the president of one of the biggest chapters (ΣΘ at Las Positas College), it was my duty to oversee the organization, manage fundraisers, create events, and overlook the community service of nearly 100 members.
+                                        As I chaired weekly meetings, I created a community of people who are truly happy and inspired to contribute to their communities and to excel academically and as leaders.
+                                        <br><br>
+                                        Additionally, I was awarded the state most prestigious award (Mantovani Scholarship)as a recognition of my achievements both as a leader and academically.
                                     </p>
                                 </div>
-                            <button class = "item-activities-list" data-toggle="collapse" data-target="#studgov-div"><strong> Student Government   </strong>|   Senator <i class="fa fa-long-arrow-right"></i> Director of Events </button><br>
-                                <div id = "studgov-div" class = "collapse act-div"><br>
+                                <div id = "studgov-div" class = "act-div"  style = "display: none">
                                     <p class = "act-date"> Novemebr 2018 - August 2020 </p>
                                     <p class = "act-desc"> 
                                     The LPCSG is the most effective student organization on campus, creating many events, attending conference, 
@@ -181,8 +196,7 @@
                                     that will strngethen and embrace the relationships between the student body and the campus. 
                                     </p>
                                 </div>
-                            <button class = "item-activities-list" data-toggle="collapse" data-target="#compsciclub-div"><strong>Mu Alpha Theta (ΜΑΘ) - Math Honors Society   </strong> |   Member </button><br>
-                                <div id = "compsciclub-div" class = "collapse act-div"><br>
+                                <div id = "compsciclub-div" class = "act-div" style = "display: none">
                                     <p class = "act-date"> September 2018 - June 2020 </p>
                                     <p class = "act-desc"> 
                                         Mu Alpha Theta is the Math Honors Society on Las Positas College, providing student with extracurricular math activities,
@@ -190,8 +204,7 @@
                                         in both academic years 2018 - 2019, and 2019 - 2020.
                                     </p>
                                 </div>
-                            <button class = "item-activities-list" data-toggle="collapse" data-target="#mathclub-div"><strong> Committees, Involvement, and Representation </strong> </button><br>
-                                <div id = "mathclub-div" class = "collapse act-div"><br>
+                                <div id = "mathclub-div" class = "act-div" style = "display: none">
                                     <p class = "act-desc"> 
                                         » <u>ASACC Representative: </u> Represented Las Positas in the American Student Association tow years continuasly (2019, 2020) in Washington D.C. &nbsp; Met with congresspeople and brought to their attention concerns and issues from community college students <br>
                                         » <u>Technology Committee: </u> Represented the student body on the District Technology Coordination Committee, pushing for technological solutions that will benefit the student body <br>
@@ -199,30 +212,27 @@
                                         » <u>Student Achievment and Equity Committee: </u> Served as the representative on the SAE Committee, pushing for increased student equity and voicing student concerns <br>
                                     </p>
                                 </div>
-                            <button class = "item-activities-list" data-toggle="collapse" data-target="#committess-div"><strong>Honors Program</strong></button><br>
-                                <div id = "committess-div" class = "collapse act-div"><br>
+                                <div id = "committess-div" class = "act-div" style = "display: none">
                                     <p class = "act-desc"> 
                                         As part of the honors program, by graduation I will have completed 6 honors porjects in various subjects and classes.
                                         Recognized as an honors scholar, for which I have achieved the honors stamp on my diploma.
                                         As part of the program, I have conducted research in Physics, Mathematics, and Computer Science.
                                     </p>
                                 </div>
-                            <button class = "item-activities-list" data-toggle="collapse" data-target="#honorsprog-div"><strong>Computer Science Club   </strong>|   Member <i class="fa fa-long-arrow-right"></i> Vice President </button><br>
-                                <div id = "honorsprog-div" class = "collapse act-div"><br>
+                                <div id = "honorsprog-div" class = "act-div" style = "display: none">
                                     <p class = "act-date"> May 2019 - January 2020 </p>
                                     <p class = "act-desc"> 
                                         Server as the Vice President of the Computer Science Club. 
                                         Assisted the President with any tasks including setting up field trips, organizing local competetions, and preparing presentations about various topics
                                     </p>
                                 </div>
-                            <button class = "lower-item-activities-list item-activities-list" data-toggle="collapse" data-target="#diveteam-div"><strong> Collegiate Dive Team   </strong>|   Diver <i class="fa fa-long-arrow-right"></i> Team Leader </button><br>
-                                <div class = "collapse act-div" id = "diveteam-div"><br>
+                                <div class = "act-div" id = "diveteam-div" style = "display: none">
                                     <p class = "act-date"> September 2018 - May 2019 </p>
                                     <p class = "act-desc">
                                         As a student athlete, I have represnted Las Positas College in conferences and meets as a diver.
                                     </p>
                                 </div>
-                            <br>
+                            </div>
                         </div>
                         <!----------------------------- COLLAPSE OF CLASSES DIV -------------------------------------------->
                         <div id = "classes-div" class = "classes_div" style = "display: none"> <br>

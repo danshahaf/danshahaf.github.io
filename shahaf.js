@@ -1,4 +1,4 @@
-// ================ JS FOR NAV-BAR & SIDE_BAR ================= // 
+// ================ JS FOR NAV-BAR & SIDE_BAR & ACTIVITIES_BAR ================= // 
 function showlpcedu(x){
     var divs = ["recognitions", "activities", "classes", "projects"];
     for(var i = 0; i < divs.length; i++) {
@@ -16,6 +16,20 @@ function responsiveNavBar(val) {
 
 }
 
+function showActivitiesDesc(x, t) {
+    //display:
+    var divs = ["chessclub-div", "ags-div", "studgov-div", "compsciclub-div", "mathclub-div", "committess-div", "honorsprog-div", "diveteam-div"];
+    for(var i = 0; i < divs.length; i++) {
+        document.getElementById(divs[i]).style.display = "none";
+    }
+    document.getElementById(x).style.display = "block";
+    //change btn style:
+    var btns = document.getElementsByClassName("item-activities-list");
+    for(var i = 0; i < btns.length; i++) {
+        btns[i].style.boxShadow = "-3px -3px 7px #FFFFFF73, 3px 3px 5px rgba(94, 104, 121, 0.288)";
+    }
+    t.style.boxShadow = "inset -4px -4px 8px #FFFFFF53, inset 4px 4px 5px rgba(94, 104, 121, 0.388)";
+}
 
 // ================ JS FOR PHOTOS ================= //
 var picPaths = ['shahaf-pics/AL.JPG', 'shahaf-pics/AQ.JPG', 'shahaf-pics/AC.JPG', 'shahaf-pics/AY.JPG', 'shahaf-pics/AE.JPG', 'shahaf-pics/AH.JPG', 'shahaf-pics/AG.JPG', 'shahaf-pics/AF.JPG', 'shahaf-pics/AI.JPG', 'shahaf-pics/AU.JPG', 'shahaf-pics/AO.JPG', 'shahaf-pics/AA.JPG', 'shahaf-pics/AM.JPG', 'shahaf-pics/AN.JPG', 'shahaf-pics/AK.JPG', 'shahaf-pics/AP.JPG', 'shahaf-pics/AB.JPG', 'shahaf-pics/AR.JPG', 'shahaf-pics/AS.JPG', 'shahaf-pics/AT.JPG', 'shahaf-pics/AJ.JPG', 'shahaf-pics/AV.JPG', 'shahaf-pics/AW.JPG', 'shahaf-pics/AX.JPG', 'shahaf-pics/AD.JPG'];            
