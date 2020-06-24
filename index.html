@@ -248,15 +248,17 @@
                         <div id = "classes-div" class = "classes_div" style = "display: none"> <br>
                             <div class = "classes" id = "by_grade">
                                 <!-- <p class = "inline"> Go By: </p> -->
-                                <button class = "btn quarter courses-btn inline" id = "classByName" onclick = "coursesAlphabetically()"><strong> Name </strong></button>     
-                                <button class = "btn quarter courses-btn inline" id = "classBySubject" onclick = "coursesBySubject()"> <strong> Subject </strong> </button>
-                                <button class = "btn quarter courses-btn inline" id = "classByGrade" onclick = "coursesByGrade()"> <strong> Grade </strong> </button>
-                                <button class = "btn quarter courses-btn inline" id = "classByTerm" onclick = "coursesChronoligically()"> <strong> Academic Term </strong> </button> 
+                                <button class = "btn fifth courses-btn inline" id = "classByName" onclick = "coursesAlphabetically()"><strong> Name </strong></button>     
+                                <button class = "btn fifth courses-btn inline" id = "classBySubject" onclick = "coursesBySubject()"> <strong> Subject </strong> </button>
+                                <button class = "btn fifth courses-btn inline" id = "classByGrade" onclick = "coursesByGrade()"> <strong> Grade </strong> </button>
+                                <button class = "btn fifth courses-btn inline" id = "classByTerm" onclick = "coursesChronoligically()"> <strong> Academic Term </strong> </button> 
+                                <button class = "btn fifth courses-btn inline" id = "classByGraph" onclick = "populateGraph();"><strong>GPA Graph</strong></button>
                                 <br><hr class = "sepClassesTable">
                                 <table class = "table classesTable">
                                     <thead id = "classesTableHead"></thead>
                                     <tbody id = "classesTableBody"></tbody>
                                 </table>
+                                <div id = "lpcgpagraph" style = "display: none"></div>
                             </div>                  
                         </div>
                         <!----------------------------- COLLAPSE OF PROJECTS DIV --------------------------------------->

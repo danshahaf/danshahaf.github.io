@@ -43,6 +43,10 @@ div.content {
     width: 21% !important;
     margin-right: 1% !important;
 }
+.fifth {
+    width: 17.5% !important;
+    margin-right: 1% !important;
+}
 
 /* //not sure where it goes: */
 .sub-proj-btn{
