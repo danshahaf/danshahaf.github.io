@@ -13,9 +13,12 @@
     font-family: 'Mono', monospace;
 }
 div.content {
-    margin-left: 9.5% !important;
-    padding: 6% 0% 2% 2% !important;
+    /* margin-right: 9.5% !important; */
+    padding: 6% 2% 2% 0% !important;
     height: 100%;
+    position: relative !important;
+    width: 82% !important;
+    float: left !important;
 }
 .centrize {
     text-align: center !important;
@@ -37,8 +40,8 @@ div.content {
     height: auto !important;
 }
 .quarter {
-    width: 22% !important;
-    margin-right: 2% !important;
+    width: 21% !important;
+    margin-right: 1% !important;
 }
 
 
@@ -188,7 +191,11 @@ textarea{
     font-size: 22px;
     font-weight: 800;
     text-transform: uppercase;
-    margin: 0 0 5px;}
+    margin: 0 0 5px;
+}
+.subtitle-workexp {
+    font-size: 14px !important;
+}
 .main-timeline .description{
     color: #303030;
     font-size: 15px;
@@ -348,7 +355,7 @@ textarea{
     font-weight: 450 !important;
     text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
 }
-.sub-edu-btn:hover, .sub-proj-btn:hover {
+.sub-edu-btn:hover, .sub-proj-btn:hover, .sub-edu-btn-fold:hover {
     background-position: right center; 
     text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
  }
@@ -380,6 +387,18 @@ textarea{
     letter-spacing: 0.30em !important;
     font-weight: 450 !important;
     text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+.sub-edu-btn-fold {
+    margin-top:1% !important;
+    background: linear-gradient(to right,rgb(24, 32, 98),rgb(72, 77, 141));
+    border: 0px !important;
+    padding: 1% !important;
+    color: white !important;
+    font-size: 90% !important;
+    transition: 0.35s !important;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #ccc;
+    width: 4% !important;
 }
 .courses-btn, .projects-btn {
     background: #DDE1E7 !important;
@@ -448,7 +467,17 @@ textarea{
     font-size: 15px; 
     font-family: 'Mono', monospace;
 }
-
+/*------ SKILLS ------ */
+.exps1, .exps2, .exps3 {
+    margin: 0;
+    padding: 0;
+    width: 30% !important;
+    margin-right: 1.5 !important;
+    top: 2px !important;
+}
+.experties {
+    width: 100% !important;
+}
 /*----- About Div ----*/
 .btn-outline-danger{
     color:red!important; 
@@ -466,8 +495,8 @@ textarea{
 .about-me {
     background-color: rgba(255, 255, 255, 0.637) !important; 
     width: 100% !important;
-    padding-right: 15% !important;
-    padding-left: 15% !important;
+    padding-right: 1% !important;
+    padding-left: 7.5% !important;
     padding-top: 0.5% !important;
     text-align: justify !important;}
 .about-me-text {
@@ -483,38 +512,21 @@ textarea{
 /* ----- SIDEBAR  ----- */
 .sidebar {
     margin: 0px !important;
-    margin-left: 3.5% !important;
+    right: 4% !important;
+    margin-left: -400px !important;
     width: 12% !important;
     background: linear-gradient(to bottom,rgb(160, 131, 255),rgb(236, 174, 255)); 
     position: fixed;
     padding: 2% !important;
-    padding-top: 8% !important;
-    border-right: 2.5px solid black !important;
-    border-left: 2.5px solid black !important;
+    padding-top: 6% !important;
     opacity: 0.9;
-    height: 100%;
+    height: 75%;
     overflow: auto;
-}
-.contact-btn{
-    background-color: rgba(255, 255, 255, 0.45) !important; 
-    margin-bottom: 3% !important; 
-    border: 2px solid white !important; 
-    width: 90% !important; 
-    height: 12% !important; 
-    padding: 0.5% !important; 
-    transition: 0.35s !important;
-    display: inline-block !important;
-}
-.contact-btn:hover{
-    background-color:white !important; 
-    border: 3px solid black !important; 
-    padding: 0.75% !important;
-    transition: all 0.35s ease-in-out !important;
+    border-bottom-right-radius: 150px;
+    border-bottom-left-radius: 150px;
 }
 .LinkedIn-img{
-    height: 90%;
-    width: 80%;
-    margin-top: 5% !important;
+    width: 100%;
 }
 
 

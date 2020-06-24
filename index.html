@@ -32,16 +32,8 @@
             <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('projects_div')" > <i class="fa fa-cogs"></i> </a>
             <p class = "nav-bar-myname responsive inline"> Shahaf Dan </p>
         </header>
-        <!--------------------------- SIDEBAR: SUB-NAV-BAR --------------------------------->
-        <div class = "sidebar" id = "sidebar">
-            <a class = "contact-btn" onclick = "window.open('docs/ShahafDan_Resume06072020.pdf');"><img src = "Logos/resume-logo.png" class = "LinkedIn-img"></a><br><br>
-            <a class = "contact-btn" href = 'https://www.linkedin.com/in/shahaf-dan-66812b180/'><img src = "Logos/linkedIn-logo.png" class = "LinkedIn-img"></a><br><br>
-            <a class = "contact-btn" href = 'https://www.github.com/ShahafDan25'><img src = "Logos/gitHub-logo.png" class = "LinkedIn-img"></a><br><br>
-            <a class = "contact-btn" onclick = "window.open('mailto:dan.shachaf@gmail.com?subject=I saw your website, and...');"><img src = "Logos/gmail-logo.png" class = "LinkedIn-img"></a><br><br>
-            <a class = "contact-btn" href = "https://www.hackerrank.com/dan_shachaf"><img src = "Logos/hackerrank-logo.png" class = "LinkedIn-img"></a><br><br>
-        </div>
         <!--------------------------- CONTENT DIVISION --------------------------------->
-        <div class = "content">
+        <div class = "content inline">
             <!--------------------------- ABOUT ME COLLAPSE --------------------------------->
             <div id = "about_div" style = "display: block">
                 <!-- <h2 class = "nameText"> Shahaf Dan</h2>         -->
@@ -70,11 +62,11 @@
                                 <div class = "timeline">
                                     <a href = "#" class = "timeline-content">
                                         <div class = "timeline-icon">
-                                            <i class = "fa fa-code"></i>
+                                            <i class = "fa fa-code" style = "padding-top: 25% !important"></i>
                                         </div>
                                         <div class = "inner-content">
                                             <h3 class = "title"> Full Stack Web Developer Intern </h3>
-                                            <p> <strong> Sep. 2018 - Apr. 2019  |  Amber Systems Technologies  |  Pleasanton, CA </strong> </p> 
+                                            <p class = "subtitle-workexp"> <strong> Sep. 2018 - Apr. 2019  |  Amber Systems Technologies  |  Pleasanton, CA </strong> </p> 
                                             <p class = "description">
                                                  » Developed client-based front-end web application templates in HTML, JavaScript, CSS, and Bootstrap libraries (jQuery and AJAX) <br>
                                                  » Worked with PHP in the back-end with mysqli database connectivity <br>
@@ -87,11 +79,11 @@
                                 <div class = "timeline">
                                         <a hred = "#" class = "timeline-content">
                                             <div class = "timeline-icon">
-                                                <i class = "fa fa-database"></i>
+                                                <i class = "fa fa-database" style = "padding-top: 25% !important"></i>
                                             </div>
                                             <div class = "inner-content">
                                                 <h3 class = "title"> Back-End Java Software Developer </h3>
-                                                <p> <strong> Jun. 2019 - Aug. 2019  |  FindingGenius Startup   |  San Ramon, CA </strong> </p> 
+                                                <p class = "subtitle-workexp"> <strong> Jun. 2019 - Aug. 2019  |  FindingGenius Startup   |  San Ramon, CA </strong> </p> 
                                                 <p class = "description">
                                                      » Assisted with the development of the company's software in Java.<br>
                                                      » Used the JDBC protocol to manipulate MySQL data on the server end. <br>
@@ -124,6 +116,7 @@
                         <button type = "button" class = "btn sub-edu-btn inline quarter" id = "activities-btn" onclick = "showlpcedu(this.id);"> Activities </button> 
                         <button type = "button" class = "btn sub-edu-btn inline quarter" id = "classes-btn" onclick = "showlpcedu(this.id);"> Classes </button> 
                         <button type = "button" class = "btn sub-edu-btn inline quarter" id = "projects-btn" onclick = "showlpcedu(this.id);"> Projects </button> 
+                        <button type = "button" class = "btn sub-edu-btn-fold" onclick = "hideAllLpcEdu();" id = "lpcedusubfolder" style = "display: none; float: right !important;"><i class="fa fa-chevron-up"></i></button>
                         <!----------------------------- COLLAPSE OF DEGREES, AWARDS, RECOGNITIONS DIV ------------------------------------>
                         <div id = "recognitions-div" class = "recognitions-div" style = "display: none">
                             <h5><u>Degrees & Certifications</u></h3>
@@ -155,7 +148,7 @@
                                 <button class = "upper-item-activities-list item-activities-list" onclick = 'showActivitiesDesc("chessclub-div", this)'><strong> Chess Club </strong><br>  Founder & President </button>
                                 <button class = "item-activities-list" onclick = 'showActivitiesDesc("ags-div", this)'><strong> Alpha Gamma Sigma </strong><br> President </button>
                                 <button class = "item-activities-list" onclick = 'showActivitiesDesc("studgov-div", this)'><strong> Student Government </strong><br> Director of Events </button>
-                                <button class = "item-activities-list" onclick = 'showActivitiesDesc("compsciclub-div", this)'><strong> Mu Alpha Theta (ΜΑΘ) - Math Honors Society </strong><br> Member </button>
+                                <button class = "item-activities-list" onclick = 'showActivitiesDesc("compsciclub-div", this)'><strong> Mu Alpha Theta </strong><br> Member </button>
                                 <button class = "item-activities-list" onclick = 'showActivitiesDesc("mathclub-div", this)'><strong> Committees and Representation </strong> </button>
                                 <button class = "item-activities-list" onclick = 'showActivitiesDesc("committess-div", this)'><strong> Honors Program </strong><br> Schoar </button>
                                 <button class = "item-activities-list" onclick = 'showActivitiesDesc("honorsprog-div", this)'><strong>Computer Science Club</strong><br> Vice President </button>
@@ -188,48 +181,65 @@
                                     </p>
                                 </div>
                                 <div id = "studgov-div" class = "act-div"  style = "display: none">
+                                    <h4> Student Government - Director of Events </h4>
                                     <p class = "act-date"> Novemebr 2018 - August 2020 </p>
                                     <p class = "act-desc"> 
-                                    The LPCSG is the most effective student organization on campus, creating many events, attending conference, 
-                                    and representing the student body of Las Positas. As the director of events, it is my mission to phase the campus cultural identity to
-                                    be more student friendly, get rid of the negative stigma that student life in communit colleges are not productive, and create events 
-                                    that will strngethen and embrace the relationships between the student body and the campus. 
+                                        The Las Positas College Student Government (LPCSG) is the most impactful student organization on campus. The elected representatives advocate for student interests on local, state, and national levels by lobbying legislators, attending conferences, and being members of campus governance committees.
+                                        <br><br>
+                                        As the director of events, I had created tens of events for the student body with a simple objective to phase the campus cultural identity to be more friendly towards the student body. 
+                                        <br><br>
+                                        Under my term, student participation increased by 300%, and student have reported to feel more connected to the school. As a leader in the oragnization, I have promoted advocacy for student equity, ineterests, success, and campus engagement.
                                     </p>
                                 </div>
                                 <div id = "compsciclub-div" class = "act-div" style = "display: none">
+                                    <h4> Math Honors Society (ΜΑΘ) - Member</h4>
                                     <p class = "act-date"> September 2018 - June 2020 </p>
                                     <p class = "act-desc"> 
-                                        Mu Alpha Theta is the Math Honors Society on Las Positas College, providing student with extracurricular math activities,
-                                        club meetings, and the AMATYC Exam per academic term. As an outstanding member, I have places in the top 5 students in the AMATYC exam,
-                                        in both academic years 2018 - 2019, and 2019 - 2020.
+                                        Mu Alpha Theta is the Math Honors Society at Las Positas College, promoting excellence, enjoyment and understanding of Mathematics amongst the students.
+                                        <br><br> 
+                                        As a member of the club, I was encouraged to take the AMATYC Mathematical-unique-thinkging test, in which I have places amongst the top 5 scorers two years in a row. 
+                                        <br><br>
+                                        Additionally, I have been recognized as a scholar and an outstanding member due to my perfromance as a student in Math classes.
                                     </p>
                                 </div>
                                 <div id = "mathclub-div" class = "act-div" style = "display: none">
+                                    <h4> Committees and Involvement </h4>
                                     <p class = "act-desc"> 
-                                        » <u>ASACC Representative: </u> Represented Las Positas in the American Student Association tow years continuasly (2019, 2020) in Washington D.C. &nbsp; Met with congresspeople and brought to their attention concerns and issues from community college students <br>
-                                        » <u>Technology Committee: </u> Represented the student body on the District Technology Coordination Committee, pushing for technological solutions that will benefit the student body <br>
-                                        » <u>Student Events Committee: </u> Chaired the student events committee as the student elected Director of Events <br>
-                                        » <u>Student Achievment and Equity Committee: </u> Served as the representative on the SAE Committee, pushing for increased student equity and voicing student concerns <br>
+                                        <i class="fa fa-angle-double-right"></i><u>ASACC Representative</u>: Represented the college in the American Student Association of Community Colleges (ASACC) annual national conference twice (2019, 2020) in Washington D.C., where I met with congressional legislators and brought to their attention concerns voiced by students.
+                                        <br><br>
+                                        <i class="fa fa-angle-double-right"></i><u>District Technology Coordination Committee</u>: As a representative of the student body, I pushed for technological solutions to the benefit the students and innovative technologies to better the student experience. 
+                                        <br><br>
+                                        <i class="fa fa-angle-double-right"></i><u>Student Events Committee</u>: Chaired the student events committee as the student elected Director of Events and lead to many more new events and increased student participation by 300% .
+                                        <br><br>
+                                        <i class="fa fa-angle-double-right"></i><u>Student Achievment and Equity Committee</u>: Served as the representative on the SAE Committee, advocating for ideas to increase student equity. <br>
                                     </p>
                                 </div>
                                 <div id = "committess-div" class = "act-div" style = "display: none">
+                                    <h4> Honors Program - Scholar </h4>
                                     <p class = "act-desc"> 
-                                        As part of the honors program, by graduation I will have completed 6 honors porjects in various subjects and classes.
-                                        Recognized as an honors scholar, for which I have achieved the honors stamp on my diploma.
-                                        As part of the program, I have conducted research in Physics, Mathematics, and Computer Science.
+                                        As a member of the college's honors program, I have completed 6 honors project including research papers, constructed algorithms, and softwares.
+                                        The Projects spanned the subjects of Physics, Math, and Computer Science and awarded me with the recognition of an honors scholar.
+                                        <br><br>
+                                        Click here to read more about these projects !
+                                        <a onclick = "showlpcedu('projects-btn');" style = "color: blue !important;"><u> Honors Projects </u></a>
                                     </p>
                                 </div>
                                 <div id = "honorsprog-div" class = "act-div" style = "display: none">
+                                    <h4> Computer Science Club - Vice President</h4>
                                     <p class = "act-date"> May 2019 - January 2020 </p>
                                     <p class = "act-desc"> 
-                                        Server as the Vice President of the Computer Science Club. 
-                                        Assisted the President with any tasks including setting up field trips, organizing local competetions, and preparing presentations about various topics
+                                        As the vice president of the computer science club at the college, I has the pleasure of sharing parts of my knowledge on a weekly basis to the tens of members in the club.
+                                        <br><br>
+                                        As we went to hackathons, field trips, and visited various software companies in the heart of the Silicon Valley, Along wit the president, I lead our group of young programmers in a path of further educating ourselves about the endless field of computer science.
                                     </p>
                                 </div>
                                 <div class = "act-div" id = "diveteam-div" style = "display: none">
-                                    <p class = "act-date"> September 2018 - May 2019 </p>
+                                    <h4> College's Dive Team - Team Leader</h4>
+                                    <p class = "act-date"> December 2018 - May 2019 </p>
                                     <p class = "act-desc">
-                                        As a student athlete, I have represnted Las Positas College in conferences and meets as a diver.
+                                        As a student athlete, I represnted Las Positas College in conferences and meets as a diver.
+                                        <br><br>
+                                        I also lead the time as the team leader to many victories on both the local and state levels.
                                     </p>
                                 </div>
                             </div>
@@ -319,7 +329,7 @@
                         <p>
                             Graduated as an honors student and a Pedrozzi Scholar. <br>
                             Focused on studying computer science and computational physics. <br>
-                            Recognized for community service, excellence in computer science, and honors roll.
+                            Recognized for community service, excellence in computer science, and academic performance.
                         </p>
                     </div>
                     <br><br><br>
@@ -338,32 +348,43 @@
             <div id = "knowledge_div" class = "info_div" style = "display: none">
                 <!-- TODO: Add linkedin logo if passed the linkedin test-->
                 <h2 class = "section-title"> Technical Knowledge & Skills </h2>
-                <div class = "inline exps-table">
-                    <h4> Front End </h4>
-                    <ul class = "list-group">
-                        <li class = "list-group-item"><img src = "Logos/html-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/css-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/javascript-logo.png" class = "logo-img"></li>
-                        <li class = "list-group-item"><img src = "Logos/react-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/morrisjs-logo.png" class = "logo-img"></li>
-                        <li class = "list-group-item"><img src = "Logos/bootstrap-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/jquery-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/ajax-logo.png" class = "logo-img"></li>
-                        <li class = "list-group-item"><img src = "Logos/swift-logo.png" class = "logo-img"></li>
-                    </ul>
-                </div>
-                <div class = "inline exps-table">
-                    <h4> Back End </h4>
-                    <ul class = "list-group">
-                        <li class = "list-group-item"><img src = "Logos/java-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/jsp-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/c++-logo.png" class = "logo-img"></li>
-                        <li class = "list-group-item"><img src = "Logos/nodejs-logo.png" class = "logo-img"></li>
-                        <li class = "list-group-item"><img src = "Logos/php-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/PhpMyAdmin-logo.svg" class = "logo-img"></li>
-                        <li class = "list-group-item"><img src = "Logos/mysql-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/mongodb-logo.png" class = "logo-img"></li>
-                    </ul>
-                </div>
-                <div class = "inline exps-table">
-                    <h4> Other Experties </h4>
-                    <ul class = "list-group">
-                        <li class = "list-group-item"><img src = "Logos/word-logo.svg" class = "logo-img"> &nbsp; <img src = "Logos/powerpoint-logo.svg" class = "logo-img"> &nbsp; <img src = "Logos/excel-logo.svg" class = "logo-img"></li> 
-                        <li class = "list-group-item"><img src = "Logos/linux-logo.jpg" class = "logo-img"> &nbsp; <img src = "Logos/ubuntu-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/vmware-logo.webp" class = "logo-img"></li>
-                        <li class = "list-group-item"><img src = "Logos/MatLab-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/GnuOctave-logo.png" class = "logo-img"></li>
-                        <li class = "list-group-item"><img src = "Logos/wordpress-logo.png" class = "logo-img"> &nbsp; <img src = "Logos/LaTeX-logo.png" class = "logo-img-smaller"></li>
-                    </ul>
+                <div class = "experties">
+                    <div id = "frontend" class = "exps1 inline">
+                        <h3> Front End </h3>
+                        <br>
+                        <h5> HTML &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/html-logo.png" class = "logo-img"></h5><br>
+                        <h5> JavaScript &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/javascript-logo.png" class = "logo-img"></h5><br>
+                        <h5> CSS &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/css-logo.png" class = "logo-img"></h5><br>
+                        <h5> Morris.js &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/morrisjs-logo.png" class = "logo-img"></h5><br>
+                        <h5> React.js &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/react-logo.png" class = "logo-img"></h5><br>
+                        <h5> Bootstrap &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/bootstrap-logo.png" class = "logo-img"></h5><br>
+                        <h5> jQuery &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/jquery-logo.png" class = "logo-img"></h5><br>
+                        <h5> AJAX &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/ajax-logo.png" class = "logo-img"></h5><br>
+                    </div>
+                    <div id = "backend" class = "exps2 inline">
+                        <h3> Back End </h3>
+                        <br>
+                        <h5> Java &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/java-logo.png" class = "logo-img"></h5><br>
+                        <h5> JSP &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/jsp-logo.png" class = "logo-img"></h5><br>
+                        <h5> C++ &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/c++-logo.png" class = "logo-img"></h5><br>
+                        <h5> Node.js &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/nodejs-logo.png" class = "logo-img"></h5><br>
+                        <h5> PHP &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/php-logo.png" class = "logo-img"></h5><br>
+                        <h5> MySQL &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/mysql-logo.png" class = "logo-img"></h5><br>
+                        <h5> PhpMyAdmin &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/PhpMyAdmin-logo.svg" class = "logo-img"></h5><br>
+                        <h5> MongoDB (NoSQL) &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/mongodb-logo.png" class = "logo-img"></h5><br>
+                    </div>
+                    <div id = "otherexperties" class = "exps3 inline">
+                        <h3> Other Experties </h3>
+                        <br>
+                        <h5> M.O. &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/microsoftoffice-logo.png" class = "logo-img"></h5><br>
+                        <h5> Ubuntu &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/ubuntu-logo.png" class = "logo-img"></h5><br>
+                        <h5> Linux &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/linux-logo.jpg" class = "logo-img"></h5><br>
+                        <h5> VMWare &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/vmware-logo.webp" class = "logo-img"></h5><br>
+                        <h5> Assembly Language &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/assembly-logo.png" class = "logo-img"></h5><br>
+                        <h5> LaTeX &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/LaTeX-logo.png" class = "logo-img"></h5><br>
+                        <h5> MatLab &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/MatLab-logo.png" class = "logo-img"></h5><br>
+                        <h5> GnuOctave &nbsp;&nbsp;&nbsp;&nbsp; <img src = "Logos/GnuOctave-logo.png" class = "logo-img"></h5><br>
+                    </div>
                 </div>
                 <!-- INSERTION ON TIMELAPSE VIDEO GALLERY -->
                 <!-- <iframe id = "vid" class = "embed-responsive-item vid" src = "shahaf-pics/vid-1.mp4" allowfullscreen></iframe> -->
@@ -417,7 +438,13 @@
                 <br><br>
             </div>
         </div>
-        
+        <!--------------------------- SIDEBAR --------------------------------->
+        <div class = "sidebar inline" id = "sidebar">
+            <a  href = 'https://www.linkedin.com/in/shahaf-dan-66812b180/'><img src = "Logos/linkedIn-logo.png" class = "LinkedIn-img"></a><br><br>
+            <a  href = 'https://www.github.com/ShahafDan25'><img src = "Logos/gitHub-logo.png" class = "LinkedIn-img"></a><br><br>
+            <a  onclick = "window.open('mailto:dan.shachaf@gmail.com?subject=I saw your website, and...');"><img src = "Logos/gmail-logo.png" class = "LinkedIn-img"></a><br><br>
+            <a  href = "https://www.hackerrank.com/dan_shachaf"><img src = "Logos/hackerrank-logo.png" class = "LinkedIn-img"></a><br><br>
+        </div>
             
         <script src = "shahaf.js" type = "text/JavaScript"></script>
 
@@ -425,12 +452,7 @@
 
             Add Grades Graphs (Morris.js)
 
-            Edit inofmrtaion
-                LPC - Activities
-
             time Lapse video of me coding
-
-            Add Map of my locations around at the globe at each year
 
             Make it flexible for any screen size!! (width: auto @screen size....)
         

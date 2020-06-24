@@ -1,10 +1,17 @@
 // ================ JS FOR NAV-BAR & SIDE_BAR & ACTIVITIES_BAR ================= // 
 function showlpcedu(x){
+    hideAllLpcEdu();
+    document.getElementById(x.substring(0,x.length-4)+'-div').style.display = "block";
+    document.getElementById("lpcedusubfolder").style.display = "inline-block";
+}
+
+function hideAllLpcEdu() {
     var divs = ["recognitions", "activities", "classes", "projects"];
     for(var i = 0; i < divs.length; i++) {
         document.getElementById(divs[i] + "-div").style.display = "none";
     }
-    document.getElementById(x.substring(0,x.length-4)+'-div').style.display = "block";
+    document.getElementById("lpcedusubfolder").style.display = "none";
+
 }
 
 function responsiveNavBar(val) {
