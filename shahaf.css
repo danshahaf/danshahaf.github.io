@@ -220,10 +220,20 @@ div.content {
     color: transparent;
     float: right !important;
     font-size: 200% !important;
-    margin-bottom: 0% !important;
-    margin-right: 5% !important;
-    vertical-align: middle !important;
-    font-weight: bolder !important;}
+    margin-bottom: 5% !important;
+    margin-right: 4.5% !important;
+    font-weight: bolder !important;
+    font-family: "Gill Sans" !important;
+}
+.navbar-desc {
+    background-image: linear-gradient(to right,#6C4ADC,#9C36BA) !important;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: "Gill Sans" !important;
+    font-size: 125% !important;
+    outline: none;
+
+}
 .nav-bar-option:focus{
     color: rgb(79, 249, 255) !important;
     outline: none !important;
@@ -296,7 +306,7 @@ div.content {
     box-shadow: 0 0 20px #ccc;
     width: 4% !important;
 }
-.courses-btn{
+.courses-btn, .lpc-projects-btn{
     background: #DDE1E7 !important;
     box-shadow: -3px -3px 7px #FFFFFF73, 3px 3px 5px rgba(94, 104, 121, 0.288);
     border-radius: 10px;
@@ -413,6 +423,7 @@ div.content {
 }
 .about-me-bio {
     text-align: left !important;
+    font-size: 1.57rem !important;
 }
 .about-me {
     background-color: rgba(255, 255, 255, 0.637) !important; 
@@ -423,19 +434,48 @@ div.content {
     text-align: justify !important;
 }
 .about-me-text {
-    margin-left: 7% !important;
+    margin-left: 5% !important;
+    margin-right: 7% !important;
+    font-family: "Gill Sans" !important;
+    font-size: 125% !important;
+}
+.about-me-text-title {
+    margin-left: 2.5% !important;
     margin-right: 7% !important;
     font-weight: bold !important;
     font-family: "Gill Sans" !important;
-    font-size: 105% !important;
 }
-.imgContainer{
-    text-align: center !important; 
-    margin-right: 15% !important; 
-    margin-left: 15% !important;
+.gallery {
+    width: 100% !important;
+    align-items: right !important;
+    text-align: right !important;
 }
-.imgBanner{
-    height: 35%; 
+.gallery-item, .gallery-item-vid {
+    border: none !important;
+    /* padding-top: 100% !important; */
+    width: 20% !important;
+    margin: 0.55% !important;
+    box-shadow: 10px 10px 5px grey;
+}
+.gallery-item-vid {
+    /* position: fixed; */
+    object-fit: cover !important;
+    overflow: hidden;
+    top: 100px !important;
+
+}
+.gallery-item-vid iframe {
+    padding: 0 !important;
+    display: block !important;
+    margin: 0 !important;
+    border: none !important;
+    position: relative !important; 
+    /* background-size: cover !important; */
+    left: -25% !important;
+    /* z-index:-1;  */
+    /* top: 100px !important; */
+    /* height: 300px !important; */
+    object-fit: cover !important;
 }
 /* ----- Projects Div ----- */
 .project-description {

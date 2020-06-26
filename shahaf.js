@@ -5,6 +5,11 @@ function showlpcedu(x){
     document.getElementById("lpcedusubfolder").style.display = "inline-block";
 }
 
+function changeNavBartext(x) {
+    document.getElementById('navbartext').innerHTML = ""; //clear
+    // document.getElementById('navbartext').innerHTML = x; //insert
+}
+
 function hideAllLpcEdu() {
     var divs = ["recognitions", "activities", "classes", "projects"];
     for(var i = 0; i < divs.length; i++) {
@@ -49,24 +54,6 @@ function showAProject(x) {
 }
 // ================ JS FOR PHOTOS ================= //
 var picPaths = ['shahaf-pics/AC.JPG', 'shahaf-pics/AA.JPG', 'shahaf-pics/AN.JPG', 'shahaf-pics/AB.JPG', 'shahaf-pics/AD.JPG'];            
-var curPic = -1;
-var img0 = new Array();
-
-for(var i = 0; i < picPaths.length; i++) {
-    img0[i] = new Image();
-    img0[i].src = picPaths[i];
-}
-
-function swapImage() {
-    curPic = (++curPic > picPaths.length - 1)? 0: curPic;
-    imgCont.src = img0[curPic].src;
-    setTimeout(swapImage, 3500);
-}
-
-window.onload = function(){
-    imgCont = document.getElementById('imgBanner');
-    swapImage();
-}
 
 // ================ JS FOR CLASSES ================= //
 class Course
@@ -348,7 +335,7 @@ function cleanPrevTable()
 }
 
 function restyleBtns(x) {
-    btns = ["classByName", "classBySubject", "classByGrade", "classByTerm", "classByGraph"];
+    btns = ["classByName", "classBySubject", "classByGrade", "classByTerm"];//, "classByGraph"];
     for(var i = 0; i <btns.length; i++) {
         document.getElementById(btns[i]).style.boxShadow = "-3px -3px 7px #FFFFFF73, 3px 3px 5px rgba(94, 104, 121, 0.288)";
     }

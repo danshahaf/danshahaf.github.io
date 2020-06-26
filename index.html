@@ -26,12 +26,13 @@
     <body class = "body">
         <!--------------------------- HEADER: NAV-BAR --------------------------------->
         <header class = "nav-bar" id = "nav-bar">
-            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('about_div');" > <i class="fa fa-user"></i> </a>
-            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('history_div')" > <i class = "fa fa-briefcase"></i> </a>
-            <a class = "nav-bar-option responsive inline"  onclick = "responsiveNavBar('education_div')" >  <i class="fa fa-graduation-cap"></i> </a>
-            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('knowledge_div')" >  <i class="fa fa-wrench"></i> </a>
-            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('projects_div')" > <i class="fa fa-cogs"></i> </a>
-            <p class = "nav-bar-myname responsive inline"> Shahaf Dan </p>
+            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('about_div');" onmouseover="changeNavBartext('About Me')" onmou> <i class="fa fa-user"></i> </a>
+            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('history_div')" onmouseover="changeNavBartext('Experience')"> <i class = "fa fa-briefcase"></i> </a>
+            <a class = "nav-bar-option responsive inline"  onclick = "responsiveNavBar('education_div')" onmouseover="changeNavBartext('Education')">  <i class="fa fa-graduation-cap"></i> </a>
+            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('knowledge_div')" onmouseover="changeNavBartext('Skills')">  <i class="fa fa-wrench"></i> </a>
+            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('projects_div')" onmouseover="changeNavBartext('Projects')"> <i class="fa fa-cogs"></i> </a>
+            <a id = "navbartext" class = "navbar-desc inline"></a>
+            <a class = "nav-bar-myname inline"> Shahaf Dan </a>
         </header>
         <!--------------------------- CONTENT DIVISION --------------------------------->
         <div class = "content inline">
@@ -41,17 +42,31 @@
                 <div class = "about-me">
                     <h4 class = "centrize about-me-bio inline"><strong><i class="fa fa-angle-double-right"></i>   Full Stack Software Developer  |  Bay Area  |  dan.shachaf@gmail.com</strong></h4>
                     <button type = "button" class = "btn btn-outline-danger inline resume" onclick = "window.open('docs/ShahafDan_Resume06072020.pdf');"> My Resume (PDF)</button>
-                    <br><hr class = "sepfrombio"><br>
+                    <br><hr class = "sepfrombio">
+                    <h4 class = "about-me-text-title"> Welcome to My Portfolio Website! </h4>
+                    <br>
                     <h5 class = "about-me-text"> 
-                        Welcome to My Portfolio Website! This is a space that I have put together to document my academic, work, and computer science experience collectively. <br><br>
+                        This is a space that I have put together to document my academic, work, and computer science experience collectively. <br><br>
                         I currently seek internships for the summer of 2020, and if the opportunity will arise, will defer my transfer - admission decision at Boston University to gain work experience. <br><br>
                         <!-- My educational goals include the pursue of a Bachelor's of Science Degree in Computer Science, and a Masters Degree in Business. <br><br> -->
                         I hope this site will assist you in learning more about me, my projects and the tools that I have come across along my journey ! <br><br>
                     </h5>
                 </div>
-                <br><br>
-                <div class = "imgContainer">
-                    <img id = "imgBanner" class = "imgBanner shadow-lg p-3" src = "" alt = ""/>
+                <br>
+                <div class = "gallery">
+                    <span>
+                        <img class = "gallery-item inline" src = "shahaf-pics/AC.JPG"/> <!-- 1i  -->
+                        <!-- <div class = "gallery-item-vid inline">
+                            <iframe class = "inline" src = "shahaf-vids/vidAA.mp4" title = "time-lapse 1"></iframe>
+                        </div> -->
+                        <img class = "gallery-item inline" src = "shahaf-pics/AA.JPG"/> <!-- 3i  -->
+                        <img class = "gallery-item inline" src = "shahaf-pics/AB.JPG"/> <!-- 4i  -->
+                        <!-- <img class = "gallery-item inline" src = "shahaf-pics/AX.JPG"/> 5v  -->
+                        <!-- <img class = "gallery-item inline" src = "shahaf-pics/AN.JPG"/> 6i  -->
+                        <!-- <img class = "gallery-item inline" src = "shahaf-pics/AD.JPG"/> 7i  -->
+                        <!-- <img class = "gallery-item inline" src = "shahaf-pics/AX.JPG"/> 8v  -->
+                        <!-- <img class = "gallery-item inline" src = "shahaf-pics/AX.JPG"/> 9i  -->
+                    </span>
                 </div>
             </div>
             <!--------------------------- EXPERIENCE COLLAPSE --------------------------------->
@@ -118,7 +133,7 @@
                         <button type = "button" class = "btn sub-edu-btn inline quarter" id = "activities-btn" onclick = "showlpcedu(this.id);"> Activities </button> 
                         <button type = "button" class = "btn sub-edu-btn inline quarter" id = "classes-btn" onclick = "showlpcedu(this.id);"> Classes </button> 
                         <button type = "button" class = "btn sub-edu-btn inline quarter" id = "projects-btn" onclick = "showlpcedu(this.id);"> Projects </button> 
-                        <!-- <button type = "button" class = "btn sub-edu-btn-fold" onclick = "hideAllLpcEdu();" id = "lpcedusubfolder" style = "display: none; float: right !important;"><i class="fa fa-chevron-up"></i></button> -->
+                        <button type = "button" class = "btn sub-edu-btn-fold" onclick = "hideAllLpcEdu();" id = "lpcedusubfolder" style = "display: none; float: right !important;"><i class="fa fa-chevron-up"></i></button>
                         <!----------------------------- COLLAPSE OF DEGREES, AWARDS, RECOGNITIONS DIV ------------------------------------>
                         <div id = "recognitions-div" class = "recognitions-div" style = "display: none">
                             <h5><u>Degrees & Certifications</u></h3>
@@ -254,7 +269,7 @@
                                 <button class = "btn fifth courses-btn inline" id = "classBySubject" onclick = "coursesBySubject()"> <strong> Subject </strong> </button>
                                 <button class = "btn fifth courses-btn inline" id = "classByGrade" onclick = "coursesByGrade()"> <strong> Grade </strong> </button>
                                 <button class = "btn fifth courses-btn inline" id = "classByTerm" onclick = "coursesChronoligically()"> <strong> Term </strong> </button> 
-                                <button class = "btn fifth courses-btn inline" id = "classByGraph" onclick = "populateGraph();"><strong>GPA Graph</strong></button>
+                                <!-- <button class = "btn fifth courses-btn inline" id = "classByGraph" onclick = "populateGraph();"><strong>GPA Graph</strong></button> -->
                                 <br><hr class = "sepClassesTable">
                                 <table class = "table classesTable" id = "lpcclassestable">
                                     <thead id = "classesTableHead"></thead>
@@ -278,47 +293,47 @@
                                         <tr class = "tableRow">
                                             <td class = "projectName"><strong>Physics</strong>:<br> Electricity and Magnetism</td>
                                             <td>Solar Panels: Efficiency, Mechanism, and Applications</td>
-                                            <td class = "see-project-col"><button type = "button" class="btn w45 projects-btn" onclick = "window.open('docs/phy1c_abs.pdf');"> Abs. </button>&nbsp;<button type = "button" class = "btn   ml2 w45 projects-btn" onclick = "window.open('docs/proj.pdf');"> Paper </button></td>
+                                            <td class = "see-project-col"><button type = "button" class="btn w45 lpc-projects-btn" onclick = "window.open('docs/phy1c_abs.pdf');"> Abs. </button>&nbsp;<button type = "button" class = "btn   ml2 w45 lpc-projects-btn" onclick = "window.open('docs/proj.pdf');"> Paper </button></td>
                                         </tr>
                                         <tr class = "tableRow">
                                             <td class = "projectName"><strong>Computer Science</strong>:<br> Java Programming</td>
                                             <td>MyEvents - Management WebApp</td>
-                                            <td class = "see-project-col"><button type = "button" class="btn w94 projects-btn" onclick = "window.open('docs/csci19a_abs.pdf');">Abstract</button></td>
+                                            <td class = "see-project-col"><button type = "button" class="btn w94 lpc-projects-btn" onclick = "window.open('docs/csci19a_abs.pdf');">Abstract</button></td>
                                         </tr>
                                         <tr class = "tableRow">
                                             <td class = "projectName"><strong>Computer Science</strong>:<br> Data Structures</td>
                                             <td>Dictionary Tree: Customized Data Structure</td>
-                                            <td class = "see-project-col"><button type = "button" class="btn w45 projects-btn" onclick = "window.open('docs/cs20_abs.pdf');"> Abs. </button>&nbsp;<form class = "inline ml2 w45" action = "https://www.github.com/ShahafDan25/DataStructures-CPP/tree/master/A12_DictionaryTree"><button class = "btn   w100 projects-btn"> Code </button></form></td>
+                                            <td class = "see-project-col"><button type = "button" class="btn w45 lpc-projects-btn" onclick = "window.open('docs/cs20_abs.pdf');"> Abs. </button>&nbsp;<form class = "inline ml2 w45" action = "https://www.github.com/ShahafDan25/DataStructures-CPP/tree/master/A12_DictionaryTree"><button class = "btn   w100 lpc-projects-btn"> Code </button></form></td>
                                         </tr>
                                         <tr class = "tableRow">
                                             <td class = "projectName"><strong>Computer Science</strong>:<br> Assembly Programming</td>
                                             <td>Assembler Movie I\O Encryptor</td>
-                                            <td class = "see-project-col"><form action = "https://github.com/ShahafDan25/Assembly/tree/master/Projects/10_DynamicMemory_ShahafDan_Linux64"><button class = "btn   ml2 w94 projects-btn"> Code </button></form></td>
+                                            <td class = "see-project-col"><form action = "https://github.com/ShahafDan25/Assembly/tree/master/Projects/10_DynamicMemory_ShahafDan_Linux64"><button class = "btn   ml2 w94 lpc-projects-btn"> Code </button></form></td>
                                         </tr>
                                         <tr class = "tableRow">
                                             <td class = "projectName"><strong>Mathematics</strong>:<br> Discrete Math. Structures</td>
                                             <td>Hash Tables: Efficiency, Mechanism, and Applications</td>
-                                            <td class = "see-project-col"><button type = "button" class="btn   w45 projects-btn" onclick = "window.open('docs/cs17_abs.pdf');"> Abs. </button>&nbsp;<button type = "button" class = "btn   ml2 w45 projects-btn" onclick = "window.open('docs/cs17_proj.pdf');"> Paper </button></td>
+                                            <td class = "see-project-col"><button type = "button" class="btn   w45 lpc-projects-btn" onclick = "window.open('docs/cs17_abs.pdf');"> Abs. </button>&nbsp;<button type = "button" class = "btn   ml2 w45 lpc-projects-btn" onclick = "window.open('docs/cs17_proj.pdf');"> Paper </button></td>
                                         </tr>
                                         <tr class = "tableRow">
                                             <td class = "projectName"><strong>Physics</strong>:<br> Quantum Mechanics</td>
                                             <td>The Meissner Effect: Superconductivity and Magnetic Levitation</td>
-                                            <td class = "see-project-col"><button type = "button" class="btn   w45 projects-btn" onclick = "window.open('docs/phy1d_abs.pdf');"> Abs. </button>&nbsp;<button type = "button" class = "btn   ml2 w45 projects-btn" onclick = "window.open('docs/phys1d_proj.pdf');"> Paper </button></td>
+                                            <td class = "see-project-col"><button type = "button" class="btn   w45 lpc-projects-btn" onclick = "window.open('docs/phy1d_abs.pdf');"> Abs. </button>&nbsp;<button type = "button" class = "btn   ml2 w45 lpc-projects-btn" onclick = "window.open('docs/phys1d_proj.pdf');"> Paper </button></td>
                                         </tr>
                                         <tr class = "tableRow">
                                             <td class = "projectName"><strong>Computer Science</strong>:<br> Capstone Project</td>
                                             <td>The Market's Manager</td>
-                                            <td class = "see-project-col"><button type = "button" class="btn   w45 projects-btn" onclick = "window.open('docs/cs47_report.pdf');"> Report </button>&nbsp;<form class = "inline  ml2 w45" action = "https://github.com/ShahafDan25/LPCCapstone"><button class = "btn   projects-btn w100" > Code  </button></form></td>
+                                            <td class = "see-project-col"><button type = "button" class="btn   w45 lpc-projects-btn" onclick = "window.open('docs/cs47_report.pdf');"> Report </button>&nbsp;<form class = "inline  ml2 w45" action = "https://github.com/ShahafDan25/LPCCapstone"><button class = "btn   lpc-projects-btn w100" > Code  </button></form></td>
                                         </tr>
                                         <tr class = "tableRow">
                                             <td class = "projectName"><strong>Computer Science</strong>:<br> Database Programming</td>
                                             <td>Rate My Professor at Las Positas College</td>
-                                            <td class = "see-project-col"><button type = "button" class="btn   w45 projects-btn" onclick = "window.open('docs/cs45_abs.pdf');"> Abs. </button>&nbsp;<form class = "inline w45 ml2" action = "https://www.github.com/ShahafDan25/LPC-RMP"><button class = "btn   projects-btn w100"> Code </button></form></td>
+                                            <td class = "see-project-col"><button type = "button" class="btn   w45 lpc-projects-btn" onclick = "window.open('docs/cs45_abs.pdf');"> Abs. </button>&nbsp;<form class = "inline w45 ml2" action = "https://www.github.com/ShahafDan25/LPC-RMP"><button class = "btn   lpc-projects-btn w100"> Code </button></form></td>
                                         </tr>
                                         <tr class = "tableRow">
                                             <td class = "projectName"><strong>Mathematics</strong>:<br> Differential Equations</td>
                                             <td>Euler's Formula and Fourier Transforms</td>
-                                            <td class = "see-project-col"><button type = "button" class="btn   w45 projects-btn" onclick = "window.open('docs/math5_abs.pdf');"> Abs. </button>&nbsp;<button type = "button" class = "btn   ml2 w45 projects-btn" onclick = "window.open('docs/math5_proj.pdf');"> Paper </button></td>
+                                            <td class = "see-project-col"><button type = "button" class="btn   w45 lpc-projects-btn" onclick = "window.open('docs/math5_abs.pdf');"> Abs. </button>&nbsp;<button type = "button" class = "btn   ml2 w45 lpc-projects-btn" onclick = "window.open('docs/math5_proj.pdf');"> Paper </button></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -481,13 +496,6 @@
                 });
             }
         </script>
-        <!-- TO ADD: 
-
-            time Lapse video of me coding
-
-            Make it flexible for any screen size!! (width: auto @screen size....)
-        
-        -->
     </body>
 
 </html>
