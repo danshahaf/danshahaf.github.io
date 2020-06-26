@@ -48,7 +48,7 @@ function showAProject(x) {
 
 }
 // ================ JS FOR PHOTOS ================= //
-var picPaths = ['shahaf-pics/AL.JPG', 'shahaf-pics/AQ.JPG', 'shahaf-pics/AC.JPG', 'shahaf-pics/AY.JPG', 'shahaf-pics/AE.JPG', 'shahaf-pics/AH.JPG', 'shahaf-pics/AG.JPG', 'shahaf-pics/AF.JPG', 'shahaf-pics/AI.JPG', 'shahaf-pics/AU.JPG', 'shahaf-pics/AO.JPG', 'shahaf-pics/AA.JPG', 'shahaf-pics/AM.JPG', 'shahaf-pics/AN.JPG', 'shahaf-pics/AK.JPG', 'shahaf-pics/AP.JPG', 'shahaf-pics/AB.JPG', 'shahaf-pics/AR.JPG', 'shahaf-pics/AS.JPG', 'shahaf-pics/AT.JPG', 'shahaf-pics/AJ.JPG', 'shahaf-pics/AV.JPG', 'shahaf-pics/AW.JPG', 'shahaf-pics/AX.JPG', 'shahaf-pics/AD.JPG'];            
+var picPaths = ['shahaf-pics/AC.JPG', 'shahaf-pics/AA.JPG', 'shahaf-pics/AN.JPG', 'shahaf-pics/AB.JPG', 'shahaf-pics/AD.JPG'];            
 var curPic = -1;
 var img0 = new Array();
 
@@ -353,107 +353,9 @@ function restyleBtns(x) {
         document.getElementById(btns[i]).style.boxShadow = "-3px -3px 7px #FFFFFF73, 3px 3px 5px rgba(94, 104, 121, 0.288)";
     }
     document.getElementById(x).style.boxShadow = "inset -3px -3px 7px #FFFFFF73, inset 3px 3px 5px rgba(94, 104, 121, 0.288)";
+    document.getElementById('lpcgpagraph').style.display = "none";
+    document.getElementById('lpcclassestable').style.display = "block";
 }
-
-// ================ JS FOR GRADES GRPHA (@lpc) ================= //
-function getGpaGraphData() {
-    var gpaGraphData = [];
-    var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course24, course25];
-    // ---------- sorting: ---------------
-    var coursesChron = new Array(courses.length);
-    var gpaGraphData = [];
-    var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course24, course25];
-    // ---------- sorting: ---------------
-    var coursesChron = new Array(courses.length);
-    for (var x = 0; x < coursesChron.length; x++) {
-        var counter = 0;
-        var index = counter;
-        while(courses[counter] == null) {counter++}
-        index = counter;
-        for(var i = 0; i < courses.length; i++) 
-        {
-            var counter = 0;
-            var index = counter;
-            while(courses[counter] == null) {counter++}
-            index = counter;
-            for(var i = 0; i < courses.length; i++) 
-            if(courses[i] != null)
-            {
-                if(courses[i] != null)
-                {
-                    if(courses[i].academic > courses[index].academic) index = i;
-                }
-                if(courses[i].academic > courses[index].academic) index = i;
-            }
-            coursesChron[x] = courses[index];
-            delete courses[index];
-        }
-        coursesChron.reverse();
-        var gpaRecord;
-        var totalgpaunits = 0.0
-        var totalunits = 0.0;
-        for(var t = 1; t < coursesChron.length; t++) { //maybe later <= courseChron.....
-            if(coursesChron[t-1].grade == 'A') totalgpaunits += 4*coursesChron[t-1].units;
-            else if(coursesChron[t-1].grade == 'B') totalgpaunits += 3*coursesChron[t-1].units;
-            else if(coursesChron[t-1].grade == 'C') totalgpaunits += 2*coursesChron[t-1].units;
-            else if(coursesChron[t-1].grade == 'D') totalgpaunits += 1*coursesChron[t-1].units;
-            totalunits += coursesChron[t-1].units;
-            if(coursesChron[t].academic != coursesChron[t-1].academic) {
-                var finalTerm = parseInt(coursesChron[t-1].year.substring(0,4));
-                if(coursesChron[t-1].term == "Spring") finalTerm += 0.04;
-                else if(coursesChron[t-1].term == "Summer") finalTerm += 0.39;
-                else if(coursesChron[t-1].term == "Fall") finalTerm += 0.62
-                gpaRecord = {TERM: finalTerm, GPA: (totalgpaunits/totalunits)};
-                gpaGraphData.push(gpaRecord);
-            }
-        }
-        return gpaGraphData;
-        coursesChron[x] = courses[index];
-        delete courses[index];
-    }
-    coursesChron.reverse();
-    var gpaRecord;
-    var totalgpaunits = 0.0
-    var totalunits = 0.0;
-    for(var t = 12; t <= coursesChron.length; t++) { //maybe later <= courseChron.....
-        if(coursesChron[t-1].grade == 'A') totalgpaunits += 4*coursesChron[t-1].units;
-        else if(coursesChron[t-1].grade == 'B') totalgpaunits += 3*coursesChron[t-1].units;
-        else if(coursesChron[t-1].grade == 'C') totalgpaunits += 2*coursesChron[t-1].units;
-        else if(coursesChron[t-1].grade == 'D') totalgpaunits += 1*coursesChron[t-1].units;
-        totalunits += coursesChron[t-1].units;
-        if(t == coursesChron.length || coursesChron[t].academic != coursesChron[t-1].academic) {
-            var finalTerm = parseInt(coursesChron[t-1].year.substring(0,4));
-            if(coursesChron[t-1].term == "Spring") finalTerm += 0.04;
-            else if(coursesChron[t-1].term == "Summer") finalTerm += 0.39;
-            else if(coursesChron[t-1].term == "Fall") finalTerm += 0.62
-            gpaRecord = {TERM: finalTerm, GPA: (totalgpaunits/totalunits)};
-            gpaGraphData.push(gpaRecord);
-        } 
-    }
-    return gpaGraphData;
-}
-
-function populateGraph(){
-    restyleBtns("classByGraph");
-    Morris.Line({
-        element : 'lpcgpagraph', 
-        data: getGpaGraphData(), //edit the rest:
-        xkey:'TIME',
-        ykeys:['AMOUNT'],
-        labels:['Attendance'],
-        stacked:true,
-        lineWidth: 3.75,
-        pointSize: 4.5,
-        gridStrokeWidth: 1.25,
-        gridStrokeColor: "#303030",
-        lineColors: ["#6DD1FF"],
-        gridTextColor: "#303030",
-        gridTextWeight: "bold",
-        gridTextFamily: "Optima"
-    });
-    
-}
-
 
 
 

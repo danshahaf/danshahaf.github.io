@@ -83,15 +83,7 @@ div.content {
     text-align: left !important; 
     margin-left: 4% !important;
 }
-.imgContainer{
-    text-align: center !important; 
-    margin-right: 15% !important; 
-    margin-left: 15% !important;}
-.imgBanner{
-    height: 35%; 
-    border-radius: 5px; 
-    border: 0.1px solid black;
-}
+
 .vid{
     border: 1px solid black; 
     border-radius: 3px !important;  
@@ -399,21 +391,28 @@ div.content {
     z-index: 3
 }
 /*----- About Div ----*/
-.btn-outline-danger{
-    color:red!important; 
-    border: 0.7px solid red !important;
-}
 .resume{
     background-color:rgba(255, 255, 255, 0.45); 
     transition: 0.35s;
-    width: 100% !important;
+    width: 25% !important;
+    color:red!important; 
+    border: 0.7px solid red !important;
+    font-family: "Gill Sans" !important;
+    /* letter-spacing: 0.27em !important; */
+    float: right !important;
+}
+.sepfrombio {
+    color: #303030;
+    border: 1.25px solid #303030 !important;
 }
 .resume:hover{
     background-color: rgba(251, 223, 223, 0.856);
     -webkit-transform: scale(1.08);
     -ms-transform: scale(1.08);
     transform: scale(1.08);
-    font-weight: bolder;
+}
+.about-me-bio {
+    text-align: left !important;
 }
 .about-me {
     background-color: rgba(255, 255, 255, 0.637) !important; 
@@ -424,8 +423,19 @@ div.content {
     text-align: justify !important;
 }
 .about-me-text {
+    margin-left: 7% !important;
+    margin-right: 7% !important;
     font-weight: bold !important;
+    font-family: "Gill Sans" !important;
     font-size: 105% !important;
+}
+.imgContainer{
+    text-align: center !important; 
+    margin-right: 15% !important; 
+    margin-left: 15% !important;
+}
+.imgBanner{
+    height: 35%; 
 }
 /* ----- Projects Div ----- */
 .project-description {
@@ -438,14 +448,14 @@ div.content {
 .project-btns-container {
     align-items: left !important;
     text-align: left !important;
-    margin-left: 18% !important;
+    margin-left: 10% !important;
     margin-top: 4% !important;
 }
 
 .projects-btn {
     margin-right: 3% !important;
-  -webkit-transform: translateX(-10%) translateY(-10%);
-          transform: translateX(-10%) translateY(-10%);
+  -webkit-transform: translateX(0%) translateY(-10%);
+          transform: translateX(0%) translateY(-10%);
   background: #fff;
   width: 'auto';
   padding: 1.5% 2.5% 1.5% 2.5%;
