@@ -34,7 +34,7 @@
             <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('knowledge_div')" onmouseover="changeNavBartext('Skills')">  <i class="fa fa-wrench"></i> </a>
             <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('projects_div')" onmouseover="changeNavBartext('Projects')"> <i class="fa fa-cogs"></i> </a>
             <a id = "navbartext" class = "navbar-desc inline"></a>
-            <a class = "nav-bar-myname inline"> Shahaf Dan </a>
+            <a class = "nav-bar-myname inline" id = "navbar-text">Shahaf Dan</a>
         </header>
         <!--------------------------- CONTENT DIVISION --------------------------------->
         <div class = "content inline">
@@ -43,7 +43,7 @@
                 <!-- <h2 class = "nameText"> Shahaf Dan</h2>         -->
                 <div class = "about-me">
                     <h4 class = "centrize about-me-bio inline"><strong><i class="fa fa-angle-double-right"></i>   Full Stack Software Developer  |  Bay Area  |  dan.shachaf@gmail.com</strong></h4>
-                    <button type = "button" class = "btn btn-outline-danger inline resume" onclick = "window.open('docs/ShahafDan_Resume06072020.pdf');"> My Resume (PDF)</button>
+                    <button type = "button" class = "btn btn-outline-danger inline resume" onclick = "window.open('docs/ShahafDan_Resume06072020.pdf');"> Resume </button>
                     <br><hr class = "sepfrombio">
                     <h4 class = "about-me-text-title"> Welcome to My Portfolio !</h4>
                     <br>
@@ -123,12 +123,11 @@
                 <h2 class = "section-title"> Education </h2>
                 <div class = "sub-edu-div">
                     <div class = "bu edu" id = "lpc">
-                        <h3>Boston University</h3>
+                        <h3 class = "institution-title">Boston University</h3>
                         <p> <strong> Boston, MA | September 2020  -  May 2022 </strong> </p> 
                     </div>
-                    <br><br><br>
                     <div class = "lpc edu" id = "lpc">
-                        <h3>Las Positas College</h3>
+                        <h3 class = "institution-title">Las Positas College</h3>
                         <p> <strong> Livermore, CA | June 2018  -  May 2020 </strong> </p>
                         <h4> <u>GPA:</u> 3.83 </h4>
                         <button type = "button" class = "btn sub-edu-btn inline quarter" id = "recognitions-btn" onclick = "showlpcedu(this.id);"> Recognitions </button> 
@@ -342,9 +341,8 @@
                             </div>
                         </div>
                     </div>
-                    <br><br><br>
                     <div class = "ghs edu" id = "ghs">
-                        <h3>Granada High Shcool</h3>
+                        <h3 class = "institution-title">Granada High Shcool</h3>
                         <p> <strong> Livermore, CA | Aug. 2015  -  Jun. 2018 </strong> </p>
                         <h4> <u>GPA:</u> 4.20 </h4>
                         <p>
@@ -353,9 +351,8 @@
                             Recognized for community service, excellence in computer science, and academic performance.
                         </p>
                     </div>
-                    <br><br><br>
                     <div class = "MOR edu" id = "MOR">
-                        <h3>MOR Middle School</h3>
+                        <h3 class = "institution-title">MOR Middle/High School</h3>
                         <p> <strong> Modi'in, Israel | Aug. 2012  -  Jun. 2015 </strong> </p>
                         <p>
                             Graduated the AMAT honors program with an average grade of 97% three years in a row. <br>

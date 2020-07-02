@@ -1,3 +1,5 @@
+// const { execFile } = require("child_process");
+
 // ================ JS FOR NAV-BAR & SIDE_BAR & ACTIVITIES_BAR & PROJECTS MENU================= // 
 function showlpcedu(x){
     hideAllLpcEdu();
@@ -16,7 +18,6 @@ function hideAllLpcEdu() {
         document.getElementById(divs[i] + "-div").style.display = "none";
     }
     document.getElementById("lpcedusubfolder").style.display = "none";
-
 }
 
 function responsiveNavBar(val) {
@@ -25,7 +26,15 @@ function responsiveNavBar(val) {
         document.getElementById(divs[i] + "_div").style.display = "none";
     }
     document.getElementById(val).style.display = "block";
-
+    if(screen.width < 481) {
+        var checker = val.substring(0,val.length-4);
+        var nbt = document.getElementById("navbar-text"); //nbt = Nav Bar Text
+        if(checker == "about") nbt.innerHTML = "Shahaf Dan";
+        else if(checker == "history") nbt.innerHTML = "Experience";
+        else if(checker == "education") nbt.innerHTML = "Education";
+        else if(checker == "knowledge") nbt.innerHTML = "Skills";
+        else if(checker == "projects") nbt.innerHTML = "Projects";
+    }
 }
 
 function showActivitiesDesc(x, t) {
