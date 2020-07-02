@@ -491,14 +491,13 @@ div.content {
     font-size: 110%;
     font-weight: bold;
     text-align: justify;
-    margin-left: 20% !important;
-    width: 60% !important;
+    margin-left: 20%;
+    width: 60%;
 }
 .project-btns-container {
-    align-items: left !important;
-    text-align: left !important;
-    margin-left: 10% !important;
-    margin-top: 4% !important;
+    align-items: left ;
+    text-align: left ;
+    margin: 4% 0% 4% 10%;
 }
 
 .projects-btn {
@@ -520,7 +519,7 @@ div.content {
   -webkit-transition-delay: 0.15s;
   -webkit-transition: all 0.15s ease-out 0.15s;
   transition: all 0.15s ease-out 0.15s;
-  letter-spacing: 0.25em !important;
+  letter-spacing: 0.25em;
   font-family: "Gill Sans" !important;
 }
 .projects-btn:after, .projects-btn:before {
@@ -604,7 +603,7 @@ div.content {
     -webkit-transition-delay: 0.15s;
     -webkit-transition: all 0.15s ease-out 0.15s;
     transition: all 0.15s ease-out 0.15s;
-    letter-spacing: 0.25em !important;
+    letter-spacing: 0.25em;
     font-family: "Gill Sans" !important;
     margin-left: -7.5px;
     margin-bottom: -7.5px;
@@ -699,6 +698,7 @@ div.content {
     .section-title {
         display: none;
     }
+    /*--------- Education ---------- */
     .institution-title {
         font-size: 1.25em;
         text-align: left;
@@ -716,6 +716,7 @@ div.content {
         margin-left: 3%;
         margin-bottom: 20%;
     }
+    /*--------- Skills ---------- */
     .exps1, .exps2, .exps3 {
         display: block !important;
         width: 100% !important;
@@ -746,6 +747,104 @@ div.content {
         font-weight: bold;
         margin-top: 5%;
         padding-top: 5%;
+    }
+    /*--------- Projects ---------- */
+    .projects-btn {
+        display: inline-block !important;
+        margin-right: 1% !important;
+        -webkit-transform: translateX(0%) translateY(-10%);
+        transform: translateX(0%) translateY(-10%);
+        background: #fff;
+        width: auto;
+        padding: 1.5% 2.5% 1.5% 2.5%;
+        border: 3px solid #4ac0ee;
+        color: #4ac0ee;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        z-index: 3;
+        -moz-transition: all 0.15s ease-out 0.15s;
+        -o-transition: all 0.15s ease-out 0.15s;
+        -webkit-transition: all 0.15s ease-out;
+        -webkit-transition-delay: 0.15s;
+        -webkit-transition: all 0.15s ease-out 0.15s;
+        transition: all 0.15s ease-out 0.15s;
+        font-family: "Gill Sans" !important;
+        margin-bottom: 7px;
+        font-size: 75%;
+        letter-spacing: 0.1em;
+    }
+    .projects-btn:after, .projects-btn:before {
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        top: 100%;
+        left: 0;
+        bottom: -10px;
+        content: "";
+        z-index: 2;
+        -moz-transition: all 0.15s ease-out 0.15s;
+        -o-transition: all 0.15s ease-out 0.15s;
+        -webkit-transition: all 0.15s ease-out;
+        -webkit-transition-delay: 0.15s;
+        -webkit-transition: all 0.15s ease-out 0.15s;
+        transition: all 0.15s ease-out 0.15s;
+    }
+    .projects-btn:after, .projects-btn:before {
+        bottom: -10px;
+        content: "";
+        z-index: 2;
+        -moz-transition: all 0.15s ease-out 0.15s;
+        -o-transition: all 0.15s ease-out 0.15s;
+        -webkit-transition: all 0.15s ease-out;
+        -webkit-transition-delay: 0.15s;
+        -webkit-transition: all 0.15s ease-out 0.15s;
+        transition: all 0.15s ease-out 0.15s;
+    }
+    .projects-btn:before {
+        background: #4ac0ee;
+        top: 2px;
+        left: -7px;
+        height: 100%;
+        width: 7px;
+    }
+      .projects-btn:after {
+        width: 100%;
+        background: #4ac0ee;
+        right: 0px;
+        left: -7px;
+        height: 7px;
+    }
+    .projects-btn-clicked {
+        background: #4a7eee;
+        color: #ccc;
+        margin-right: 1% !important;
+        width: 'auto';
+        padding: 1.5% 2.5% 1.5% 2.5%;
+        border: 3px solid #4a7eee;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        z-index: 3;
+        font-family: "Gill Sans" !important;
+        outline: none;
+        margin-bottom: 5px;
+        font-size: 75%;
+        letter-spacing: 0.1em;
+        margin-left: 5px;
+        -webkit-transform: translateX(0%) translateY(-10%);
+        transform: translateX(0%) translateY(-10%);
+        -moz-transition: all 0.15s ease-out 0.15s;
+        -o-transition: all 0.15s ease-out 0.15s;
+        -webkit-transition: all 0.15s ease-out;
+        -webkit-transition-delay: 0.15s;
+        -webkit-transition: all 0.15s ease-out 0.15s;
+        transition: all 0.15s ease-out 0.15s;
+    }
+    .project-description {
+        width: 90%;
+        margin-left: 5%;
+        font-size: 90%;
     }
 }
 
