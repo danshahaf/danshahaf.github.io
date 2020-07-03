@@ -78,11 +78,6 @@ div.content {
     margin: 0% !important;
 }
 
-
-.vid{
-    border: 1px solid black; 
-    border-radius: 3px !important;  
-}
 /* timeline CSS */
 .main-timeline{ 
     font-family: 'Nunito Sans', sans-serif; }
@@ -654,11 +649,13 @@ div.content {
     }
     .nav-bar-option:active, .nav-bar-option:focus{
         background-image: linear-gradient(to right,#6C4ADC,#9C36BA) !important;
-        -webkit-background-clip: text;
-        color: transparent;
+        color: rgb(79, 249, 255) !important;
+        outline: none !important;
+        border-bottom: 3px solid rgb(79, 249, 255) !important;
         -webkit-transform: scale(1.08);
         -ms-transform: scale(1.08); 
         transform: scale(1.08);
+        transition: all 0.55s ease-in-out !important;
     }
     .nav-bar-myname {
         font-size: 140%;
