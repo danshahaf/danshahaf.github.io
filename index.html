@@ -28,12 +28,11 @@
     <body class = "body">
         <!--------------------------- HEADER: NAV-BAR --------------------------------->
         <header class = "nav-bar" id = "nav-bar">
-            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('about_div');" onmouseover="changeNavBartext('About Me')" onmou> <i class="fa fa-user"></i> </a>
-            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('history_div')" onmouseover="changeNavBartext('Experience')"> <i class = "fa fa-briefcase"></i> </a>
-            <a class = "nav-bar-option responsive inline"  onclick = "responsiveNavBar('education_div')" onmouseover="changeNavBartext('Education')">  <i class="fa fa-graduation-cap"></i> </a>
-            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('knowledge_div')" onmouseover="changeNavBartext('Skills')">  <i class="fa fa-wrench"></i> </a>
-            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('projects_div')" onmouseover="changeNavBartext('Projects')"> <i class="fa fa-cogs"></i> </a>
-            <a id = "navbartext" class = "navbar-desc inline"></a>
+            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('about_div');"> <i class="fa fa-user"></i> </a>
+            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('history_div')"> <i class = "fa fa-briefcase"></i> </a>
+            <a class = "nav-bar-option responsive inline"  onclick = "responsiveNavBar('education_div')">  <i class="fa fa-graduation-cap"></i> </a>
+            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('knowledge_div')">  <i class="fa fa-wrench"></i> </a>
+            <a class = "nav-bar-option responsive inline" onclick = "responsiveNavBar('projects_div')"> <i class="fa fa-cogs"></i> </a>
             <a class = "nav-bar-myname inline" id = "navbar-text">Shahaf Dan</a>
         </header>
         <!--------------------------- CONTENT DIVISION --------------------------------->
@@ -124,11 +123,11 @@
                 <div class = "sub-edu-div">
                     <div class = "bu edu" id = "lpc">
                         <h3 class = "institution-title">Boston University</h3>
-                        <p> <strong> Boston, MA | September 2020  -  May 2022 </strong> </p> 
+                        <p class = "institution-subtitle"> <strong> Boston, MA | September 2020  -  May 2022 </strong> </p> 
                     </div>
                     <div class = "lpc edu" id = "lpc">
                         <h3 class = "institution-title">Las Positas College</h3>
-                        <p> <strong> Livermore, CA | June 2018  -  May 2020 </strong> </p>
+                        <p class = "institution-subtitle"> <strong> Livermore, CA | June 2018  -  May 2020 </strong> </p>
                         <h4> <u>GPA:</u> 3.83 </h4>
                         <button type = "button" class = "btn sub-edu-btn inline quarter" id = "recognitions-btn" onclick = "showlpcedu(this.id);"> Recognitions </button> 
                         <button type = "button" class = "btn sub-edu-btn inline quarter" id = "activities-btn" onclick = "showlpcedu(this.id);"> Activities </button> 
@@ -174,7 +173,7 @@
                             </div>
                             <div class = "activities-content inline">
                                 <div id = "chessclub-div" class = "act-div" style = "display: none">
-                                    <h4><strong>The Chess Club - President</strong></h4>
+                                    <h4 class = "lpc-activity-title"><strong>The Chess Club - President</strong></h4>
                                     <p class = "act-date"> Novemebr 2018 - June 2020 </p> 
                                     <p class = "act-desc"> 
                                         Founded in October 2018 by myself and my classmate Sayed Hamid, the Las Positas College chess club quickly became one of the most succesfull clubs at the college.
@@ -187,7 +186,7 @@
                                     </p>
                                 </div>
                                 <div id = "ags-div" class = "act-div" style = "display: none">
-                                    <h4> Alpha Gamma Sigma (Sigma Theta ΣΘ Chapter) - President</h4>
+                                    <h4 class = "lpc-activity-title"><strong> Alpha Gamma Sigma (Sigma Theta ΣΘ Chapter) - President </strong></h4>
                                     <p class = "act-date"> February 2019 - August 2020 </p>
                                     <p class = "act-desc"> 
                                         AGS is a California state-wide honors society for community college students the emphasizes and resembles comunity services, leadership, and academic excellence.
@@ -199,7 +198,7 @@
                                     </p>
                                 </div>
                                 <div id = "studgov-div" class = "act-div"  style = "display: none">
-                                    <h4> Student Government - Director of Events </h4>
+                                    <h4 class = "lpc-activity-title"><strong> Student Government - Director of Events </strong></h4>
                                     <p class = "act-date"> Novemebr 2018 - August 2020 </p>
                                     <p class = "act-desc"> 
                                         The Las Positas College Student Government (LPCSG) is the most impactful student organization on campus. The elected representatives advocate for student interests on local, state, and national levels by lobbying legislators, attending conferences, and being members of campus governance committees.
@@ -210,7 +209,7 @@
                                     </p>
                                 </div>
                                 <div id = "compsciclub-div" class = "act-div" style = "display: none">
-                                    <h4> Math Honors Society (ΜΑΘ) - Member</h4>
+                                    <h4 class = "lpc-activity-title"><strong> Math Honors Society (ΜΑΘ) - Member </strong></h4>
                                     <p class = "act-date"> September 2018 - June 2020 </p>
                                     <p class = "act-desc"> 
                                         Mu Alpha Theta is the Math Honors Society at Las Positas College, promoting excellence, enjoyment and understanding of Mathematics amongst the students.
@@ -221,7 +220,7 @@
                                     </p>
                                 </div>
                                 <div id = "mathclub-div" class = "act-div" style = "display: none">
-                                    <h4> Committees and Involvement </h4>
+                                    <h4 class = "lpc-activity-title"><strong> Committees and Involvement </strong></h4>
                                     <p class = "act-desc"> 
                                         <i class="fa fa-angle-double-right"></i><u>ASACC Representative</u>: Represented the college in the American Student Association of Community Colleges (ASACC) annual national conference twice (2019, 2020) in Washington D.C., where I met with congressional legislators and brought to their attention concerns voiced by students.
                                         <br><br>
@@ -233,7 +232,7 @@
                                     </p>
                                 </div>
                                 <div id = "committess-div" class = "act-div" style = "display: none">
-                                    <h4> Honors Program - Scholar </h4>
+                                    <h4 class = "lpc-activity-title"><strong> Honors Program - Scholar </strong></h4>
                                     <p class = "act-desc"> 
                                         As a member of the college's honors program, I have completed 6 honors project including research papers, constructed algorithms, and softwares.
                                         The Projects spanned the subjects of Physics, Math, and Computer Science and awarded me with the recognition of an honors scholar.
@@ -243,7 +242,7 @@
                                     </p>
                                 </div>
                                 <div id = "honorsprog-div" class = "act-div" style = "display: none">
-                                    <h4> Computer Science Club - Vice President</h4>
+                                    <h4 class = "lpc-activity-title"><strong> Computer Science Club - Vice President </strong></h4>
                                     <p class = "act-date"> May 2019 - January 2020 </p>
                                     <p class = "act-desc"> 
                                         As the vice president of the computer science club at the college, I has the pleasure of sharing parts of my knowledge on a weekly basis to the tens of members in the club.
@@ -252,7 +251,7 @@
                                     </p>
                                 </div>
                                 <div class = "act-div" id = "diveteam-div" style = "display: none">
-                                    <h4> College's Dive Team - Team Leader</h4>
+                                    <h4 class = "lpc-activity-title"><strong> College's Dive Team - Team Leader </strong></h4>
                                     <p class = "act-date"> December 2018 - May 2019 </p>
                                     <p class = "act-desc">
                                         As a student athlete, I represnted Las Positas College in conferences and meets as a diver.
@@ -260,6 +259,7 @@
                                         I also lead the time as the team leader to many victories on both the local and state levels.
                                     </p>
                                 </div>
+                                <hr style = "border: 3px solid #303030;"/>
                             </div>
                         </div>
                         <!----------------------------- COLLAPSE OF CLASSES DIV -------------------------------------------->
@@ -343,9 +343,9 @@
                     </div>
                     <div class = "ghs edu" id = "ghs">
                         <h3 class = "institution-title">Granada High Shcool</h3>
-                        <p> <strong> Livermore, CA | Aug. 2015  -  Jun. 2018 </strong> </p>
+                        <p class = "institution-subtitle"> <strong> Livermore, CA | Aug. 2015  -  Jun. 2018 </strong> </p>
                         <h4> <u>GPA:</u> 4.20 </h4>
-                        <p>
+                        <p class = "institution-description">
                             Graduated as an honors student and a Pedrozzi Scholar. <br>
                             Focused on studying computer science and computational physics. <br>
                             Recognized for community service, excellence in computer science, and academic performance.
@@ -353,8 +353,8 @@
                     </div>
                     <div class = "MOR edu" id = "MOR">
                         <h3 class = "institution-title">MOR Middle/High School</h3>
-                        <p> <strong> Modi'in, Israel | Aug. 2012  -  Jun. 2015 </strong> </p>
-                        <p>
+                        <p class = "institution-subtitle"> <strong> Modi'in, Israel | Aug. 2012  -  Jun. 2015 </strong> </p>
+                        <p class = "institution-description">
                             Graduated the AMAT honors program with an average grade of 97% three years in a row. <br>
                             Was destined to enter a software engineering program of the Israeli military.
                         </p>
@@ -400,6 +400,7 @@
                         <div class = "exps-items"><h5> MatLab   </h5><img src = "Logos/MatLab-logo.png" class = "logo-img"></div>
                         <div class = "exps-items"><h5> GnuOctave   </h5><img src = "Logos/GnuOctave-logo.png" class = "logo-img"></div>
                     </div>
+                    <br><br><br>
                 </div>
                 <!-- INSERTION ON TIMELAPSE VIDEO GALLERY -->
                 <!-- <iframe id = "vid" class = "embed-responsive-item vid" src = "shahaf-pics/vid-1.mp4" allowfullscreen></iframe> -->

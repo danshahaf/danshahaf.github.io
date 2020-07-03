@@ -3,13 +3,17 @@
 // ================ JS FOR NAV-BAR & SIDE_BAR & ACTIVITIES_BAR & PROJECTS MENU================= // 
 function showlpcedu(x){
     hideAllLpcEdu();
-    document.getElementById(x.substring(0,x.length-4)+'-div').style.display = "block";
-    document.getElementById("lpcedusubfolder").style.display = "inline-block";
-}
-
-function changeNavBartext(x) {
-    document.getElementById('navbartext').innerHTML = ""; //clear
-    // document.getElementById('navbartext').innerHTML = x; //insert
+    var folder = document.getElementById("lpcedusubfolder");
+    if(screen.width < 481) {
+        var diva = document.getElementById(x.substring(0,x.length-4)+'-div');
+        if(diva.style.display == "block") diva.style.display = "none";
+        else diva.style.display = "block";
+        folder.style.display = "block";
+    }
+    else {
+        document.getElementById(x.substring(0,x.length-4)+'-div').style.display = "block";
+        folder.style.display = "inline-block";
+    }
 }
 
 function hideAllLpcEdu() {
