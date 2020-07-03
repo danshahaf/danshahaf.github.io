@@ -761,6 +761,9 @@ div.content {
         font-size: 75%;
         margin-bottom: 20px;
     }
+    .lpc #classes-btn, .lpc #projects-btn{
+        display: none !important;
+    } 
     /*--------- Skills ---------- */
     .exps1, .exps2, .exps3 {
         display: block !important;
