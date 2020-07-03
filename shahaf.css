@@ -45,6 +45,9 @@ div.content {
     width: 17.5% !important;
     margin-right: 1% !important;
 }
+iframe {
+    border: none !important; /* overrider 1px solid black that is the default */
+}
 
 /* //not sure where it goes: */
 .sub-proj-btn{
@@ -454,34 +457,36 @@ div.content {
     width: 100% !important;
     align-items: right !important;
     text-align: right !important;
+    display: flex;
+
 }
-.gallery-item, .gallery-item-vid {
+.gallery-item {
     border: none !important;
     /* padding-top: 100% !important; */
     width: 20% !important;
     margin: 0.55% !important;
     box-shadow: 10px 10px 5px grey;
-}
-.gallery-item-vid {
-    /* position: fixed; */
+    text-align: center;
+    align-items: center;
     object-fit: cover !important;
     overflow: hidden;
-    top: 100px !important;
+    flex: 1;
+    margin-bottom: 100%;
+}
+.gallery-item-video {
+    /* position: relative; */
+    overflow: hidden;
+    width: 175%;
+    object-fit: cover !important;
+    right: 75px;
+    vertical-align: auto !important;
 
 }
-.gallery-item-vid iframe {
-    padding: 0 !important;
-    display: block !important;
-    margin: 0 !important;
-    border: none !important;
-    position: relative !important; 
-    /* background-size: cover !important; */
-    left: -25% !important;
-    /* z-index:-1;  */
-    /* top: 100px !important; */
-    /* height: 300px !important; */
-    object-fit: cover !important;
-}
+/* .gallery-item-video-container {
+    display: inline-block !important;
+    position: absolute;
+    margin-right: 20.6%;
+} */
 /* ----- Projects Div ----- */
 .project-description {
     font-size: 110%;
