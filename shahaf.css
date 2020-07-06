@@ -653,8 +653,8 @@ iframe {
         margin-top: 5%;
     }
     .nav-bar-option:active, .nav-bar-option:focus{
-        background-image: linear-gradient(to right,#6C4ADC,#9C36BA) !important;
         color: rgb(79, 249, 255) !important;
+        background-image: rgb(79, 249, 255) !important;
         outline: none !important;
         border-bottom: 3px solid rgb(79, 249, 255) !important;
         -webkit-transform: scale(1.08);
