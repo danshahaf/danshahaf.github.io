@@ -57,7 +57,7 @@ function showActivitiesDesc(x, t) {
 }
 
 function showAProject(x) {
-    for(var i = 1; i < 4; i++){
+    for(var i = 1; i < 5; i++){
         document.getElementById("projects-div-"+i).style.display = "none";
         document.getElementById("projects-btn-"+i).className = "projects-btn inline";
     }
