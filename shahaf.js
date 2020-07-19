@@ -1,29 +1,21 @@
 // const { execFile } = require("child_process");
 
+// ================ EDUCATION TAB BUTTONS ROTATION ON CLICK ================= // 
+$("#lpc-more-btn").click(function() {
+    $("#lpc-more-btn").toggleClass('flip'); //180 rotation
+});
+$("#ghs-more-btn").click(function() {
+    $("#ghs-more-btn").toggleClass('flip'); //180 rotation
+});
+$("#mor-more-btn").click(function() {
+    $("#mor-more-btn").toggleClass('flip'); //180 rotation
+});
+$("#bu-more-btn").click(function() {
+    $("#bu-more-btn").toggleClass('flip'); //180 rotation
+});
+
+
 // ================ JS FOR NAV-BAR & SIDE_BAR & ACTIVITIES_BAR & PROJECTS MENU================= // 
-function showlpcedu(x){
-    hideAllLpcEdu();
-    var folder = document.getElementById("lpcedusubfolder");
-    if(screen.width < 481) {
-        var diva = document.getElementById(x.substring(0,x.length-4)+'-div');
-        if(diva.style.display == "block") diva.style.display = "none";
-        else diva.style.display = "block";
-        folder.style.display = "block";
-    }
-    else {
-        document.getElementById(x.substring(0,x.length-4)+'-div').style.display = "block";
-        folder.style.display = "inline-block";
-    }
-}
-
-function hideAllLpcEdu() {
-    var divs = ["recognitions", "activities", "classes", "projects"];
-    for(var i = 0; i < divs.length; i++) {
-        document.getElementById(divs[i] + "-div").style.display = "none";
-    }
-    document.getElementById("lpcedusubfolder").style.display = "none";
-}
-
 function responsiveNavBar(val) {
     var divs = ["about", "history", "education", "knowledge", "projects"];
     for(var i = 0; i < divs.length; i++) {
@@ -39,21 +31,6 @@ function responsiveNavBar(val) {
         else if(checker == "knowledge") nbt.innerHTML = "Skills";
         else if(checker == "projects") nbt.innerHTML = "Projects";
     }
-}
-
-function showActivitiesDesc(x, t) {
-    //display:
-    var divs = ["chessclub-div", "ags-div", "studgov-div", "compsciclub-div", "mathclub-div", "committess-div", "honorsprog-div", "diveteam-div"];
-    for(var i = 0; i < divs.length; i++) {
-        document.getElementById(divs[i]).style.display = "none";
-    }
-    document.getElementById(x).style.display = "block";
-    //change btn style:
-    var btns = document.getElementsByClassName("item-activities-list");
-    for(var i = 0; i < btns.length; i++) {
-        btns[i].style.boxShadow = "-3px -3px 7px #FFFFFF73, 3px 3px 5px rgba(94, 104, 121, 0.288)";
-    }
-    t.style.boxShadow = "inset -4px -4px 8px #FFFFFF53, inset 4px 4px 5px rgba(94, 104, 121, 0.388)";
 }
 
 function showAProject(x) {
@@ -113,249 +90,5 @@ const course26 = new Course('Kinesiology','SW1','Introduction to Swimming','A','
 
 var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course25, course26];
 // ============== END OF JSON CLASSES =================//
-
-// ================ POPULATE ORIGINAL TABLE ================= //
-var thead = document.getElementById("classesTableHead");
-var tbody = document.getElementById("classesTableBody");
-// ---------- populating: ---------------
-var row = thead.insertRow(0);    
-var cell = row.insertCell(0);
-cell.innerHTML = "<strong>Name</strong>";
-var cell = row.insertCell(1);
-cell.innerHTML = "<strong>Subject</strong>";
-var cell = row.insertCell(2);
-cell.innerHTML = "<strong>Grade</strong>";
-var cell = row.insertCell(3);
-cell.innerHTML = "<strong>Academic Term</strong>";
-for(var i = courses.length - 1; i > -1; i--)
-{
-    var row = tbody.insertRow(0);    
-    var cell = row.insertCell(0);
-    cell.innerHTML = courses[i].name;
-    var cell = row.insertCell(1);
-    cell.innerHTML = courses[i].id;
-    var cell = row.insertCell(2);
-    cell.innerHTML = "<strong>" + courses[i].grade + "</strong>";
-    var cell = row.insertCell(3);
-    cell.innerHTML = courses[i].academic.substring(0,4) + courses[i].academic.substring(5, courses[i].academic.length);
-}
-
-// ============= FUCTIONS =============:::
-function coursesAlphabetically()
-{
-    restyleBtns("classByName");
-    // ---------- preparations: ---------------
-    var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course24, course25];
-    cleanPrevTable();
-    // ---------- sorting: ---------------
-    var coursesAlphabetically = new Array(courses.length);
-    for (var x = 0; x < coursesAlphabetically.length; x++)
-    {
-        var counter = 0;
-        var index = counter;
-        while(courses[counter] == null) {counter++}
-        index = counter;
-        for(var i = counter; i < courses[i].length; i++)
-        {
-            if(courses[i] != null)
-            {
-                if(courses[i].name > courses[index].name) index = i;
-            }
-        }
-        coursesAlphabetically[x] = courses[index];
-        delete courses[index];
-    }
-    // ---------- populating: ---------------
-    var row = thead.insertRow(0);    
-    var cell = row.insertCell(0);
-    cell.innerHTML = "<strong>Name</strong>";
-    var cell = row.insertCell(1);
-    cell.innerHTML = "<strong>Subject</strong>";
-    var cell = row.insertCell(2);
-    cell.innerHTML = "<strong>Grade</strong>";
-    var cell = row.insertCell(3);
-    cell.innerHTML = "<strong>Academic Term</strong>";
-    for(var i = 0; i < coursesAlphabetically.length; i++)
-    {
-        var row = tbody.insertRow(i);    
-        var cell = row.insertCell(0);
-        cell.innerHTML = coursesAlphabetically[i].name;
-        var cell = row.insertCell(1);
-        cell.innerHTML = coursesAlphabetically[i].id;
-        var cell = row.insertCell(2);
-        cell.innerHTML = "<strong>" + coursesAlphabetically[i].grade + "</strong>";
-        var cell = row.insertCell(3);
-        cell.innerHTML = coursesAlphabetically[i].academic.substring(0,4) + coursesAlphabetically[i].academic.substring(5, coursesAlphabetically[i].academic.length);
-    }
-
-    return;
-}
-
-function coursesBySubject()
-{
-    restyleBtns("classBySubject");
-    // ---------- preparations: ---------------
-    var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course24, course25];
-    cleanPrevTable();
-    // ---------- sorting: ---------------
-    var subjectiveCourses = new Array(courses.length);
-    for (var x = 0; x < subjectiveCourses.length; x++)
-    {
-        var counter = 0;
-        var index = counter;
-        while(courses[counter] == null) {counter++}
-        index = counter;
-        for(var i = counter; i < courses.length; i++)
-        {
-            if(courses[i] != null)
-            {
-                if(courses[i].id < courses[index].id) index = i;
-            }
-        }
-        subjectiveCourses[x] = courses[index];
-        delete courses[index];
-    }
-    subjectiveCourses.reverse();
-    // ---------- populating: ---------------
-    var row = thead.insertRow(0);    
-    var cell = row.insertCell(0);
-    cell.innerHTML = "<strong>Subject</strong>";
-    var cell = row.insertCell(1);
-    cell.innerHTML = "<strong>Name</strong>";
-    var cell = row.insertCell(2);
-    cell.innerHTML = "<strong>Grade</strong>";
-    var cell = row.insertCell(3);
-    cell.innerHTML = "<strong>Academic Term</strong>";
-    for(var i = 0; i < subjectiveCourses.length; i++)
-    {
-        var row = tbody.insertRow(0);    
-        var cell = row.insertCell(0);
-        cell.innerHTML = subjectiveCourses[i].id;
-        var cell = row.insertCell(1);
-        cell.innerHTML = subjectiveCourses[i].name;
-        var cell = row.insertCell(2);
-        cell.innerHTML = "<strong>" + subjectiveCourses[i].grade + "</strong>";
-        var cell = row.insertCell(3);
-        cell.innerHTML = subjectiveCourses[i].academic.substring(0,4) + subjectiveCourses[i].academic.substring(5, subjectiveCourses[i].academic.length);
-    }
-    return;
-}
-
-function coursesByGrade()
-{
-    restyleBtns("classByGrade");
-     // ---------- preparations: ---------------
-    var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course24, course25];
-    cleanPrevTable();
-    // ---------- sorting: ---------------
-    var courses = courses;
-    var coursesg = new Array(courses.length);
-    for (var x = 0; x < coursesg.length; x++)
-    {
-        var counter = 0;
-        var index = counter;
-        while(courses[counter] == null) {counter++;}
-        index = counter;
-        for(var i = counter; i < courses.length; i++)
-        {
-            if(courses[i] != null)
-            {
-                if(courses[i].grade > courses[index].grade) index = i;
-            }
-        }
-        coursesg[x] = courses[index];
-        delete courses[index];
-    }
-    // ---------- populating: ---------------
-    var row = thead.insertRow(0);    
-    var cell = row.insertCell(0);
-    cell.innerHTML = "<strong>Grade</strong>";
-    var cell = row.insertCell(1);
-    cell.innerHTML = "<strong>Name</strong>";
-    var cell = row.insertCell(2);
-    cell.innerHTML = "<strong>Subject</strong>";
-    var cell = row.insertCell(3);
-    cell.innerHTML = "<strong>Academic Term</strong>";
-    for(var i = 0; i < coursesg.length; i++)
-    {
-        var row = tbody.insertRow(0);    
-        var cell = row.insertCell(0);
-        cell.innerHTML = "<strong>" + coursesg[i].grade + "</strong>";
-        var cell = row.insertCell(1);
-        cell.innerHTML = coursesg[i].name;
-        var cell = row.insertCell(2);
-        cell.innerHTML = coursesg[i].id;
-        var cell = row.insertCell(3);
-        cell.innerHTML = coursesg[i].academic.substring(0,4) + coursesg[i].academic.substring(5, coursesg[i].academic.length);
-    }
-    return;
-}
-
-function coursesChronoligically()
-{
-    restyleBtns("classByTerm");
-    // ---------- preparations: ---------------
-    var courses = [course01, course02, course03, course04, course05, course06, course07, course08, course09, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course24, course25];
-    cleanPrevTable();
-    // ---------- sorting: ---------------
-    var coursesChron = new Array(courses.length);
-    for (var x = 0; x < coursesChron.length; x++)
-    {
-        var counter = 0;
-        var index = counter;
-        while(courses[counter] == null) {counter++}
-        index = counter;
-        for(var i = 0; i < courses.length; i++) 
-        {
-            if(courses[i] != null)
-            {
-                if(courses[i].academic > courses[index].academic) index = i;
-            }
-        }
-        coursesChron[x] = courses[index];
-        delete courses[index];
-    }
-    // ---------- populating: ---------------
-    var row = thead.insertRow(0);    
-    var cell = row.insertCell(0);
-    cell.innerHTML = "<strong>Academic Term</strong>";
-    var cell = row.insertCell(1);
-    cell.innerHTML = "<strong>Name</strong>";
-    var cell = row.insertCell(2);
-    cell.innerHTML = "<strong>Subject</strong>";
-    var cell = row.insertCell(3);
-    cell.innerHTML = "<strong>Grade </strong>";
-    for(var i = 0; i < coursesChron.length; i++)
-    {
-        var row = tbody.insertRow(i);    
-        var cell = row.insertCell(0);
-        cell.innerHTML = coursesChron[i].academic.substring(0,4) + coursesChron[i].academic.substring(5, coursesChron[i].academic.length);
-        cell = row.insertCell(1);
-        cell.innerHTML = coursesChron[i].name;
-        cell = row.insertCell(2);
-        cell.innerHTML = coursesChron[i].id;
-        cell = row.insertCell(3);
-        cell.innerHTML = "<strong>" + coursesChron[i].grade + "</strong>";
-    }
-    return;
-}
-
-function cleanPrevTable()
-{
-    thead.deleteRow(0);
-    for(var z = courses.length - 1; z > -1; z--) {tbody.deleteRow(z);}
-    return;
-}
-
-function restyleBtns(x) {
-    btns = ["classByName", "classBySubject", "classByGrade", "classByTerm"];//, "classByGraph"];
-    for(var i = 0; i <btns.length; i++) {
-        document.getElementById(btns[i]).style.boxShadow = "-3px -3px 7px #FFFFFF73, 3px 3px 5px rgba(94, 104, 121, 0.288)";
-    }
-    document.getElementById(x).style.boxShadow = "inset -3px -3px 7px #FFFFFF73, inset 3px 3px 5px rgba(94, 104, 121, 0.288)";
-    document.getElementById('lpcgpagraph').style.display = "none";
-    document.getElementById('lpcclassestable').style.display = "block";
-}
-
 
 

@@ -245,15 +245,34 @@ iframe {
     transition: all 0.55s ease-in-out !important;
 }
 /*----- Education Div ----- */
+#education_div{
+    font-family: "Gill Sans" !important;
+}
 .recognitions-div {
     padding: 0.75% 1% 1.5% 1.25;
     background: #DDE1E7 !important;    
     margin-top: 1.75% !important
 }
 .edu{
-    margin-right: 7%; 
-    margin-left: 7%;
-    margin-bottom: 12%;
+    margin-right: 4%; 
+    margin-left: 4%;
+    margin-bottom: 3%;
+}
+.edu div {
+    margin-left: 3%;
+}
+.edu .edu-btn {
+    background-color: rgb(0, 110, 255);
+    color: #EEEEEE;
+    font-size: 130% !important;
+    font-weight: bolder !important;
+    margin-left: 2%;
+    -moz-transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    transition: transform 0.5s;
+}
+.flip {
+    transform: rotate(-180deg);
 }
 .award-listing {
     text-align: left;
@@ -262,7 +281,7 @@ iframe {
 .sub-edu-div {
     text-align: justify;
     width: 90% ;
-    margin-left: 10%;
+    margin-left: 3%;
 }
 .sub-edu-btn:hover, .sub-proj-btn:hover, .sub-edu-btn-fold:hover {
     background-position: right center; 
@@ -772,6 +791,8 @@ iframe {
     }
     .institution-description {
         font-size: 85%;
+        margin-left: 3% !important;
+        padding-left: 3%;
     }
     .recognitions-div {
         padding-left: 10px;

@@ -23,6 +23,10 @@
 
         <!-- MY CSS -->
         <link rel = "stylesheet" type = "text/css" href = "shahaf.css">
+
+        <!-- MY JavaScript -->
+        <script src = "shahaf.js" type = "text/JavaScript"></script>
+
     </head>
 
     <body class = "body">
@@ -38,7 +42,7 @@
         <!--------------------------- CONTENT DIVISION --------------------------------->
         <div class = "content inline">
             <!--------------------------- ABOUT ME COLLAPSE --------------------------------->
-            <div id = "about_div" style = "display: block">
+            <div id = "about_div" style = "display: none">
                 <!-- <h2 class = "nameText"> Shahaf Dan</h2>         -->
                 <div class = "about-me">
                     <h4 class = "centrize about-me-bio inline"><strong><i class="fa fa-angle-double-right"></i>   Full Stack Software Developer  |  Bay Area  |  dan.shachaf@gmail.com</strong></h4>
@@ -137,248 +141,87 @@
                 
             </div>
             <!-------------------------- EDUCATION COLLAPSE -------------------------->
-            <div id = "education_div" class = "info_div" style = "display: none">
-                <h2 class = "section-title"> Education </h2>
+            <div id = "education_div" class = "info_div" style = "display: block">
                 <div class = "sub-edu-div">
                     <div class = "bu edu" id = "lpc">
-                        <h3 class = "institution-title">Boston University</h3>
+                        <h3 class = "institution-title inline">Boston University</h3><button class = "btn edu-btn inline" data-toggle = "collapse" data-target = "#bu-more" aria-expanded = "false" aria-controls = "collapseExample" id = "bu-more-btn"><i class = "fa fa-angle-double-down"></i></button>
                         <p class = "institution-subtitle"> <strong> Boston, MA | September 2020  -  May 2022 </strong> </p> 
+                        <div id = "bu-more" class = "collapse">
+                            <p class = "institution-description">
+                                <strong> Bachelor's of Arts</strong>: Computer Science and Mathematics<br>
+                            </p>
+                        </div>
                     </div>
                     <div class = "lpc edu" id = "lpc">
-                        <h3 class = "institution-title">Las Positas College</h3>
-                        <p class = "institution-subtitle"> <strong> Livermore, CA | June 2018  -  May 2020 </strong> </p>
-                        <h4> <u>GPA:</u> 3.83 </h4>
-                        <button type = "button" class = "btn sub-edu-btn inline quarter" id = "recognitions-btn" onclick = "showlpcedu(this.id);"> Recognitions </button> 
-                        <button type = "button" class = "btn sub-edu-btn inline quarter" id = "activities-btn" onclick = "showlpcedu(this.id);"> Activities </button> 
-                        <button type = "button" class = "btn sub-edu-btn inline quarter" id = "classes-btn" onclick = "showlpcedu(this.id);"> Classes </button> 
-                        <button type = "button" class = "btn sub-edu-btn inline quarter" id = "projects-btn" onclick = "showlpcedu(this.id);"> Projects </button> 
-                        <button type = "button" class = "btn sub-edu-btn-fold" onclick = "hideAllLpcEdu();" id = "lpcedusubfolder" style = "display: none; float: right !important;"><i class="fa fa-chevron-up"></i></button>
-                        <!----------------------------- COLLAPSE OF DEGREES, AWARDS, RECOGNITIONS DIV ------------------------------------>
-                        <div id = "recognitions-div" class = "recognitions-div" style = "display: none">
-                            <h5><u>Degrees & Certifications</u></h3>
-                            <ul class = "award-listing">
-                                <li><strong>Associates of Arts</strong>: Computer Studies</li>
-                                <li><strong>Associates of Sciences</strong>: Mathematics</li>
-                                <li><strong>Associates of Sciences</strong>: Physics</li>
-                                <li><strong>Certification</strong>: Computer Programming</li>
-                                <li><strong>Certification</strong>: LPI (Linux Professional Institute) Linux Programming</li>
-                            </ul>
-                            <Br>
-                            <h5><u>Scholarships</u></h3>
-                            <ul class = "award-listing">
-                                <li><strong>Scholarship</strong>: Alpha Gamma Sigma Honors Society California State Mantovani Academic and Leadership Scholarship</li>
-                                <li><strong>Scholarship</strong>: The Mathematics, Engineering and Computer Science Las Positas College Department Scholarship</li>
-                                <li><strong>Scholarship</strong>: American Council of Engineering Companies: Bay Area Chapter Scholarship</li>
-                            </ul>
-                            <br>
-                            <h5><u>Awards</u></h3>
-                            <ul class = "award-listing">
-                                <li><strong>Award</strong>: 2018-2019 Locally Top Ranked Math Honors Society AMATYC Exam Performance</li>
-                                <li><strong>Award</strong>: 2019-2020 Locally Top Ranked Math Honors Society AMATYC Exam Performance</li>
-                                <li><strong>Recognition of Completion</strong>: Honors Program Scholar (For the Completion of 6 honors courses</li>
-                            </ul>
-                        </div>
-                        <!----------------------------- COLLAPSE OF ACTIVITIES DIV -------------------------------------->
-                        <div id = "activities-div" class = "activities_div" style = "display: none">
-                            <div class = "activities-menu inline">
-                                <button class = "upper-item-activities-list item-activities-list" onclick = 'showActivitiesDesc("chessclub-div", this)'><strong> Chess Club </strong><br>  Founder & President </button>
-                                <button class = "item-activities-list" onclick = 'showActivitiesDesc("ags-div", this)'><strong> Alpha Gamma Sigma </strong><br> President </button>
-                                <button class = "item-activities-list" onclick = 'showActivitiesDesc("studgov-div", this)'><strong> Student Government </strong><br> Director of Events </button>
-                                <button class = "item-activities-list" onclick = 'showActivitiesDesc("compsciclub-div", this)'><strong> Mu Alpha Theta </strong><br> Member </button>
-                                <button class = "item-activities-list" onclick = 'showActivitiesDesc("mathclub-div", this)'><strong> Committees and Representation </strong> </button>
-                                <button class = "item-activities-list" onclick = 'showActivitiesDesc("committess-div", this)'><strong> Honors Program </strong><br> Schoar </button>
-                                <button class = "item-activities-list" onclick = 'showActivitiesDesc("honorsprog-div", this)'><strong>Computer Science Club</strong><br> Vice President </button>
-                                <button class = "lower-item-activities-list item-activities-list" onclick = 'showActivitiesDesc("diveteam-div", this)'><strong> Collegiate Dive Team </strong><br> Team Leader </button>
-                            </div>
-                            <div class = "activities-content inline">
-                                <div id = "chessclub-div" class = "act-div" style = "display: none">
-                                    <h4 class = "lpc-activity-title"><strong>The Chess Club - President</strong></h4>
-                                    <p class = "act-date"> Novemebr 2018 - June 2020 </p> 
-                                    <p class = "act-desc"> 
-                                        Founded in October 2018 by myself and my classmate Sayed Hamid, the Las Positas College chess club quickly became one of the most succesfull clubs at the college.
-                                        <br><br>
-                                        The club grew quickly to sizes reaching at times to 40 people in a room!
-                                        <br><br>
-                                        As the president, it was my duty and pleaure to oversee the club's management, outreach, events, and chair the meetings. 
-                                        <br><br>
-                                        On a weekly basis, I prepared presentations for our members, who were able to gather along to play chess, learn new strtegies, meet friends, learn about the history of the game, and emjoy a safe space where they can take a break from the busy academic routine.
-                                    </p>
-                                </div>
-                                <div id = "ags-div" class = "act-div" style = "display: none">
-                                    <h4 class = "lpc-activity-title"><strong> Alpha Gamma Sigma (Sigma Theta ΣΘ Chapter) - President </strong></h4>
-                                    <p class = "act-date"> February 2019 - August 2020 </p>
-                                    <p class = "act-desc"> 
-                                        AGS is a California state-wide honors society for community college students the emphasizes and resembles comunity services, leadership, and academic excellence.
-                                        <br><br>
-                                        After elected as the president of one of the biggest chapters (ΣΘ at Las Positas College), it was my duty to oversee the organization, manage fundraisers, create events, and overlook the community service of nearly 100 members.
-                                        As I chaired weekly meetings, I created a community of people who are truly happy and inspired to contribute to their communities and to excel academically and as leaders.
-                                        <br><br>
-                                        Additionally, I was awarded the state most prestigious award (Mantovani Scholarship)as a recognition of my achievements both as a leader and academically.
-                                    </p>
-                                </div>
-                                <div id = "studgov-div" class = "act-div"  style = "display: none">
-                                    <h4 class = "lpc-activity-title"><strong> Student Government - Director of Events </strong></h4>
-                                    <p class = "act-date"> Novemebr 2018 - August 2020 </p>
-                                    <p class = "act-desc"> 
-                                        The Las Positas College Student Government (LPCSG) is the most impactful student organization on campus. The elected representatives advocate for student interests on local, state, and national levels by lobbying legislators, attending conferences, and being members of campus governance committees.
-                                        <br><br>
-                                        As the director of events, I had created tens of events for the student body with a simple objective to phase the campus cultural identity to be more friendly towards the student body. 
-                                        <br><br>
-                                        Under my term, student participation increased by 300%, and student have reported to feel more connected to the school. As a leader in the oragnization, I have promoted advocacy for student equity, ineterests, success, and campus engagement.
-                                    </p>
-                                </div>
-                                <div id = "compsciclub-div" class = "act-div" style = "display: none">
-                                    <h4 class = "lpc-activity-title"><strong> Math Honors Society (ΜΑΘ) - Member </strong></h4>
-                                    <p class = "act-date"> September 2018 - June 2020 </p>
-                                    <p class = "act-desc"> 
-                                        Mu Alpha Theta is the Math Honors Society at Las Positas College, promoting excellence, enjoyment and understanding of Mathematics amongst the students.
-                                        <br><br> 
-                                        As a member of the club, I was encouraged to take the AMATYC Mathematical-unique-thinkging test, in which I have places amongst the top 5 scorers two years in a row. 
-                                        <br><br>
-                                        Additionally, I have been recognized as a scholar and an outstanding member due to my perfromance as a student in Math classes.
-                                    </p>
-                                </div>
-                                <div id = "mathclub-div" class = "act-div" style = "display: none">
-                                    <h4 class = "lpc-activity-title"><strong> Committees and Involvement </strong></h4>
-                                    <p class = "act-desc"> 
-                                        <i class="fa fa-angle-double-right"></i><u>ASACC Representative</u>: Represented the college in the American Student Association of Community Colleges (ASACC) annual national conference twice (2019, 2020) in Washington D.C., where I met with congressional legislators and brought to their attention concerns voiced by students.
-                                        <br><br>
-                                        <i class="fa fa-angle-double-right"></i><u>District Technology Coordination Committee</u>: As a representative of the student body, I pushed for technological solutions to the benefit the students and innovative technologies to better the student experience. 
-                                        <br><br>
-                                        <i class="fa fa-angle-double-right"></i><u>Student Events Committee</u>: Chaired the student events committee as the student elected Director of Events and lead to many more new events and increased student participation by 300% .
-                                        <br><br>
-                                        <i class="fa fa-angle-double-right"></i><u>Student Achievment and Equity Committee</u>: Served as the representative on the SAE Committee, advocating for ideas to increase student equity. <br>
-                                    </p>
-                                </div>
-                                <div id = "committess-div" class = "act-div" style = "display: none">
-                                    <h4 class = "lpc-activity-title"><strong> Honors Program - Scholar </strong></h4>
-                                    <p class = "act-desc"> 
-                                        As a member of the college's honors program, I have completed 6 honors project including research papers, constructed algorithms, and softwares.
-                                        The Projects spanned the subjects of Physics, Math, and Computer Science and awarded me with the recognition of an honors scholar.
-                                        <br><br>
-                                        Click here to read more about these projects !
-                                        <a onclick = "showlpcedu('projects-btn');" style = "color: blue !important;"><u> Honors Projects </u></a>
-                                    </p>
-                                </div>
-                                <div id = "honorsprog-div" class = "act-div" style = "display: none">
-                                    <h4 class = "lpc-activity-title"><strong> Computer Science Club - Vice President </strong></h4>
-                                    <p class = "act-date"> May 2019 - January 2020 </p>
-                                    <p class = "act-desc"> 
-                                        As the vice president of the computer science club at the college, I has the pleasure of sharing parts of my knowledge on a weekly basis to the tens of members in the club.
-                                        <br><br>
-                                        As we went to hackathons, field trips, and visited various software companies in the heart of the Silicon Valley, Along wit the president, I lead our group of young programmers in a path of further educating ourselves about the endless field of computer science.
-                                    </p>
-                                </div>
-                                <div class = "act-div" id = "diveteam-div" style = "display: none">
-                                    <h4 class = "lpc-activity-title"><strong> College's Dive Team - Team Leader </strong></h4>
-                                    <p class = "act-date"> December 2018 - May 2019 </p>
-                                    <p class = "act-desc">
-                                        As a student athlete, I represnted Las Positas College in conferences and meets as a diver.
-                                        <br><br>
-                                        I also lead the time as the team leader to many victories on both the local and state levels.
-                                    </p>
-                                </div>
-                                <hr style = "border: 3px solid #303030;"/>
-                            </div>
-                        </div>
-                        <!----------------------------- COLLAPSE OF CLASSES DIV -------------------------------------------->
-                        <div id = "classes-div" class = "classes_div" style = "display: none"> <br>
-                            <div class = "classes" id = "by_grade">
-                                <!-- <p class = "inline"> Go By: </p> -->
-                                <button class = "btn fifth courses-btn inline" id = "classByName" onclick = "coursesAlphabetically()"><strong> Name </strong></button>     
-                                <button class = "btn fifth courses-btn inline" id = "classBySubject" onclick = "coursesBySubject()"> <strong> Subject </strong> </button>
-                                <button class = "btn fifth courses-btn inline" id = "classByGrade" onclick = "coursesByGrade()"> <strong> Grade </strong> </button>
-                                <button class = "btn fifth courses-btn inline" id = "classByTerm" onclick = "coursesChronoligically()"> <strong> Term </strong> </button> 
-                                <!-- <button class = "btn fifth courses-btn inline" id = "classByGraph" onclick = "populateGraph();"><strong>GPA Graph</strong></button> -->
-                                <br><hr class = "sepClassesTable">
-                                <table class = "table classesTable" id = "lpcclassestable">
-                                    <thead id = "classesTableHead"></thead>
-                                    <tbody id = "classesTableBody"></tbody>
-                                </table>
-                                <div id = "lpcgpagraph" style = "display: none"></div>
-                            </div>                  
-                        </div>
-                        <!----------------------------- COLLAPSE OF PROJECTS DIV --------------------------------------->
-                        <div id = "projects-div" style = "display: none"> <br>
-                            <div class = "projectTableContainer">
-                                <table class = "table projectTable">
-                                    <thead class = "tablePart">
-                                        <tr>
-                                            <th scope="col">Class</th>
-                                            <th scope="col">Research Project Name</th>
-                                            <th scope="col">See for Yourself</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class = "tablePart" id = "projectTableBody">
-                                        <tr class = "tableRow">
-                                            <td class = "projectName"><strong>Physics</strong>:<br> Electricity and Magnetism</td>
-                                            <td>Solar Panels: Efficiency, Mechanism, and Applications</td>
-                                            <td class = "see-project-col"><button type = "button" class="btn w45 lpc-projects-btn" onclick = "window.open('docs/phy1c_abs.pdf');"> Abs. </button>&nbsp;<button type = "button" class = "btn   ml2 w45 lpc-projects-btn" onclick = "window.open('docs/proj.pdf');"> Paper </button></td>
-                                        </tr>
-                                        <tr class = "tableRow">
-                                            <td class = "projectName"><strong>Computer Science</strong>:<br> Java Programming</td>
-                                            <td>MyEvents - Management WebApp</td>
-                                            <td class = "see-project-col"><button type = "button" class="btn w94 lpc-projects-btn" onclick = "window.open('docs/csci19a_abs.pdf');">Abstract</button></td>
-                                        </tr>
-                                        <tr class = "tableRow">
-                                            <td class = "projectName"><strong>Computer Science</strong>:<br> Data Structures</td>
-                                            <td>Dictionary Tree: Customized Data Structure</td>
-                                            <td class = "see-project-col"><button type = "button" class="btn w45 lpc-projects-btn" onclick = "window.open('docs/cs20_abs.pdf');"> Abs. </button>&nbsp;<form class = "inline ml2 w45" action = "https://www.github.com/ShahafDan25/DataStructures-CPP/tree/master/A12_DictionaryTree"><button class = "btn   w100 lpc-projects-btn"> Code </button></form></td>
-                                        </tr>
-                                        <tr class = "tableRow">
-                                            <td class = "projectName"><strong>Computer Science</strong>:<br> Assembly Programming</td>
-                                            <td>Assembler Movie I\O Encryptor</td>
-                                            <td class = "see-project-col"><form action = "https://github.com/ShahafDan25/Assembly/tree/master/Projects/10_DynamicMemory_ShahafDan_Linux64"><button class = "btn   ml2 w94 lpc-projects-btn"> Code </button></form></td>
-                                        </tr>
-                                        <tr class = "tableRow">
-                                            <td class = "projectName"><strong>Mathematics</strong>:<br> Discrete Math. Structures</td>
-                                            <td>Hash Tables: Efficiency, Mechanism, and Applications</td>
-                                            <td class = "see-project-col"><button type = "button" class="btn   w45 lpc-projects-btn" onclick = "window.open('docs/cs17_abs.pdf');"> Abs. </button>&nbsp;<button type = "button" class = "btn   ml2 w45 lpc-projects-btn" onclick = "window.open('docs/cs17_proj.pdf');"> Paper </button></td>
-                                        </tr>
-                                        <tr class = "tableRow">
-                                            <td class = "projectName"><strong>Physics</strong>:<br> Quantum Mechanics</td>
-                                            <td>The Meissner Effect: Superconductivity and Magnetic Levitation</td>
-                                            <td class = "see-project-col"><button type = "button" class="btn   w45 lpc-projects-btn" onclick = "window.open('docs/phy1d_abs.pdf');"> Abs. </button>&nbsp;<button type = "button" class = "btn   ml2 w45 lpc-projects-btn" onclick = "window.open('docs/phys1d_proj.pdf');"> Paper </button></td>
-                                        </tr>
-                                        <tr class = "tableRow">
-                                            <td class = "projectName"><strong>Computer Science</strong>:<br> Capstone Project</td>
-                                            <td>The Market's Manager</td>
-                                            <td class = "see-project-col"><button type = "button" class="btn   w45 lpc-projects-btn" onclick = "window.open('docs/cs47_report.pdf');"> Report </button>&nbsp;<form class = "inline  ml2 w45" action = "https://github.com/ShahafDan25/LPCCapstone"><button class = "btn   lpc-projects-btn w100" > Code  </button></form></td>
-                                        </tr>
-                                        <tr class = "tableRow">
-                                            <td class = "projectName"><strong>Computer Science</strong>:<br> Database Programming</td>
-                                            <td>Rate My Professor at Las Positas College</td>
-                                            <td class = "see-project-col"><button type = "button" class="btn   w45 lpc-projects-btn" onclick = "window.open('docs/cs45_abs.pdf');"> Abs. </button>&nbsp;<form class = "inline w45 ml2" action = "https://www.github.com/ShahafDan25/LPC-RMP"><button class = "btn   lpc-projects-btn w100"> Code </button></form></td>
-                                        </tr>
-                                        <tr class = "tableRow">
-                                            <td class = "projectName"><strong>Mathematics</strong>:<br> Differential Equations</td>
-                                            <td>Euler's Formula and Fourier Transforms</td>
-                                            <td class = "see-project-col"><button type = "button" class="btn   w45 lpc-projects-btn" onclick = "window.open('docs/math5_abs.pdf');"> Abs. </button>&nbsp;<button type = "button" class = "btn   ml2 w45 lpc-projects-btn" onclick = "window.open('docs/math5_proj.pdf');"> Paper </button></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                        <h3 class = "institution-title inline">Las Positas College</h3><button class = "btn edu-btn inline" data-toggle = "collapse" data-target = "#lpc-more" aria-expanded = "false" aria-controls = "collapseExample" id = "lpc-more-btn"><i class = "fa fa-angle-double-down"></i></button>
+                        <p class = "institution-subtitle"> <strong> Livermore, CA | June 2018  -  May 2020 | GPA 3.83 </strong> </p>
+                        <div id = "lpc-more" class = "collapse">
+                            <p class = "institution-description">
+                                <strong> Associates of Arts</strong>: Computer Studies <br>
+                                <strong> Associates of Liberal Arts and science</strong>: Mathematics <br>
+                                <strong> Associates of Sciences</strong>: Physics <br>
+                                <strong> Certificate</strong>: Computer Programming <br>
+    
+                                <br>
+    
+                                <strong>President</strong>: Alpha Gamma Sigma Honors Society (Sigma Theta Chapter). <br>
+                                <ul>
+                                    <li><strong>California State Mantovani Scholar</strong> in recognition outstanding academic and leadership performance.</li>
+                                    <li>Superior Scholastic and Service Achievment <strong>Scholar</strong>.</li>
+                                    <li>Randy Taylor <strong>Scholar</strong>.</li>
+                                    <li>Sigma Theta Chapter Dedicated <strong>Member Award</strong>.</li>
+                                    <li>Sigma Theta Chapter Faculty Advisor Tribute to <strong>Excellence Award</strong>.</li>
+                                </ul>
+                                <strong>President, Founder</strong>: Las Positas College Chess Club. <br>
+                                <strong>Vice President</strong>: Computer Engineering Club. <br>
+                                <strong>Director of Events, Executive Board Member</strong> Las Positas College Student Government. <br>
+                                <strong>Chair</strong>: Student Events Committee. <br>
+                                <strong>College Representative</strong>: American Student Association Conference in Washington D.C. (2019, 2020). <br>
+                                <strong>Member</strong>: Mu Alpha Theta (Math Honors Society), <strong>top ranked AMATYC scorer</strong>. <br>
+                                <strong>College Representative</strong>: District Technologi Cooridantion Committee. <br>
+                                <strong>Student Body Representative</strong>: Student Achievments & Equity Committee. <br> 
+                                The Mathematics, Engineering, and Computer Science Las Positas College Departments <strong> Scholar</strong>. <br>
+                                The American Council of Engineering Companies (Bay Area Chapter) <strong>Scholar</strong>. <br>
+    
+                                <br>
+    
+                                Honors Program Scholar - Thanks to the completion of over 6 honors research projects:
+                                <ul class = 'lpc-projects'>
+                                    <li><strong>Physics Electricity & Magnetism: </strong><a href = "docs/phy1c_proj.pdf">Solar Panels: Efficiency, Mechanism, and Applications</a></li>
+                                    <li><strong>Computer Science Object Oriented Java Programming: </strong><a href = "docs/csci19a_abs.pdf">My Events Java Web Application</a> | <a href = "https://github.com/ShahafDan25/JavaIntroduction/tree/master/HonorsProject/Stoodent/WebContent"> View Code </a><i class = "fa fa-github"></i></li>
+                                    <li><strong>Computer Science C++ Data Structures: </strong><a href = "docs/cs20_abs.pdf"> Dictionary Tree: Self Designed Data Structure </a> | <a href = "https://www.github.com/ShahafDan25/DataStructures-CPP/tree/master/A12_DictionaryTree"> View Code </a><i class = "fa fa-github"></i></li>
+                                    <li><strong>Computer Science Arcitechture and Assembly Programming: </strong><a href = "docs/LinkNotAvail.pdf">Assembler Movie In/Output De/Encryptor</a> | <a href = "https://github.com/ShahafDan25/Assembly/tree/master/Projects/10_DynamicMemory_ShahafDan_Linux64"> View Code </a><i class = "fa fa-github"></i></li>
+                                    <li><strong>Discrete Mathematical Structures: </strong><a href = "docs/cs17_proj.pdf"> Hash Tables: Efficiency, Mechanism, and Applications </a></li>
+                                    <li><strong>Physics Quantum Mechanics: </strong><a href = "docs/phy1d_proj.pdf">Superconductivity, The Meissner Effect, and Magnetic Levitation</a></li>
+                                    <li><strong>Computer Science Database Programming: </strong><a href = "docs/cs45_abs.pdf"> Rate My Professor Full Stack PHP Web Application </a> | <a href = "https://github.com/ShahafDan25/LPC-RMP"> View Code </a><i class = "fa fa-github"></i></li>
+                                    <li><strong>Mathematics Differential Equations: </strong><a href = "docs/math5_proj.pdf">Euler's Formula and Fourier Transforms</a></li>
+                                    <li><strong>Computer Science Capston Project: </strong><a href = "docs/cs47_report.pdf"> The Market's Management App </a>  | <a href = "https://github.com/ShahafDan25/LPCCapstone"> View Code </a><i class = "fa fa-github"></i></li>
+                                </ul>
+                            </p>
                         </div>
                     </div>
                     <div class = "ghs edu" id = "ghs">
-                        <h3 class = "institution-title">Granada High Shcool</h3>
-                        <p class = "institution-subtitle"> <strong> Livermore, CA | Aug. 2015  -  Jun. 2018 </strong> </p>
-                        <h4> <u>GPA:</u> 4.20 </h4>
-                        <p class = "institution-description">
-                            Graduated as an honors student and a Pedrozzi Scholar. <br>
-                            Focused on studying computer science and computational physics. <br>
-                            Recognized for community service, excellence in computer science, and academic performance.
-                        </p>
+                        <h3 class = "institution-title inline">Granada High Shcool</h3><button class = "btn edu-btn inline" data-toggle = "collapse" data-target = "#ghs-more" aria-expanded = "false" aria-controls = "collapseExample" id = "ghs-more-btn"><i class = "fa fa-angle-double-down"></i></button>
+                        <p class = "institution-subtitle"> <strong> Livermore, CA | Aug. 2015  -  Jun. 2018 | GPA 4.20 </strong> </p>
+                        <div id = "ghs-more" class = "collapse">
+                            <p class = "institution-description">
+                                Graduated as an honors student and a Pedrozzi Scholar. <br>
+                                Focused on studying computer science and computational physics. <br>
+                                Recognized for community service, excellence in computer science, and academic performance. <br>
+                                Varsity Tri-Athelete in Cross Country, Wrestling, and Volleyball.
+                            </p>
+                        </div>        
                     </div>
                     <div class = "MOR edu" id = "MOR">
-                        <h3 class = "institution-title">MOR Middle/High School</h3>
-                        <p class = "institution-subtitle"> <strong> Modi'in, Israel | Aug. 2012  -  Jun. 2015 </strong> </p>
-                        <p class = "institution-description">
-                            Graduated the AMAT honors program with an average grade of 97% three years in a row. <br>
-                            Was destined to enter a software engineering program of the Israeli military.
-                        </p>
+                        <h3 class = "institution-title inline">MOR Middle/High School</h3><button class = "btn edu-btn inline" data-toggle = "collapse" data-target = "#mor-more" aria-expanded = "false" aria-controls = "collapseExample" id = "mor-more-btn"><i class = "fa fa-angle-double-down"></i></button>
+                        <p class = "institution-subtitle"> <strong> Modi'in, Israel | Aug. 2012  -  Jun. 2015 | Avg. 97.1%</strong> </p>
+                        <div id = "mor-more" class = "collapse">
+                            <p class = "institution-description">
+                                Graduated the AMAT honors program with an average grade of 97% three years in a row. <br>
+                                Was destined to enter a software engineering program of the Israeli military.
+                            </p>
+                        </div>   
                     </div>
-                    <br><br><br>
                 </div>
             </div>
             <!----------------------  TECHNICAL SKILLS COLLAPSE ------------------------------>
@@ -510,37 +353,10 @@
             <!-- <a  href = "http://shahaf.host"><img src = "Logos/blog-logo.png" class = "LinkedIn-img"></a>  -->
         </div>
             
-        <script src = "shahaf.js" type = "text/JavaScript"></script>
-        <script>
-            function populateGraph(){
-                Morris.Line({
-                    element : 'lpcgpagraph', 
-                    data: [
-                        {TERM: '2018-08-15', GPA: 4.00}, //summer 2018
-                        {TERM: '2018-12-30', GPA: 4.00}, //fall 2018
-                        {TERM: '2019-05-15', GPA: 3.90}, //spring 2019
-                        {TERM: '2019-08-15', GPA: 3.92}, //summer 2019
-                        {TERM: '2019-12-30', GPA: 3.88}, //fall 2019
-                        {TERM: '2020-05-15', GPA: 3.83} //spring 2020
-                        // {}, //summer 2020
-                    ],
-                    xkey:'TERM',
-                    ykeys:['GPA'],
-                    labels:['GPA'],
-                    stacked:true,
-                    lineWidth: 3.75,
-                    pointSize: 4.5,
-                    gridStrokeWidth: 1.25,
-                    gridStrokeColor: "#303030",
-                    lineColors: ["#6DD1FF"],
-                    gridTextColor: "#303030",
-                    gridTextWeight: "bold",
-                    gridTextFamily: "Optima"
-                });
-            }
-        </script>
     </body>
-
+    <script>
+        
+    </script>
 </html>
 
     
