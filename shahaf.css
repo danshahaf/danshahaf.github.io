@@ -522,6 +522,29 @@ div.bio span.button button:hover {
     margin-right: 20.6%;
 } */
 /* ----- Projects Div ----- */
+.projects_div {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+}
+.projects_div div.project-linkers-container {
+    flex: 5;
+    /* background: linear-gradient(to bottom,rgb(160, 131, 255),rgb(236, 174, 255)); */
+    border-radius: 0px;
+    border-right: 1.25px solid black;
+    text-align: left;
+    padding-left: 3%;
+}
+.projects_div div.project-linkers-container h4 {
+    padding-left: 1.5%;
+    font-family: "Gill Sans";
+    font-weight: bold;
+    text-decoration: underline;
+}
+.projects_div .projects-space {
+    flex: 15;
+}
 .project-description {
     font-size: 110%;
     font-weight: bold;
@@ -529,135 +552,27 @@ div.bio span.button button:hover {
     margin-left: 8%;
     width: 85%;
 }
-.project-btns-container {
-    align-items: left ;
-    text-align: left ;
-    margin: 4% 0% 4% 10%;
+.projects-linker {
+    text-decoration: none;
+    color: #337AB7;
+    font-weight: bolder;
+    font-size: 90%;
+    width: 100%;
+    padding: 0.25% 0% 0.5% 2%;
+    display: block;
+    text-align: left;
+}
+.projects-linker-clicked {
+    text-decoration: none;
+    color: #337AB7;
+    font-weight: bolder;
+    font-size: 110%;
+    width: 100%;
+    padding: 0.25% 0% 0.5% 7%;
+    display: block;
+    text-align: left;
 }
 
-.projects-btn {
-    margin-right: 3% !important;
-  -webkit-transform: translateX(0%) translateY(-10%);
-          transform: translateX(0%) translateY(-10%);
-  background: #fff;
-  width: 'auto';
-  padding: 1.5% 2.5% 1.5% 2.5%;
-  border: 5px solid #4ac0ee;
-  color: #4ac0ee;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  z-index: 3;
-  -moz-transition: all 0.15s ease-out 0.15s;
-  -o-transition: all 0.15s ease-out 0.15s;
-  -webkit-transition: all 0.15s ease-out;
-  -webkit-transition-delay: 0.15s;
-  -webkit-transition: all 0.15s ease-out 0.15s;
-  transition: all 0.15s ease-out 0.15s;
-  letter-spacing: 0.25em;
-  font-family: "Gill Sans" !important;
-}
-.projects-btn:after, .projects-btn:before {
-  position: absolute;
-  width: 100%;
-  max-width: 100%;
-  top: 100%;
-  left: 0;
-  bottom: -10px;
-  content: "";
-  z-index: 2;
-  -moz-transition: all 0.15s ease-out 0.15s;
-  -o-transition: all 0.15s ease-out 0.15s;
-  -webkit-transition: all 0.15s ease-out;
-  -webkit-transition-delay: 0.15s;
-  -webkit-transition: all 0.15s ease-out 0.15s;
-  transition: all 0.15s ease-out 0.15s;
-}
-.projects-btn:after, .projects-btn:before {
-    bottom: -10px;
-    content: "";
-    z-index: 2;
-    -moz-transition: all 0.15s ease-out 0.15s;
-    -o-transition: all 0.15s ease-out 0.15s;
-    -webkit-transition: all 0.15s ease-out;
-    -webkit-transition-delay: 0.15s;
-    -webkit-transition: all 0.15s ease-out 0.15s;
-    transition: all 0.15s ease-out 0.15s;
-}
-.projects-btn:before {
-    background: #4ac0ee;
-    top: 10px;
-    left: -15px;
-    height: 100%;
-    width: 15px;
-  }
-  .projects-btn:after {
-    width: 100%;
-    background: #4ac0ee;
-    right: 0px;
-    left: -15px;
-    height: 15px;
-  }
-  .projects-btn:hover {
-    background: #4ac0ee;
-    color: #fff;
-    margin-left: -7.5px;
-    margin-bottom: -7.5px;
-  }
-  .projects-btn:hover:after, .projects-btn:hover:before {
-    top: 100%;
-    left: 0;
-    bottom: 0px;
-  }
-  .projects-btn:hover:before {
-    top: 0px;
-    left: 0px;
-    width: 0px;
-  }
-  .projects-btn:hover:after {
-    right: 0px;
-    left: 0px;
-    height: 0px;
-  }
-.projects-btn-clicked {
-    background: #4a7eee;
-    color: #ccc;
-    margin-right: 3% !important;
-    -webkit-transform: translateX(-10%) translateY(-10%);
-            transform: translateX(-10%) translateY(-10%);
-    width: 'auto';
-    padding: 1.5% 2.5% 1.5% 2.5%;
-    border: 5px solid #4a7eee;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    z-index: 3;
-    -moz-transition: all 0.15s ease-out 0.15s;
-    -o-transition: all 0.15s ease-out 0.15s;
-    -webkit-transition: all 0.15s ease-out;
-    -webkit-transition-delay: 0.15s;
-    -webkit-transition: all 0.15s ease-out 0.15s;
-    transition: all 0.15s ease-out 0.15s;
-    letter-spacing: 0.25em;
-    font-family: "Gill Sans" !important;
-    margin-left: -7.5px;
-    margin-bottom: -7.5px;
-  }
-  .projects-btn-clicked:after, .projects-btn-clicked:before {
-    top: 100%;
-    left: 0;
-    bottom: 0px;
-  }
-  .projects-btn-clicked:before {
-    top: 0px;
-    left: 0px;
-    width: 0px;
-  }
-  .projects-btn-clicked:after {
-    right: 0px;
-    left: 0px;
-    height: 0px;
-  }
 /* ----- SIDEBAR  ----- */
 .sidebar {
     margin: 0px;

@@ -32,12 +32,12 @@ function responsiveNavBar(val) {
 }
 
 function showAProject(x) {
-    for(var i = 1; i < 6; i++){
+    for(var i = 1; i < 8; i++){
         document.getElementById("projects-div-"+i).style.display = "none";
-        document.getElementById("projects-btn-"+i).className = "projects-btn inline";
+        document.getElementById("projects-btn-"+i).className = "projects-linker";
     }
     document.getElementById("projects-div-"+x).style.display = "block";
-    document.getElementById("projects-btn-"+x).className = "projects-btn-clicked inline";
+    document.getElementById("projects-btn-"+x).className = "projects-linker-clicked";
 
 }
 // ================ JS FOR CLASSES ================= //
