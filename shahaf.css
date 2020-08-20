@@ -428,29 +428,44 @@ iframe {
     z-index: 3
 }
 /*----- About Div ----*/
-.resume{
-    background-color:rgba(255, 255, 255, 0.45); 
-    transition: 0.35s;
-    width: 25%;
-    color:red; 
-    border: 0.7px solid red;
+.bio {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: baseline;
+}
+div.bio span.text {
+    flex: 8;
+    text-align: left;
+}
+div.bio span.text h4{
+    margin: 0px;
+}
+div.bio span.button {
+    flex: 2;
+}
+div.bio span.button button {
+    background-color: #ffe6e6;
+    color: red;
+    font-weight: 600;
+    bordeR: 1.5px solid red;
     font-family: "Gill Sans" !important;
-    /* letter-spacing: 0.27em !important; */
-    float: right !important;
+    transition: 0.25s ease-in-out;
+    padding: 5%;
+    border-radius: 5px;
+    width: 100%;
+    align-self: center;
 }
-.sepfrombio {
-    color: #303030;
-    border: 1.25px solid #303030 !important;
-}
-.resume:hover{
+div.bio span.button button:hover {
     background-color: rgba(251, 223, 223, 0.856);
     -webkit-transform: scale(1.08);
     -ms-transform: scale(1.08);
     transform: scale(1.08);
 }
-.about-me-bio {
-    text-align: left !important;
-    font-size: 1.57rem;
+
+.sepfrombio {
+    color: #303030;
+    border: 1.25px solid #303030 !important;
 }
 .about-me {
     background-color: rgba(255, 255, 255, 0.637) !important; 
