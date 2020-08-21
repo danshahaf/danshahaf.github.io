@@ -49,20 +49,20 @@ header.nav-bar {
     padding-left: 1.25% !important;
     font-weight: bolder;
     font-size: 110%;
-    transition: 0.37s !important;
+    transition: 0.30s !important;
     background-image: black;
     padding-bottom: 1% !important;
     outline: none !important;
 }
 .nav-bar-option:hover {
     border-bottom: 1.25px solid transparent;
-    background-image: linear-gradient(to right,#6C4ADC,#9C36BA) !important;
+    background-image: linear-gradient(to right,#6C4ADC,#9C36BA);
     -webkit-background-clip: text;
     color: transparent;
     -webkit-transform: scale(1.08);
     -ms-transform: scale(1.08); 
     transform: scale(1.08);
-    transition: all 0.42s ease-in-out !important;
+    transition: all 0.30s ease-in-out !important;
     outline: none !important;
 }
 .nav-bar-myname {
@@ -76,6 +76,7 @@ header.nav-bar {
     margin-right: 4.5%;
     font-weight: bolder;
     font-family: "Gill Sans" !important;
+    align-self: baseline;
 }
 .navbar-desc {
     background-image: linear-gradient(to right,#6C4ADC,#9C36BA) !important;
@@ -84,16 +85,8 @@ header.nav-bar {
     font-family: "Gill Sans" !important;
     font-size: 125% !important;
     outline: none;
+    align-self: baseline;
 
-}
-.nav-bar-option-clicked{
-    color: rgb(79, 249, 255) !important;
-    outline: none !important;
-    border-bottom: 3px solid rgb(79, 249, 255) !important;
-    -webkit-transform: scale(1.08);
-    -ms-transform: scale(1.08); 
-    transform: scale(1.08);
-    transition: all 0.55s ease-in-out !important;
 }
 /* ------------ GENERAL -------------- */
 .inline{
@@ -121,38 +114,6 @@ header.nav-bar {
 }
 iframe {
     border: none !important; /* overrider 1px solid black that is the default */
-}
-
-/* //not sure where it goes: */
-.sub-proj-btn{
-    margin-top:1% !important;
-    background: linear-gradient(to right,rgb(24, 32, 98),rgb(72, 77, 141));
-    border: 0px !important;
-    padding: 1% !important;
-    color: white !important;
-    text-transform: uppercase;
-    font-size: 90% !important;
-    transition: 0.35s !important;
-    background-size: 200% auto;
-    box-shadow: 0 0 20px #ccc;
-    letter-spacing: 0.25em !important;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-}
-
-.w45{
-    width: 45% !important;}
-.w94{
-    width: 94% !important;}
-.w100{
-    width: 100% !important;}
-.ml2{
-    margin-left: 2% !important;
-}
-.tablePart{
-    width: 90% !important; 
-    padding-right:3% !important; 
-    padding-left: 3% !important; 
-    margin: 0% !important;
 }
 
 /* timeline CSS */
@@ -297,15 +258,6 @@ iframe {
     border-radius: 4px;
     padding: 2%;
 }
-#classesTableBody, #projectTableBody{
-    font-size: 85% !important;
-}
-#classesTableBody tr {
-    padding-bottom: 2px !important;
-}
-.projectName {
-    width: 26% !important;
-}
 .sub-edu-btn {
     margin-top:1% !important;
     background: linear-gradient(to right,rgb(24, 32, 98),rgb(72, 77, 141));
@@ -437,6 +389,9 @@ div.bio span.text {
 div.bio span.text h4{
     margin: 0px;
 }
+div.bio span.text h5 {
+    font-family: "Gill Sans";
+}
 div.bio span.button {
     flex: 2;
 }
@@ -450,7 +405,7 @@ div.bio span.button button {
     padding: 5%;
     border-radius: 5px;
     width: 100%;
-    align-self: center;
+    align-self: baseline;
 }
 div.bio span.button button:hover {
     background-color: rgba(251, 223, 223, 0.856);
@@ -587,17 +542,25 @@ div.bio span.button button:hover {
 
 /*------------- PHONE STYLING ------------------ */
 @media only screen and (max-width: 1176px) {
-    .sidebar {
-        padding-top: 8%;
+    .bio {
+        display: block;
     }
-    .resume {
-        display: block !important;
-        width: 100% !important;
-        float: none;
+    div.bio span.text {
+        flex: none;
     }
-    div.content {
-        padding: 7.25% 2% 2% 0% ;
-
+    div.bio span.text h4{
+        margin: 0px;
+        font-size: 105%;
+        text-align: center;
+    }
+    div.bio span.text h5 {
+        font-size: 85%;
+    }
+    div.bio span.button {
+        flex: none;
+    }
+    div.bio span.button button {
+        padding: 2.5%;
     }
 }
 @media only screen and (max-width: 576px) {
@@ -620,21 +583,14 @@ div.bio span.button button:hover {
         text-align: justify;
         margin-top: 4%;
     }
-    .sidebar, div.content {
-        margin-top: 0%;
-        padding-top: 20%;
-    }
-    .arrow-scroll-sidebar {
-        font-size: 50%;
-        margin-right: -10%; 
-    }
-    div.contant {
-        width: 90%;
+    div.content {
+        width: 62%;
     }
     .sidebar {
-        width: 15%;
+        width: 18%;
+        height: 70%;
         right: 1%;
-        box-shadow: 2px 6px 7px #303030;
+        box-shadow: 2px -6px 7px #303030;
     }
     .lower-top-most-icon-sidebar-short-screen {
         margin-top: 5%;

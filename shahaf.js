@@ -14,7 +14,9 @@ $("#bu-more-btn").click(function() {
 
 
 // ================ JS FOR NAV-BAR & SIDE_BAR & ACTIVITIES_BAR & PROJECTS MENU================= // 
-function responsiveNavBar(val) {
+function responsiveNavBar(val, navLinker) {
+    
+    //change div seens on screen
     var divs = ["about", "history", "education", "knowledge", "projects"];
     for(var i = 0; i < divs.length; i++) {
         document.getElementById(divs[i] + "_div").style.display = "none";
