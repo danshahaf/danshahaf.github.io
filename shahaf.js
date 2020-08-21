@@ -29,6 +29,15 @@ function responsiveNavBar(val) {
         else if(checker == "knowledge") nbt.innerHTML = "Skills";
         else if(checker == "projects") nbt.innerHTML = "Projects";
     }
+    else  {
+        var checker = val.substring(0,val.length-4);
+        var nbt = document.getElementById("navbar-text"); //nbt = Nav Bar Text
+        if(checker == "about") nbt.innerHTML = "Shahaf Dan";
+        else if(checker == "history") nbt.innerHTML = "Jobs & Work Experience";
+        else if(checker == "education") nbt.innerHTML = "Schools & Education";
+        else if(checker == "knowledge") nbt.innerHTML = "Technical Knowledge & Skills";
+        else if(checker == "projects") nbt.innerHTML = "Personal Projects";
+    }
 }
 
 function showAProject(x) {

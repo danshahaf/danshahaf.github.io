@@ -1,4 +1,4 @@
-/* ------------ CONTAINERS -------------- */
+/* ------------ CONTAINERS & PAGE SETUP -------------- */
 .body{
     height: 100% !important;
     /* background: url('shahaf-pics/background-pic.jpg') !important;  */
@@ -11,15 +11,89 @@
     background-attachment: fixed !important;
     font-family: 'Mono', monospace;
 }
-div.content {
-    padding: 6% 2% 2% 0% ;
-    height: 100%;
-    position: relative ;
-    width: 82% ;
-    float: left;
+div.page {
+    width: 100%;
+    position: absolute;
+}
+div.page div.content {
+    padding: 0%;
+    position: absolute;
+    left: 0px;
+    width: 87%;
+    padding-bottom: 5%;
 }
 .centrize {
     text-align: center !important;
+}
+        /*----- Navigation Bar ----- */
+header.nav-bar {
+    width: 100% !important;
+    margin-top: 0% !important;
+    padding-left: 3.5% !important;
+    padding-top: 1.75% !important;
+    background-color: black !important;
+    height: 8.5% !important;
+    overflow: hidden;
+    background-color: #121212;  
+    position: sticky;
+    top: 0;
+    z-index: 5 !important;
+}
+.nav-bar-option {
+    color: white;
+    float: left;
+    margin-right: 3% !important;
+    width: auto !important;
+    border:0px !important;
+    padding-right: 1.25% !important;
+    padding-left: 1.25% !important;
+    font-weight: bolder;
+    font-size: 110%;
+    transition: 0.37s !important;
+    background-image: black;
+    padding-bottom: 1% !important;
+    outline: none !important;
+}
+.nav-bar-option:hover {
+    border-bottom: 1.25px solid transparent;
+    background-image: linear-gradient(to right,#6C4ADC,#9C36BA) !important;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-transform: scale(1.08);
+    -ms-transform: scale(1.08); 
+    transform: scale(1.08);
+    transition: all 0.42s ease-in-out !important;
+    outline: none !important;
+}
+.nav-bar-myname {
+    border-bottom: 1.25px solid transparent;
+    background-image: linear-gradient(to right,#6C4ADC,#9C36BA) !important;
+    -webkit-background-clip: text;
+    color: transparent;
+    float: right;
+    font-size: 200%;
+    margin-bottom: 5%;
+    margin-right: 4.5%;
+    font-weight: bolder;
+    font-family: "Gill Sans" !important;
+}
+.navbar-desc {
+    background-image: linear-gradient(to right,#6C4ADC,#9C36BA) !important;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: "Gill Sans" !important;
+    font-size: 125% !important;
+    outline: none;
+
+}
+.nav-bar-option-clicked{
+    color: rgb(79, 249, 255) !important;
+    outline: none !important;
+    border-bottom: 3px solid rgb(79, 249, 255) !important;
+    -webkit-transform: scale(1.08);
+    -ms-transform: scale(1.08); 
+    transform: scale(1.08);
+    transition: all 0.55s ease-in-out !important;
 }
 /* ------------ GENERAL -------------- */
 .inline{
@@ -174,76 +248,7 @@ iframe {
     }
     .main-timeline .title{ font-size: 18px; }
 } */
-/*----- Navigation Bar ----- */
-.nav-bar {
-    width: 100% !important;
-    margin-top: 0% !important;
-    padding-left: 3.5% !important;
-    padding-top: 1.75% !important;
-    background-color: black !important;
-    height: 8.5% !important;
-    overflow: hidden;
-    background-color: #121212;  
-    position: fixed;
-    top: 0;
-    z-index: 5 !important;
-}
-.nav-bar-option {
-    color: white;
-    float: left;
-    margin-right: 3% !important;
-    width: auto !important;
-    border:0px !important;
-    padding-right: 1.25% !important;
-    padding-left: 1.25% !important;
-    font-weight: bolder;
-    font-size: 110%;
-    transition: 0.37s !important;
-    background-image: black;
-    padding-bottom: 1% !important;
-    outline: none !important;
-}
-.nav-bar-option:hover {
-    border-bottom: 1.25px solid transparent;
-    background-image: linear-gradient(to right,#6C4ADC,#9C36BA) !important;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-transform: scale(1.08);
-    -ms-transform: scale(1.08); 
-    transform: scale(1.08);
-    transition: all 0.42s ease-in-out !important;
-    outline: none !important;
-}
-.nav-bar-myname {
-    border-bottom: 1.25px solid transparent;
-    background-image: linear-gradient(to right,#6C4ADC,#9C36BA) !important;
-    -webkit-background-clip: text;
-    color: transparent;
-    float: right;
-    font-size: 200%;
-    margin-bottom: 5%;
-    margin-right: 4.5%;
-    font-weight: bolder;
-    font-family: "Gill Sans" !important;
-}
-.navbar-desc {
-    background-image: linear-gradient(to right,#6C4ADC,#9C36BA) !important;
-    -webkit-background-clip: text;
-    color: transparent;
-    font-family: "Gill Sans" !important;
-    font-size: 125% !important;
-    outline: none;
 
-}
-.nav-bar-option:focus{
-    color: rgb(79, 249, 255) !important;
-    outline: none !important;
-    border-bottom: 3px solid rgb(79, 249, 255) !important;
-    -webkit-transform: scale(1.08);
-    -ms-transform: scale(1.08); 
-    transform: scale(1.08);
-    transition: all 0.55s ease-in-out !important;
-}
 /*----- Education Div ----- */
 #education_div{
     font-family: "Gill Sans" !important;
@@ -395,39 +400,30 @@ iframe {
     font-size: 15px; 
     font-family: 'Mono', monospace;
 }
-/*------ SKILLS ------ */
-.exps1, .exps2, .exps3 {
-    margin: 0;
-    padding: 0;
-    width: 31% ;
-    margin-right: 1.5;
-    top: 2px;
-}
+/*----------------------------- SKILLS --------------------------- */
 .experties {
-    width: 100% !important;
-    margin-left: 6% !important;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    row-gap: 2rem;
+    grid-template-columns: repeat(6, 1fr);
+    position: static;
 }
 .exps-items {
-    text-align: left;
-    margin-left: 2.5%;
-    display: block;
-    margin-bottom: 1%;
+    margin-top: 1%;
 }
 .skills-section-title {
     text-align: left !important;
-    margin-bottom: 2%;
-    margin-top: 2%;
+    margin: 2% 0 0 2%;
     font-weight: bold;
+    text-decoration: underline;
 }
 .logo-img{
-    margin: 1%; 
-    padding: 0.5%; 
-    height: 7%; 
-    padding-top: 0%;
-    /* text-align: right; */
-    z-index: 3
+    z-index: 3;
+    width: auto;
+    height: 5rem;
 }
-/*----- About Div ----*/
+/*---------------------------------- About Div ------------------------------*/
 .bio {
     display: inline-flex;
     width: 100%;
@@ -470,9 +466,7 @@ div.bio span.button button:hover {
 .about-me {
     background-color: rgba(255, 255, 255, 0.637) !important; 
     width: 100% !important;
-    padding-right: 1% !important;
-    padding-left: 7.5% !important;
-    padding-top: 0.5% !important;
+    padding: 1% 1% 0% 3%;
     text-align: justify !important;
 }
 .about-me-text {
@@ -492,14 +486,13 @@ div.bio span.button button:hover {
     align-items: right !important;
     text-align: right !important;
     display: flex;
-
 }
 .gallery-item {
     border: none !important;
     /* padding-top: 100% !important; */
-    width: 20% !important;
+    width: 14% !important;
     margin: 0.55% !important;
-    box-shadow: 10px 10px 5px grey;
+    box-shadow: 8px 8px 5px grey;
     text-align: center;
     align-items: center;
     object-fit: cover !important;
@@ -507,20 +500,6 @@ div.bio span.button button:hover {
     flex: 1;
     margin-bottom: 100%;
 }
-.gallery-item-video {
-    /* position: relative; */
-    overflow: hidden;
-    width: 175%;
-    object-fit: cover !important;
-    right: 75px;
-    vertical-align: auto !important;
-
-}
-/* .gallery-item-video-container {
-    display: inline-block !important;
-    position: absolute;
-    margin-right: 20.6%;
-} */
 /* ----- Projects Div ----- */
 .projects_div {
     display: inline-flex;
@@ -561,8 +540,9 @@ div.bio span.button button:hover {
     padding: 0.25% 0% 0.5% 2%;
     display: block;
     text-align: left;
+    transition: 0.2s ease-in-out;
 }
-.projects-linker-clicked {
+.projects-linker-clicked, .projects-linker:hover {
     text-decoration: none;
     color: #337AB7;
     font-weight: bolder;
@@ -571,24 +551,22 @@ div.bio span.button button:hover {
     padding: 0.25% 0% 0.5% 7%;
     display: block;
     text-align: left;
+    transition: 0.2s ease-in-out;
 }
 
 /* ----- SIDEBAR  ----- */
 .sidebar {
     margin: 0px;
-    right: 4%;
-    margin-left: -400px;
-    width: 12%;
+    right: 2%;
+    width: 8%;
+    height: 87%;
     background: linear-gradient(to bottom,rgb(160, 131, 255),rgb(236, 174, 255)); 
     position: fixed;
-    padding: 2%;
-    padding-top: 6%;
+    padding: 1%;
     opacity: 0.9;
-    height: 75%;
-    overflow: auto;
     border-bottom-right-radius: 150px;
     border-bottom-left-radius: 150px;
-    box-shadow: 5px 5px 8px #303030;
+    box-shadow: 5px -5px 8px #303030;
 }
 .LinkedIn-img{
     width: 80%;
