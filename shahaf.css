@@ -609,6 +609,9 @@ div.bio span.button button:hover {
         padding-right: 0px !important;
         padding-left: 0px !important;
     }
+    .main-timeline .timeline .inner-content .title {
+        font-size: 14px !important;
+    }
     .main-timeline .timeline-content{ padding: 20px 20px 20px 0; }
     .main-timeline .timeline:nth-child(even) .timeline-content{ padding: 20px 0 20px 20px; }
     .main-timeline .timeline-icon{
@@ -618,7 +621,6 @@ div.bio span.button button:hover {
         width: 70px;
     }
     .main-timeline .title, .main-timeline .subtitle-workexp{ 
-        font-size: 12px; 
         margin: 0 0 5px;
         width: 70%;
         text-align: left;
@@ -631,10 +633,10 @@ div.bio span.button button:hover {
         margin-left: -10px;
     }
     .subtitle-workexp {
-        font-size: 9px !important;
+        font-size: 8px !important;
     }
     .main-timeline .inner-content .description {
-        font-size: 11px !important;
+        font-size: 10px !important;
         width: 100% !important;
         display: flex !important;
         flex-direction: column;
