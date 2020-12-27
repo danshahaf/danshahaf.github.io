@@ -244,6 +244,18 @@ div.edu button.edu-btn {
     width: 90% ;
     margin-left: 3%;
 }
+div#education_div div.sub-edu-div div.edu div.pictures {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    position: static;
+}
+div#education_div div.sub-edu-div div.edu div.pictures img {
+    border-radius: 4px !important;
+    height: 200px;
+    width: 280px;
+    box-shadow: #303030 1px 3px 7px;
+}
 /*----------------------------- SKILLS --------------------------- */
 .experties {
     margin: 0 auto;
@@ -536,7 +548,10 @@ div.bio span.button button:hover {
     div.edu div  {
         font-size: 80%;
     }
-   
+    div#education_div div.sub-edu-div div.edu div.pictures {
+        row-gap: 3rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
     /*----------------------------- SKILLS --------------------------- */
     .experties {
         row-gap: 1rem;
