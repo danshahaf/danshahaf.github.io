@@ -228,13 +228,15 @@ div.edu button.edu-btn {
     color: #EEEEEE;
     font-size: 130% !important;
     font-weight: bolder !important;
-    margin-left: 2%;
+    margin-left: 1%;
     -moz-transition: transform 0.5s;
     -webkit-transition: transform 0.5s;
     transition: transform 0.5s;
-    border-radius: 5px;
+    border-radius: 150px;
     font-weight: 900 !important;
-    padding: 1% 4%;
+    width: 40px;
+    height: 40px;
+    padding: 1%;
 }
 .flip {
     transform: rotate(-180deg);
