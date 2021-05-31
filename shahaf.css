@@ -115,7 +115,13 @@ header.nav-bar {
 iframe {
     border: none !important; /* overrider 1px solid black that is the default */
 }
-
+hr.bluebar {
+    background-color: rgb(36, 36, 58);
+    border-radius: 150px;
+    height: 3x;
+    border: 2px solid rgb(36, 36, 58);
+    margin: 2px !important;
+}
 /* timeline CSS */
 .main-timeline{ 
     font-family: 'Nunito Sans', sans-serif; }
@@ -446,6 +452,40 @@ div.bio span.button button:hover {
 }
 
 
+/* ------------------- EXPERIENCE ------------ */
+div.experience-container {
+    width: 100%;
+    padding: 1% 5%;
+}
+div.experience-container div.experience-section {
+    padding: 7px 10px;
+    border: 1px solid black;
+    margin-bottom: 25px;
+}
+div.experience-container div.experience-section div.experience-profile {
+    display: inline-flex;
+    height: auto;
+    width: 100%;
+    padding: 7px;
+    align-items: center;
+}
+div.experience-container div.experience-section div.experience-profile img.experience-logo {
+    width: auto;
+    height: 35px;
+}
+div.experience-container div.experience-section div.experience-profile h3.experience-title {
+    margin: 0px 30px !important;
+    padding: 0px !important;
+}
+div.experience-container div.experience-section div.experience-details {
+    text-align: left;
+    margin: 2px !important;
+}
+div.experience-container div.experience-section div.experience-description p {
+    padding: 7px;
+    text-align: left;
+    margin: 0px 0px 0px 7px !important;
+}
 /*------------- PHONE STYLING ------------------ */
 @media only screen and (max-width: 1176px) {
     .bio {
