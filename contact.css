@@ -1,0 +1,38 @@
+div.padder {
+    padding: 15%;
+    text-align: left;
+    height: auto;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: bolder;
+    
+}
+
+button.emailme {
+    background: transparent;
+    color: black;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 10 40px;
+    font-weight: bolder;
+    background-color: rgb(187, 255, 255);
+}
+
+div.socialmedia {
+    display: flex;
+    text-align: left;
+    font-size: 28px;
+    margin-top: 20px;
+    width: 15%;
+}
+
+div.socialmedia i {
+    flex: 1;
+    margin: 0px 20px 0px 0px;
+}
+
+div.spacer {
+    margin: 70px;
+}
