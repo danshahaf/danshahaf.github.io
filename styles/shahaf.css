@@ -21,6 +21,7 @@ div#menu {
     text-align: left;
     top: 0px;
     position: fixed;
+    z-index: 2;
 
 }
 
@@ -68,6 +69,26 @@ div.section {
 }
 
 div.nwbgfs { /* Non White Back Ground For Section = NWBGFS */
-    background-color: rgba(232, 232, 251, 0.903);
+    background-color: rgba(240, 240, 255, 0.817);
 }
+div#home {
+    border-bottom: 5px solid rgb(142, 142, 255);
+}
+
+div.container {
+    padding: 5%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.423);
+}
+
+div.cover { /* COVER PHOTO FOR HOME SECTION */
+    position: relative;
+    /* color: white; */
+    background-image: url('../photos/cover.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+}   
+
+
 

@@ -36,4 +36,45 @@ div.job-description {
 div.job-description h5 {
     font-weight: bold;
     margin: 25px 0px 5px 0px !important;
+    font-size: 16px;
+}
+
+div.job-description table {
+    font-size: 13px;
+}
+div.job-description table td {
+    padding: 0px 32px;
+    /* border-bottom: 1px solid black; */
+}
+div.job-description p {
+    font-size: 14px;
+    line-height: 110%
+}
+
+/* -------- EDUCATION SECTION LAYOUT FOR PHOTO GALLERY ------------ */
+div#academics div.job {
+    display: flex;
+}
+
+div#academics div.job div.edu {
+    flex: 8;
+}
+
+div#academics div.job div.edu-gallery {
+    flex: 2;
+    display: block;
+}
+
+div#academics div.job div.edu-gallery p{
+    text-align: left;
+    margin: 5px 0px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+div#academics div.job div.edu-gallery img{
+    height: auto;
+    width: 100%;
+    /* border: 3px solid rgb(142, 142, 255);; */
+    border-radius: 5px;
 }

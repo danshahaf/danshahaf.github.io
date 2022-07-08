@@ -40,13 +40,16 @@
             <button class = "nav-btn" onclick = 'roll_to_section("contact", self)'> Contact! </button>
         </div>
         
-        <div id = "home" class = "section">
-            <div class = "padder">
-                <h1> HelloWorld! </h1>
-                <h2> My name is Shahaf, nice to meet you.</h2>
-                <h4> I am a recent (2022) grad-student from Boston University and a passionate developer.</h4>
-                <div class = "spacer"></div>
-                <button class = "emailme"  onclick = 'roll_to_section("introduction", self)'> Let's get started &nbsp; <i class = "fa fa-arrow-right"></i> </button>
+        <div id = "home" class = "cover">
+            <!-- <img src = 'photos/cover.jpg' /> -->
+            <div class = container>
+                <div class = "padder">
+                    <h1> HelloWorld! </h1>
+                    <h2> My name is Shahaf, nice to meet you.</h2>
+                    <h4> I am a recent (2022) grad-student from Boston University and a passionate developer.</h4>
+                    <div class = "spacer"></div>
+                    <a class = "emailme"  href='docs/resume.pdf'> My Resume &nbsp; <i class = "fa fa-file-text"></i> </a>
+                </div>
             </div>
         </div>
 
@@ -90,67 +93,162 @@
 
         <div id = "academics" class = "section">
             <div class = "job"> <!-- BOSTON UNIVERSITY -->
-                <div class = "workplace">
-                    <img src = "logos/bostonu.png" />
-                    <div class = "role">
-                        <h3> Boston University </h3>
-                        <h4> <strong> BA Computer Science </strong></h4>
-                        <h5> Sep. 2020 - May 2022  &nbsp;◦&nbsp;  GPA 3.41</h5>
+                <div class = "edu">
+                    <div class = "workplace">
+                        <img src = "logos/bostonu.png" />
+                        <div class = "role">
+                            <h3> Boston University </h3>
+                            <h4> <strong> BA Computer Science </strong></h4>
+                            <h5> Sep. 2020 - May 2022  &nbsp;◦&nbsp;  GPA 3.41</h5>
+                        </div>
+                    </div>
+                    <div class = "job-description">
+                        <h5> Achievements & Awards </h5>
+                        <p>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            ◦ <strong>Computer Science</strong>, Bachelor of Arts <br>
+                        </p>
+
+                        <h5> Relevant Classes </h5>
+                        <table>
+                            <tr>
+                                <td>◦ Probability in Computing</td>
+                                <td>◦ Concepts of Programming Languages</td>
+                                <td>◦ Introduction to Algorithm Analysis</td>
+                            </tr>
+                            <tr>
+                                <td>◦ Foundation of Data Science</td>
+                                <td>◦ Computation Tools for Data Science</td>
+                                <td>◦ Software Engineering</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>◦ Machine Learning</td>
+                                <td>◦ Machine Learning Lab Practicum</td>
+                                <td>◦ Natural Language Programming</td>
+                            </tr>
+                        </table>
+
+                        <h5> Additional Activities </h5>
+                        <p>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            ◦ Alpha Epsilon Pi Fraternity - <strong> President </strong> <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            ◦ Student Government - <strong> Executive Board, Treasure </strong> <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            ◦ TAMID StartUp Consulting Group - <strong> Director of Technology </strong> <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            ◦ FinTech Club - <strong> Director of Quant </strong> <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            ◦ Residence Hall Council, Myles- <strong> President </strong> <br>
+                        </p>
                     </div>
                 </div>
-                <div class = "job-description">
-                    <h5> Achievements & Awards </h5>
-                    ◦ Worked on various projects as an intern on the Data Science Track, while learning and applying various data analytics methods (KNN Modelings, Neural Networks, multidimensional regression, data visualization, etc.).
-                    <br />
-                    ◦ Designed various anomaly detection algorithms for both supervised and unsupervised datasets to be applied on an existing engine to improve accuracy.
-                    <br />
-                    ◦ Connected Front end technology to results achieved from a back end pipeline to map multi-sourced data into a unified organized and accessible file to work with.
-                    <h5> Relevant Classes </h5>
-                    ◦ Worked on various projects as an intern on the Data Science Track, while learning and applying various data analytics methods (KNN Modelings, Neural Networks, multidimensional regression, data visualization, etc.).
-                    <br />
-                    ◦ Designed various anomaly detection algorithms for both supervised and unsupervised datasets to be applied on an existing engine to improve accuracy.
-                    <br />
-                    ◦ Connected Front end technology to results achieved from a back end pipeline to map multi-sourced data into a unified organized and accessible file to work with.
-                    <h5> Additional Activities </h5>
-                    ◦ Worked on various projects as an intern on the Data Science Track, while learning and applying various data analytics methods (KNN Modelings, Neural Networks, multidimensional regression, data visualization, etc.).
-                    <br />
-                    ◦ Designed various anomaly detection algorithms for both supervised and unsupervised datasets to be applied on an existing engine to improve accuracy.
-                    <br />
-                    ◦ Connected Front end technology to results achieved from a back end pipeline to map multi-sourced data into a unified organized and accessible file to work with.
+                <div class = "edu-gallery">
+                    <p> Alpha Epsilon Pi Seniors </p>
+                    <img src = "photos/aepi.jpg" />
+                    <p> Student Government Executive Board </p>
+                    <img src = "photos/busg.jpg" />
                 </div>
             </div>
 
             <div class = "job"> <!-- LAS POSITAS COLLEGE  -->
-                <div class = "workplace">
-                    <img src = "logos/laspo.jpeg" />
-                    <div class = "role">
-                        <h3> Las Positas College </h3>
-                        <h4> <strong> AA Computer Science, AS Physics, AA Math </strong></h4>
-                        <h5> Jun. 2018 - May 2020  &nbsp;◦&nbsp;  GPA 3.92</h5>
+                <div class = "edu">
+                    <div class = "workplace">
+                        <img src = "logos/laspo.jpeg" />
+                        <div class = "role">
+                            <h3> Las Positas College </h3>
+                            <h4> <strong> AA Computer Science, AS Physics, AA Math </strong></h4>
+                            <h5> Jun. 2018 - May 2020  &nbsp;◦&nbsp;  GPA 3.92</h5>
+                        </div>
+                    </div>
+                    <div class = "job-description">
+                        <h5> Achievements & Awards </h5>
+                        <p>
+                            &nbsp; &nbsp; &nbsp; &nbsp;◦ <strong>Computer Science</strong> [general], Associate of Sciences <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;◦ <strong>Computer Studies</strong>, Associate of Arts <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;◦ <strong>Mathematics</strong>, Associate of Liberal Arts and Sciences <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;◦ <strong>Physics</strong>, Associate of Sciences <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;◦ <strong>Computer Programming</strong>, Certificate
+                            <br><br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;◦ <strong> Scholar</strong>: The Mathematics, Engineering, and Computer Science College Department <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;◦ <strong> Scholar</strong>: The American Council of Engineering Companies 
+                            <br><br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;◦ <strong> Scholar</strong>: Collegiate Honors Program <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; ‣ <strong>Solar Panels:</strong> Efficiency, Mechanism, and Applications &nbsp;&nbsp; <a class = "link" href = "docs/honors_01.pdf">Abstract</a> <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; ‣ <strong>Dictionary Tree:</strong> Language Reader Data Structure &nbsp;&nbsp; <a class = "link" href = "docs/honors_02.pdf">Abstract</a> &nbsp;◦&nbsp; <a class = "link" href = "https://github.com/ShahafDan25/DataStructures-CPP/tree/master/A12_DictionaryTree">Code <i class = "fa fa-github"></i></a> <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; ‣ <strong>Movie De/Encryptor:</strong> Computer Architeture & Assembly Programming &nbsp;&nbsp; <a class = "link" href = "https://github.com/ShahafDan25/Assembly/tree/master/Projects/10_DynamicMemory_ShahafDan_Linux64">Code <i class = "fa fa-github"></i></a> <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; ‣ <strong>Hash Tables:</strong> Efficiency, Mechanism, and Applications &nbsp;&nbsp;<a class = "link" href = "docs/honors_03.pdf">Abstract</a>  <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; ‣ <strong>PHP & SQL Site:</strong> Rate my Professor &nbsp;&nbsp; <a class = "link" href = "docs/honors_04.pdf">Abstract</a> &nbsp;◦&nbsp; <a class = "link" href = "https://github.com/ShahafDan25/LPC-RMP">Code <i class = "fa fa-github"></i></a> <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; ‣ <strong>Fourier Transformations:</strong> Differential Equations & Euler's Formula &nbsp;&nbsp; <a class = "link" href = "docs/honors_05.pdf">Abstract</a><br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; ‣ <strong>Superconductivity & Meissner Effect:</strong> Quantum Mechanics and Magentic Levitation &nbsp;&nbsp; <a class = "link" href = "docs/honors_06.pdf">Abstract</a>
+    
+    
+                        </p>
+                        <h5> Relevant Classes </h5>
+                        <table>
+                            <tr>
+                                <td>◦ Computing Fundamentals I </td>
+                                <td>◦ Data Structures Programming</td>
+                                <td>◦ Discrete Mathematical Structures</td>
+                            </tr>
+                            <tr>
+                                <td>◦ Computing Fundamentals II </td>
+                                <td>◦ Assembly & Operating Systems</td>
+                                <td>◦ Database Programming</td>
+                            </tr>
+                            <tr>
+                                <td>◦ Capstone Project Development </td>
+                                <td>◦ Object Oriented & Java Programming</td>
+                                <td>◦ Linear Algebra</td>
+                            </tr>
+                        </table>
+                        <h5> Additional Activities </h5>
+                        <p>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            ◦ Alpha Gamma Sigma Honors Society (Sigma Theta Chapter) - <strong> President </strong> <br><br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp;‣ California State Mantovani Scholar in recognition outstanding academic and leadership performance. <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp;‣ Superior Scholastic and Service Achievment Scholar. <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp;‣ Randy Taylor Scholar. <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp;‣ Sigma Theta Chapter Dedicated Member Award. <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp;‣ Sigma Theta Chapter Faculty Advisor Tribute to Excellence Award. <br><br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            ◦ Chess Club - <strong> President, Founder </strong> <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            ◦ Computer Engineering Club - <strong> Vice President </strong> <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            ◦ Student Government - <strong> Executive Board, Director of Events </strong> <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            ◦ Student Events Committee - <strong> Chair </strong> <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            ◦ American Student Association D.C. - <strong> 2x College Representative </strong> <br> 
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            ◦ Mu Alpha Theta (Math Honors Society) - <strong> Member, Top ranked AMATYC Scholar </strong> <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            ◦ District Technology Cooridantion Committee - <strong> College Representative </strong> <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            ◦ Student Achievments & Equity Committee - <strong> Student Body Representative </strong> <br>
+                        </p>
                     </div>
                 </div>
-                <div class = "job-description">
-                    <h5> Achievements & Awards </h5>
-                    ◦ Worked on various projects as an intern on the Data Science Track, while learning and applying various data analytics methods (KNN Modelings, Neural Networks, multidimensional regression, data visualization, etc.).
-                    <br />
-                    ◦ Designed various anomaly detection algorithms for both supervised and unsupervised datasets to be applied on an existing engine to improve accuracy.
-                    <br />
-                    ◦ Connected Front end technology to results achieved from a back end pipeline to map multi-sourced data into a unified organized and accessible file to work with.
-                    <h5> Relevant Classes </h5>
-                    ◦ Worked on various projects as an intern on the Data Science Track, while learning and applying various data analytics methods (KNN Modelings, Neural Networks, multidimensional regression, data visualization, etc.).
-                    <br />
-                    ◦ Designed various anomaly detection algorithms for both supervised and unsupervised datasets to be applied on an existing engine to improve accuracy.
-                    <br />
-                    ◦ Connected Front end technology to results achieved from a back end pipeline to map multi-sourced data into a unified organized and accessible file to work with.
-                    <h5> Additional Activities </h5>
-                    ◦ Worked on various projects as an intern on the Data Science Track, while learning and applying various data analytics methods (KNN Modelings, Neural Networks, multidimensional regression, data visualization, etc.).
-                    <br />
-                    ◦ Designed various anomaly detection algorithms for both supervised and unsupervised datasets to be applied on an existing engine to improve accuracy.
-                    <br />
-                    ◦ Connected Front end technology to results achieved from a back end pipeline to map multi-sourced data into a unified organized and accessible file to work with.
-                </div>
-                <div class = "gallery">
-
+                <div class = "edu-gallery">
+                    <p> Student Government </p>
+                    <img src = "photos/lpcsg.jpg" />
+                    
+                    <p> The Chess Club </p>
+                    <img src = "photos/lpccc.jpg" />
                 </div>
             </div>
         </div>
@@ -298,7 +396,7 @@
                         <h5> jQuery </h5>
                     </div>
                     <div class = "skill">
-                        <img src = "logos/chartsjs.png" />
+                        <img src = "logos/chartsjs.webp" />
                         <h5> charts.js </h5>
                     </div>
                 </div>
@@ -346,6 +444,10 @@
                     <div class = "skill">
                         <img src = "logos/pytorch.png" />
                         <h5> PyTorch (ML) </h5>
+                    </div>
+                    <div class = "skill">
+                        <img src = "logos/tensorflow.png" />
+                        <h5> Tensorflow (ML) </h5>
                     </div>
                 </div>
                 <div class = "skills-category">
@@ -534,9 +636,9 @@
                 </form>
                 <!-- <button class = "emailme"> Email Me &nbsp; &nbsp; <i class = "fa fa-envelope-o"></i> </button> -->
                 <div class = "socialmedia">
-                    <i class="fa fa-linkedin-square"></i>
-                    <i class="fa fa-instagram"></i>
-                    <i class="fa fa-github"></i>
+                    <a class = "link" href = "https://www.linkedin.com/in/shahaf-dan-66812b180/"><i class="fa fa-linkedin-square"></i> </a>
+                    <a class = "link" href = "https://www.instagram.com/shahaf.dan/"><i class="fa fa-instagram"></i> </a>
+                    <a class = "link" href = "https://github.com/ShahafDan25"><i class="fa fa-github"></i> </a>
                 </div>
             </div>
             
@@ -550,5 +652,6 @@
                 scrollTop: $("#"+section).offset().top - 2*$("#menu").height() // minus the nav height
             }, 1000);
         }
-  </script>
+    </script>
+
 </html>
