@@ -1,0 +1,73 @@
+/* ------------ CONTAINERS & PAGE SETUP -------------- */
+.body{
+    height: 100% !important;
+    /* background: url('shahaf-pics/background-pic.jpg') !important;  */
+    text-align: center !important; 
+    width: 100% !important;
+    background-color: white !important;
+    background-position: center !important; 
+    background-repeat: no-repeat !important; 
+    background-size: 100% !important; 
+    background-attachment: fixed !important;
+    font-family: 'Neue Montreal', sans-serif
+}
+
+div#menu {
+    width: 100%;
+    max-width: 100%;
+    background-color: black;
+    padding: 25px;
+    border-bottom: 5px solid rgb(142, 142, 255);
+    text-align: left;
+    top: 0px;
+    position: fixed;
+
+}
+
+div#menu button.nav-btn {
+    font-family: "Gill Sans";
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid transparent;
+    color: white;
+    margin: 2px 20px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+div#menu button.nav-btn:hover, div#menu button.nav-btn:focus {
+    color: rgb(142, 142, 255);
+    border-color: rgb(142, 142, 255);
+    /* background-color: rgb(255, 255, 255); */
+    transition: ease-out 0.3s;
+    /* transition-property: border-color; */
+}
+
+a.link {
+    color: rgb(142, 142, 255);
+    font-weight: bold;
+    transition: ease-out 0.3s
+}
+
+a.link:hover {
+    color: rgb(21, 21, 255);
+    text-decoration: none;
+}
+
+div.padder {
+    padding: 10%;
+    text-align: left;
+    height: auto;
+    max-height: auto;
+}
+
+div.section {
+    border-bottom: 5px solid rgb(142, 142, 255);
+    padding: 5%;
+}
+
+div.nwbgfs { /* Non White Back Ground For Section = NWBGFS */
+    background-color: rgb(250, 243, 231);
+}
+

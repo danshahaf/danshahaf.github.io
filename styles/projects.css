@@ -1,0 +1,40 @@
+div.project {
+    display: flex;
+    padding: 10px 50px;
+    margin-bottom: 40px;
+}
+
+div.about-theproject div.title {
+    text-align: left;
+}
+
+div.about-theproject div.title h2 {
+    font-weight: bolder;
+}
+
+div.about-theproject div.project-tools {
+    display: flex;
+    width: 25%;
+}
+
+div.about-theproject div.project-tools img {
+    border-radius: 150px;
+    border: 2px solid rgb(142, 142, 255);
+    height: 40px;
+    width: 40px !important;
+    max-height: 40px;
+    max-width: 40px;
+    flex: 1;
+    margin-right: 5px;
+}
+
+div.project div.description {
+    margin-top: 25px;
+}
+
+div.project div.description div.wordical {
+    padding-top: 5px;
+    font-size: 14px !important;
+    text-align: left;
+}
+

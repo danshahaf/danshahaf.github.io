@@ -1,0 +1,39 @@
+div.job {
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+div.workplace {
+    display: flex;
+    text-align: left;
+    width: 55%;
+    align-items: center;
+}
+
+div.workplace div.role {
+    margin-left: 25px;
+
+}
+
+div.workplace div.role h3 {
+    flex: 9;
+    font-weight: bolder;
+}
+
+div.workplace img {
+    height: 100px;
+    width: 100px;
+    border-radius: 15px;
+    border: 4px solid rgb(142, 142, 255);
+}
+
+div.job-description {
+    font-size: 14px;
+    padding: 5px 10px;
+    text-align: left;
+}
+
+div.job-description h5 {
+    font-weight: bold;
+    margin: 25px 0px 5px 0px !important;
+}

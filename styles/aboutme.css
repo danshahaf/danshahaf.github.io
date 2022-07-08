@@ -1,0 +1,32 @@
+div#introduction {
+    background-color: rgb(255, 243, 228);
+    text-align: left !important;
+    display: flex;
+}
+
+div#introduction div.wordical {
+    flex: 8;
+    padding-right: 5%;
+}
+
+div#introduction div.side-gallery {
+    flex: 2;
+    text-align: center;
+    display: block;
+}
+
+div#introduction div.side-gallery p {
+    text-align: left;
+    margin: 5px 0px;
+    font-weight: bold;
+}
+
+div#introduction div.side-gallery img {
+    height: auto;
+    width: 100%;
+    border: 3px solid rgb(142, 142, 255);;
+}
+
+div#introduction div.wordical h4 {
+    font-weight: 400;
+}

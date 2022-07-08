@@ -2,21 +2,26 @@
 <html> 
     <head>
         <title> Shahaf Dan</title>
-        <link rel = "shortcut icon" href = "Logos/s-logo.jpg"/>
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
         <meta charset = utf-8 />
 
 
         <!-- FONTAWESOME ICON --> 
-        <link href="/others/fontawesome/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
         <!-- BOOTSTRAP -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
 
-        <!-- MY CSS -->
-        <link rel = "stylesheet" type = "text/css" href = "shahaf.css">
-        <link rel = "stylesheet" type = "text/css" href = "contact.css">
+        <!-- MY CSS --> <!-- TODO: Sort by order -->
+        <link rel = "stylesheet" type = "text/css" href = "styles/shahaf.css">
+        <link rel = "stylesheet" type = "text/css" href = "styles/contact.css">
+        <link rel = "stylesheet" type = "text/css" href = "styles/experience.css">
+        <link rel = "stylesheet" type = "text/css" href = "styles/home.css">
+        <link rel = "stylesheet" type = "text/css" href = "styles/projects.css">
+        <link rel = "stylesheet" type = "text/css" href = "styles/skills.css">
+        <link rel = "stylesheet" type = "text/css" href = "styles/aboutme.css">
 
         <!-- MY JavaScript -->
         <script src = "shahaf.js" type = "text/JavaScript"></script>
@@ -25,49 +30,496 @@
 
     <body class = "body">
         <div id = "menu">
-            <button class = "nav-btn"> Home </button>
-            <button class = "nav-btn"> About Me </button>
-            <button class = "nav-btn"> Academics </button>
-            <button class = "nav-btn"> Experience </button>
-            <button class = "nav-btn"> My Work </button>
-            <button class = "nav-btn"> Contact! </button>
+            <button class = "nav-btn" onclick = 'roll_to_section("home", self)'> Home </button>
+            <button class = "nav-btn" onclick = 'roll_to_section("introduction", self)'> About Me </button>
+            <button class = "nav-btn" onclick = 'roll_to_section("academics", self)'> Academics </button>
+            <button class = "nav-btn" onclick = 'roll_to_section("sites", self)'> My Sites </button>
+            <button class = "nav-btn" onclick = 'roll_to_section("experience", self)'> Experience </button>
+            <button class = "nav-btn" onclick = 'roll_to_section("skills", self)'> Skills </button>
+            <button class = "nav-btn" onclick = 'roll_to_section("projects", self)'> My Work </button>
+            <button class = "nav-btn" onclick = 'roll_to_section("contact", self)'> Contact! </button>
         </div>
         
-        <div class = "home">
-
+        <div id = "home" class = "section">
+            <div class = "padder">
+                <h1> Hello! </h1>
+                <h2> My name is Shahaf, Nice to meet you.</h2>
+                <h4> I am a recent (2022) grad-student from Boston University and a passionate developer.</h4>
+                <div class = "spacer"></div>
+                <button class = "emailme"  onclick = 'roll_to_section("introduction", self)'> Let's get started &nbsp; <i class = "fa fa-arrow-right"></i> </button>
+            </div>
         </div>
 
-        <div id = "introduction" class = "section">
-
+        <div id = "introduction" class = "section nwbgfs">
+            <div class = "wordical">
+                <h1> So.... Hi! </h1>
+                <h3> Let me tell you a little bit about me:</h3>
+                <br>
+                <h4> 
+                    I am 22, and just recently graduated from <a class = "link" onclick = 'roll_to_section("academics", self)'>Boston University</a> with a Bachelors in Computer Science. <br>
+                    I am currently looking for a job in the Boston area as a Software Developer or Data Scientist.
+                    <br><br>
+                    I was born in Israel and moved to Livermore, California at the age of 15.5 with my 3 younger siblings and parents.
+                    <br><br>
+                    I graduated <a class = "link" onclick = 'roll_to_section("academics", self)'>Granada High School</a> in 2018 and in the top 5% of, where I was on the Cross Country, Wrestling, and Volleyball teams. 
+                    <br><br>
+                    I made the financially-responsible decision of attending a community college (<a class = "link" onclick = 'roll_to_section("academics", self)'>Las Positas College</a>), 
+                    where while working almost full-time in internships and as a waiter, I have achieved much more than imagined 
+                    (feel free to read about it <a class = "link" onclick = 'roll_to_section("academics", self)'>here</a>)
+                    <br><br>
+                    In the midst of the pandemic (2020), I transferred to <a class = "link" onclick = 'roll_to_section("academics", self)'>Boston University</a> - a school with a rapidly growing Data Science program 
+                    and a safe in-person plan through the pandemic for its students - allowing me to experience the "college experience" 
+                    I never had in my time at Las Positas. <br>
+                    I had recently graduated from BU and am now looking to get my foot into the industry.
+                    <br><br>
+                    I love playing basketball, and am a big warriors fan.
+                    In my free time I love working on fun coding projects, watch TV (which I document <a class = "link" onclick = 'roll_to_section("academics", self)'>here</a>), travel and hike, take and edit photos (that I upload <a class = "link" onclick = 'roll_to_section("academics", self)'>here</a>), go out with friends, or read modern-philosophy books.
+                    <br><br>
+                    That was my attemp at keeping this as short as possible. <br>
+                    I developed myself a blogging site (<a class = "link" onclick = 'roll_to_section("projects", self)'>shahafster</a>) so everyone who is interested can keep up with my life.
+                </h4>
+            </div>
+            <div class = "side-gallery">
+                <p> Las Positas College Student Government</p>
+                <img src = "photos/lpcsg.jpg" />
+            </div>
+            
         </div>
 
         <div id = "academics" class = "section">
+            <div class = "job"> <!-- BOSTON UNIVERSITY -->
+                <div class = "workplace">
+                    <img src = "logos/bostonu.png" />
+                    <div class = "role">
+                        <h3> Boston University </h3>
+                        <h4> <strong> BA Computer Science </strong></h4>
+                        <h5> Sep. 2020 - May 2022  &nbsp;◦&nbsp;  GPA 3.41</h5>
+                    </div>
+                </div>
+                <div class = "job-description">
+                    <h5> Achievements & Awards </h5>
+                    ◦ Worked on various projects as an intern on the Data Science Track, while learning and applying various data analytics methods (KNN Modelings, Neural Networks, multidimensional regression, data visualization, etc.).
+                    <br />
+                    ◦ Designed various anomaly detection algorithms for both supervised and unsupervised datasets to be applied on an existing engine to improve accuracy.
+                    <br />
+                    ◦ Connected Front end technology to results achieved from a back end pipeline to map multi-sourced data into a unified organized and accessible file to work with.
+                    <h5> Relevant Classes </h5>
+                    ◦ Worked on various projects as an intern on the Data Science Track, while learning and applying various data analytics methods (KNN Modelings, Neural Networks, multidimensional regression, data visualization, etc.).
+                    <br />
+                    ◦ Designed various anomaly detection algorithms for both supervised and unsupervised datasets to be applied on an existing engine to improve accuracy.
+                    <br />
+                    ◦ Connected Front end technology to results achieved from a back end pipeline to map multi-sourced data into a unified organized and accessible file to work with.
+                    <h5> Additional Activities </h5>
+                    ◦ Worked on various projects as an intern on the Data Science Track, while learning and applying various data analytics methods (KNN Modelings, Neural Networks, multidimensional regression, data visualization, etc.).
+                    <br />
+                    ◦ Designed various anomaly detection algorithms for both supervised and unsupervised datasets to be applied on an existing engine to improve accuracy.
+                    <br />
+                    ◦ Connected Front end technology to results achieved from a back end pipeline to map multi-sourced data into a unified organized and accessible file to work with.
+                </div>
+            </div>
 
+            <div class = "job"> <!-- LAS POSITAS COLLEGE  -->
+                <div class = "workplace">
+                    <img src = "logos/laspo.jpeg" />
+                    <div class = "role">
+                        <h3> Las Positas College </h3>
+                        <h4> <strong> AA Computer Science, AS Physics, AA Math </strong></h4>
+                        <h5> Jun. 2018 - May 2020  &nbsp;◦&nbsp;  GPA 3.92</h5>
+                    </div>
+                </div>
+                <div class = "job-description">
+                    <h5> Achievements & Awards </h5>
+                    ◦ Worked on various projects as an intern on the Data Science Track, while learning and applying various data analytics methods (KNN Modelings, Neural Networks, multidimensional regression, data visualization, etc.).
+                    <br />
+                    ◦ Designed various anomaly detection algorithms for both supervised and unsupervised datasets to be applied on an existing engine to improve accuracy.
+                    <br />
+                    ◦ Connected Front end technology to results achieved from a back end pipeline to map multi-sourced data into a unified organized and accessible file to work with.
+                    <h5> Relevant Classes </h5>
+                    ◦ Worked on various projects as an intern on the Data Science Track, while learning and applying various data analytics methods (KNN Modelings, Neural Networks, multidimensional regression, data visualization, etc.).
+                    <br />
+                    ◦ Designed various anomaly detection algorithms for both supervised and unsupervised datasets to be applied on an existing engine to improve accuracy.
+                    <br />
+                    ◦ Connected Front end technology to results achieved from a back end pipeline to map multi-sourced data into a unified organized and accessible file to work with.
+                    <h5> Additional Activities </h5>
+                    ◦ Worked on various projects as an intern on the Data Science Track, while learning and applying various data analytics methods (KNN Modelings, Neural Networks, multidimensional regression, data visualization, etc.).
+                    <br />
+                    ◦ Designed various anomaly detection algorithms for both supervised and unsupervised datasets to be applied on an existing engine to improve accuracy.
+                    <br />
+                    ◦ Connected Front end technology to results achieved from a back end pipeline to map multi-sourced data into a unified organized and accessible file to work with.
+                </div>
+                <div class = "gallery">
+
+                </div>
+            </div>
+        </div>
+
+        <div id = "sites" class = "section nwbgfs">
+            <div class = "site">
+                <h2> Shahafster </h2>
+                <h4> My Blog Wesite </h4>
+            </div>
+            <div class = "site">
+                <h2> Haf's Camera </h2>
+                <h4> My Photography Wesite </h4>
+            </div>
+            <div class = "site">
+                <h2> STVR </h2>
+                <h4> Shahaf's TeleVision Rating </h4>
+            </div>
         </div>
 
         <div id = "experience" class = "section">
+            <div class = "job">
+                <div class = "workplace">
+                    <img src = "logos/spark.png" />
+                    <div class = "role">
+                        <h3> BU Spark! </h3>
+                        <h4> <strong> Date Scientist, Full Stack Developer </strong></h4>
+                        <h5> Dec. 2020 - May 2022  &nbsp;|&nbsp;  Boston, MA</h5>
+                    </div>
+                </div>
+                <div class = "job-description">
+                    ◦ Worked on various projects as an intern on the Data Science Track, while learning and applying various data analytics methods (KNN Modelings, Neural Networks, multidimensional regression, data visualization, etc.).
+                    <br />
+                    ◦ Designed various anomaly detection algorithms for both supervised and unsupervised datasets to be applied on an existing engine to improve accuracy.
+                    <br />
+                    ◦ Connected Front end technology to results achieved from a back end pipeline to map multi-sourced data into a unified organized and accessible file to work with.
+                </div>
+            </div>
 
+            <div class = "job">
+                <div class = "workplace">
+                    <img src = "logos/spark.png" />
+                    <div class = "role">
+                        <h3> Prody </h3>
+                        <h4> <strong> Date Scientist, Full Stack Developer </strong></h4>
+                        <h5> Dec. 2020 - May 2022  &nbsp;|&nbsp;  Boston, MA</h5>
+                    </div>
+                </div>
+                <div class = "job-description">
+                    ◦ Worked on various projects as an intern on the Data Science Track, while learning and applying various data analytics methods (KNN Modelings, Neural Networks, multidimensional regression, data visualization, etc.).
+                    <br />
+                    ◦ Designed various anomaly detection algorithms for both supervised and unsupervised datasets to be applied on an existing engine to improve accuracy.
+                    <br />
+                    ◦ Connected Front end technology to results achieved from a back end pipeline to map multi-sourced data into a unified organized and accessible file to work with.
+                </div>
+            </div>
+
+            <div class = "job">
+                <div class = "workplace">
+                    <img src = "logos/skillwaze.jpeg" />
+                    <div class = "role">
+                        <h3> SkillWaze </h3>
+                        <h4> <strong> Backend Developer, Database Engineer </strong></h4>
+                        <h5> Jun. 2019 - Aug. 2019  &nbsp;|&nbsp;  San Ramon, MA</h5>
+                    </div>
+                </div>
+                <div class = "job-description">
+                    ◦ Assisted with Backend Java Development of the main website platform to create effective data communication between the Server and the site’s front-end.
+                    <br />
+                    ◦ Developed data pipelines to integrate non-relational data into an ER SQL model via the JDBC protocol.
+                </div>
+            </div>
+
+            <div class = "job">
+                <div class = "workplace">
+                    <img src = "logos/astpos.png" />
+                    <div class = "role">
+                        <h3> Amber System Technologies </h3>
+                        <h4> <strong> Full Stack Developer </strong></h4>
+                        <h5> Sep. 2018 - Apr. 2019  &nbsp;|&nbsp;  Pleasanton, CA</h5>
+                    </div>
+                </div>
+                <div class = "job-description">
+                    ◦ Integrated a WebApp with various POS system databases so clients’ (businesses) customers can make online purchases.
+                    <br />
+                    ◦ Developed 50+ client websites based on client-specified needs using HTML, CSS, JS, AJAX, jQuery, and various libraries.
+                    <br />
+                    ◦ Designed PHP data-query SQL scripts using the PDO protocol to manipulate and analyze mass data.
+                </div>
+            </div>
+        </div>
+
+        <div id = "skills" class = "section nwbgfs">
+            <div class = "skills-padder">
+                <div class = "skills-category">
+                    <h3> Front End Dev. </h3>
+                    <div class = "skill">
+                        <img src = "logos/html.png" />
+                        <h5> HTML </h5>
+                    </div>
+                    <div class = "skill">
+                        <img src = "logos/css.jpeg" />
+                        <h5> CSS </h5>
+                    </div>
+                    <div class = "skill">
+                        <img src = "logos/javascript.png" />
+                        <h5> JavaScript </h5>
+                    </div>
+                    <div class = "skill">
+                        <img src = "logos/react.png" />
+                        <h5> React </h5>
+                    </div>
+                    <div class = "skill">
+                        <img src = "logos/bootstrap.png" />
+                        <h5> Bootstrap </h5>
+                    </div>
+                    <div class = "skill">
+                        <img src = "logos/jquery.svg" />
+                        <h5> jQuery </h5>
+                    </div>
+                    <div class = "skill">
+                        <img src = "logos/chartsjs.png" />
+                        <h5> charts.js </h5>
+                    </div>
+                </div>
+                <div class = "skills-category">
+                    <h3> Back End Dev. </h3>
+                    <div class = "skill">
+                        <img src = "logos/flask.png" />
+                        <h5> Flask (Python) </h5>
+                    </div>
+                    <div class = "skill">
+                        <img src = "logos/php.png" />
+                        <h5> PHP </h5>
+                    </div>
+                    <div class = "skill">
+                        <img src = "logos/python.png" />
+                        <h5> Python </h5>
+                    </div>
+                    <div class = "skill">
+                        <img src = "logos/cpp.webp" />
+                        <h5> C++ </h5>
+                    </div>
+                    <div class = "skill">
+                        <img src = "logos/java.png" />
+                        <h5> Java </h5>
+                    </div>
+                    <div class = "skill">
+                        <img src = "logos/nodejs.jpeg" />
+                        <h5> Node.js </h5>
+                    </div>
+                </div>
+                <div class = "skills-category">
+                    <h3> Data (DS, DB, ML) </h3>
+                    <div class = "skill">
+                        <img src = "logos/pandas.png" />
+                        <h5> Pandas (Python) </h5>
+                    </div>
+                    <div class = "skill">
+                        <img src = "logos/mongodb.webp" />
+                        <h5> Mongo DB </h5>
+                    </div>
+                    <div class = "skill">
+                        <img src = "logos/mysql.png" />
+                        <h5> MySQL </h5>
+                    </div>
+                    <div class = "skill">
+                        <img src = "logos/pytorch.png" />
+                        <h5> PyTorch (ML) </h5>
+                    </div>
+                </div>
+                <div class = "skills-category">
+                    <h3> Other </h3>
+                    <div class = "skill">
+                        <img src = "logos/git.png" />
+                        <h5> Git </h5>
+                    </div>
+                    <div class = "skill">
+                        <img src = "logos/ocaml.png" />
+                        <h5> OCaml </h5>
+                    </div>
+                    <div class = "skill">
+                        <img src = "logos/assembly.jpeg" />
+                        <h5> Assembly </h5>
+                    </div>
+                    <div class = "skill">
+                        <img src = "logos/selenium.png" />
+                        <h5> Selenium (Python) </h5>
+                    </div>
+                    <div class = "skill">
+                        <img src = "logos/linux.jpeg" />
+                        <h5> Linux / Unix </h5>
+                    </div>
+                    <div class = "skill">
+                        <img src = "logos/msoffice.png" />
+                        <h5> Microsoft Office </h5>
+                    </div>
+                    <div class = "skill">
+                        <img src = "logos/latex.jpeg" />
+                        <h5> LateX </h5>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
         <div id = "projects" class = "section">
+            <div class = "project"> <!-- DATA SCIENCE JOURNAL -->
+                <div class = "about-theproject">
+                    <div class = "title">
+                        <h2>  Data Science Journal </h2>
+                        <h5> <a class = "link" href = "https://github.com/ShahafDan25/DataScienceJournal" ><i class = "fa fa-github"></i> See Code </a> &nbsp; ◦ &nbsp; Jun. 2022</h5>
+                    </div>
+                    <div class = "description">
+                        <div class = "project-tools">
+                            <img src = "logos/python.png" class = "project-tool-logo" />
+                            <img src = "logos/pandas.png" class = "project-tool-logo" />
+                            <img src = "logos/react.png" class = "project-tool-logo" />
+                            <img src = "logos/flask.png" class = "project-tool-logo" />
+                        </div>
+                        <div class = "wordical">
+                            Having graduated in May '22, all of a sudden June became surprisingly broing. I spent my time looking for DS & ML jobs in the Boston and NY area, while running across some pretty interesting APIs.
+                            <br />
+                            This project is the epitome of what a BU student with a BA in Computer Science and some experience can do with some data.
+                            <br /> <br />
+                            This project is a fully delopyed website. The front end was done using react and is connected via a flask backend to various REST APIs (using Python).
+                            <br />
+                            Some of the APIs used in the project include from NBA (
+                                <a class = "link" href= "https://www.basketball-reference.com/leagues/NBA_2020_per_game.html">Players </a>, 
+                                <a class = "link" href= "https://cdn.nba.com/stats/"> Actions</a>),
+                                <a class = "link" href= "https://accounts.spotify.com/api/"> Spotify</a>,
+                                <a class = "link" href= "http://theautomatic.net/yahoo_fin-documentation/"> Yahoo Finance</a>,
+                                and more.
+                            <br /> <br />
+                            For every API used, there are two main files within the GitHub Open Source Code I share: <strong>retrieve.py</strong> and <strong>analyze.ipynb</strong>
+                            <br />
+                            Those files are documented and commented very carefully and in a user-friendly manner to allow more developers to learn from the use of those APIs and to ease the process of retrieving and analyzing data on other developers.
+                            <br /> <br />
+                            Some of the DS & ML methods I was hoping to demonstrate include the use of <strong>Neural Networks</strong>, <strong>Anomaly Detection</strong> (Isolation Forrests, Outlier Factors), <strong>Classification Methods </strong> (SVM, KNN), <strong>Predictions</strong>, and more.
+                        </div>
+                    </div>
+                </div>
+                <div class = "project-gallery">
 
+                </div>
+            </div>
+
+            <div class = "project"> <!-- SHAHAFSTER -->
+                <div class = "about-theproject">
+                    <div class = "title">
+                        <h2>  Shahafster </h2>
+                        <h5> <a class = "link" href = "https://github.com/ShahafDan25/shahafster-002" ><i class = "fa fa-github"></i> See Code </a> &nbsp; ◦ &nbsp; Aug. 2021</h5>
+                    </div>
+                    <div class = "description">
+                        <div class = "project-tools">
+                            <img src = "logos/html.png" class = "project-tool-logo" />
+                            <img src = "logos/css.jpeg" class = "project-tool-logo" />
+                            <img src = "logos/javascript.png" class = "project-tool-logo" />
+                            <img src = "logos/php.png" class = "project-tool-logo" />
+                            <img src = "logos/mysql.png" class = "project-tool-logo" />
+                        </div>
+                        <div class = "wordical">
+                            Insert <strong> DESCRIPTION </strong> Here!
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div class = "project-gallery">
+
+                </div>
+            </div>
+
+            <div class = "project"> <!-- FRAT PORTAL -->
+                <div class = "about-theproject">
+                    <div class = "title">
+                        <h2>  Frat Portal </h2>
+                        <h5> <a class = "link" href = "https://github.com/ShahafDan25/shahafster-002" ><i class = "fa fa-github"></i> See Code </a> &nbsp; ◦ &nbsp; Jan. 2021</h5>
+                    </div>
+                    <div class = "description">
+                        <div class = "project-tools">
+                            <img src = "logos/html.png" class = "project-tool-logo" />
+                            <img src = "logos/css.jpeg" class = "project-tool-logo" />
+                            <img src = "logos/javascript.png" class = "project-tool-logo" />
+                            <img src = "logos/php.png" class = "project-tool-logo" />
+                            <img src = "logos/mysql.png" class = "project-tool-logo" />
+                        </div>
+                        <div class = "wordical">
+                            Insert <strong> DESCRIPTION </strong> Here!
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div class = "project-gallery">
+
+                </div>
+            </div>
+
+            <div class = "project"> <!-- shahaf.css -->
+                <div class = "about-theproject">
+                    <div class = "title">
+                        <h2>  shahaf.css </h2>
+                        <h5> <a class = "link" href = "https://github.com/ShahafDan25/shahafster-002" ><i class = "fa fa-github"></i> See Code </a> &nbsp; ◦ &nbsp; Jul. 2020</h5>
+                    </div>
+                    <div class = "description">
+                        <div class = "project-tools">
+                            <img src = "logos/html.png" class = "project-tool-logo" />
+                            <img src = "logos/css.jpeg" class = "project-tool-logo" />
+                            <img src = "logos/javascript.png" class = "project-tool-logo" />
+                        </div>
+                        <div class = "wordical">
+                            Insert <strong> DESCRIPTION </strong> Here!
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div class = "project-gallery">
+
+                </div>
+            </div>
+
+            <div class = "project"> <!-- MARKET MANAGER -->
+                <div class = "about-theproject">
+                    <div class = "title">
+                        <h2>  The Market Manager </h2>
+                        <h5> <a class = "link" href = "https://github.com/ShahafDan25/shahafster-002" ><i class = "fa fa-github"></i> See Code </a> &nbsp; ◦ &nbsp; Mar. 2020</h5>
+                    </div>
+                    <div class = "description">
+                        <div class = "project-tools">
+                            <img src = "logos/html.png" class = "project-tool-logo" />
+                            <img src = "logos/css.jpeg" class = "project-tool-logo" />
+                            <img src = "logos/javascript.png" class = "project-tool-logo" />
+                            <img src = "logos/php.png" class = "project-tool-logo" />
+                            <img src = "logos/mysql.png" class = "project-tool-logo" />
+                        </div>
+                        <div class = "wordical">
+                            Insert <strong> DESCRIPTION </strong> Here!
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div class = "project-gallery">
+
+                </div>
+            </div>
         </div>
 
-        <div id = "contact" class = "section">
+        <div id = "contact" class = "section nwbgfs">
             <div class = "padder">
                 <h1> Thank you! </h1>
                 <h2> For visiting my site and learning about me.</h2>
 
                 <div class = "spacer"></div>
-                <button class = "emailme"> Email Me <i class = "fa-solid fa-envelop"></i> </button>
+                <form action="mailto:dan.shachaf@gmail.com" method="post" enctype="text/plain" >
+                    <input class = "emailme" type="submit" name="submit" value = "<    Email Me   / >" />
+                </form>
+                <!-- <button class = "emailme"> Email Me &nbsp; &nbsp; <i class = "fa fa-envelope-o"></i> </button> -->
                 <div class = "socialmedia">
-                    <i class="fa-brands fa-linkedin"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-github"></i>
+                    <i class="fa fa-linkedin-square"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-github"></i>
                 </div>
             </div>
             
 
         </div>
     </body>
+
+    <script>
+        function roll_to_section(section, btn) {
+            $('html, body').animate({
+                scrollTop: $("#"+section).offset().top - 2*$("#menu").height() // minus the nav height
+            }, 1000);
+        }
+  </script>
 </html>
