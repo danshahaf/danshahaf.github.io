@@ -1,4 +1,4 @@
-div#skills div.skills-padder {
+div.skills-padder {
     display: flex;
     padding: 25px 10%;
 }
@@ -29,3 +29,24 @@ div.skill img {
 div.skill h5 {
     font-weight: bold;
 }
+
+/* ----------------- SITES ------------------------- */
+div.site {
+    flex: 1;
+    padding: 0px 45px;
+}
+
+div.site h2 {
+    font-weight: bolder;
+    margin: 0px !important;
+}
+
+div.site p {
+    margin: 5px 0px 0px 20px !important;
+}
+
+div.site h4 {
+    text-align: justify;
+}
+
+
