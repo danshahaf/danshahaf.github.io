@@ -1,7 +1,7 @@
 <!-- <!DOCTYPE html> -->
 <html> 
     <head>
-        <title> Shahaf Dan</title>
+        <title> Sagiv </title>
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
         <meta charset = utf-8 />
 
@@ -675,11 +675,26 @@
     </body>
 
     <script>
+
         function roll_to_section(section, btn) {
             $('html, body').animate({
                 scrollTop: $("#"+section).offset().top - 2*$("#menu").height() // minus the nav height
             }, 1000);
         }
+
+        hackkeys = []
+        function equalArrays(a1, a2) {
+            return JSON.stringify(a1)==JSON.stringify(a2);
+        }
+
+        document.addEventListener('keypress', function(e) {
+            hackkeys.push(e.key)
+            lastsix = hackkeys.slice(-6)
+            if (equalArrays(['o', 'r', 'i', 'd', 'a', 'n'], lastsix)){
+                document.getElementById("menu").style.backgroundColor = "blue";
+                console.log("success")
+            }
+        }, false);
     </script>
 
 </html>
