@@ -1,0 +1,35 @@
+.top-bar {
+    background: linear-gradient(45deg, #121212, #333, #232323);
+    overflow: hidden;
+    padding: 10px 20px;
+}
+
+.top-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar li {
+    float: left;
+}
+
+.top-bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: 2px solid transparent; /* Transparent border to maintain layout consistency */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Added transition for border color */
+}
+
+.top-bar li a:hover {
+    background-color: #89C4F4; /* Light shiny blue on hover */
+    color: #EAEAEA; /* White metallic text color on hover */
+    border-color: #3B7CA9; /* Metallic Navy Light Blue border on hover */
+}
+
+.top-bar li a i {
+    margin-right: 8px; /* Adjusts space between the icon and the text */
+}

@@ -1,0 +1,50 @@
+h1 {
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+.emailme {
+    background: transparent;
+    color: black;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 10px 40px;
+    font-weight: bolder;
+    background-color: rgb(142, 142, 255); /* Metallic light blue */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.emailme:hover {
+    background-color: #3B7CA9; /* Metallic Navy Light Blue on hover */
+    color: #EAEAEA; /* White metallic text color on hover */
+}
+
+div.socialmedia {
+    display: flex;
+    text-align: left;
+    font-size: 28px;
+    margin-top: 20px;
+    width: 15%;
+}
+
+div.socialmedia i {
+    flex: 1;
+    margin: 0px 20px 0px 0px;
+    transition: color 0.3s;
+}
+
+div.socialmedia i:hover {
+    color: #3B7CA9; /* Metallic Navy Light Blue on hover */
+}
+
+
+#outro .subsection .context {
+    padding-right: 80px;
+}
+
+#outro .subsection .gallery {
+    display: flex;
+    justify-content: center;
+
+}
+

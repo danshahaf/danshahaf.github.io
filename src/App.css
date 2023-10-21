@@ -1,38 +1,103 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  /* background-color: rgb(201, 201, 201); */
+  background: linear-gradient(to bottom, #333333, #3B7CA9);
   min-height: 100vh;
-  display: flex;
+  font-family: Arial, sans-serif;
+  padding-bottom: 40px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.section {
+  border: 2px solid #3B7CA9; /* Metallic Navy Light Blue */
+  padding: 20px 60px;;
+  border-radius: 12px;
+  margin: 20px 40px;
+  background: white;;
+  display: block;
+  /* margin: 20px 0; */
+}
+
+.section h2 {
+  margin: 5px !important
+}
+
+.subsection .context {
+  flex: 8;
+  
+}
+
+.subsection .gallery {
+  flex: 2;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2%;
 }
 
-.App-link {
-  color: #61dafb;
+/* Style the .gallery-item */
+.subsection .gallery .gallery-item {
+  width: 200px; /* Set the width as needed */
+  height: 200px; /* Set the height as needed */
+  border-radius: 5px; /* Apply a border radius */
+  overflow: hidden; /* Crop the image to a square */
+  position: relative; /* Position for text overlay */
+  margin: 15px 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Style the image within .gallery-item */
+.subsection .gallery .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Automatically crop to a square */
+}
+
+/* Style the description text at the bottom */
+.subsection .gallery .gallery-item .description {
+  position: absolute;
+  bottom: 0; /* Move the text to the bottom */
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Background color for the text */
+  color: #fff; /* Text color */
+  padding: 5px; /* Add padding to the text */
+  box-sizing: border-box;
+  border-radius: 0 0 5px 5px; /* Rounded corners at the bottom */
+}
+
+/* Initially, set the gallery-item to a smaller size */
+.gallery-item {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Adjust border thickness and color */
+  background: rgba(255, 255, 255, 0.1); /* Adjust background color and opacity */
+  backdrop-filter: blur(10px)
+}
+
+/* Style the expanded image */
+.gallery-item.expanded {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.2); /* You can adjust the scale factor as needed */
+  z-index: 2;
+}
+
+
+
+.link {
+  color: rgb(142, 142, 255);
+  font-weight: bold;
+  transition: ease-out 0.3s;
+}
+
+.link:hover {
+  color: rgb(21, 21, 255);
+  text-decoration: none;
+}
+
+.subsection {
+  display: flex;
 }

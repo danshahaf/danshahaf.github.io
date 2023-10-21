@@ -1,0 +1,38 @@
+
+.skills-padder {
+    display: flex;
+    padding: 25px 10%;
+}
+
+.skills-category {
+    flex: 1;
+    margin: 0 15px;
+}
+
+.skills-category h3 {
+    font-weight: bolder;
+    text-align: left;
+    color: #3B7CA9; /* Metallic Navy Light Blue */
+    border-bottom: 2px solid #3B7CA9; /* Metallic Navy Light Blue border */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    margin: 5px 0px;
+}
+
+.skill img {
+    width: 35px;
+    height: 35px;
+    border-radius: 150px;
+    border: 2px solid #3B7CA9; /* Metallic Navy Light Blue border */
+    margin-right: 10px;
+}
+
+.skill h5 {
+    font-weight: bold;
+    color: #EAEAEA; /* White metallic text color */
+}

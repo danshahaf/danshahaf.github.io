@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import TopBar from './components/TopBar';
+import Cover from './components/Cover';
+import Intro from './components/Intro';
+import Education from './components/Education'
+import Experience from './components/Experience'
+import Skills from './components/Skills'
+import Outro from './components/Outro'
 
 function App() {
+      
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+          <TopBar />
+
+              {<Cover />}
+
+              {<Intro />}
+
+              {<Education />}
+
+              {<Experience />}
+
+              { <Skills /> }
+
+              { <Outro />}
+
+          {/* Add more sections as needed */}
+      </div>
   );
 }
 
