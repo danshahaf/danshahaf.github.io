@@ -1,0 +1,14 @@
+.contactbtn {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 7px 35px;
+    margin-right: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+}
+
+.contactbtn:hover {
+    background-color: rgb(235, 241, 186);
+    transition: ease-in-out 0.2s;
+}
