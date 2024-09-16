@@ -1,0 +1,20 @@
+.menu {
+    background-color: white;
+    padding: 30px;
+    border-bottom: 3px solid rgb(187, 192, 139);
+    align-items: center;
+    text-align: center;
+}
+
+.navbtn {
+    color: black;
+    margin: 0px 35px;
+    text-decoration: none;
+    font-weight: bolder;
+    transition: ease-in-out 0.2s;
+}
+
+.navbtn:hover {
+    color: rgb(187, 192, 139);
+    transition: ease-in-out 0.2s;
+}

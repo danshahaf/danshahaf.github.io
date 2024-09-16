@@ -1,0 +1,71 @@
+.work {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #000; /* Keep the title in black */
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .workTable {
+    width: 100%;
+    background-color: #fbf9e8;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+  }
+  
+  .workTable th,
+  .workTable td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+  .workTable th {
+    background-color: #f5f5dc;
+    color: #000; /* Keep header text in black */
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .workTable tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .workTable tbody tr:hover {
+    background-color: #e6e6fa; /* Light lavender hover effect */
+  }
+  
+  .noProjects {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 20px;
+  }
+  
+  .repoLink {
+    text-decoration: none;
+    color: #5859ac;
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .repoLink:hover {
+    color: #5390b9;
+  }
+  
+  .repoLink:visited {
+    color: #5859ac;
+  }
+  

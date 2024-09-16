@@ -1,0 +1,70 @@
+.writings {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #000; /* Keep the title in black */
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .writingsTable {
+    width: 100%;
+    background-color: #fbf9e8;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+  }
+  
+  .writingsTable th,
+  .writingsTable td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+  .writingsTable th {
+    background-color: #f5f5dc;
+    color: #000; /* Keep the header text in black */
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .writingsTable tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .writingsTable tbody tr:hover {
+    background-color: #e6e6fa; /* Change the hover highlight to a light lavender color */
+  }
+  
+  .articleLink {
+    text-decoration: none;
+    color: #5859ac;
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .articleLink:hover {
+    color: #5390b9;
+  }
+  
+  .articleLink:visited {
+    color: #5859ac;
+  }
+  
+  .writingsTable td:nth-child(3) {
+    font-size: 12px; /* Make the date slightly smaller */
+    font-style: italic; /* Italicize the date */
+    color: #555; /* Slightly lighter color for the date */
+  }
+  
