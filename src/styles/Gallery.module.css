@@ -1,0 +1,89 @@
+.photo {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block; /* Ensure the image behaves as a block element with no extra inline spacing */
+    margin: 0; /* Remove any potential margin */
+    cursor: pointer; /* Changes the cursor to indicate it's clickable */
+    transition: transform 0.3s ease; /* Adds a smooth transition effect */
+  }
+  
+  .photoItem {
+    width: 70%;
+    margin: 10px auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0; /* Remove padding inside the photoItem */
+  }
+  
+  .photoInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 0; /* Remove any margin below the title and date */
+  }
+  
+  .photoTitle, .photoDate {
+    margin: 0; /* Remove any potential margin from title and date */
+  }
+
+  .photoTitle {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .photoDate{
+    font-size: 10px;
+    font-style: italic;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    z-index: 1001;
+  }
+  
+  .closeButton:hover {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  
+  .photo:hover {
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+  }

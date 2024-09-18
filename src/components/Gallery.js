@@ -3,21 +3,27 @@ import styles from '../styles/Gallery.module.css';
 
 const Gallery = () => {
   const [photos, setPhotos] = useState([]);
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   useEffect(() => {
-    // In a real scenario, you'd fetch this list from your server
-    // For now, we'll simulate it with a hard-coded list
     const photoList = [
       {
         id: 1,
         filename: 'A01.jpg',
         title: 'Madison Ave',
-        date: '2023-12-04'
+        date: '2023-12-04',
       },
-      // Add more photos as needed
     ];
     setPhotos(photoList);
   }, []);
+
+  const handlePhotoClick = (photo) => {
+    setSelectedPhoto(photo);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedPhoto(null);
+  };
 
   return (
     <div id="gallery" className={styles.gallery}>
@@ -30,15 +36,28 @@ const Gallery = () => {
                 <h3 className={styles.photoTitle}>{photo.title}</h3>
                 <p className={styles.photoDate}>{new Date(photo.date).toLocaleDateString()}</p>
               </div>
-              <img 
-                src={`../photos/${photo.filename}`} 
+              <img
+                src={`/photos/${photo.filename}`}
                 alt={photo.title}
                 className={styles.photo}
+                onClick={() => handlePhotoClick(photo)}
               />
             </div>
           ))}
         </div>
       </div>
+
+      {selectedPhoto && (
+        <div className={styles.modal}>
+          <button className={styles.closeButton} onClick={handleCloseModal}>
+            &times;
+          </button>
+          <img
+            src={`/photos/${selectedPhoto.filename}`}
+            alt={selectedPhoto.title}
+          />
+        </div>
+      )}
     </div>
   );
 };

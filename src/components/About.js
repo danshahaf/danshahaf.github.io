@@ -3,10 +3,10 @@ import styles from '../styles/About.module.css';
 
 const About = () => {
   const socialLinks = [
-    { name: '𝕏', url: 'https://x.com/gullhaf' },
-    { name: 'GitHub', url: 'https://github.com/danshahaf' },
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/shahaf-dan/' },
-    { name: 'Medium', url: 'https://medium.com/@shahafdan' }
+    { name: '𝕏', url: 'https://x.com/gullhaf', className: styles.twitter },
+    { name: 'GitHub', url: 'https://github.com/danshahaf', className: styles.github },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/shahaf-dan/', className: styles.linkedin },
+    { name: 'Medium', url: 'https://medium.com/@shahafdan', className: styles.medium }
   ];
 
   return (
@@ -15,17 +15,19 @@ const About = () => {
         <h1>Shahaf Dan</h1>
         <h3>Data Scientist • Engineer • Photographer</h3>
         
-        {socialLinks.map((link, index) => (
-          <a 
-            key={index}
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.contactbtn}
-          >
-            {link.name}
-          </a>
-        ))}
+        <div className={styles.socialLinks}>
+          {socialLinks.map((link, index) => (
+            <a 
+              key={index}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${styles.contactbtn} ${link.className}`}
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
 
         <p>
           I live in New York City and work as a Data Scientist in resinsurance. 
