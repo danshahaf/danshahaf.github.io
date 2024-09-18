@@ -28,7 +28,7 @@ const Gallery = () => {
   return (
     <div id="gallery" className={styles.gallery}>
       <div className={styles.content}>
-        <h1>My Photos</h1>
+        <h2>My Photos</h2>
         <div className={styles.photoGrid}>
           {photos.map((photo) => (
             <div key={photo.id} className={styles.photoItem}>
