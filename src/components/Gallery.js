@@ -37,7 +37,7 @@ const Gallery = () => {
                 <p className={styles.photoDate}>{new Date(photo.date).toLocaleDateString()}</p>
               </div>
               <img
-                src={`/photos/${photo.filename}`}
+                src={`${process.env.PUBLIC_URL}/photos/${photo.filename}`}
                 alt={photo.title}
                 className={styles.photo}
                 onClick={() => handlePhotoClick(photo)}
@@ -53,7 +53,7 @@ const Gallery = () => {
             &times;
           </button>
           <img
-            src={`/photos/${selectedPhoto.filename}`}
+            src={`${process.env.PUBLIC_URL}/photos/${selectedPhoto.filename}`}
             alt={selectedPhoto.title}
           />
         </div>
