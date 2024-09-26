@@ -12,6 +12,7 @@ function App() {
     <Router>
       <Navbar />
         <div className = {styles.body}>
+          <hr></hr>
           <Routes>
             <Route path="/" exact element={<About/>} />
             <Route path="/writings" element={<Writings/>} />

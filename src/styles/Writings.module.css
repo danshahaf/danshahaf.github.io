@@ -1,70 +1,161 @@
 .writings {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    color: #333;
-  }
-  
-  .content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  h2 {
-    text-align: center;
-    color: #000; /* Keep the title in black */
-    margin-bottom: 20px;
-    font-size: 24px;
-  }
-  
-  .writingsTable {
-    width: 100%;
-    background-color: #fbf9e8;
-    border-radius: 10px;
+  padding: 20px;
+  font-family: 'OCR A Std', sans-serif !important;
+  color: #333;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  color: #000;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.writingsTable {
+  width: 100%;
+  background-color: #fbf9e8;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
+}
+
+.writingsTable th,
+.writingsTable td {
+  padding: 10px 6px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.writingsTable th {
+  background-color: #494949;
+  outline: 2px solid #494949;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.writingsTable tbody tr {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  transition: all 0.2s ease-in-out;
+}
+
+.writingsTable tbody tr:hover {
+  background-color: #ffffff;
+  outline: 2px solid #000000;
+  transition: all 0.2s ease-in-out;
+}
+
+.articleLink {
+  text-decoration: none;
+  color: #5859ac;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+}
+
+.articleLink:hover {
+  color: #5390b9;
+}
+
+.articleLink:visited {
+  color: #5859ac;
+}
+
+.writingsTable td:nth-child(3) {
+  font-size: 12px;
+  font-style: italic;
+  color: #555;
+}
+
+/* Media query for tablets */
+@media screen and (max-width: 768px) {
+  .writings {
     padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-collapse: collapse;
   }
-  
+
+  .content {
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .writingsTable {
+    padding: 10px;
+  }
+
   .writingsTable th,
   .writingsTable td {
-    padding: 12px 15px;
-    text-align: left;
+    padding: 8px 4px;
   }
-  
+
   .writingsTable th {
-    background-color: #f5f5dc;
-    color: #000; /* Keep the header text in black */
+    font-size: 14px;
+  }
+}
+
+/* Media query for mobile phones */
+@media screen and (max-width: 480px) {
+  .writings {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .writingsTable {
+    padding: 5px;
+  }
+
+  .writingsTable, .writingsTable tbody, .writingsTable tr, .writingsTable td {
+    display: block;
+    width: 100%;
+  }
+
+  .writingsTable thead {
+    display: none;
+  }
+
+  .writingsTable tr {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .writingsTable td {
+    text-align: left;
+    padding: 5px;
+    position: relative;
+  }
+
+  .writingsTable td:before {
+    content: attr(data-label);
     font-weight: bold;
-    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
   }
-  
-  .writingsTable tbody tr {
-    border-bottom: 1px solid #e0e0e0;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  .writingsTable tbody tr:hover {
-    background-color: #e6e6fa; /* Change the hover highlight to a light lavender color */
-  }
-  
+
   .articleLink {
-    text-decoration: none;
-    color: #5859ac;
-    font-weight: bold;
-    transition: color 0.2s ease-in-out;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
   }
-  
-  .articleLink:hover {
-    color: #5390b9;
+
+  .writingsTable td:nth-child(2) {
+    font-size: 14px;
   }
-  
-  .articleLink:visited {
-    color: #5859ac;
-  }
-  
+
   .writingsTable td:nth-child(3) {
-    font-size: 12px; /* Make the date slightly smaller */
-    font-style: italic; /* Italicize the date */
-    color: #555; /* Slightly lighter color for the date */
+    font-size: 12px;
   }
-  
+}

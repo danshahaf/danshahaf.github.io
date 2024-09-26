@@ -1,3 +1,12 @@
+// Step 1: Verify photo location
+// Ensure your photos are in the following path:
+// portfolio/docs/photos/A01.jpg
+
+// Step 2: Update package.json
+// Add this to your package.json scripts:
+// "postbuild": "cp -R docs build/docs"
+
+// Step 3: Update Gallery.js
 import React, { useState, useEffect } from 'react';
 import styles from '../styles/Gallery.module.css';
 
@@ -25,6 +34,15 @@ const Gallery = () => {
     setSelectedPhoto(null);
   };
 
+  const getPhotoPath = (filename) => {
+    // This function will work in both development and production
+    if (process.env.NODE_ENV === 'production') {
+      return `${process.env.PUBLIC_URL}/photos/${filename}`;
+    } else {
+      return `./photos/${filename}`;
+    }
+  };
+
   return (
     <div id="gallery" className={styles.gallery}>
       <div className={styles.content}>
@@ -37,7 +55,7 @@ const Gallery = () => {
                 <p className={styles.photoDate}>{new Date(photo.date).toLocaleDateString()}</p>
               </div>
               <img
-                src={`${process.env.PUBLIC_URL}/docs/photos/${photo.filename}`}
+                src={getPhotoPath(photo.filename)}
                 alt={photo.title}
                 className={styles.photo}
                 onClick={() => handlePhotoClick(photo)}
@@ -53,7 +71,7 @@ const Gallery = () => {
             &times;
           </button>
           <img
-            src={`/photos/${selectedPhoto.filename}`}
+            src={getPhotoPath(selectedPhoto.filename)}
             alt={selectedPhoto.title}
           />
         </div>
@@ -63,3 +81,10 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
+// Step 4: Rebuild your project
+// Run: npm run build
+
+// Step 5: Serve your build
+// Use a local server to test the production build:
+// npx serve -s build

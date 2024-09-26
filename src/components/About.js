@@ -1,12 +1,14 @@
 import React from 'react';
 import styles from '../styles/About.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin, faMedium, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const About = () => {
   const socialLinks = [
-    { name: '𝕏', url: 'https://x.com/gullhaf', className: styles.twitter },
-    { name: 'GitHub', url: 'https://github.com/danshahaf', className: styles.github },
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/shahaf-dan/', className: styles.linkedin },
-    { name: 'Medium', url: 'https://medium.com/@shahafdan', className: styles.medium }
+    { name: 'X', url: 'https://x.com/gullhaf', className: styles.x, icon: faXTwitter },
+    { name: 'GitHub', url: 'https://github.com/danshahaf', className: styles.github, icon: faGithub },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/shahaf-dan/', className: styles.linkedin, icon: faLinkedin },
+    { name: 'Medium', url: 'https://medium.com/@shahafdan', className: styles.medium, icon: faMedium }
   ];
 
   return (
@@ -24,13 +26,15 @@ const About = () => {
               rel="noopener noreferrer"
               className={`${styles.contactbtn} ${link.className}`}
             >
-              {link.name}
+              <FontAwesomeIcon icon={link.icon} className={styles.logo} />
             </a>
           ))}
         </div>
 
+        <hr></hr>
+
         <p>
-          I live in New York City and work as a Data Scientist in resinsurance. 
+          I live in New York City and work as a Data Scientist in reinsurance. 
           
           <br />
           <br />

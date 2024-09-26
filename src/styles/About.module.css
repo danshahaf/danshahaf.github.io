@@ -1,7 +1,8 @@
+/* Existing styles */
 .contactbtn {
     border: 1px solid black;
     border-radius: 5px;
-    padding: 7px 0;
+    padding: 10px 0;
     font-weight: bold;
     cursor: pointer;
     background: none;
@@ -12,24 +13,24 @@
     align-items: center;
     transition: ease-in-out 0.2s;
     width: 100%;
+    font-size: 24px;
 }
-
 
 .socialLinks {
     display: flex;
     justify-content: space-between;
     gap: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
-.contactbtn.twitter {
-    color: #333;
-    border-color: #333;
+.contactbtn.x {
+    color: black;
+    border-color: black;
 }
 
-.contactbtn.twitter:hover {
+.contactbtn.x:hover {
     color: white;
-    background-color: #333;
+    background-color: black;
 }
 
 .contactbtn.github {
@@ -60,4 +61,89 @@
 .contactbtn.medium:hover {
     color: white;
     background-color: #000000;
+}
+
+/* New styles for responsiveness */
+.about {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Media queries for mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .about {
+        padding: 15px;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .socialLinks {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .contactbtn {
+        font-size: 20px;
+        padding: 8px 0;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    .socialLinks {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contactbtn {
+        font-size: 18px;
+        padding: 10px 0;
+    }
+
+    p {
+        font-size: 14px;
+    }
 }

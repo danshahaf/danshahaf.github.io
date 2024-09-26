@@ -1,106 +1,190 @@
 .gallery {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    color: #333;
-  }
-  
-  .content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  h2 {
-    text-align: center;
-    color: #000; /* Keep the title in black */
-    margin-bottom: 20px;
-    font-size: 24px;
-  }
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  color: #000;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
 .photo {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block; /* Ensure the image behaves as a block element with no extra inline spacing */
-    margin: 0; /* Remove any potential margin */
-    cursor: pointer; /* Changes the cursor to indicate it's clickable */
-    transition: transform 0.3s ease; /* Adds a smooth transition effect */
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 5px;
+}
+
+.photoItem {
+  width: 70%;
+  margin: 20px auto;
+  overflow: hidden;
+  padding: 0;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7), 0 6px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photoInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.photoTitle, .photoDate {
+  margin: 0;
+}
+
+.photoTitle {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.photoDate {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 5px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1001;
+}
+
+.closeButton:hover {
+  background-color: #f44336;
+  color: white;
+  transform: scale(1.1);
+}
+
+.photoItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.photo:hover {
+  transform: scale(1.03);
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .content {
+    max-width: 100%;
+    padding: 0 10px;
   }
-  
+
+  h2 {
+    font-size: 20px;
+  }
+
   .photoItem {
-    width: 70%;
-    margin: 10px auto;
-    border: 1px solid black;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 0; /* Remove padding inside the photoItem */
+    width: 90%;
+    margin: 15px auto;
   }
-  
+
+  .photo {
+    height: 200px;
+  }
+
   .photoInfo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 10px;
-    margin: 0; /* Remove any margin below the title and date */
-  }
-  
-  .photoTitle, .photoDate {
-    margin: 0; /* Remove any potential margin from title and date */
   }
 
   .photoTitle {
     font-size: 12px;
-    font-weight: bold;
   }
 
-  .photoDate{
+  .photoDate {
     font-size: 10px;
-    font-style: italic;
   }
-  
-  .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-  }
-  
-  .modal img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-  }
-  
+
   .closeButton {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: white;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-    z-index: 1001;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
   }
-  
-  .closeButton:hover {
-    background-color: #f44336;
-    color: white;
+}
+
+@media screen and (max-width: 480px) {
+  .gallery {
+    padding: 10px;
   }
-  
-  
-  .photo:hover {
-    transform: scale(1.05); /* Slightly enlarges the image on hover */
+
+  h2 {
+    font-size: 18px;
   }
+
+  .photoItem {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .photo {
+    height: 180px;
+  }
+
+  .photoInfo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .photoDate {
+    margin-top: 5px;
+  }
+
+  .modal img {
+    max-width: 95%;
+    max-height: 95%;
+  }
+}

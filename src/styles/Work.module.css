@@ -1,71 +1,178 @@
 .work {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    color: #333;
-  }
-  
-  .content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  h2 {
-    text-align: center;
-    color: #000; /* Keep the title in black */
-    margin-bottom: 20px;
-    font-size: 24px;
-  }
-  
-  .workTable {
-    width: 100%;
-    background-color: #fbf9e8;
-    border-radius: 10px;
+  padding: 20px;
+  font-family: 'OCR A Std', sans-serif !important;
+  color: #333;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  color: #000;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.workTable {
+  width: 100%;
+  background-color: #fbf9e8;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
+}
+
+.workTable th,
+.workTable td {
+  padding: 10px 6px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.workTable th {
+  background-color: #494949;
+  outline: 2px solid #494949;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.workTable tbody tr {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  transition: all 0.2s ease-in-out;
+}
+
+.workTable tbody tr:hover {
+  background-color: #ffffff;
+  outline: 2px solid #000000;
+  transition: all 0.2s ease-in-out;
+}
+
+.repoLink {
+  text-decoration: none;
+  color: #5859ac;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+}
+
+.repoLink:hover {
+  color: #5390b9;
+}
+
+.repoLink:visited {
+  color: #5859ac;
+}
+
+.workTable td:nth-child(3) {
+  font-size: 12px;
+  font-style: italic;
+  color: #555;
+}
+
+.noProjects {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  padding: 20px;
+}
+
+/* Media query for tablets */
+@media screen and (max-width: 768px) {
+  .work {
     padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-collapse: collapse;
   }
-  
+
+  .content {
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .workTable {
+    padding: 10px;
+  }
+
   .workTable th,
   .workTable td {
-    padding: 12px 15px;
+    padding: 8px 4px;
+  }
+
+  .workTable th {
+    font-size: 14px;
+  }
+}
+
+/* Media query for mobile phones */
+@media screen and (max-width: 480px) {
+  .work {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .workTable {
+    padding: 5px;
+  }
+
+  .workTable th,
+  .workTable td {
+    padding: 6px 3px;
+    font-size: 12px;
+  }
+
+  .workTable th {
+    font-size: 12px;
+  }
+
+  .workTable td:nth-child(3) {
+    font-size: 10px;
+  }
+
+  /* Convert table to cards for better mobile viewing */
+  .workTable, .workTable tbody, .workTable tr, .workTable td {
+    display: block;
+    width: 100%;
+  }
+
+  .workTable thead {
+    display: none;
+  }
+
+  .workTable tr {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .workTable td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .workTable td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
     text-align: left;
   }
-  
-  .workTable th {
-    background-color: #f5f5dc;
-    color: #000; /* Keep header text in black */
-    font-weight: bold;
-    font-size: 16px;
-  }
-  
-  .workTable tbody tr {
-    border-bottom: 1px solid #e0e0e0;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  .workTable tbody tr:hover {
-    background-color: #e6e6fa; /* Light lavender hover effect */
-  }
-  
+
   .noProjects {
-    text-align: center;
-    color: #888;
-    font-style: italic;
-    padding: 20px;
+    font-size: 14px;
+    padding: 15px;
   }
-  
-  .repoLink {
-    text-decoration: none;
-    color: #5859ac;
-    font-weight: bold;
-    transition: color 0.2s ease-in-out;
-  }
-  
-  .repoLink:hover {
-    color: #5390b9;
-  }
-  
-  .repoLink:visited {
-    color: #5859ac;
-  }
-  
+}
